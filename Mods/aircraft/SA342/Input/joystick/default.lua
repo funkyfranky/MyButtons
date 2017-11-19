@@ -34,6 +34,7 @@ keyCommands = {
 {down = device_commands.Button_11, cockpit_device_id = devices.AUTOPILOT, value_down = 0, name = _('SA342 Roll Off'), category = _('_My Buttons')},
 {down = device_commands.Button_13, cockpit_device_id = devices.AUTOPILOT, value_down = 1, name = _('SA342 Pitch On'), category = _('_My Buttons')},
 {down = device_commands.Button_13, cockpit_device_id = devices.AUTOPILOT, value_down = 0, name = _('SA342 Pitch Off'), category = _('_My Buttons')},
+{down = device_commands.Button_26, cockpit_device_id = devices.AUTOPILOT, value_down = 1, name = _('SA342 Master On/Off (toggle)'), category = _('_My Buttons')},
 
 {down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id = devices.WEAPONS, value_down = 1, value_up = 0, name = _('SA342 Left Arm On/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_12, up = device_commands.Button_12, cockpit_device_id = devices.WEAPONS, value_down = 1, value_up = 0, name = _('SA342 Right Arm On/Off'), category = _('_My Buttons')},
