@@ -41,6 +41,9 @@ keyCommands = {
 
 {down = device_commands.Button_8, up = device_commands.Button_8,cockpit_device_id = devices.NAVLIGHTS, value_down = 1, value_up = 0,name = _('SA342 Panels Lighting On/Off (alternative)'), category = _('_My Buttons')},
 
+-- flight controls
+{action = device_commands.Button_10, cockpit_device_id = devices.FLIGHT_CONTROLS, name = _('Main Horizontal Attitude Set')},
+
 -- flare
 {down = device_commands.Button_2, up = device_commands.Button_2,cockpit_device_id = devices.FD, value_down = 0, value_up = 1,name = _('Flare Dispense Mode CC/SEQ'), category = _('_My Buttons')},
 {down = device_commands.Button_3, up = device_commands.Button_3,cockpit_device_id = devices.FD, value_down = 1, value_up = 0,name = _('Flare Power/Speed Le/Ve'), category = _('_My Buttons')},
@@ -48,7 +51,7 @@ keyCommands = {
 {down = device_commands.Button_1, up = device_commands.Button_1,cockpit_device_id = devices.FD, value_down = 1, value_up = 0,name = _('Flare Side Mode G/G+D'), category = _('_My Buttons')},
 {down = device_commands.Button_1, up = device_commands.Button_1,cockpit_device_id = devices.FD, value_down = -1, value_up = 0,name = _('Flare Side Mode D/G+D'), category = _('_My Buttons')},
 
--- ADI
+-- ADF
 {down = device_commands.Button_12, cockpit_device_id = devices.ADF, value_down = 1, name = _('ADF Select Right'), category = _('_My Buttons')},
 {down = device_commands.Button_12, cockpit_device_id = devices.ADF, value_down = 0, name = _('ADF Select Left'), category = _('_My Buttons')},
 
@@ -61,6 +64,15 @@ keyCommands = {
 {down = device_commands.Button_1, up = device_commands.Button_2, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, value_up = 0.0, name = _('Pilot/Copilot Seat'), category = _('_My Buttons')},
 
 --fvh: end additional buttons
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- fvh: missing buttons from keyboard lua
+-- INTERCOM1
+{down = device_commands.Button_7,up = device_commands.Button_8,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 VHF AM Radio Volume+'), category = _('SA342 Intercom1')},
+{down = device_commands.Button_9,up = device_commands.Button_10,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 VHF AM Radio Volume-'), category = _('SA342 Intercom1')},
+{down = device_commands.Button_11,up = device_commands.Button_12,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 FM1 Radio Volume+'), category = _('SA342 Intercom1')},
+{down = device_commands.Button_13,up = device_commands.Button_14,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 FM1 Radio Volume-'), category = _('SA342 Intercom1')},
+{down = device_commands.Button_15,up = device_commands.Button_16,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 UHF Radio Volume+'), category = _('SA342 Intercom1')},
+{down = device_commands.Button_17,up = device_commands.Button_18,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 UHF Radio Volume-'), category = _('SA342 Intercom1')},
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- [WP1]
