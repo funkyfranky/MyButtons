@@ -19,10 +19,10 @@ join(res.keyCommands,{
 {down = lights_commands.L39C_Command_LightsRedWhite_EXT, up = lights_commands.L39C_Command_LightsRedWhite_EXT, cockpit_device_id = devices.LIGHTS, value_down =  1.0, value_up = 0.0, name = _('Cockpit Lights Red/Off'),   category = {_('_My Buttons')}},
 {down = lights_commands.L39C_Command_LightsRedWhite_EXT, up = lights_commands.L39C_Command_LightsRedWhite_EXT, cockpit_device_id = devices.LIGHTS, value_down = -1.0, value_up = 0.0, name = _('Cockpit Lights White/Off'), category = {_('_My Buttons')}},
 {down = lights_commands.L39C_Command_FwdSpotlightsSw, up = lights_commands.L39C_Command_FwdSpotlightsSw, cockpit_device_id = devices.LIGHTS, value_down =  1.0, value_up = 0.0, name = _('Spotlight Switch Landing/Off'), category = {_('_My Buttons')}},
-{down = lights_commands.L39C_Command_FwdSpotlightsSw, up = lights_commands.L39C_Command_FwdSpotlightsSw, cockpit_device_id = devices.LIGHTS, value_down = -1.0, value_up = 0.0, name = _('Spotlight Switch Landing/Off (-1,0)'), category = {_('_My Buttons')}},
-{down = lights_commands.L39C_Command_AftSpotlightsSw, up = lights_commands.L39C_Command_AftSpotlightsSw, cockpit_device_id = devices.LIGHTS, value_down =  1.0, value_up = 0.0, name = _('Spotlight Switch Taxi/Off'),    category = {_('_My Buttons')}},
-{down = iCommandPlane_SpotSelect_switch, value_down =  1.0, value_up = 0.0, name = _('Spotlight Switch Landing (icommand)'), category = {_('_My Buttons')}},
-{down = iCommandPlane_SpotSelect_switch, value_down = -1.0, value_up = 0.0, name = _('Spotlight Switch Taxi (icommand)'),	 category = {_('_My Buttons')}},
+{down = lights_commands.L39C_Command_FwdSpotlightsSw, up = lights_commands.L39C_Command_FwdSpotlightsSw, cockpit_device_id = devices.LIGHTS, value_down = -1.0, value_up = 0.0, name = _('Spotlight Switch Taxi/Off'), category = {_('_My Buttons')}},
+--{down = lights_commands.L39C_Command_AftSpotlightsSw, up = lights_commands.L39C_Command_AftSpotlightsSw, cockpit_device_id = devices.LIGHTS, value_down =  1.0, value_up = 0.0, name = _('Spotlight Switch Taxi/Off'),    category = {_('_My Buttons')}},
+--{down = iCommandPlane_SpotSelect_switch, value_down =  1.0, value_up = 0.0, name = _('Spotlight Switch Landing (icommand)'), category = {_('_My Buttons')}},
+--{down = iCommandPlane_SpotSelect_switch, value_down = -1.0, value_up = 0.0, name = _('Spotlight Switch Taxi (icommand)'),	 category = {_('_My Buttons')}},
 
 -- Weapon System
 {down = device_commands.Button_69, up = device_commands.Button_69, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0,	name = _('Gun+PK3 Switch On/Off'), category = {_('_My Buttons')}},
@@ -35,9 +35,21 @@ join(res.keyCommands,{
 {down = device_commands.Button_39, up = device_commands.Button_39, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.1, value_up = 0.2, name = _('Rockets Firing Mode AUT/2RS'),category = {_('_My Buttons')}},
 {down = device_commands.Button_39, up = device_commands.Button_39, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.3, value_up = 0.2, name = _('Rockets Firing Mode 4RS/2RS'),category = {_('_My Buttons')}},
 {down = device_commands.Button_39, up = device_commands.Button_39, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.2, value_up = 0.3, name = _('Rockets Firing Mode 2RS/4RS'),category = {_('_My Buttons')}},
+{down = device_commands.Button_39, up = device_commands.Button_39, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.2, value_up = 0.1, name = _('Rockets Firing Mode 2RS/AUT'),category = {_('_My Buttons')}},
+{down = device_commands.Button_39, up = device_commands.Button_39, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.3, value_up = 0.1, name = _('Rockets Firing Mode 4RS/AUT'),category = {_('_My Buttons')}},
+{down = device_commands.Button_47, up = device_commands.Button_47, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Gsh-23 Cannon Arm/Save'),category = {_('_My Buttons')}},
+{down = device_commands.Button_45, up = device_commands.Button_45, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.5, name = _('Pyro Charge III/II'),category = {_('_My Buttons')}},
+{down = device_commands.Button_45, up = device_commands.Button_45, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.0, value_up = 0.5, name = _('Pyro Charge I/II'),category = {_('_My Buttons')}},
+{down = device_commands.Button_52, up = device_commands.Button_52, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Charge Outer Guns On/Off'),category = {_('_My Buttons')}},
+{down = device_commands.Button_53, up = device_commands.Button_53, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Charge Innter Guns On/Off'),category = {_('_My Buttons')}},
+{down = device_commands.Button_31, up = device_commands.Button_31, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('CB Missile Seeker Heating Circuit Power ON/OFF'), category = {_('_My Buttons'),}},
+{down = device_commands.Button_32, up = device_commands.Button_32, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('CB Missile Seeker Glowing Circuit Power ON/OFF'), category = {_('_My Buttons'),}},
+
+-- Airbrake
+{down = iCommandPlaneAirBrakeOn, up = iCommandPlaneAirBrakeOff, value_down = 1.0, value_up = 1.0, name = _('Airbrake Switch OPEN/CLOSE'), category = {_('_My Buttons')}},
 
 -- SDU
-{down = device_commands.Button_2, up = device_commands.Button_2,   cockpit_device_id = devices.SDU,           value_down = 1.0, value_up = 0.0, name = _('SDU Switch On/Off'),            category = {_('_My Buttons')}},
+{down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.SDU, value_down = 1.0, value_up = 0.0, name = _('SDU Switch On/Off'), category = {_('_My Buttons')}},
 
 -- RSBN
 {down = device_commands.Button_14, up = device_commands.Button_14, cockpit_device_id = devices.RSBN_5, value_down = 0.2, value_up = 0.1, name = _('RSBN Mode Switch LANDING/NAVIGATION'), category = {_('RSBN-5 Control Panel'), _('Only Front Cockpit'), _('_My Buttons')}},
@@ -49,9 +61,9 @@ join(res.keyCommands,{
 -- Flaps
 {down = iCommandPlaneFlaps,	up = iCommandPlaneFlaps, value_down = 1, value_up = 2,	name = _('Flaps Flight/Takeoff'), category = {_('_My Buttons')}},
 {down = iCommandPlaneFlaps,	up = iCommandPlaneFlaps, value_down = 3, value_up = 2,	name = _('Flaps Landing/Takeoff'), category = {_('_My Buttons')}},
-
-{down = device_commands.Button_11, up = device_commands.Button_11, cockpit_device_id = devices.CTRL_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Landing Gear Up/Neutral'), category = {_('_My Buttons')}},
-{down = device_commands.Button_11, up = device_commands.Button_11, cockpit_device_id = devices.CTRL_INTERFACE, value_down =-1.0, value_up = 0.0, name = _('Landing Gear Down/Neutral'), category = {_('_My Buttons')}},
+-- Gear
+{down = device_commands.Button_11, up = device_commands.Button_11, cockpit_device_id = devices.CTRL_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Landing Gear Down/Neutral'), category = {_('_My Buttons')}},
+{down = device_commands.Button_11, up = device_commands.Button_11, cockpit_device_id = devices.CTRL_INTERFACE, value_down =-1.0, value_up = 0.0, name = _('Landing Gear Up/Neutral'), category = {_('_My Buttons')}},
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- end funkyfranky
