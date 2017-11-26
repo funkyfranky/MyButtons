@@ -17,7 +17,10 @@ forceFeedback = {
 },
 keyCommands = {
 
--- fvh
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- begin funkyfranky
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 {down = device_commands.Button_4,                              up = device_commands.Button_4,  cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1, value_up = -1,name = _('Manual Pip Control Switch Toggle'), category = {_('_My Buttons')}},
 {down = device_commands.Button_3,                              up = device_commands.Button_3,  cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1, value_up = -1, name = _('Gun Heater Switch Toggle'), category = {_('_My Buttons')}},
 {down = device_commands.Button_12,                             up = device_commands.Button_12, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1, value_up = -1, name = _('Rocket Jettison Switch Toggle'), category = {_('_My Buttons')}},
@@ -35,7 +38,7 @@ keyCommands = {
 {down = hydro_commands.F86_CockpitDeviceCommand_HydPressIndicatorSelector, up = hydro_commands.F86_CockpitDeviceCommand_HydPressIndicatorSelector, cockpit_device_id = devices.HYDRO_INTERFACE, value_down =-1, value_up = 0, name = _('Hydraulic Pressure Gage Alternate/Normal'), category = {_('_My Buttons')}},
 
 {down = device_commands.Button_11, up = device_commands.Button_11, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1, value_up = 0, name = _('Rocket Fuze (Arming) Delay/Off'), category = {_('_My Buttons')}},
-{down = device_commands.Button_11, up = device_commands.Button_11, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1, value_up =-1, name = _('Rocket Fuze (Arming) Instant/Off'), category = {_('_My Buttons')}},
+{down = device_commands.Button_11, up = device_commands.Button_11, cockpit_device_id = devices.WEAPON_SYSTEM, value_down =-1, value_up = 0, name = _('Rocket Fuze (Arming) Instant/Off'), category = {_('_My Buttons')}},
 
 {down = engine_commands.F86_CockpitDeviceCommand_EmergFuel,	           up = engine_commands.F86_CockpitDeviceCommand_EmergFuel,            cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1, value_up = -1, name = _('Emergency Fuel Switch Toggle'), category = {_('_My Buttons')}},
 {down = engine_commands.F86_CockpitDeviceCommand_AirStart,             up = engine_commands.F86_CockpitDeviceCommand_AirStart,             cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0, value_up = -1, name = _('Emergency Ignition Switch On/Off'), category = {_('_My Buttons')}},
@@ -43,6 +46,10 @@ keyCommands = {
 {down = electric_commands.F86_CockpitDeviceCommand_EngineMasterSw,     up = electric_commands.F86_CockpitDeviceCommand_EngineMasterSw,     cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('Engine Master Switch On/Off'), category = {_('_My Buttons')}},
 {down = electric_commands.F86_CockpitDeviceCommand_GeneratorSw,	       up = electric_commands.F86_CockpitDeviceCommand_GeneratorSw,        cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('Generator Switch On/Off'), category = {_('_My Buttons')}},
 {down = electric_commands.F86_CockpitDeviceCommand_BatteryStarterSw,   up = electric_commands.F86_CockpitDeviceCommand_BatteryStarterSw,   cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('Battery-Starter Battery/Off'), category = {_('_My Buttons')}},
+
+{down = electric_commands.F86_CockpitDeviceCommand_InverterSw,         up = electric_commands.F86_CockpitDeviceCommand_InverterSw,		cockpit_device_id = devices.ELEC_INTERFACE,	value_down = 1,	value_up=-1,	name = _('Instrument Power Switch Alternate/Normal'),		category = {_('_My Buttons')}},
+
+
 {down = fuel_commands.F86_CockpitDeviceCommand_DensitometerCorrection, up = fuel_commands.F86_CockpitDeviceCommand_DensitometerCorrection, cockpit_device_id = devices.FUEL_INTERFACE, value_down = 1, value_up =-1, name = _('Fuel Densitometer Selection Switch Out/In'), category = {_('_My Buttons')}},
 
 {down = light_commands.F86_CockpitDeviceCommand_StandByCompassLightSw,   up = light_commands.F86_CockpitDeviceCommand_StandByCompassLightSw,   cockpit_device_id = devices.LIGHT_INTERFACE,	     value_down = 1, value_up = -1, name = _('Compass Light Switch On/Off'), category = {_('_My Buttons')}},
@@ -68,6 +75,24 @@ keyCommands = {
 
 {down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id = devices.WEAPON_SYSTEM,	value_down = 1,	value_up = 0, name = _('Rocket Release Selector Single/Off'), category = {_('_My Buttons')}},
 {down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id = devices.WEAPON_SYSTEM,	value_down =-1,	value_up = 0, name = _('Rocket Release Selector Auto/Off'), category = {_('_My Buttons')}},
+
+{down = device_commands.Button_15, up = device_commands.Button_15, cockpit_device_id = devices.A4_GUNSIGHT,	value_down = 1,	value_up =-1, name = _('A-4 Sight Filament Selector Switch Secondary/Primary'), category = {_('_My Buttons')}},
+
+-- Push to test buttons
+--{down = electric_commands.F86_CockpitDeviceCommand_GenOff_PTLmp, up = electric_commands.F86_CockpitDeviceCommand_GenOff_PTLmp, cockpit_device_id = devices.ELEC_INTERFACE, electric, value_down = 1.0, value_up = 0.0, name = _('Generator Warning Light (Push To Test)'), category = {_('_My Buttons')}},
+--{down = electric_commands.F86_CockpitDeviceCommand_MainInstInverterOffSelectAlt_PTLmp, up = electric_commands.F86_CockpitDeviceCommand_MainInstInverterOffSelectAlt_PTLmp, cockpit_device_id = devices.ELEC_INTERFACE, electric, value_down = 1.0, value_up = 0.0, name = _('Main Instrument Inverter Failure Warning Light (Push to test)'), category = {_('_My Buttons')}},
+--{down = electric_commands.F86_CockpitDeviceCommand_BothInstInvertersOff_PTLmp, up = electric_commands.F86_CockpitDeviceCommand_BothInstInvertersOff_PTLmp, cockpit_device_id = devices.ELEC_INTERFACE, electric, value_down = 1.0, value_up = 0.0, name = _('Both Instrument (Main and alternate) Inverter Failure Warning Light (Push to test)'), category = {_('_My Buttons')}},
+--{down = electric_commands.F86_CockpitDeviceCommand_MainRadarInverterOff_PTLmp, up = electric_commands.F86_CockpitDeviceCommand_MainRadarInverterOff_PTLmp, cockpit_device_id = devices.ELEC_INTERFACE, electric, value_down = 1.0, value_up = 0.0, name = _('Main Radar Inverter Failure Warning Light (Push to test)'), category = {_('_My Buttons')}},
+--{down = hydro_commands.F86_CockpitDeviceCommand_AlternateFltContSysOper_PTLmp, up = hydro_commands.F86_CockpitDeviceCommand_AlternateFltContSysOper_PTLmp, cockpit_device_id = devices.HYDRO_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Alternate-on Warning Light (Push to test)'), category = {_('_My Buttons')}},
+--{down = fuel_commands.F86_CockpitDeviceCommand_OutDropTanksEmpty_TPLmp, up = fuel_commands.F86_CockpitDeviceCommand_OutDropTanksEmpty_TPLmp, cockpit_device_id = devices.FUEL_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Outboard Drop Tank Empty Indicator Light (Push to test)'), category = {_('_My Buttons')}},
+--{down = fire_detection_commands.F86_CockpitDeviceCommand_FwdWarning_TPLmp, up = fire_detection_commands.F86_CockpitDeviceCommand_FwdWarning_TPLmp, cockpit_device_id = devices.FIRE_DETECTION_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Forward Engine Compartment Fire-warning Light (Push to test)'), category = {_('_My Buttons')}},
+--{down = fire_detection_commands.F86_CockpitDeviceCommand_AftWarning_TPLmp, up = fire_detection_commands.F86_CockpitDeviceCommand_AftWarning_TPLmp, cockpit_device_id = devices.FIRE_DETECTION_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Aft Engine Compartment Fire-warning Light (Push to test)'), category = {_('_My Buttons')}},
+--{down = air_commands.F86_CockpitDeviceCommand_WindshieldAntiIceOverheatLmpTest, up = air_commands.F86_CockpitDeviceCommand_WindshieldAntiIceOverheatLmpTest, cockpit_device_id = devices.AIR_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Windshield Anti-Ice Overheat Warning Light (Push to test)'), category = {_('_My Buttons')}},
+--{down = control_commands.F86_CockpitDeviceCommand_TakeOffPosIndTest, up = control_commands.F86_CockpitDeviceCommand_TakeOffPosIndTest, devices.CONTROL_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Take-off (Trim) Position Indicator Light (Push to test)'), category = {_('_My Buttons')}},
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- end funkyfranky
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Debug
 {down = iCommandMissionRestart, name = _('Restart Mission'), category = _('Debug')},
