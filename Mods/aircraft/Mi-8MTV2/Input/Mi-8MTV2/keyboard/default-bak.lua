@@ -6,11 +6,6 @@ dofile(cockpit.."command_defs.lua")
 
 local base = external_profile("Config/Input/Aircrafts/common_keyboard_binding.lua")
 
-ignore_features(base.keyCommands,{
-"Camera jiggle"
-})
-
-
 join(base.keyCommands,{
 
 ------------------------------------------------
@@ -55,27 +50,6 @@ join(base.keyCommands,{
 {combos = {{key = 'H', reformers = {'RShift'}}},			down = iCommandViewNightVisionGogglesOn,		name = _('Night Vision Goggles'),			category = {_('Sensors')}},
 {combos = {{key = 'H', reformers = {'RShift','RCtrl'}}},	pressed = iCommandPlane_Helmet_Brightess_Up,	name = _('Night Vision Goggles Gain Up'),	category = {_('Sensors')}},
 {combos = {{key = 'H', reformers = {'RShift','RAlt'}}},		pressed = iCommandPlane_Helmet_Brightess_Down,	name = _('Night Vision Goggles Gain Down'),	category = {_('Sensors')}},
-
-------------------------------------------------
--- Checklist -----------------------------------
-------------------------------------------------
-{combos = {{key = 'Num1', reformers = {'LShift'}}},		down = device_commands.Button_1,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Before Starting APU'),		category = {_('Crew')}},
-{combos = {{key = 'Num2', reformers = {'LShift'}}},		down = device_commands.Button_2,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - After Starting APU'),			category = {_('Crew')}},
-{combos = {{key = 'Num3', reformers = {'LShift'}}},		down = device_commands.Button_3,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Engines on Idle'),			category = {_('Crew')}},
-{combos = {{key = 'Num4', reformers = {'LShift'}}},		down = device_commands.Button_4,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Correction Lever Right'),		category = {_('Crew')}},
-{combos = {{key = 'Num5', reformers = {'LShift'}}},		down = device_commands.Button_5,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Before Takeoff'),				category = {_('Crew')}},
-{combos = {{key = 'Num6', reformers = {'LShift'}}},		down = device_commands.Button_6,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Before Landing'),				category = {_('Crew')}},
-{combos = {{key = 'Num*', reformers = {'LShift'}}},		down = device_commands.Button_7,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Wind Conditions'),							category = {_('Crew')}},
-
-------------------------------------------------
--- Crew Procedures -----------------------------
-------------------------------------------------
-{combos = {{key = 'Left',	reformers = {'LShift'}}},					down = device_commands.Button_1,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Open Door'),			category = {_('Crew')}},
-{combos = {{key = 'Right',	reformers = {'LShift'}}},					down = device_commands.Button_2,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Close Door'),			category = {_('Crew')}},
-{combos = {{key = 'Down',	reformers = {'LShift'}}},					down = device_commands.Button_3,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Open Cargo Doors'),		category = {_('Crew')}},
-{combos = {{key = 'Up',		reformers = {'LShift'}}},					down = device_commands.Button_4,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Close Cargo Doors'),	category = {_('Crew')}},
-{combos = {{key = 'A',		reformers = {'LShift','LWin','LCtrl'}}},	down = device_commands.Button_5,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Turn Autopilot On'),	category = {_('Crew')}},
-{combos = {{key = 'T',		reformers = {'LShift'}}},					down = device_commands.Button_6,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Take Off'),				category = {_('Crew')}},
 
 ------------------------------------------------
 -- Ins Cyclic Stick ----------------------------

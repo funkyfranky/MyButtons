@@ -17,7 +17,10 @@ forceFeedback = {
 },
 keyCommands = {
 
--- fvh
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- funkyfranky
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ------------------------------------------------
 -- Right Side Panel ----------------------------
 ------------------------------------------------
@@ -76,6 +79,15 @@ keyCommands = {
 {down = device_commands.Button_14,up = device_commands.Button_14,cockpit_device_id = devices.FUELSYS_INTERFACE,	value_down = 0.0, value_up = 0.5, name = _('Refueling Contol Check/Off'), category = {_('_My Buttons')}},
 {down = device_commands.Button_14,up = device_commands.Button_14,cockpit_device_id = devices.FUELSYS_INTERFACE,	value_down = 1.0, value_up = 0.5, name = _('Refueling Contol Refuel/Off'), category = {_('_My Buttons')}},
 
+{down = device_commands.Button_2, up = device_commands.Button_1, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, value_up = 0.0, name = _('Set Seat Copilot/Pilot'), category = _('_My Buttons')},
+{down = device_commands.Button_3, up = device_commands.Button_1, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, value_up = 0.0, name = _('Set Seat Technican/Pilot'), category = _('_My Buttons')},
+
+{down = device_commands.Button_27, up = device_commands.Button_27, cockpit_device_id = devices.WEAPON_SYS, value_down = 1.0, value_up = 0.0, name = _('Weapon Switch Safe/Armed'), category = {_('_My Buttons')}},
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- funkyfranky
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 -- Debug
 {down = iCommandMissionRestart, name = _('Restart Mission'), category = _('Debug')},
 
@@ -90,7 +102,6 @@ keyCommands = {
 {down = iCommandInfoOnOff, name = _('Info bar view toggle'), category = _('General')},
 {down = iCommandRecoverHuman, name = _('Get new plane - respawn'), category = _('General')},
 {down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
-{down = iCommandScreenShot, name = _('Screenshot'), category = _('General')},
 {down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {down = iCommandViewCoordinatesInLinearUnits, name = _('Info bar coordinate units toggle'), category = _('General')},
 {down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
@@ -233,7 +244,6 @@ keyCommands = {
 {pressed = iCommandViewBack, up = iCommandViewBackStop, name = _('Zoom out'), category = _('View Cockpit')},
 
 -- Extended view
-{down = iCommandViewCameraJiggle, name = _('Camera jiggle toggle'), category = _('View Extended')},
 {down = iCommandViewKeepTerrain, name = _('Keep terrain camera altitude'), category = _('View Extended')},
 {down = iCommandViewFriends, name = _('View friends mode'), category = _('View Extended')},
 {down = iCommandViewEnemies, name = _('View enemies mode'), category = _('View Extended')},
@@ -319,6 +329,17 @@ keyCommands = {
 {	down = iCommandViewNightVisionGogglesOn,		name = _('Night Vision Goggles'),			category = {_('Sensors')}},
 {	pressed = iCommandPlane_Helmet_Brightess_Up,	name = _('Night Vision Goggles Gain Up'),	category = {_('Sensors')}},
 {	pressed = iCommandPlane_Helmet_Brightess_Down,	name = _('Night Vision Goggles Gain Down'),	category = {_('Sensors')}},
+
+------------------------------------------------
+-- Checklist -----------------------------------
+------------------------------------------------
+{	down = device_commands.Button_1,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Before Starting APU'),		category = {_('Crew')}},
+{	down = device_commands.Button_2,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - After Starting APU'),			category = {_('Crew')}},
+{	down = device_commands.Button_3,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Engines on Idle'),			category = {_('Crew')}},
+{	down = device_commands.Button_4,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Correction Lever Right'),		category = {_('Crew')}},
+{	down = device_commands.Button_5,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Before Takeoff'),				category = {_('Crew')}},
+{	down = device_commands.Button_6,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Before Landing'),				category = {_('Crew')}},
+{	down = device_commands.Button_7,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Wind Conditions'),							category = {_('Crew')}},
 
 ------------------------------------------------
 -- Ins Cyclic Stick ----------------------------
@@ -1298,17 +1319,31 @@ keyCommands = {
 --
 {	down = device_commands.Button_11, up = device_commands.Button_11,	cockpit_device_id = devices.WEAPON_SYS,	value_down = 1.0, value_up = 0.0,	name = _('Release Bomb'),	category = {_('Armament System')}},
 
+--Gunners AI Panel
+{	down = device_commands.Button_91, cockpit_device_id = devices.WEAPON_SYS, value_down = 1.0, name = _('AI Panel Show/Hide'), category = _('Gunners AI Panel')},
+{	down = device_commands.Button_92, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.0, name = _('AI Gunner ROE Iterate'), category = _('Gunners AI Panel')},
+{	down = device_commands.Button_92, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.1, name = _('AI Gunner Burst Switch'), category = _('Gunners AI Panel')},
+{	down = device_commands.Button_93, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.0, name = _('AI Back Gunner ROE Iterate'), category = _('Gunners AI Panel')},
+{	down = device_commands.Button_93, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.1, name = _('AI Back Gunner Burst Switch'), category = _('Gunners AI Panel')},
+
 
 },
 axisCommands = {
 
--- fvh
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- funkyfranky
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 {action = device_commands.Button_5,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Left Group 1 Rheostat")},
 {action = device_commands.Button_6,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Left Group 2 Rheostat")},
 {action = device_commands.Button_7,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Right Group 1 Rheostat")},
 {action = device_commands.Button_8,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Right Group 2 Rheostat")},
 {action = device_commands.Button_9,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Central Group 1 Rheostat")},
 {action = device_commands.Button_10, cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Central Group 2 Rheostat")},
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- funkyfranky
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 {action = iCommandViewHorizontalAbs			, name = _('Absolute Camera Horizontal View')},
 {action = iCommandViewVerticalAbs			, name = _('Absolute Camera Vertical View')},

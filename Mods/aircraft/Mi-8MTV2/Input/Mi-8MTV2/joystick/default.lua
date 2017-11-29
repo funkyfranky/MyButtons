@@ -6,9 +6,16 @@ dofile(cockpit.."command_defs.lua")
 
 local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
 
+ignore_features(res.keyCommands,{
+"Camera jiggle"
+})
+
 join(res.keyCommands,{
 
--- fvh
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- funkyfranky
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ------------------------------------------------
 -- Right Side Panel ----------------------------
 ------------------------------------------------
@@ -53,6 +60,12 @@ join(res.keyCommands,{
 {down = device_commands.Button_12,up = device_commands.Button_12,cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('APU Start Mode Start/ColdCraning'), category = {_('_My Buttons')}},
 {down = device_commands.Button_75,up = device_commands.Button_75,cockpit_device_id = devices.ENGINE_INTERFACE, value_down =-1.0, value_up = 0.0, name = _('Engine Ignition Test Switch Left/Center'), category = {_('_My Buttons')}},
 {down = device_commands.Button_75,up = device_commands.Button_75,cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Engine Ignition Test Switch Right/Center'), category = {_('_My Buttons')}},
+{down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Engine Left Stop Lever Off/On'), category = {_('_My Buttons')}},
+{down = device_commands.Button_10,up = device_commands.Button_10,cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Engine Right Stop Lever Off/On'), category = {_('_My Buttons')}},
+{down = device_commands.Button_9,                                cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1.0,                 name = _('Engine Left Stop Lever Off'), category = {_('_My Buttons')}},
+{down = device_commands.Button_10,                               cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1.0,                 name = _('Engine Right Stop Lever Off'), category = {_('_My Buttons')}},
+{down = device_commands.Button_9,                                cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0.0,                 name = _('Engine Left Stop Lever On'), category = {_('_My Buttons')}},
+{down = device_commands.Button_10,                               cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 0.0,                 name = _('Engine Right Stop Lever On'), category = {_('_My Buttons')}},
 -- Hydraulic System Panel
 {down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 1.0,	value_up = 0.0, name = _('Main Hydraulic Switch On/Off'), category = {_('_My Buttons')}},
 {down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.HYDRO_SYS_INTERFACE, value_down = 1.0,	value_up = 0.0, name = _('Auxiliary Hydraulic Switch On/Off'), category = {_('_My Buttons')}},
@@ -71,6 +84,10 @@ join(res.keyCommands,{
 {down = device_commands.Button_3, up = device_commands.Button_1, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, value_up = 0.0, name = _('Set Seat Technican/Pilot'), category = _('_My Buttons')},
 
 {down = device_commands.Button_27, up = device_commands.Button_27, cockpit_device_id = devices.WEAPON_SYS, value_down = 1.0, value_up = 0.0, name = _('Weapon Switch Safe/Armed'), category = {_('_My Buttons')}},
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- funkyfranky
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------
 -- Cheat ---------------------------------------
@@ -115,6 +132,28 @@ join(res.keyCommands,{
 {	down = iCommandViewNightVisionGogglesOn,		name = _('Night Vision Goggles'),			category = {_('Sensors')}},
 {	pressed = iCommandPlane_Helmet_Brightess_Up,	name = _('Night Vision Goggles Gain Up'),	category = {_('Sensors')}},
 {	pressed = iCommandPlane_Helmet_Brightess_Down,	name = _('Night Vision Goggles Gain Down'),	category = {_('Sensors')}},
+
+------------------------------------------------
+-- Checklist -----------------------------------
+------------------------------------------------
+{	down = device_commands.Button_1,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Before Starting APU'),		category = {_('Crew')}},
+{	down = device_commands.Button_2,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - After Starting APU'),			category = {_('Crew')}},
+{	down = device_commands.Button_3,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Engines on Idle'),			category = {_('Crew')}},
+{	down = device_commands.Button_4,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Correction Lever Right'),		category = {_('Crew')}},
+{	down = device_commands.Button_5,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Before Takeoff'),				category = {_('Crew')}},
+{	down = device_commands.Button_6,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Start List - Before Landing'),				category = {_('Crew')}},
+{	down = device_commands.Button_7,	cockpit_device_id = devices.CHECKLIST,	value_down = 1,	name = _('Checklist: Wind Conditions'),							category = {_('Crew')}},
+
+------------------------------------------------
+-- Crew Procedures -----------------------------
+------------------------------------------------
+{	down = device_commands.Button_1,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Open Door'),			category = {_('Crew')}},
+{	down = device_commands.Button_2,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Close Door'),			category = {_('Crew')}},
+{	down = device_commands.Button_3,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Open Cargo Doors'),		category = {_('Crew')}},
+{	down = device_commands.Button_4,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Close Cargo Doors'),	category = {_('Crew')}},
+{	down = device_commands.Button_5,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Turn Autopilot On'),	category = {_('Crew')}},
+{	down = device_commands.Button_6,	cockpit_device_id = devices.CREW_PROCEDURES,	value_down = 1,	name = _('CREW: Take Off'),				category = {_('Crew')}},
+
 
 ------------------------------------------------
 -- Ins Cyclic Stick ----------------------------
@@ -1096,6 +1135,15 @@ join(res.keyCommands,{
 
 
 
+--Gunners AI Panel
+{	down = device_commands.Button_91, cockpit_device_id = devices.WEAPON_SYS, value_down = 1.0, name = _('AI Panel Show/Hide'), category = _('Gunners AI Panel')},
+{	down = device_commands.Button_92, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.0, name = _('AI Gunner ROE Iterate'), category = _('Gunners AI Panel')},
+{	down = device_commands.Button_92, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.1, name = _('AI Gunner Burst Switch'), category = _('Gunners AI Panel')},
+{	down = device_commands.Button_93, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.0, name = _('AI Back Gunner ROE Iterate'), category = _('Gunners AI Panel')},
+{	down = device_commands.Button_93, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.1, name = _('AI Back Gunner Burst Switch'), category = _('Gunners AI Panel')},
+
+
+
 })
 
 
@@ -1103,13 +1151,20 @@ join(res.keyCommands,{
 -- joystick axes 
 join(res.axisCommands,{
 
--- fvh
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- funkyfranky
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 {action = device_commands.Button_5,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Left Group 1 Rheostat")},
 {action = device_commands.Button_6,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Left Group 2 Rheostat")},
 {action = device_commands.Button_7,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Right Group 1 Rheostat")},
 {action = device_commands.Button_8,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Right Group 2 Rheostat")},
 {action = device_commands.Button_9,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Central Group 1 Rheostat")},
 {action = device_commands.Button_10, cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Central Group 2 Rheostat")},
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- funkyfranky
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- joystick axes
 {combos = defaultDeviceAssignmentFor("roll"),	action = iCommandPlaneRoll,			name = _('Flight Control Cyclic Roll')},
