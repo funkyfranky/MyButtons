@@ -69,10 +69,14 @@ join(res.keyCommands,{
 {down = hud_commands.DisplayModeSwitch,                                      cockpit_device_id = devices.HUDCONTROL, value_down = 1.0,                 name = _('HUD Mode Selector NIGHT'), category = _('_My Buttons')},
 
 -- LTINT
-{down = int_light_commands.Knob_Instr_Lights,       up = int_light_commands.Knob_Instr_Lights,       cockpit_device_id = devices.LTINT, value_down = 1.0, value_up = 0.0, name = _('Instrument Lights ON/OFF'), category = _('_My Buttons')},
-{down = int_light_commands.Knob_Console_Lights,     up = int_light_commands.Knob_Console_Lights,     cockpit_device_id = devices.LTINT, value_down = 1.0, value_up = 0.0, name = _('Console Lights ON/OFF'), category = _('_My Buttons')},	
-{down = int_light_commands.Knob_Flood_Lights,       up = int_light_commands.Knob_Flood_Lights,       cockpit_device_id = devices.LTINT, value_down = 1.0, value_up = 0.0, name = _('Flood Lights ON/OFF'), category = _('_My Buttons')},
-{down = int_light_commands.Knob_Annunciator_Lights, up = int_light_commands.Knob_Annunciator_Lights, cockpit_device_id = devices.LTINT, value_down = 0.9, value_up = 0.0, name = _('Annunciator Lights ON/OFF'), category = _('_My Buttons')},	
+{down = int_light_commands.Knob_Instr_Lights,         up = int_light_commands.Knob_Instr_Lights,         cockpit_device_id = devices.LTINT, value_down = 1.0, value_up = 0.0, name = _('Instrument Lights ON/OFF'), category = _('_My Buttons')},
+{down = int_light_commands.Knob_Console_Lights,       up = int_light_commands.Knob_Console_Lights,       cockpit_device_id = devices.LTINT, value_down = 1.0, value_up = 0.0, name = _('Console Lights ON/OFF'), category = _('_My Buttons')},	
+{down = int_light_commands.Knob_Flood_Lights,         up = int_light_commands.Knob_Flood_Lights,         cockpit_device_id = devices.LTINT, value_down = 1.0, value_up = 0.0, name = _('Flood Lights ON/OFF'), category = _('_My Buttons')},
+{down = int_light_commands.Knob_Annunciator_Lights,   up = int_light_commands.Knob_Annunciator_Lights,   cockpit_device_id = devices.LTINT, value_down = 0.9, value_up = 0.0, name = _('Annunciator Lights ON/OFF'), category = _('_My Buttons')},	
+{down = int_light_commands.Switch_Compass_Light_Test, up = int_light_commands.Switch_Compass_Light_Test, cockpit_device_id = devices.LTINT, value_down = 1.0, value_up = 0.0, name = _('Test Lights ON/OFF'), category = _('_My Buttons')},
+{down = int_light_commands.Switch_Compass_Light_Test, up = int_light_commands.Switch_Compass_Light_Test, cockpit_device_id = devices.LTINT, value_down =-1.0, value_up = 0.0, name = _('Compass Light ON/OFF'), category = _('_My Buttons')},
+{down = int_light_commands.Switch_Compass_Light_Test,                                                    cockpit_device_id = devices.LTINT, value_down =-1.0,                 name = _('Compass Light ON'), category = _('_My Buttons')},
+{down = int_light_commands.Switch_Compass_Light_Test,                                                    cockpit_device_id = devices.LTINT, value_down = 0.0,                 name = _('Compass/Test Lights OFF'), category = _('_My Buttons')},
 
 -- DECS
 {down = engine_commands.Switch_H20_DUMP,      up = engine_commands.Switch_H20_DUMP,      cockpit_device_id = devices.DECS, value_down = 1.0, value_up = 0.0, name = _('H2O Dump Switch ON/OFF'), category = _('_My Buttons')},
