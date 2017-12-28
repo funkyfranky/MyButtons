@@ -13,23 +13,37 @@ swapAxes = false,
 
 keyCommands = {
 
--- fvh
-{down = device_commands.Button_13, up = device_commands.Button_13, cockpit_device_id = devices.WEAPON_SYSTEM,  value_down = 1.0, value_up = 0.0, name = _('Master Arm On/Off Toggle'), category = _('_My Buttons')},
-{down = device_commands.Button_15, up = device_commands.Button_15, cockpit_device_id = devices.ENGINE_SYSTEM,  value_down = 1.0, value_up = 0.0, name = _('MW-50 Switch On/Off'), category = _('_My Buttons')},
-{down = device_commands.Button_12, up = device_commands.Button_12, cockpit_device_id = devices.WEAPON_SYSTEM,  value_down = 1.0, value_up = 0.0, name = _('Jettison Fuselage Stores On/Off'), category = _('_My Buttons')},
-{down = device_commands.Button_12, up = device_commands.Button_25, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('CB Battery On/Off'), category = _('_My Buttons')},
-{down = device_commands.Button_11, up = device_commands.Button_24, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('CB Generator On/Off'), category = _('_My Buttons')},
-{down = device_commands.Button_13, up = device_commands.Button_26, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('CB Navigation Lights On/Off'), category = _('_My Buttons')},
+-- ff begin
 
-{down = device_commands.Button_1,  up = device_commands.Button_1,  cockpit_device_id = devices.EZ42_GUNSIGHT,  value_down = 1.0, value_up = 0.0, name = _('EZ42 Gunsight Gyro Power On/Off'), category = _('_My Buttons')},
-{down = device_commands.Button_11, up = device_commands.Button_11, cockpit_device_id = devices.EZ42_GUNSIGHT,  value_down = 1.0, value_up = 0.0, name = _('EZ42 Gunsight Night Lens Filter On/Off'), category = _('_My Buttons')},
+{down = device_commands.Button_13, up = device_commands.Button_13, cockpit_device_id = devices.WEAPON_SYSTEM,  value_down = 1.0, value_up = 0.0, name = _('Master Arm ON/OFF (Toggle Only)'), category = _('_My Buttons')},
+{down = device_commands.Button_15, up = device_commands.Button_15, cockpit_device_id = devices.ENGINE_SYSTEM,  value_down = 1.0, value_up = 0.0, name = _('MW-50 Switch ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_12, up = device_commands.Button_12, cockpit_device_id = devices.WEAPON_SYSTEM,  value_down = 1.0, value_up = 0.0, name = _('Jettison Fuselage Stores ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_12, up = device_commands.Button_25, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('CB Battery ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_11, up = device_commands.Button_24, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('CB Generator ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_13, up = device_commands.Button_26, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('CB Navigation Lights ON/OFF'), category = _('_My Buttons')},
 
-{down = device_commands.Button_2,  up = device_commands.Button_2,  cockpit_device_id = devices.FUEL_SYSTEM,    value_down = 0.0, value_up = 0.5, name = _('Fuel Gauge Selector Fwd/Off'), category = _('_My Buttons')},
-{down = device_commands.Button_2,  up = device_commands.Button_2,  cockpit_device_id = devices.FUEL_SYSTEM,    value_down = 1.0, value_up = 0.5, name = _('Fuel Gauge Selector Aft/Off'), category = _('_My Buttons')},
+{down = device_commands.Button_1,  up = device_commands.Button_1,  cockpit_device_id = devices.EZ42_GUNSIGHT,  value_down = 1.0, value_up = 0.0, name = _('EZ42 Gunsight Gyro Power ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_11, up = device_commands.Button_11, cockpit_device_id = devices.EZ42_GUNSIGHT,  value_down = 1.0, value_up = 0.0, name = _('EZ42 Gunsight Night Lens Filter ON/OFF'), category = _('_My Buttons')},
 
-{down = device_commands.Button_8, up = device_commands.Button_8,   cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 0.0, value_up = 1.0, name = _('Landing Gear Emergency Handle Push/Pull'), category = _('_My Buttons')},
-{down = device_commands.Button_8, up = device_commands.Button_8,   cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Landing Gear Emergency Handle Pull/Push'), category = _('_My Buttons')},
--- end fvh
+{down = device_commands.Button_2,  up = device_commands.Button_2,  cockpit_device_id = devices.FUEL_SYSTEM,    value_down = 0.0, value_up = 0.5, name = _('Fuel Gauge Selector FWD/CENTER'), category = _('_My Buttons')},
+{down = device_commands.Button_2,  up = device_commands.Button_2,  cockpit_device_id = devices.FUEL_SYSTEM,    value_down = 1.0, value_up = 0.5, name = _('Fuel Gauge Selector AFT/CENTER'), category = _('_My Buttons')},
+
+{down = device_commands.Button_8,  up = device_commands.Button_8,  cockpit_device_id  = devices.FUEL_SYSTEM,   value_down = 1.0, value_up =-1.0, name = _('Cold Start/Wind Screen Washer RIGHT/CENTER'), category = _('_My Buttons')},
+{down = device_commands.Button_8,  up = device_commands.Button_8,  cockpit_device_id  = devices.FUEL_SYSTEM,   value_down =-1.0, value_up = 1.0, name = _('Cold Start/Wind Screen Washer LEFT/CENTER'), category = _('_My Buttons')},
+
+{down = device_commands.Button_8,  up = device_commands.Button_8,  cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 0.0, value_up = 1.0, name = _('Landing Gear Emergency Handle PUSH/PULL'), category = _('_My Buttons')},
+{down = device_commands.Button_8,  up = device_commands.Button_8,  cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Landing Gear Emergency Handle PULL/PUSH'), category = _('_My Buttons')},
+
+{down = iCommandLeftEngineStop, up = iCommandLeftEngineStart, name = _('Throttle STOP/IDLE'), category = _('_My Buttons')},
+
+{down = device_commands.Button_5, up = device_commands.Button_7, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = 1.0, value_up = 1.0, name = _('Landing Gear RETRACT/EXTEND'), category = _('_My Buttons')},
+
+{down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_down = 1.0, value_up = 0.0, name = _('Clock STOP/START'), category = _('_My Buttons')},
+
+{down = device_commands.Button_8, up = device_commands.Button_8, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Main Rocket Switch ON/OFF'), category = _('_My Buttons')},
+
+-- ff end
+
 
 {down = iCommandEnginesStart, name = _('Start Procedure'), category = _('Cheat')},
 {down = iCommandEnginesStop, name = _('Stop Procedure'), category = _('Cheat')},
