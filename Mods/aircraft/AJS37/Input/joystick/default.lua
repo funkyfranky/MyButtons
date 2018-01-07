@@ -1,7 +1,5 @@
 local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
 join(res.keyCommands,{
-
-
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- begin custom assignments
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -23,6 +21,10 @@ join(res.keyCommands,{
 {down = 3723, up = 3723, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Landing Gear Lever Up/Down (toggle)'), category = _('_My Buttons')}, --working
 {down = 3301, up = 3302, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 1.0, name = _('Autopilot SPAK/ATT'), category = _('_My Buttons')}, --added v0.5
 {down = 3303, up = 3302, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 1.0, name = _('Autopilot HÖJD/ATT'), category = _('_My Buttons')}, --added v0.5
+{down = 3720, up = 3720, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Backup ADI Cage Depress/Release'), category = _('_My Buttons')}, --added v1.3
+{down = 3091, up = 3091, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 1.0, name = _('Snabbresning Depress/Release'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 0.015,            name = _("Backup Altimeter Setting Up"), category = _("_My Buttons")}, --added v1.3
+{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed =-0.015,            name = _("Backup Altimeter Setting Down"), category = _("_My Buttons")}, --added v1.3
 -- engine panel
 {down = 3001, up = 3001, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _("System Start Switch On/Off"), category = _("_My Buttons")}, --working
 {down = 3002, up = 3002, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Low-pressure Fuel Valve On/Off'), category = _('_My Buttons')}, --working
@@ -37,12 +39,28 @@ join(res.keyCommands,{
 {down = 3913, up = 3913, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Autopilot Maintenance Testing Mode On/Off'), category = _('_My Buttons')}, --added v0.6
 {down = 3919, up = 3919, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('DME Selector On/Off'), category = _('_My Buttons')}, --working
 {down = 3920, up = 3920, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('IFF/Transponder Power On/Off'), category = _('_My Buttons')}, --working
+{down = 3920,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('IFF/Transponder Power On'), category = _('_My Buttons')}, --added v1.3
+{down = 3920,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('IFF/Transponder Power Off'), category = _('_My Buttons')}, --added v1.3
 {down = 3921, up = 3921, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('IFF Channel Selector A+C/A'), category = _('_My Buttons')}, --working
+{down = 3921,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('IFF Channel Selector A+C'), category = _('_My Buttons')}, --added v1.3
+{down = 3921,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('IFF Channel Selector A'), category = _('_My Buttons')}, --added v1.3
 {down = 3924, up = 3924, cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0, value_up = 1.0, name = _('Flight Recorder Till/Fran'), category = _('_My Buttons')}, --working
 {down = 3924, up = 3924, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Flight Recorder Fran/Till'), category = _('_My Buttons')}, --working
 {down = 3925, up = 3925, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Data Cartridge Insert/Remove'), category = _('_My Buttons')}, --working
 {down = 3925,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('Data Cartridge Insert'), category = _('_My Buttons')}, --added v0.6
 {down = 3925,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('Data Cartridge Remove'), category = _('_My Buttons')}, --added v0.6
+{down = 3905,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('CB Autopilot SA Out'), category = _('_My Buttons')}, --added v1.3
+{down = 3905,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('CB Autopilot SA In'), category = _('_My Buttons')}, --added v1.3
+{down = 3906,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('CB High Alpha Warning Out'), category = _('_My Buttons')}, --added v1.3
+{down = 3906,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('CB High Alpha Warning In'), category = _('_My Buttons')}, --added v1.3
+{down = 3907,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('CB Trim System Out'), category = _('_My Buttons')}, --added v1.3
+{down = 3907,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('CB Trim System In'), category = _('_My Buttons')}, --added v1.3
+{down = 3908,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('CB CI/SI Out'), category = _('_My Buttons')}, --added v1.3
+{down = 3908,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('CB CI/SI In'), category = _('_My Buttons')}, --added v1.3
+{down = 3909,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('CB Ejection System Out'), category = _('_My Buttons')}, --added v1.3
+{down = 3909,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('CB Ejection System In'), category = _('_My Buttons')}, --added v1.3
+{down = 3910,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('CB Engine Out'), category = _('_My Buttons')}, --added v1.3
+{down = 3910,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('CB Engine In'), category = _('_My Buttons')}, --added v1.3
 -- lights
 {down = 3001, up = 3001, cockpit_device_id = devices.LIGHTS, value_down = 1.0, value_up = 0.0, name = _('Anti Collision Lights On/Off'), category = _('_My Buttons')}, --working
 {down = 3002, up = 3002, cockpit_device_id = devices.LIGHTS, value_down = 1.0, value_up = 0.0, name = _('Navigation Lights Bright/Off'), category = _('_My Buttons')}, --working
@@ -87,6 +105,10 @@ join(res.keyCommands,{
 {down = 3305,            cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.2,                 name = _("Weapon Interval 08 40m"), category = _("_My Buttons")}, -- added v0.6
 {down = 3305,            cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.1,                 name = _("Weapon Interval 09 50m"), category = _("_My Buttons")}, -- added v0.6
 {down = 3305,            cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.0,                 name = _("Weapon Interval 10 60m"), category = _("_My Buttons")}, -- added v0.6
+{down = 3320, up = 3320, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Fuel Tank Jettison Button Depress/Release'), category = _('_My Buttons')}, -- added v1.3
+{down = 3303, up = 3303, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Weapon Emergency Release Button Depress/Release'), category = _('_My Buttons')}, -- added v1.3
+{down = 3302, up = 3302, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Weapon Emergency Release Cover Open/Close'), category = _('_My Buttons')}, -- added v1.3
+{down = 3402, up = 3402, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('External Tank Release Cover Open/Close'), category = _('_My Buttons')}, -- added v1.3
 -- radios
 {down = 3008, up = 3008, cockpit_device_id = devices.FR22, value_down = 1.0, value_up = 1.0, name = _('FR22 Radio AM/FM (toggle)'), category = _('_My Buttons')}, --changed v1.0
 {down = 3210,            cockpit_device_id = devices.FR22, value_down = 1.0,                 name = _('FR22 Radio Flight 0'), category = _('_My Buttons')}, --added v1.2
@@ -99,6 +121,14 @@ join(res.keyCommands,{
 {down = 3217,            cockpit_device_id = devices.FR22, value_down = 1.0,                 name = _('FR22 Radio Flight 7'), category = _('_My Buttons')}, --added v1.2
 {down = 3218,            cockpit_device_id = devices.FR22, value_down = 1.0,                 name = _('FR22 Radio Flight 8'), category = _('_My Buttons')}, --added v1.2
 {down = 3219,            cockpit_device_id = devices.FR22, value_down = 1.0,                 name = _('FR22 Radio Flight 9'), category = _('_My Buttons')}, --added v1.2
+{pressed = 3003,         cockpit_device_id = devices.FR22, value_pressed = 0.1,              name = _('FR22 Radio Manual Frequency Setting Knob Inner Left Increase'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3003,         cockpit_device_id = devices.FR22, value_pressed =-0.1,             name = _('FR22 Radio Manual Frequency Setting Knob Inner Left Decrease'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3004,         cockpit_device_id = devices.FR22, value_pressed = 0.1,              name = _('FR22 Radio Manual Frequency Setting Knob Outer Left Increase'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3004,         cockpit_device_id = devices.FR22, value_pressed =-0.1,             name = _('FR22 Radio Manual Frequency Setting Knob Outer Left Decrease'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3005,         cockpit_device_id = devices.FR22, value_pressed = 0.1,              name = _('FR22 Radio Manual Frequency Setting Knob Inner Right Increase'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3005,         cockpit_device_id = devices.FR22, value_pressed =-0.1,             name = _('FR22 Radio Manual Frequency Setting Knob Inner Right Decrease'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3006,         cockpit_device_id = devices.FR22, value_pressed = 0.1,              name = _('FR22 Radio Manual Frequency Setting Knob Outer Right Increase'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3006,         cockpit_device_id = devices.FR22, value_pressed =-0.1,             name = _('FR22 Radio Manual Frequency Setting Knob Outer Right Decrease'), category = _('_My Buttons')}, --added v1.3
 -- walkman
 {down=3001, up = 3002, cockpit_device_id=devices.WALKMAN, value_down=1.0, value_up = 1.0, name= _('Walkman Play/Stop'), category = _('_My Buttons')}, --working
 -- radar
@@ -117,6 +147,7 @@ join(res.keyCommands,{
 {down = 3350, up = 3350, cockpit_device_id = devices.RADAR, value_down = 1.0, value_up = 0.0, name = _("Radar Passive Recce On/Off"), category = _("_My Buttons")}, --working
 {down = 3914, up = 3914, cockpit_device_id = devices.RADAR, value_down = 1.0, value_up = 0.0, name = _("Radar/EL Maintenance Test On/Off"), category = _("_My Buttons")}, --working
 {down = 3918, up = 3918, cockpit_device_id = devices.RADAR, value_down = 1.0, value_up = 0.0, name = _("Radar Ignition Coils On/Off"), category = _("_My Buttons")}, --working
+{down = 3922, up = 3922, cockpit_device_id = devices.RADAR, value_down = 1.0, value_up = 0.0, name = _("IFF Identification Depressed/Released"), category = _("_My Buttons")}, --added v1.3
 -- doppler
 {down = 3001, up = 3001, cockpit_device_id = devices.DOPPLER, value_down = 1.0, value_up = 1.0, name = _("Doppler Mode Land/Sea (toggle)"), category = _("_My Buttons")}, --working, toggle only
 -- navigation panel
@@ -132,6 +163,7 @@ join(res.keyCommands,{
 {down = 3009,            cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.4,                 name = _("Datapanel 4 BANA/GRANS"), category = _("_My Buttons")}, -- added v0.6
 {down = 3009,            cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.5,                 name = _("Datapanel 5 REF/LOLA"), category = _("_My Buttons")}, -- added v0.6
 {down = 3009,            cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.6,                 name = _("Datapanel 6 AKT/POS"), category = _("_My Buttons")}, -- added v0.6
+{down = 3101, up = 3101, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, value_up = 0.0, name = _("Data panel RENSA cover OPEN/CLOSE"), category = _("_My Buttons")}, -- added v1.3
 -- RWR
 {down = 3001, up = 3002, cockpit_device_id = devices.RWR, value_down = 1.0, value_up = 1.0,  name = _('RWR KB Off/Lights'), category = _('_My Buttons')}, --added v0.4
 {down = 3003, up = 3002, cockpit_device_id = devices.RWR, value_down = 1.0, value_up = 1.0,  name = _('RWR KB Lights+Sound/Lights'), category = _('_My Buttons')}, --added v0.4
@@ -141,6 +173,8 @@ join(res.keyCommands,{
 {down = 3010, up = 3010, cockpit_device_id = devices.COUNTERMEASURE, value_down = 1.0, value_up = 0.0, name = _('Countermeasure KB Stråk Mod 4/0'), category = _('_My Buttons')}, --added v0.4
 {down = 3028, up = 3028, cockpit_device_id = devices.COUNTERMEASURE, value_down = 0.0, value_up = 0.1, name = _('Countermeasure Chaff/Flares Selector R/RF'), category = _('_My Buttons')}, --added v0.4
 {down = 3028, up = 3028, cockpit_device_id = devices.COUNTERMEASURE, value_down = 0.2, value_up = 0.1, name = _('Countermeasure Chaff/Flares Selector F/RF'), category = _('_My Buttons')}, --added v0.4
+-- ERRORPANEL
+{down = 3004, up = 3004, cockpit_device_id = devices.ERRORPANEL,     value_down = 1.0, value_up = 0.0, name = _('KONTROLL Indicator System Test'), category = _('_My Buttons')}, --added v1.3
 -- begin added missing buttons
 {down = 3008, up = 3008, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Button L MÅL"), category = _("Navigation")}, --added v0.4
 {down = 3009, up = 3009, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Button LS"), category = _("Navigation")}, --added v0.4
@@ -149,76 +183,8 @@ join(res.keyCommands,{
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------ The follow stuff is only present in the keyboard default.lua (simply copied from there to make is usable for other input devices)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- CW/CCW for master mode and weapon selector (added v0.9)
---{combos = {{key = "Q", reformers = {"LCtrl","LAlt"}}}, down = 3669, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _("Mode select - turn clockwise"), category = _("Mode selector")}, --removed v1.2
---{combos = {{key = "Q", reformers = {"LCtrl","LShift"}}}, down = 3669, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = -1.0, name = _("Mode select - turn counterclockwise"), category = _("Mode selector")}, --removed v1.2
---{combos = {{key = "W", reformers = {"LShift","LCtrl"}}}, down = 3969, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = -1.0, name = _("Weapon selector turn clockwise"), category = _("Weapons")}, --removed v1.2
--- quick fix: added LShift modifier because of conflict with parking brake
---{combos = {{key = "W", reformers = {"LShift","LAlt","LCtrl"}}}, down = 3969, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("Weapon selector turn counterclockwise"), category = _("Weapons")}, --removed v1.2
---{combos = {{key = "R", reformers = {"LAlt","LCtrl"}}}, down = 3005, value_down = 0.1, cockpit_device_id = devices.RWR, name = _('Master Volume / Sidewinder Tone Up'), category = _('Countermeasures')}, --removed v1.0
---{combos = {{key = "R", reformers = {"LAlt","RAlt"}}},down = 3005, value_down = -0.1, cockpit_device_id = devices.RWR, name = _('Master Volume / Sidewinder Tone Down'), category = _('Countermeasures')}, --removed v1.0
--- Ground crew (added v0.8 by dannyq8)
---{combos = {{key = 'L', reformers = {'LCtrl', "LAlt"}}},down = 3501, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Cycle Ground Crew Loadout Selection'), category = _('Weapons')}, --removed v1.2
---{combos = {{key = 'F', reformers = {'LCtrl', "LAlt"}}},down = 3502, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Cycle Ground Crew Fuel Selection'), category = _('Weapons')}, --removed v1.2
---{combos = {{key = 'R', reformers = {'LCtrl', "LAlt"}}},down = 3503, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Cycle Ground Crew Regroup Selection'), category = _('Weapons')}, --removed v1.2
---{combos = {{key = 'Enter', reformers = {'LCtrl', "LAlt"}}},down = 3504, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Confirm Ground Crew Orders'), category = _('Weapons')}, --removed v1.2
--- Error panel
 {down = 3001, cockpit_device_id = devices.ERRORPANEL, value_down = 1.0,  name = _('Master caution reset'), category = _('Caution panel')},
---{down = 3002, up = 3002, cockpit_device_id = devices.ERRORPANEL, value_down = 1.0, value_up = 0, name = _('Check indicator lights'), category = _('Caution panel')}, --removed v1.2
---{down = 3003, cockpit_device_id = devices.ERRORPANEL, value_down = 1.0,  name = _('Toggle caution light full/half'), category = _('Caution panel')}, --removed v1.2
--- countermeasures
---{down = 3001, value_down = 1.0, cockpit_device_id = devices.RWR, name = _('RWR KB Off'), category = _('Countermeasures')}, --removed v1.0
---{down = 3002, value_down = 1.0, cockpit_device_id = devices.RWR, name = _('RWR KB Lights'), category = _('Countermeasures')}, removed v1.0
---{down = 3003, value_down = 1.0, cockpit_device_id = devices.RWR, name = _('RWR KB Lights/Sound'), category = _('Countermeasures')}, removed v1.0
---{down = 3001, value_down = 1.0, cockpit_device_id = devices.IFF, name = _('IK (IFF) On/Off'), category = _('Countermeasures')}, --removed v1.0
---{down = 3002, value_down = 1.0, cockpit_device_id = devices.IFF, name = _('IK (IFF) Code Up'), category = _('Countermeasures')}, --removed v1.0
---{down = 3002, value_down = -1.0, cockpit_device_id = devices.IFF, name = _('IK (IFF) Code Down'), category = _('Countermeasures')}, --removed v1.0
--- flight control
---{cockpit_device_id = devices.FLIGHTDATAUNIT,  down = 3716, up = 3716, value_down =-1.0, value_up =0.0, name = _('Emergency Trim Roll Left'), category = _('Flight Control')}, --removed v1.2
---{cockpit_device_id = devices.FLIGHTDATAUNIT,  down = 3716, up = 3716, value_down =1.0, value_up =0.0, name = _('Emergency Trim Roll Rght'), category = _('Flight Control')}, --removed v1.2
---{cockpit_device_id = devices.FLIGHTDATAUNIT,  down = 3717, up = 3717, value_down =-1.0, value_up =0.0, name = _('Emergency Trim Pitch Up'), category = _('Flight Control')}, --removed v1.2
---{cockpit_device_id = devices.FLIGHTDATAUNIT,  down = 3717, up = 3717, value_down =1.0, value_up =0.0, name = _('Emergency Trim Pitch Down'), category = _('Flight Control')}, --removed v1.2
 {down=iCommandPlaneEject,name = _('Eject (3 times)'), category = _('Flight Control')},
---{down = 3408, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down =1.0, name = _('Parking brake'), category = _('Flight Control')}, --removed v1.2
--- flight data
---{down = 3715, value_down = 1.0, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = -1.0, name = _("Altimeter setting pull-out"), category = _("Flight Data")}, --removed v1.2
---{down = 3002, cockpit_device_id = devices.RADARALT, value_down = 1.0, name = _("Radar altimeter switch"), category = _("Flight Data")}, --removed v1.2
--- lights fvh: removed commands v1.0 since they are now "officially" included (see below)
---{down = 3001, cockpit_device_id = devices.LIGHTS, value_down = -1.0, name = _('Anti collision lights switch'), category = _('Lights')},
---{down = 3002, cockpit_device_id = devices.LIGHTS, value_down = -2.0, name = _('Navigation lights switch'), category = _('Lights')},
---{down = 3003, cockpit_device_id = devices.LIGHTS, value_down = -1.0, name = _('Formation lights switch'), category = _('Lights')},
---{down = 3005, cockpit_device_id = devices.LIGHTS, value_down = -1.0, name = _('Position lights switch'), category = _('Lights')},
---{down = 3009, cockpit_device_id = devices.LIGHTS, value_down = -1.0, name = _('Taxi/landing lights switch'), category = _('Lights')},
---{down = 3001, value_down = 1.0, up = 3001, value_up = 0.0, cockpit_device_id = devices.ERRORPANEL, name = _('KONTROLL light test'), category = _('Lights')},
--- misc
---{down=3718, cockpit_device_id=devices.FLIGHTDATAUNIT, value_down=1.0, name = _('Oxygen lever'), category = _('Misc')}, --removed v1.2
--- mode selector
---{down = 3501, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _("Easy mode - Navigaton"), category = _("Mode selector")}, --removed v1.2
---{down = 3502, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _("Easy mode - Landing"), category = _("Mode selector")}, --removed v1.2
---{down = 3503, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _("Easy mode - Grond attack"), category = _("Mode selector")}, --removed v1.2
---{down = 3504, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _("Easy mode - Air-to-air"), category = _("Mode selector")}, --removed v1.2
--- motor
---{cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = _("Engine De-ice switch"), category = _("Motor")}, --removed v1.2
--- navigation
---{combos = {{key = 'H', reformers = {'RShift','RAlt','RCtrl'}}}, cockpit_device_id = devices.FLIGHTDATAUNIT, down = 3715, value_down =1.0,  name = _('Altimeter pull-out'), category = _('Navigation')}, --removed v1.2
---{cockpit_device_id = devices.FLIGHTDATAUNIT, down = 3714, up = 3714, value_down =-1.0, value_up =0.0, name = _('Magnetic correction left'), category = _('Navigation')}, --removed v1.2
---{cockpit_device_id = devices.FLIGHTDATAUNIT, down = 3714, up = 3714, value_down =1.0, value_up =0.0, name = _('Magnetic correction right'), category = _('Navigation')}, --removed v1.2
---{cockpit_device_id = devices.FLIGHTDATAUNIT, down = 3715, value_down =1.0,  name = _('Altimeter pull-out'), category = _('Navigation')}, --removed v1.2
---{down = 3510, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _("TILS rotary clockwise"), category = _("Navigation")}, --removed v1.2
---{down = 3510, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = -1.0, name = _("TILS rotary counterclockwise"), category = _("Navigation")}, --removed v1.2
---{down = 3511, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = -1.0, name = _("TILS rotary layer switch"), category = _("Navigation")},
---{pressed = 3404, up = 3404, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 1.0, value_up = 0, name = _('Seat adjustment up'), category = _('Navigation')}, --removed v1.2
---{pressed = 3404, up = 3404, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = -1.0, value_up = 0, name = _('Seat adjustment down'), category = _('Navigation')}, --removed v1.2
--- weapons
---{down = 3316, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'EP13 Brightness up', category = 'Weapons'}, --removed v1.0
---{down = 3316, value_down = -1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'EP13 Brightness down', category = 'Weapons'}, --removed v1.0
---{down = 3317, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'EP13 Contrast up', category = 'Weapons'}, -- removed v1.0
---{down = 3317, value_down = -1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'EP13 Contrast down', category = 'Weapons'}, --removed v1.0
---{combos = {{key = "J", reformers = {"RCtrl","RAlt"}}}, down = 3402, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = "Fuel tank jettison Cover", category = "Weapons"}, --removed v1.2
---{combos = {{key = "J", reformers = {"RCtrl","RShift"}}}, down = 3320, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = "Fuel tank jettison Button", category = "Weapons"}, --removed v1.2
---{down = iCommandPlaneDropFlareOnce, up = iCommandPlaneDropChaffOnce, name='Test command',category='Weapons'}, --removed v1.0
---{combos = {{key = "J", reformers = {"LCtrl","LAlt"}}}, down = 3302, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = "Weapon jettison Cover", category = "Weapons"}, --removed v1.2
---{combos = {{key = "J", reformers = {"LShift","LCtrl"}}}, down = 3303, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = "Weapon jettison Button", category = "Weapons"}, --removed v1.2
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- end custom assignments
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -590,10 +556,14 @@ join(res.axisCommands,{
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- begin custom assignments
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-{action = 3409, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Axis HUD Brightness Knob (50-100)')}, --working best with user defined curve
-{action = 3006, cockpit_device_id = devices.LIGHTS, name = _('Axis Panel Lights (50-100)')}, --working best with user definded curve
-{action = 3007, cockpit_device_id = devices.LIGHTS, name = _('Axis Flood Lights (50-100)')}, --working best with user defined curve
-{action = 3008, cockpit_device_id = devices.LIGHTS, name = _('Axis Instrument Lights (50-100)')}, --working best with user defined curve
+{action = 3409, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('HUD Brightness Knob'), category = _('_My Buttons')}, --working best with user defined curve
+{action = 3006, cockpit_device_id = devices.LIGHTS,         name = _('Panel Lights'),        category = _('_My Buttons')}, --working best with user defined curve
+{action = 3007, cockpit_device_id = devices.LIGHTS,         name = _('Flood Lights'),        category = _('_My Buttons')}, --working best with user defined curve
+{action = 3008, cockpit_device_id = devices.LIGHTS,         name = _('Instrument Lights'),   category = _('_My Buttons')}, --working best with user defined curve
+--{action = 3003, cockpit_device_id = devices.FR22,           name = _('Radio Manual Frequency Setting Knob Inner Left'),   category = _('_My Buttons')}, --working best with user defined curve
+--{action = 3004, cockpit_device_id = devices.FR22,           name = _('Radio Manual Frequency Setting Knob Outer Left'),   category = _('_My Buttons')}, --working best with user defined curve
+--{action = 3005, cockpit_device_id = devices.FR22,           name = _('Radio Manual Frequency Setting Knob Inner Right'),  category = _('_My Buttons')}, --working best with user defined curve
+--{action = 3006, cockpit_device_id = devices.FR22,           name = _('Radio Manual Frequency Setting Knob Outer Right'),  category = _('_My Buttons')}, --working best with user defined curve
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- end custom assignments
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------																																																					  

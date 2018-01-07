@@ -34,7 +34,7 @@ keyCommands = {
 {down = device_commands.Button_8,  up = device_commands.Button_8,  cockpit_device_id = devices.ELEC_INTERFACE,      value_down =-1.0, value_up = 0.0,  name = _('Inverter Main/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_8,  up = device_commands.Button_8,  cockpit_device_id = devices.ELEC_INTERFACE,      value_down = 1.0, value_up = 0.0,  name = _('Inverter Spare/Off'), category = _('_My Buttons')},
 
-{down = device_commands.Button_13, up = device_commands.Button_13, cockpit_device_id = devices.NAVLIGHT_SYSTEM,     value_down = 0.0, value_up = 1.0,  name = _('Nav Lights Bright/Dim'), category = _('_My Buttons')},
+{down = device_commands.Button_13, up = device_commands.Button_13, cockpit_device_id = devices.NAVLIGHT_SYSTEM,     value_down = 1.0, value_up = 0.0,  name = _('Nav Lights Bright/Dim'), category = _('_My Buttons')},
 {down = device_commands.Button_2,  up = device_commands.Button_2,  cockpit_device_id = devices.NAVLIGHT_SYSTEM,     value_down = 1.0, value_up = 0.0,  name = _('Nav Lights Steady/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_2,  up = device_commands.Button_2,  cockpit_device_id = devices.NAVLIGHT_SYSTEM,     value_down =-1.0, value_up = 0.0,  name = _('Nav Lights Flash/Off'), category = _('_My Buttons')},
 
@@ -88,7 +88,6 @@ keyCommands = {
 {down = iCommandRecoverHuman, name = _('Get New Plane - respawn'), category = _('General')},
 {down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {down = iCommandPlaneJump, name = _('Jump into other aircraft'), category = _('General')},
-{down = iCommandScreenShot, name = _('Screenshot'), category = _('General')},
 {down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {down = iCommandViewCoordinatesInLinearUnits, name = _('Info bar coordinate units toggle'), category = _('General')},
 --{down = iCommandCockpitShowPilotOnOff, name = _('Show Pilot Body'), category = _('General')},
@@ -298,13 +297,15 @@ keyCommands = {
 {pressed = device_commands.Button_4, cockpit_device_id = devices.PILOT_SIGHT, value_pressed = -0.5, name = _('Pilot Sight Elevation Decrease'), category = _('Pilot Sight')},
 {pressed = device_commands.Button_4, cockpit_device_id = devices.PILOT_SIGHT, value_pressed = 0.5, name = _('Pilot Sight Elevation Increase'), category = _('Pilot Sight')},
 
-
 -- External Cargo
-{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.CARGO_CAM, value_down = 1, value_up = 0,	name = _('Toggle External Cargo Camera'),		category = _("External Cargo")},
-{down = iCommandExtCargoHook,																											name = _('External Cargo Hook'),				category = _("External Cargo")},
-{down = iCommandExternalCargoAutounhook,																								name = _('External Cargo Autounhook'),			category = _("External Cargo")},
-{down = iCommandExternalCargoIndicator,																									name = _("External Cargo Indicator"),			category = _("External Cargo"), },
-{down = iCommandEmergencyCargoUnhook,																									name = _('External Cargo Emergency Unhook'),	category = _("External Cargo")},
+{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.CARGO_CAM, value_down = 1, value_up = 0,				name = _('Toggle External Cargo Camera'),		category = _("External Cargo")},
+{down = iCommandExtCargoHook,																														name = _('External Cargo Hook'),				category = _("External Cargo")},
+{down = iCommandExternalCargoAutounhook,																											name = _('External Cargo Autounhook'),			category = _("External Cargo")},
+{down = iCommandExternalCargoIndicator,																												name = _("External Cargo Indicator"),			category = _("External Cargo"), },
+{down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,																													name = _('External Cargo Pilot Unhook'),		category = _("External Cargo")},
+{down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,		name = _('External Cargo CoPilot Unhook'),		category = _("External Cargo")},
+{down = device_commands.Button_4, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, 								  value_down = 1,					name = _('External Cargo Safety'),				category = _("External Cargo")},
+																																																							 
 
 -- Weapon System
 {down = device_commands.Button_20, cockpit_device_id  = devices.WEAPON_SYS, value_down = 1.0, name = _('Armament Off/Safe/Armed Up'), category = _('Armament System')},

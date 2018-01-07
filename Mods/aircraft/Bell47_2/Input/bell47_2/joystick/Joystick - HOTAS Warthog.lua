@@ -26,7 +26,7 @@ keyCommands = {
 {down = device_commands.Button_8,  up = device_commands.Button_8,  cockpit_device_id = devices.ELEC_INTERFACE,      value_down =-1.0, value_up = 0.0,  name = _('Inverter Main/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_8,  up = device_commands.Button_8,  cockpit_device_id = devices.ELEC_INTERFACE,      value_down = 1.0, value_up = 0.0,  name = _('Inverter Spare/Off'), category = _('_My Buttons')},
 
-{down = device_commands.Button_13, up = device_commands.Button_13, cockpit_device_id = devices.NAVLIGHT_SYSTEM,     value_down = 0.0, value_up = 1.0,  name = _('Nav Lights Bright/Dim'), category = _('_My Buttons')},
+{down = device_commands.Button_13, up = device_commands.Button_13, cockpit_device_id = devices.NAVLIGHT_SYSTEM,     value_down = 1.0, value_up = 0.0,  name = _('Nav Lights Bright/Dim'), category = _('_My Buttons')},
 {down = device_commands.Button_2,  up = device_commands.Button_2,  cockpit_device_id = devices.NAVLIGHT_SYSTEM,     value_down = 1.0, value_up = 0.0,  name = _('Nav Lights Steady/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_2,  up = device_commands.Button_2,  cockpit_device_id = devices.NAVLIGHT_SYSTEM,     value_down =-1.0, value_up = 0.0,  name = _('Nav Lights Flash/Off'), category = _('_My Buttons')},
 
@@ -63,7 +63,6 @@ keyCommands = {
 {down = device_commands.Button_9,  up = device_commands.Button_9, cockpit_device_id  = devices.WEAPON_SYS,          value_down =-1.0,  value_up = 0.0,  name = _('Gun Selector LEFT/ALL'), category = _('_My Buttons')},
 -- end fvh
 
-
 {down = iCommandPlane_SpotLight_up, up = iCommandPlane_SpotLight_vert_stop,  name = _("Search light Retract"),  category = _("Ins Collective Stick"), },
 {down = 3002, cockpit_device_id = 7, value_down = 1,  name = _("Nav Lights Steady"),  category = _("Ins Overhead panel"), },
 {down = iCommandViewTower,  name = _("F3 Fly-By view"),  category = _("View"), },
@@ -77,7 +76,9 @@ keyCommands = {
 {down = 3002, up = 3002, cockpit_device_id = 1, value_down = 1, value_up = 0,  name = _("Main generator RESET"),  category = _("Ins Overhead panel"), },
 {down = iCommandPlane_SpotLight_right, up = iCommandPlane_SpotLight_vert_stop,  name = _("Search light Right"),  category = _("Ins Collective Stick"), },
 {down = iCommandExternalCargoAutounhook,  name = _("External Cargo Autounhook"),  category = _("External Cargo"), },
-{down = iCommandEmergencyCargoUnhook, name = _('External Cargo Emergency Unhook'), 	category = _("External Cargo")},
+{down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,	 name = _('External Cargo Pilot Unhook'), 	category = _("External Cargo")},
+{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, 		name = _('External Cargo Safety'),				category = _("External Cargo")},
+{down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,		name = _('External Cargo CoPilot Unhook'),		category = _("External Cargo")},
 {down = iCommandViewNavy,  name = _("F9 Ship view"),  category = _("View"), },
 {down = 3010, up = 3010, cockpit_device_id = 50, value_down = 1, value_up = 0,  name = _("Armed Lamp Test Button"),  category = _("Pedestal"), },
 {down = 3008, cockpit_device_id = 10, value_down = 1,  name = _("GMC Pointer #1 ADF/VOR"),  category = _("Systems"), },
@@ -307,7 +308,6 @@ keyCommands = {
 {down = 3008, cockpit_device_id = 21, value_down = 0.2,  name = _("Intercom Mode 1"),  category = _("Intercom Control Panel"), },
 {down = iCommandViewFree,  name = _("F11 Airport free camera"),  category = _("View"), },
 {down = iCommandRecoverHuman,  name = _("Get New Plane - respawn"),  category = _("General"), },
-{down = iCommandScreenShot,  name = _("Screenshot"),  category = _("General"), },
 {down = iCommandGraphicsFrameRate,  name = _("Frame rate counter - Service info"),  category = _("General"), },
 {down = 3008, cockpit_device_id = 21, value_down = 0.1,  name = _("Intercom Mode INT"),  category = _("Intercom Control Panel"), },
 {combos = {{key = "JOY_BTN3"}, }, down = iCommandExtCargoHook,  name = _("External Cargo Hook"),  category = _("External Cargo"), },
