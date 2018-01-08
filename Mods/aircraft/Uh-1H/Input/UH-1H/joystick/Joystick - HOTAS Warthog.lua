@@ -7,8 +7,9 @@ forceFeedback = {
 	trimmer		= 1,
 },
 keyCommands = {
-
--- fvh
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- funkyfranky begin custom assignments
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 {down = device_commands.Button_9,  up = device_commands.Button_9,  cockpit_device_id = devices.ELEC_INTERFACE,      value_down = 1.0, value_up = 0.0,  name = _('Battery Switch On/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_9,                                  cockpit_device_id = devices.ELEC_INTERFACE,      value_down = 1.0,                  name = _('Battery Switch On'), category = _('_My Buttons')},
 {down = device_commands.Button_9,                                  cockpit_device_id = devices.ELEC_INTERFACE,      value_down = 0.0,                  name = _('Battery Switch Off'), category = _('_My Buttons')},
@@ -61,7 +62,11 @@ keyCommands = {
 {down = device_commands.Button_8,  up = device_commands.Button_8, cockpit_device_id  = devices.WEAPON_SYS,          value_down =-1.0,  value_up = 0.0,  name = _('Armament Selector OFF/SAFE'), category = _('_My Buttons')},
 {down = device_commands.Button_9,  up = device_commands.Button_9, cockpit_device_id  = devices.WEAPON_SYS,          value_down = 1.0,  value_up = 0.0,  name = _('Gun Selector RIGHT/ALL'), category = _('_My Buttons')},
 {down = device_commands.Button_9,  up = device_commands.Button_9, cockpit_device_id  = devices.WEAPON_SYS,          value_down =-1.0,  value_up = 0.0,  name = _('Gun Selector LEFT/ALL'), category = _('_My Buttons')},
--- end fvh
+
+{down = device_commands.Button_8,  up = device_commands.Button_8, cockpit_device_id  = devices.IFF,                 value_down = 0.1,  value_up = 0.0,  name = _('Transponder APX-72 STBY/OFF'), category = _('_My Buttons')},
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- funkyfranky begin custom assignments
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 {down = iCommandPlane_SpotLight_up, up = iCommandPlane_SpotLight_vert_stop,  name = _("Search light Retract"),  category = _("Ins Collective Stick"), },
 {down = 3002, cockpit_device_id = 7, value_down = 1,  name = _("Nav Lights Steady"),  category = _("Ins Overhead panel"), },
