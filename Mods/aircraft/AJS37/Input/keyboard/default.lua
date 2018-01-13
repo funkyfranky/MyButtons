@@ -24,9 +24,23 @@ join(res.keyCommands,{
 {down = 3301, up = 3302, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 1.0, name = _('Autopilot SPAK/ATT'), category = _('_My Buttons')}, --added v0.5
 {down = 3303, up = 3302, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 1.0, name = _('Autopilot HÖJD/ATT'), category = _('_My Buttons')}, --added v0.5
 {down = 3720, up = 3720, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Backup ADI Cage Depress/Release'), category = _('_My Buttons')}, --added v1.3
-{down = 3091, up = 3091, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 1.0, name = _('Snabbresning Depress/Release'), category = _('_My Buttons')}, --added v1.3
-{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 0.015,            name = _("Backup Altimeter Setting Up"), category = _("_My Buttons")}, --added v1.3
-{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed =-0.015,            name = _("Backup Altimeter Setting Down"), category = _("_My Buttons")}, --added v1.3
+{down = 3091, up = 3091, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('FL37 ADI Fast Erect (Snabbresning) Depress/Release'), category = _('_My Buttons')}, --added v1.3
+{down = 3722, up = 3722, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Max G Reset Depress/Release'), category = _('_My Buttons')}, --added v1.3
+{down = 3305, up = 3305, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Roll Centering Depress/Release'), category = _('_My Buttons')}, --added v1.3
+{down = 3716, up = 3716, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Emergency Roll Trim (NÖDTRIM ROLL) Right(H)/Center'), category = _('_My Buttons')}, --added v1.3
+{down = 3716, up = 3716, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down =-1.0, value_up = 0.0, name = _('Emergency Roll Trim (NÖDTRIM ROLL) Left(V)/Center'), category = _('_My Buttons')}, --added v1.3
+{down = 3918, up = 3918, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Emergency Yaw Trim (SIDTRIM) Right(H)/Center'), category = _('_My Buttons')}, --added v1.3
+{down = 3918, up = 3918, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down =-1.0, value_up = 0.0, name = _('Emergency Yaw Trim (SIDTRIM) Left(V)/Center'), category = _('_My Buttons')}, --added v1.3
+{down = 3402, up = 3402, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Magnetic Declination Cover Open/Close'), category = _('_My Buttons')}, -- added v1.3
+{pressed = 3724,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 0.010,            name = _("Magnetic Declination Increase"), category = _("_My Buttons")}, --added v1.3
+{pressed = 3724,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed =-0.010,            name = _("Magnetic Declination Decrease"), category = _("_My Buttons")}, --added v1.3
+{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 0.005,            name = _("Backup Altimeter Setting Up - Slow"), category = _("_My Buttons")}, --added v1.3
+{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed =-0.005,            name = _("Backup Altimeter Setting Down - Slow"), category = _("_My Buttons")}, --added v1.3
+{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 0.015,            name = _("Backup Altimeter Setting Up - Normal"), category = _("_My Buttons")}, --added v1.3
+{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed =-0.015,            name = _("Backup Altimeter Setting Down - Normal"), category = _("_My Buttons")}, --added v1.3
+{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 0.045,            name = _("Backup Altimeter Setting Up - Fast"), category = _("_My Buttons")}, --added v1.3
+{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed =-0.045,            name = _("Backup Altimeter Setting Down - Fast"), category = _("_My Buttons")}, --added v1.3
+
 -- engine panel
 {down = 3001, up = 3001, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _("System Start Switch On/Off"), category = _("_My Buttons")}, --working
 {down = 3002, up = 3002, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Low-pressure Fuel Valve On/Off'), category = _('_My Buttons')}, --working
@@ -51,6 +65,7 @@ join(res.keyCommands,{
 {down = 3925, up = 3925, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Data Cartridge Insert/Remove'), category = _('_My Buttons')}, --working
 {down = 3925,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('Data Cartridge Insert'), category = _('_My Buttons')}, --added v0.6
 {down = 3925,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('Data Cartridge Remove'), category = _('_My Buttons')}, --added v0.6
+{down = 3000, up = 3000, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Missile Select Button (IR-RB FRAMSTEGN) Depress/Release'), category = _('_My Buttons')}, --added v1.3 (seems to be same button number as Cabin Air Valve)
 {down = 3905,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('CB Autopilot SA Out'), category = _('_My Buttons')}, --added v1.3
 {down = 3905,            cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0,                 name = _('CB Autopilot SA In'), category = _('_My Buttons')}, --added v1.3
 {down = 3906,            cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0,                 name = _('CB High Alpha Warning Out'), category = _('_My Buttons')}, --added v1.3
@@ -123,17 +138,18 @@ join(res.keyCommands,{
 {down = 3217,            cockpit_device_id = devices.FR22, value_down = 1.0,                 name = _('FR22 Radio Flight 7'), category = _('_My Buttons')}, --added v1.2
 {down = 3218,            cockpit_device_id = devices.FR22, value_down = 1.0,                 name = _('FR22 Radio Flight 8'), category = _('_My Buttons')}, --added v1.2
 {down = 3219,            cockpit_device_id = devices.FR22, value_down = 1.0,                 name = _('FR22 Radio Flight 9'), category = _('_My Buttons')}, --added v1.2
-{pressed = 3003,         cockpit_device_id = devices.FR22, value_pressed = 0.1,              name = _('FR22 Radio Manual Frequency Setting Knob Inner Left Increase'), category = _('_My Buttons')}, --added v1.3
-{pressed = 3003,         cockpit_device_id = devices.FR22, value_pressed =-0.1,             name = _('FR22 Radio Manual Frequency Setting Knob Inner Left Decrease'), category = _('_My Buttons')}, --added v1.3
-{pressed = 3004,         cockpit_device_id = devices.FR22, value_pressed = 0.1,              name = _('FR22 Radio Manual Frequency Setting Knob Outer Left Increase'), category = _('_My Buttons')}, --added v1.3
-{pressed = 3004,         cockpit_device_id = devices.FR22, value_pressed =-0.1,             name = _('FR22 Radio Manual Frequency Setting Knob Outer Left Decrease'), category = _('_My Buttons')}, --added v1.3
-{pressed = 3005,         cockpit_device_id = devices.FR22, value_pressed = 0.1,              name = _('FR22 Radio Manual Frequency Setting Knob Inner Right Increase'), category = _('_My Buttons')}, --added v1.3
-{pressed = 3005,         cockpit_device_id = devices.FR22, value_pressed =-0.1,             name = _('FR22 Radio Manual Frequency Setting Knob Inner Right Decrease'), category = _('_My Buttons')}, --added v1.3
-{pressed = 3006,         cockpit_device_id = devices.FR22, value_pressed = 0.1,              name = _('FR22 Radio Manual Frequency Setting Knob Outer Right Increase'), category = _('_My Buttons')}, --added v1.3
-{pressed = 3006,         cockpit_device_id = devices.FR22, value_pressed =-0.1,             name = _('FR22 Radio Manual Frequency Setting Knob Outer Right Decrease'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3003, up = 3003, cockpit_device_id = devices.FR22, value_pressed = 0.1, value_up = 0.0, name = _('FR22 Radio Manual Frequency Setting Knob Inner Left Increase'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3003, up = 3003, cockpit_device_id = devices.FR22, value_pressed =-0.1, value_up = 0.0, name = _('FR22 Radio Manual Frequency Setting Knob Inner Left Decrease'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3004, up = 3004, cockpit_device_id = devices.FR22, value_pressed = 0.1, value_up = 0.0, name = _('FR22 Radio Manual Frequency Setting Knob Outer Left Increase'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3004, up = 3004, cockpit_device_id = devices.FR22, value_pressed =-0.1, value_up = 0.0, name = _('FR22 Radio Manual Frequency Setting Knob Outer Left Decrease'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3005, up = 3005, cockpit_device_id = devices.FR22, value_pressed = 0.1, value_up = 0.0, name = _('FR22 Radio Manual Frequency Setting Knob Inner Right Increase'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3005, up = 3005, cockpit_device_id = devices.FR22, value_pressed =-0.1, value_up = 0.0, name = _('FR22 Radio Manual Frequency Setting Knob Inner Right Decrease'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3006, up = 3006, cockpit_device_id = devices.FR22, value_pressed = 0.1, value_up = 0.0, name = _('FR22 Radio Manual Frequency Setting Knob Outer Right Increase'), category = _('_My Buttons')}, --added v1.3
+{pressed = 3006, up = 3006, cockpit_device_id = devices.FR22, value_pressed =-0.1, value_up = 0.0, name = _('FR22 Radio Manual Frequency Setting Knob Outer Right Decrease'), category = _('_My Buttons')}, --added v1.3
 -- walkman
 {down=3001, up = 3002, cockpit_device_id=devices.WALKMAN, value_down=1.0, value_up = 1.0, name= _('Walkman Play/Stop'), category = _('_My Buttons')}, --working
 -- radar
+{pressed = 3208, up = 0.0, cockpit_device_id = devices.RADAR, value_pressed = 0.1, value_up = 0.0, name = _("Anti Jamming Mode (AS) Selector Up (test)"), category = _("_My Buttons")}, -- added v1.3
 {down = 3208,            cockpit_device_id = devices.RADAR, value_down = 0.0,                 name = _("Anti Jamming Mode (AS) Selector 0"), category = _("_My Buttons")}, -- added v0.6
 {down = 3208,            cockpit_device_id = devices.RADAR, value_down = 0.1,                 name = _("Anti Jamming Mode (AS) Selector 1"), category = _("_My Buttons")}, -- added v0.6
 {down = 3208,            cockpit_device_id = devices.RADAR, value_down = 0.2,                 name = _("Anti Jamming Mode (AS) Selector 2"), category = _("_My Buttons")}, -- added v0.6
@@ -181,6 +197,7 @@ join(res.keyCommands,{
 {down = 3008, up = 3008, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Button L MÅL"), category = _("Navigation")}, --added v0.4
 {down = 3009, up = 3009, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Button LS"), category = _("Navigation")}, --added v0.4
 {down = 3010, up = 3010, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Waypoint BX"), category = _("Navigation")}, --added v0.4
+-- end added missing buttons
 -- end added missing buttons
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------ end custom assignments
