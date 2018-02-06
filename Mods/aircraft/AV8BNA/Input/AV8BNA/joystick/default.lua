@@ -240,7 +240,6 @@ join(res.keyCommands,{
 -- funkyfranky end custom assignments
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
 	-- Master Modes
 	{down = iCommandHelicopter_PPR_button_K, name = _('Master Mode NAV'),	category = _('Master Modes')},
 	{down = iCommandHelicopter_PPR_button_H, name = _('Master Mode VSTOL'),	category = _('Master Modes')},
@@ -274,8 +273,8 @@ join(res.keyCommands,{
 	{pressed = iCommandThrottleDecrease,					up = iCommandThrottleStop,			name = _('Throttle DOWN'),			category = _('Flight Control')},
 	{pressed = iCommandPlaneCollectiveIncrease,				up = iCommandPlaneCollectiveStop,	name = _('Nozzle Rotation UP'),		category = _('Flight Control')},
 	{pressed = iCommandPlaneCollectiveDecrease,				up = iCommandPlaneCollectiveStop,	name = _('Nozzle Rotation DOWN'),	category = _('Flight Control')},
-	{down = iCommandHelicopter_CollectiveStopper_Up,		up = iCommandPlaneCollectiveStop,	name = _('STO STOP UP'),			category = _('Flight Control')},
-	{down = iCommandHelicopter_CollectiveStopper_Down,		up = iCommandPlaneCollectiveStop,	name = _('STO STOP DOWN'),			category = _('Flight Control')},
+	{pressed = iCommandHelicopter_CollectiveStopper_Up,		up = iCommandPlaneCollectiveStop,	name = _('STO STOP UP'),			category = _('Flight Control')},
+	{pressed = iCommandHelicopter_CollectiveStopper_Down,	up = iCommandPlaneCollectiveStop,	name = _('STO STOP DOWN'),			category = _('Flight Control')},
 	{pressed = iCommandPlaneTrimLeftRudder,					up = iCommandPlaneTrimStop,			name = _('Trim RUDDER LEFT'),		category = _('Flight Control')},
 	{pressed = iCommandPlaneTrimRightRudder,				up = iCommandPlaneTrimStop,			name = _('Trim RUDDER RIGHT'),		category = _('Flight Control')},
 	
@@ -343,7 +342,7 @@ join(res.keyCommands,{
 	{down = iCommandPlane_ABRIS_Axis_Push,					name = _('Cage/Uncage'),					category = _('HOTAS')},
 	
 	{down = iCommandPlane_HOTAS_CMS_Up,						name = _('Engine Air Start'),				category = _('HOTAS')},
-	{down = iCommandPlane_HOTAS_CMS_Down,					name = _('Emergency Flap Retraction'),		category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_CMS_Down, up = iCommandPlane_HOTAS_CMS_Off, name = _('Emergency Flap Retraction'),		category = _('HOTAS')},
 	
 	{down = iCommandPlane_HOTAS_MIC_SwitchUp,				name = _('COMM FWD: Select COMM 1'),		category = _('HOTAS')},
 	{down = iCommandPlane_HOTAS_MIC_SwitchDown,				name = _('COMM AFT: Select COMM 2'),		category = _('HOTAS')},
@@ -399,26 +398,26 @@ join(res.keyCommands,{
 	{down = iCommand_UV26_PowerCover,													name = _('Left MPCD Export View ON/OFF'),	category = _('Left MPCD')},
 	
 	-- Right MPCD
-	{down = iCommandPlaneRightMFD_OSB1 , up = iCommandPlaneRightMFD_OSB1_Off,  name = _('Right MFCD OSB 01'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB2 , up = iCommandPlaneRightMFD_OSB2_Off,  name = _('Right MFCD OSB 02'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB3 , up = iCommandPlaneRightMFD_OSB3_Off,  name = _('Right MFCD OSB 03'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB4 , up = iCommandPlaneRightMFD_OSB4_Off,  name = _('Right MFCD OSB 04'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB5 , up = iCommandPlaneRightMFD_OSB5_Off,  name = _('Right MFCD OSB 05'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB6 , up = iCommandPlaneRightMFD_OSB6_Off,  name = _('Right MFCD OSB 06'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB7 , up = iCommandPlaneRightMFD_OSB7_Off,  name = _('Right MFCD OSB 07'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB8 , up = iCommandPlaneRightMFD_OSB8_Off,  name = _('Right MFCD OSB 08'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB9 , up = iCommandPlaneRightMFD_OSB9_Off,  name = _('Right MFCD OSB 09'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB10, up = iCommandPlaneRightMFD_OSB10_Off, name = _('Right MFCD OSB 10'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB11, up = iCommandPlaneRightMFD_OSB11_Off, name = _('Right MFCD OSB 11'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB12, up = iCommandPlaneRightMFD_OSB12_Off, name = _('Right MFCD OSB 12'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB13, up = iCommandPlaneRightMFD_OSB13_Off, name = _('Right MFCD OSB 13'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB14, up = iCommandPlaneRightMFD_OSB14_Off, name = _('Right MFCD OSB 14'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB15, up = iCommandPlaneRightMFD_OSB15_Off, name = _('Right MFCD OSB 15'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB16, up = iCommandPlaneRightMFD_OSB16_Off, name = _('Right MFCD OSB 16'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB17, up = iCommandPlaneRightMFD_OSB17_Off, name = _('Right MFCD OSB 17'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB18, up = iCommandPlaneRightMFD_OSB18_Off, name = _('Right MFCD OSB 18'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB19, up = iCommandPlaneRightMFD_OSB19_Off, name = _('Right MFCD OSB 19'), category = _('Right MFCD')},
-	{down = iCommandPlaneRightMFD_OSB20, up = iCommandPlaneRightMFD_OSB20_Off, name = _('Right MFCD OSB 20'), category = _('Right MFCD')},
+	{down = iCommandPlaneRightMFD_OSB1 , up = iCommandPlaneRightMFD_OSB1_Off,  name = _('Right MPCD OSB 01'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB2 , up = iCommandPlaneRightMFD_OSB2_Off,  name = _('Right MPCD OSB 02'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB3 , up = iCommandPlaneRightMFD_OSB3_Off,  name = _('Right MPCD OSB 03'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB4 , up = iCommandPlaneRightMFD_OSB4_Off,  name = _('Right MPCD OSB 04'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB5 , up = iCommandPlaneRightMFD_OSB5_Off,  name = _('Right MPCD OSB 05'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB6 , up = iCommandPlaneRightMFD_OSB6_Off,  name = _('Right MPCD OSB 06'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB7 , up = iCommandPlaneRightMFD_OSB7_Off,  name = _('Right MPCD OSB 07'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB8 , up = iCommandPlaneRightMFD_OSB8_Off,  name = _('Right MPCD OSB 08'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB9 , up = iCommandPlaneRightMFD_OSB9_Off,  name = _('Right MPCD OSB 09'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB10, up = iCommandPlaneRightMFD_OSB10_Off, name = _('Right MPCD OSB 10'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB11, up = iCommandPlaneRightMFD_OSB11_Off, name = _('Right MPCD OSB 11'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB12, up = iCommandPlaneRightMFD_OSB12_Off, name = _('Right MPCD OSB 12'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB13, up = iCommandPlaneRightMFD_OSB13_Off, name = _('Right MPCD OSB 13'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB14, up = iCommandPlaneRightMFD_OSB14_Off, name = _('Right MPCD OSB 14'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB15, up = iCommandPlaneRightMFD_OSB15_Off, name = _('Right MPCD OSB 15'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB16, up = iCommandPlaneRightMFD_OSB16_Off, name = _('Right MPCD OSB 16'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB17, up = iCommandPlaneRightMFD_OSB17_Off, name = _('Right MPCD OSB 17'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB18, up = iCommandPlaneRightMFD_OSB18_Off, name = _('Right MPCD OSB 18'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB19, up = iCommandPlaneRightMFD_OSB19_Off, name = _('Right MPCD OSB 19'), category = _('Right MPCD')},
+	{down = iCommandPlaneRightMFD_OSB20, up = iCommandPlaneRightMFD_OSB20_Off, name = _('Right MPCD OSB 20'), category = _('Right MPCD')},
 	
 	{pressed = iCommandPlaneRightMFD_SYM_Up,		up = iCommandPlaneRightMFD_SYM_Stop,	name = _('Right MPCD SYM Increase'),	category = _('Right MPCD')},
 	{pressed = iCommandPlaneRightMFD_SYM_Dn,		up = iCommandPlaneRightMFD_SYM_Stop,	name = _('Right MPCD SYM Decrease'),	category = _('Right MPCD')},
@@ -498,9 +497,9 @@ join(res.keyCommands,{
 	{down = iCommandPlaneUFC_ALT,					name = _('UFC Altimeter Function Button'),				category = _('Up Front Control')},
 	{down = iCommandPlaneUFC_SEL_DOWN,				name = _('UFC EMCON Toggle Button'),					category = _('Up Front Control')},
 	{down = iCommandPlaneUFC_DEPR_DOWN, up = iCommandPlaneUFC_DEPR_UP,	name = _('UFC I/P Button'),			category = _('Up Front Control')},
-	-- ff: fixed press  --> pressed
-	{pressed = iCommandPlaneUFC_INTEN_INCREASE, 	name = _('UFC Display Brightness Increase'),			category = _('Up Front Control')},
-	{pressed = iCommandPlaneUFC_INTEN_DECREASE, 	name = _('UFC Display Brightness Decrease'),			category = _('Up Front Control')},
+	-- ff: press -> pressed
+	{pressed = iCommandPlaneUFC_INTEN_INCREASE,		name = _('UFC Display Brightness Increase'),			category = _('Up Front Control')},
+	{pressed = iCommandPlaneUFC_INTEN_DECREASE,		name = _('UFC Display Brightness Decrease'),			category = _('Up Front Control')},
 	
 	-- ODU
 	{down = iCommandPlaneCDU_1,						name = _('ODU Option 1'),								category = _('Up Front Control')},
@@ -610,6 +609,7 @@ join(res.axisCommands,{
 {action = iCommandWheelBrake,		name = _('Wheel Brakes')},
 {action = iCommandLeftWheelBrake,	name = _('Wheel Brake Left')},
 {action = iCommandRightWheelBrake,	name = _('Wheel Brake Right')},
+{action = iCommandPlaneThrustRight,	name = _('Nozzle STO Stop')},
 
 --HOTAS TDC
 {action = iCommandPlaneSelecterHorizontalAbs, name = _('TDC Slew Horizontal')},

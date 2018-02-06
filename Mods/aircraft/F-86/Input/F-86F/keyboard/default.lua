@@ -58,7 +58,7 @@ join(base.keyCommands,{
 {down = device_commands.Button_7, up = device_commands.Button_7, cockpit_device_id = devices.WEAPON_SYSTEM,	value_down = 1, value_up = 0, name = _('Demolition Bomb Arming Switch Nose&Tail/Off'), category = {_('_My Buttons')}},
 {down = device_commands.Button_7, up = device_commands.Button_7, cockpit_device_id = devices.WEAPON_SYSTEM,	value_down =-1, value_up = 0, name = _('Demolition Bomb Arming Switch Tail/Off'), category = {_('_My Buttons')}},
 
-{down = iCommandPlaneGearUp, up = iCommandPlaneGearUp, name = _('Landing Gear Up/Down'), category = {_('_My Buttons')}},
+{down = iCommandPlaneGearUp, up = iCommandPlaneGearDown, name = _('Landing Gear Up/Down'), category = {_('_My Buttons')}},
 
 {down = hydro_commands.F86_CockpitDeviceCommand_AlternateHydraulicOverrideSw, up = hydro_commands.F86_CockpitDeviceCommand_AlternateHydraulicOverrideSw, cockpit_device_id = devices.HYDRO_INTERFACE, value_down = 0, value_up = 1, name = _('Alternate Hydraulic Emergency Override Handle Pull/Push'), category = {_('_My Buttons')}},
 
