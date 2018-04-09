@@ -8,18 +8,23 @@ swapAxes = false,
 
 keyCommands = {
 
--- fvh
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- FF: Begin Changes.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Misc
 {down = iCommandPlane_APU_Start, 	up = iCommandPlane_APU_Off, 		name = _('APU Start/Off'), 			category = _('_My Buttons')},
 {down = iCommandPlane_EAC_ARM, 		up = iCommandPlane_EAC_OFF, 		name = _('EAC Arm/Off'), 			category = _('_My Buttons')},
 {down = iCommandPlane_RDR_ALTM_NRM, up = iCommandPlane_RDR_ALTM_DIS,	name = _('RDR ALTM Normal/Dis'),	category = _('_My Buttons')},
 {down = iCommandPlaneLGPLandLight, 	up = iCommandPlaneLGPLightsOff,		name = _('Lights Landing/Off'),     category = _('_My Buttons')},
 {down = iCommandPlaneLGPTaxiLight,  up = iCommandPlaneLGPLightsOff,     name = _('Lights Taxi/Off'),        category = _('_My Buttons')},
+{down = iCommandPlaneGearUp,        up = iCommandPlaneGearDown, 		name = _('Landing Gear Up/Down'),   category = _('_My Buttons')},
 
--- fvh flaps
+-- Flaps
 {down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.CPT_MECH, value_down = 1.0 ,value_up = 0.5, name = _('Flaps Up/Center'), category = _('_My Buttons')},
 {down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.CPT_MECH, value_down = 0.0 ,value_up = 0.5, name = _('Flaps Down/Center'), category = _('_My Buttons')},
 
--- fvh AHCP
+-- AHCP
 {down = iCommandPlaneAHCPMasterArm,   up = iCommandPlaneAHCPMasterSafe, name = _('Master switch ARM/SAFE'), category = _('_My Buttons')},
 {down = iCommandPlaneAHCPMasterTrain, up = iCommandPlaneAHCPMasterSafe,	name = _('Master switch TRAIN/SAFE'), category = _('_My Buttons')},
 {down = iCommandPlaneAHCPGUNPACArm,   up = iCommandPlaneAHCPGUNSafe,	name = _('GUN/PAC switch ARM/SAFE'), category = _('_My Buttons')},
@@ -37,7 +42,7 @@ keyCommands = {
 {down = device_commands.Button_8,     up = device_commands.Button_8, cockpit_device_id = devices.AHCP, value_down = 1.0 ,value_up = -1.0, name = _('CICU On/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_9,     up = device_commands.Button_9, cockpit_device_id = devices.AHCP, value_down = 1.0 ,value_up = -1.0, name = _('JTRS Datalink On/Off'), category = _('_My Buttons')},
 
--- fvh Electrical power control panel
+-- Electrical power control panel
 {down = device_commands.Button_1,     up = device_commands.Button_1, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, value_up = -1.0, name = _('APU Generator On/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_4,     up = device_commands.Button_4, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, value_up = -1.0, name = _('AC Generator Left Power/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_5,     up = device_commands.Button_5, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, value_up = -1.0, name = _('AC Generator Right Power/Off'), category = _('_My Buttons')},
@@ -46,7 +51,7 @@ keyCommands = {
 {down = iCommandElectricalPowerInverterSTBY, up = iCommandElectricalPowerInverterOFF, name = _('Inverter STBY/OFF'), category = _('_My Buttons')},
 {down = iCommandElectricalPowerInverterTEST, up = iCommandElectricalPowerInverterOFF, name = _('Inverter TEST/OFF'), category = _('_My Buttons')},
 
--- fvh radios
+-- Radios
 {down = device_commands.Button_8,  cockpit_device_id = devices.UHF_RADIO,    value_down = 0.1, name = _('UHF Radio On'), category = _('_My Buttons')},
 {down = device_commands.Button_8,  cockpit_device_id = devices.UHF_RADIO,    value_down =-0.1, name = _('UHF Radio Off'), category = _('_My Buttons')},
 {down = device_commands.Button_3,  cockpit_device_id = devices.VHF_AM_RADIO, value_down = 0.1, name = _('VHF/AM Radio On'), category = _('_My Buttons')},
@@ -57,7 +62,9 @@ keyCommands = {
 {down = device_commands.Button_3,     up = device_commands.Button_3,  cockpit_device_id = devices.VHF_AM_RADIO, value_down = 0.1, value_up =-0.1, name = _('VHF/AM Radio On/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_3,     up = device_commands.Button_3,  cockpit_device_id = devices.VHF_FM_RADIO, value_down = 0.1, value_up =-0.1, name = _('VHF/FM Radio On/Off'), category = _('_My Buttons')},
 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- FF: End Changes.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 {down = iCommandActivePauseOnOff, name = _('Active Pause'), category = _('Cheat')},
 {down = iCommandEnginesStart, name = _('Start Procedure'), category = _('Cheat')},
