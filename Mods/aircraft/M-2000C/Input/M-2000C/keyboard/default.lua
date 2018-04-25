@@ -5,7 +5,9 @@ dofile(cockpit.."command_defs.lua")
 
 join(res.keyCommands,{
 
-	-- fvh
+	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	-- ff: begin additional buttons
+	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	{down = iCommandPlaneCobra, up=iCommandPlaneCobra, value_down = 1, value_up = -1, name = _('FBW G-Limiter Mode On/Off (iCommand)'), category = _('_My Buttons')},
 	{down = 3422, up=3422, cockpit_device_id = 3, value_down = -1, value_up = 1, name = _('FBW G-Limiter Mode On/Off'), category = _('_My Buttons')},
 	{down = 3422, cockpit_device_id = 3, value_down = 1, name = _('FBW G-Limiter Mode On'), category = _('_My Buttons')},
@@ -172,11 +174,11 @@ join(res.keyCommands,{
 	--elements["PTN_387"] = default_2_position_tumb(_("Mode-C Switch"), devices.INSTPANEL, device_commands.Button_387, 387)
 	{down = device_commands.Button_383,            cockpit_device_id = devices.INSTPANEL,  value_down = 0.00,             name = _('IFF Power OFF'), category = _('_My Buttons')},
 	{down = device_commands.Button_383,            cockpit_device_id = devices.INSTPANEL,  value_down = 1.00,             name = _('IFF Power SECT'), category = _('_My Buttons')},
-	{down = device_commands.Button_383,            cockpit_device_id = devices.INSTPANEL,  value_down =-1.00,             name = _('IFF Power CONT'), category = _('_My Buttons')},	
+	{down = device_commands.Button_383,            cockpit_device_id = devices.INSTPANEL,  value_down =-1.00,             name = _('IFF Power CONT'), category = _('_My Buttons')},
 	
-	-- fvh end
-	
---]]
+	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	-- ff: end additional buttons
+	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 	--HOTAS
 	-- A. HOTAS Stick

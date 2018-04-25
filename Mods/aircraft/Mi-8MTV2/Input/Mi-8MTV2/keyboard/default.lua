@@ -41,6 +41,8 @@ join(base.keyCommands,{
 {							down = iCommandViewTransposeModeOn, up = iCommandViewTransposeModeOff,							name = _('Camera transpose mode on/off'),	category = _('View Cockpit')},
 {combos = {{key = 'T', reformers = {'LAlt'}}},	down = device_commands.Button_5, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('TrackIR Aiming On/Off'),		category = _('View Cockpit')},
 
+{combos = {{key = '3', reformers = {'LWin'}}},	down = device_commands.Button_6, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Cargo Hatch View'),		category = _('View Cockpit')},
+
 ------------------------------------------------
 -- External Cargo ------------------------------
 ------------------------------------------------
@@ -85,7 +87,7 @@ join(base.keyCommands,{
 {combos = {{key = 'Left'}},									pressed = iCommandPlaneLeftStart,	up = iCommandPlaneLeftStop,																					name = _('Cyclic - Bank Left'),				category = {_('Ins Cyclic Stick'), _('Flight Control')}},
 {combos = {{key = 'Right'}},								pressed = iCommandPlaneRightStart,	up = iCommandPlaneRightStop,																				name = _('Cyclic - Bank Right'),			category = {_('Ins Cyclic Stick'), _('Flight Control')}},
 
-{combos = {{key = 'Space'}},								down = iCommandPlaneFire,			up = iCommandPlaneFireOff,																					name = _('Release weapons'),				category = {_('Ins Cyclic Stick'), _('Armament System')}},
+{combos = {{key = 'Space'}},								down = iCommandPlaneFire,			up = iCommandPlaneFire, value_down = 1, value_up = 0,														name = _('Release weapons'),				category = {_('Ins Cyclic Stick'), _('Armament System')}},
 {															down = device_commands.Button_86,	cockpit_device_id = devices.WEAPON_SYS,		value_down = -1.0,												name = _('RS Button Cover - OPEN/CLOSE'),	category = {_('Ins Cyclic Stick'), _('Armament System')}},
 {															down = device_commands.Button_86,	cockpit_device_id = devices.WEAPON_SYS,		value_down = 1.0,												name = _('RS Button Cover - OPEN'),			category = {_('Ins Cyclic Stick'), _('Armament System')}},
 {															down = device_commands.Button_86,	cockpit_device_id = devices.WEAPON_SYS,		value_down = 0.0,												name = _('RS Button Cover - CLOSE'),		category = {_('Ins Cyclic Stick'), _('Armament System')}},

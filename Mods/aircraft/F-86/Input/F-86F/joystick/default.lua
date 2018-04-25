@@ -190,7 +190,7 @@ join(res.keyCommands,{
 
 -- Stick grip
 {combos = {{key = 'JOY_BTN6'}},	down = iCommandPlane_HOTAS_NoseWheelSteeringButton, up = iCommandPlane_HOTAS_NoseWheelSteeringButtonOff,								name = _('Nosewheel Steering Button'),			category = {_('Stick Grip'), _('Gear Systems')}},
-{combos = {{key = 'JOY_BTN1'}},	down = iCommandPlaneFire,							up = iCommandPlaneFireOff,															name = _('Trigger - SECOND DETENT(Gun Fire)'),	category = {_('Stick Grip'), _('Armament')}},
+{combos = defaultDeviceAssignmentFor("fire"),	down = iCommandPlaneFire,							up = iCommandPlaneFireOff,															name = _('Trigger - SECOND DETENT(Gun Fire)'),	category = {_('Stick Grip'), _('Armament')}},
 {								down = iCommandPlane_HOTAS_TriggerFirstStage,		up = iCommandPlane_HOTAS_TriggerFirstStage,	value_down = 0.5,	value_up = 0,		name = _('Trigger - FIRST DETENT'),				category = {_('Stick Grip'), _('Armament')}},
 {combos = {{key = 'JOY_BTN2'}}, down = iCommandPlanePickleOn,						up = iCommandPlanePickleOff,														name = _('Weapon Release'),						category = {_('Stick Grip'), _('Armament')}},
 

@@ -1,18 +1,9 @@
 dofile("Mods/aircraft/SA342/Cockpit/devices.lua")
-dofile("Mods/aircraft/SA342/Cockpit/devices.lua")
 dofile("Mods/aircraft/SA342/Cockpit/command_defs.lua")
 
 return {
 
 keyCommands = {
-
--- ff: begin additional buttons
-{down = device_commands.Button_3, cockpit_device_id = devices.FD, value_down = 0, name = _('Flare Dispense Off/Speed val=0'), category = _('_My Buttons')},
-{down = device_commands.Button_3, cockpit_device_id = devices.FD, value_down = 1, name = _('Flare Dispense Off/Speed val=1'), category = _('_My Buttons')},
-{down = device_commands.Button_49, cockpit_device_id = devices.ELECTRIC, value_down = 1,name = _('Starter On'), category = _('_My Buttons')},
-{down = device_commands.Button_50, cockpit_device_id = devices.ELECTRIC, value_down = 0,name = _('Starter Off'), category = _('_My Buttons')},
-{down = device_commands.Button_51, cockpit_device_id = devices.ELECTRIC, value_down =-1,name = _('Starter Vent.'), category = _('_My Buttons')},
--- ff: end
 
 -- Flight Test
 -- {combos = {{key = 'F', reformers = {'RCtrl'}}}, down = iCommandPlaneNav_THeadingTimeRangeF, name = _('SA342 Show Flight Test indicator') , category = 'Flight Test'},
@@ -29,7 +20,13 @@ keyCommands = {
 
 -- DEBUG
 -- {combos = {{key = 'D', reformers = {'LCtrl'}}}, down = iCommandPlaneNav_Wind, name = _('SA342 DEBUG Show'), category = 'DEBUG'},
--- {combos = {{key = 'D', reformers = {'LAlt'}}}, down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.SENSORS, value_down = 1, name = _('RESET GNumber'), category = 'DEBUG'},
+
+-- fvh
+{down = device_commands.Button_3, cockpit_device_id = devices.FD, value_down = 0, name = _('Flare Dispense Off/Speed val=0'), category = _('_My Buttons')},
+{down = device_commands.Button_3, cockpit_device_id = devices.FD, value_down = 1, name = _('Flare Dispense Off/Speed val=1'), category = _('_My Buttons')},
+{down = device_commands.Button_49, cockpit_device_id = devices.ELECTRIC, value_down = 1,name = _('Starter On'), category = _('_My Buttons')},
+{down = device_commands.Button_50, cockpit_device_id = devices.ELECTRIC, value_down = 0,name = _('Starter Off'), category = _('_My Buttons')},
+{down = device_commands.Button_51, cockpit_device_id = devices.ELECTRIC, value_down =-1,name = _('Starter Vent.'), category = _('_My Buttons')},
 
 -- [WP1]
 {down = device_commands.Button_16, cockpit_device_id = devices.WEAPONS, value_down = 1, name = _('SA342 Weapons Arm Down'), category = _('SA342 Weapons Panel')},
@@ -53,7 +50,6 @@ keyCommands = {
 {down = device_commands.Button_12, up = device_commands.Button_13,cockpit_device_id = devices.TV, value_down = 1, value_up = 0, name = _('SA342 TV Brightness-'), category = _('SA342 TV')},
 {down = device_commands.Button_14, up = device_commands.Button_15,cockpit_device_id = devices.TV, value_down = 1, value_up = 0, name = _('SA342 TV Cover+'), category = _('SA342 TV')},
 {down = device_commands.Button_16, up = device_commands.Button_17,cockpit_device_id = devices.TV, value_down = 1, value_up = 0, name = _('SA342 TV Cover-'), category = _('SA342 TV')},
-{combos = {{key = 'G', reformers = {'LAlt'}}} ,down = iCommandPlaneHook, name = _('TV Hook'), category = _('SA342 TV')},
 
 -- MAIN PANEL
 {down = device_commands.Button_21,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Battery On/Off'), category = _('SA342 Main Panel')},
@@ -114,20 +110,6 @@ keyCommands = {
 {down = device_commands.Button_13,up = device_commands.Button_14,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 FM1 Radio Volume-'), category = _('SA342 Intercom1')},
 {down = device_commands.Button_15,up = device_commands.Button_16,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 UHF Radio Volume+'), category = _('SA342 Intercom1')},
 {down = device_commands.Button_17,up = device_commands.Button_18,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 UHF Radio Volume-'), category = _('SA342 Intercom1')},
-{down = device_commands.Button_24,up = device_commands.Button_24,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 VHF AM Radio Select'), category = _('SA342 Intercom1')},
-{down = device_commands.Button_25,up = device_commands.Button_25,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 FM Radio Select'), category = _('SA342 Intercom1')},
-{down = device_commands.Button_26,up = device_commands.Button_26,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 UHF AM Radio Select'), category = _('SA342 Intercom1')},
-
--- INTERCOM2
-{down = device_commands.Button_37,up = device_commands.Button_38,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 VHF AM Radio Volume2 +'), category = _('SA342 Intercom2')},
-{down = device_commands.Button_39,up = device_commands.Button_40,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 VHF AM Radio Volume2 -'), category = _('SA342 Intercom2')},
-{down = device_commands.Button_41,up = device_commands.Button_42,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 FM1 Radio Volume2 +'), category = _('SA342 Intercom2')},
-{down = device_commands.Button_43,up = device_commands.Button_44,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 FM1 Radio Volume2 -'), category = _('SA342 Intercom2')},
-{down = device_commands.Button_45,up = device_commands.Button_46,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 UHF Radio Volume2 +'), category = _('SA342 Intercom2')},
-{down = device_commands.Button_47,up = device_commands.Button_48,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 UHF Radio Volume2 -'), category = _('SA342 Intercom2')},
-{down = device_commands.Button_54,up = device_commands.Button_54,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 VHF AM Radio Select2'), category = _('SA342 Intercom2')},
-{down = device_commands.Button_55,up = device_commands.Button_55,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 FM Radio Select2'), category = _('SA342 Intercom2')},
-{down = device_commands.Button_56,up = device_commands.Button_56,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 UHF AM Radio Select2'), category = _('SA342 Intercom2')},
 
 -- NADIR
 {down = device_commands.Button_25, up = device_commands.Button_25, cockpit_device_id = devices.NADIR, value_down = 1, value_up = 0,name = _('SA342 NADIR ENT'), category = _('SA342 NADIR')},
@@ -250,13 +232,6 @@ keyCommands = {
 {combos = {{key = '3', reformers = {'LAlt'}}}, down = device_commands.Button_6, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Station 3 Select'), category = _('SA342 Weapons Panel')},
 {combos = {{key = '4', reformers = {'LAlt'}}}, down = device_commands.Button_7, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Station 4 Select'), category = _('SA342 Weapons Panel')},
 {combos = {{key = 'D'}}, down = iCommandPlaneChangeWeapon, name = _('SA342 Cycle Station'), category = _('SA342 Weapons Panel')},
-{down = device_commands.Button_8, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Cle plus'), category = _('SA342 Weapons Panel')},
-{down = device_commands.Button_9, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Cle moins'), category = _('SA342 Weapons Panel')},
-{down = device_commands.Button_10, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Gisement plus'), category = _('SA342 Weapons Panel')},
-{down = device_commands.Button_11, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Gisement moins'), category = _('SA342 Weapons Panel')},
-{down = device_commands.Button_12, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Lum plus'), category = _('SA342 Weapons Panel')},
-{down = device_commands.Button_13, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Lum moins'), category = _('SA342 Weapons Panel')},
-
 
 -- RWR
 {down = device_commands.Button_8,  up = device_commands.Button_9, cockpit_device_id = devices.RWR, value_down = -1, value_up = 0,name = _('SA342 RWR OFF/ON'), category = _('SA342 RWR')},
@@ -304,10 +279,10 @@ keyCommands = {
 {combos = {{key = '.'}}, down = device_commands.Button_10, up = device_commands.Button_11, cockpit_device_id = devices.PE, value_down = 1, value_up = 0,name = _('SA342 Slew down'), category = _('SA342 Video Command Box')},
 {combos = {{key = ','}}, down = device_commands.Button_12, up = device_commands.Button_13, cockpit_device_id = devices.PE, value_down = 1, value_up = 0,name = _('SA342 Slew left'), category = _('SA342 Video Command Box')},
 {combos = {{key = '/'}}, down = device_commands.Button_14, up = device_commands.Button_15, cockpit_device_id = devices.PE, value_down = 1, value_up = 0,name = _('SA342 Slew right'), category = _('SA342 Video Command Box')},
-{combos = {{key = 'I', reformers = {'RCtrl'}}}, down = device_commands.Button_44, up = device_commands.Button_44, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Camera Centering'), category = _('SA342 Video Command Box')},
-{combos = {{key = '='}}, down = device_commands.Button_46, up = device_commands.Button_46, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Zoom +'), category = _('SA342 Video Command Box')},
-{combos = {{key = '-'}}, down = device_commands.Button_47, up = device_commands.Button_47, cockpit_device_id = devices.PE, value_down = -1, value_up = 0, name = _('SA342 Zoom -'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_45, cockpit_device_id = devices.PE, value_down = 1.0, name = _('SA342 Normal/IR View Toggle'), category = _('SA342 Video Command Box')},
+{combos = {{key = 'I', reformers = {'RCtrl'}}}, down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Camera Centering'), category = _('SA342 Video Command Box')},
+{combos = {{key = '='}}, down = device_commands.Button_3, up = device_commands.Button_3, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Zoom +'), category = _('SA342 Video Command Box')},
+{combos = {{key = '-'}}, down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.PE, value_down = -1, value_up = 0, name = _('SA342 Zoom -'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_2, cockpit_device_id = devices.PE, value_down = 1.0, name = _('SA342 Normal/IR View Toggle'), category = _('SA342 Video Command Box')},
 {down = device_commands.Button_17, cockpit_device_id = devices.PE, value_down = 1.0, name = _('SA342 MODE +'), category = _('SA342 Video Command Box')},
 {down = device_commands.Button_18, cockpit_device_id = devices.PE, value_down = 1.0, name = _('SA342 MODE -'), category = _('SA342 Video Command Box')},
 {down = device_commands.Button_19, cockpit_device_id = devices.PE, value_down = 1.0, name = _('SA342 CTH Cycle'), category = _('SA342 Video Command Box')},
@@ -316,6 +291,7 @@ keyCommands = {
 {down = device_commands.Button_39, up = device_commands.Button_39, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Power button'), category = _('SA342 Video Command Box')},
 
 -- Controls
+{combos = {{key = 'A'}}, down = device_commands.Button_13, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('SA342 Swap Controls multi'), category = _('Controls')},
 {combos = {{key = 'Enter', reformers = {'RCtrl'}}}, down = iCommandPlane_ShowControls, name = _('Show controls indicator') , category = _('Controls')},
 {combos = {{key = 'T', reformers = {'LCtrl'}}}, down = iCommandPlaneTrimCancel, name = _('Trimmer reset'), category = _('Controls')},
 -- Ins Cyclick Stick
@@ -339,6 +315,12 @@ keyCommands = {
 --{combos = {{key = '`'}}, down = ICommandToggleConsole, name = _('Toggle Console'), category = 'Debug'},
 
 --- Kneeboard
+-- {combos = {{key = ']'}}						   , 	down = device_commands.Button_1, cockpit_device_id = devices.KNEEBOARD, value_down = 1.0, name = _('Kneeboard Next Page')  , category = _('Kneeboard')},
+-- {combos = {{key = '['}}						   , 	down = device_commands.Button_2, cockpit_device_id = devices.KNEEBOARD, value_down = 1.0, name = _('Kneeboard Previous Page'), category = _('Kneeboard')},
+-- {combos = {{key = 'K', reformers = {'RShift'}}}, 	down = iCommandPlaneShowKneeboard,	name = _('Kneeboard ON/OFF'), category = _('Kneeboard')},
+-- {combos = {{key = 'K'}}						   , 	down = iCommandPlaneShowKneeboard, up = iCommandPlaneShowKneeboard ,value_down = 1.0,value_up = -1.0, name = _('Kneeboard glance view')  , category = _('Kneeboard')},
+-- {combos = {{key = 'K', reformers = {'RCtrl'}}} , 	down = device_commands.Button_3	, cockpit_device_id = devices.KNEEBOARD,value_down = 1.0, name = _('Kneeboard current position mark point')  , category = _('Kneeboard')},
+
 {combos = {{key = 'K', reformers = {'RShift'}}}, 			down = iCommandPlaneShowKneeboard	, name = _('Kneeboard ON/OFF'), category = _('Kneeboard')},
 {combos = {{key = 'K'}}						   , 			down = iCommandPlaneShowKneeboard	, up = iCommandPlaneShowKneeboard ,value_down = 1.0,value_up = -1.0, name = _('Kneeboard glance view')  , category = _('Kneeboard')},
 {combos = {{key = ']'}}						   , 			down = 3001		, cockpit_device_id  = 100, value_down = 1.0, name = _('Kneeboard Next Page')  , category = _('Kneeboard')},
@@ -362,7 +344,6 @@ keyCommands = {
 -- HEAD_WRAPPER
 {combos = {{key = '1'}}, down = device_commands.Button_1, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('SA342 Set Pilot Seat'), category = _('View Cockpit')},
 {combos = {{key = '2'}}, down = device_commands.Button_2, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('SA342 Set CoPilot Seat'), category = _('View Cockpit')},
-{combos = {{key = '3'}}, down = device_commands.Button_7, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('SA342 Set Gunner Seat'), category = _('View Cockpit')},
 {combos = {{key = 'G'}}, down = device_commands.Button_3, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('SA342 Pilot Sun glass On/Off'), category = _('View Cockpit')},
 {combos = {{key = 'L', reformers = {'LAlt'}}}, down = device_commands.Button_4, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('SA342 Microphone Light On/Off'), category = _('View Cockpit')},
 
@@ -385,7 +366,7 @@ keyCommands = {
 {combos = {{key = '\''}}, 									down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
 {combos = {{key = '\'', reformers = {'RShift'}}}, 			down = iCommandDebriefing, name = _('Debriefing window'), category = _('General')},
 {combos = {{key = '\'', reformers = {'LAlt'}}}, 			down = iCommandMissionResourcesManagement, name = _('Rearming and Refueling Window'), category = _('General')},
-{combos = {{key = 'J', reformers = {'RAlt'}}}, down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
+-- {combos = {{key = 'J', reformers = {'RAlt'}}}, down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
 
 -- View                                                    
 {combos = {{key = 'Num4'}}, pressed = iCommandViewLeftSlow, up = iCommandViewStopSlow, name = _('View Left slow'), category = _('View')},
@@ -528,15 +509,18 @@ keyCommands = {
 {combos = {{key = 'Num.', reformers = {'RCtrl'}}}, down = iCommandViewTerrainLock, name = _('Lock terrain view'), category = _('View Padlock')},
 
 --Night Vision Goggles
+--{combos = {{key = 'H', reformers = {'RShift'}}}		   , 	down    = iCommandViewNightVisionGogglesOn   , name = _('Night Vision Goggles On/Off')   , category = _('Night Vision Goggles')},
 {combos = {{key = 'H', reformers = {'RShift'}}}, down = device_commands.Button_5, up = device_commands.Button_5, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 1, value_up = 0, name = _('SA342 Night Vision Goggles On/Off'), category = _('Night Vision Goggles')},
-{combos = {{key = 'H', reformers = {'RShift','RCtrl'}}}, 	down = iCommandPlane_Helmet_Brightess_Up  , name = _('Night Vision Goggles Gain Up')  , category = _('Night Vision Goggles')},
-{combos = {{key = 'H', reformers = {'RShift','RAlt'}}} , 	down = iCommandPlane_Helmet_Brightess_Down, name = _('Night Vision Goggles Gain Down'), category = _('Night Vision Goggles')},
+{combos = {{key = 'H', reformers = {'RShift','RCtrl'}}}, 	pressed = iCommandPlane_Helmet_Brightess_Up  , name = _('Night Vision Goggles Gain Up')  , category = _('Night Vision Goggles')},
+{combos = {{key = 'H', reformers = {'RShift','RAlt'}}} , 	pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Night Vision Goggles Gain Down'), category = _('Night Vision Goggles')},
 
 -- Systems
 {combos = {{key = 'C', reformers = {'RCtrl'}}}, down = iCommandPlaneFonar, name = _('Cockpit door open/close'), category = _('Systems')},
+--{combos = {{key = 'C', reformers = {'RCtrl'}}}, down = device_commands.Button_16, cockpit_device_id = devices.FLIGHT_CONTROLS, value_down = 1,name = _('Cockpit door open/close'), category = _('Systems')},
+--{combos = {{key = 'E', reformers = {'LCtrl'}}}, down = iCommandPlaneEject, name = _('Eject (3 times)'), category = _('Systems')},
 
 -- Radio Communications
-{combos = {{key = '\\'}}, down = iCommandToggleCommandMenu, name = _('SA342 Communication menu'), category = _('Radio Communications')},
+{combos = {{key = '\\'}}, down = iCommandToggleCommandMenu, name = _('Communication menu'), category = _('Radio Communications')},
 {combos = {{key = 'E', reformers = {'LWin'}}}, down = iCommandPlaneDoAndHome, name = _('Flight - Complete mission and RTB'), category = _('Radio Communications')},
 --{combos = {{key = 'R', reformers = {'LWin'}}}, down = iCommandPlaneDoAndBack, name = _('Flight - Complete mission and rejoin'), category = _('Radio Communications')},
 {combos = {{key = 'T', reformers = {'LWin'}}}, down = iCommandPlaneFormation, name = _('Toggle formation'), category = _('Radio Communications')},
@@ -546,6 +530,7 @@ keyCommands = {
 {combos = {{key = 'G', reformers = {'LWin'}}}, down = iCommandPlane_EngageGroundTargets, name = _('Flight - Attack ground targets'), category = _('Radio Communications')},
 {combos = {{key = 'D', reformers = {'LWin'}}}, down = iCommandPlane_EngageAirDefenses, name = _('Flight - Attack air defenses'), category = _('Radio Communications')},
 {combos = {{key = '\\', reformers = {'LShift'}}}, down = ICommandSwitchDialog, name = _('Switch dialog'), category = _('Radio Communications')},
+--{combos = {{key = '\\', reformers = {'LCtrl'}}}, down = ICommandSwitchToCommonDialog, name = _('Switch to main menu'), category = ('Radio Communications')},
 
 -- Labels
 {down = iCommandMarkerState, name = _('All Labels'), category = _('Labels')},

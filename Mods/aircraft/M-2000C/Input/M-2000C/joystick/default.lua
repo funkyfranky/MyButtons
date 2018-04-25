@@ -5,7 +5,9 @@ dofile(cockpit.."command_defs.lua")
 
 join(res.keyCommands,{
 
-	-- fvh
+	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	-- ff: begin additional buttons
+	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	{down = iCommandPlaneCobra, up=iCommandPlaneCobra, value_down = 1, value_up = -1, name = _('FBW G-Limiter Mode On/Off (iCommand)'), category = _('_My Buttons')},
 	{down = 3422, up=3422, cockpit_device_id = 3, value_down = -1, value_up = 1, name = _('FBW G-Limiter Mode On/Off'), category = _('_My Buttons')},
 	{down = 3422, cockpit_device_id = 3, value_down = 1, name = _('FBW G-Limiter Mode On'), category = _('_My Buttons')},
@@ -175,8 +177,10 @@ join(res.keyCommands,{
 	--{down = device_commands.Button_383,            cockpit_device_id = devices.INSTPANEL,  value_down = 1.00,             name = _('IFF Power SECT'), category = _('_My Buttons')},
 	--{down = device_commands.Button_383,            cockpit_device_id = devices.INSTPANEL,  value_down =-1.00,             name = _('IFF Power CONT'), category = _('_My Buttons')},	
 	
-	-- fvh end
-	
+	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	-- ff: end additional buttons
+	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 	-- B. HOTAS Throttle
 	{down = iCommandPlaneModeCannon, up = iCommandPlaneModeGrid, name = _('Select AAGun/PCA'),   category = _('_My Buttons')},
 	{down = iCommandPlaneModeFI0,    up = iCommandPlaneModeGrid, name = _('Select Magic/PCA'),   category = _('_My Buttons')},
@@ -649,7 +653,7 @@ join(res.axisCommands,{
 {action = iCommandRightWheelBrake,	name = _('Wheel Brake Right')},
 {action = 3915,	cockpit_device_id = 7, name = _('Emergency Throttle')},
 
---- fvh: my axes commands
+--- ff: my axes commands
 {action = device_commands.Button_639, cockpit_device_id = devices.SYSLIGHTS, name = _('Dashboard U.V. Lights Knob')},
 {action = device_commands.Button_640, cockpit_device_id = devices.SYSLIGHTS, name = _('Dashboard Panel Lights Knob')},
 {action = device_commands.Button_641, cockpit_device_id = devices.SYSLIGHTS, name = _('Red Flood Lights Knob')},

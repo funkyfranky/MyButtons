@@ -329,7 +329,7 @@ join(res.keyCommands,{
 	{down = iCommandPlane_HOTAS_DataManagementSwitchUp,		up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select FWD: INS, IRMV/EOMV'),  			category = _('HOTAS')},
 	{down = iCommandPlane_HOTAS_DataManagementSwitchDown,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select AFT: DMT: LST/TV'),  				category = _('HOTAS')},
 	{down = iCommandPlane_HOTAS_DataManagementSwitchLeft,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select LEFT: MAP Center/Decenter'),		category = _('HOTAS')},
-	{down = iCommandPlane_HOTAS_DataManagementSwitchRight,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select RIGHT: FLIR/HUD-BH/WH'),			category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_DataManagementSwitchRight,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select RIGHT: FLIR BH/WH'),				category = _('HOTAS')},
 	{down = iCommandPlane_HOTAS_ChinaHatForward,			up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select DOWN: HUD Scene Reject/TGP'),		category = _('HOTAS')},
 	{down = iCommandPlane_HOTAS_NoseWheelSteeringButton,	up = iCommandPlane_HOTAS_NoseWheelSteeringButtonOff,name = _('AG Target Undesignate / NWS / FOV Toggle'),		category = _('HOTAS')},
 	
@@ -534,6 +534,11 @@ join(res.keyCommands,{
 	{down = iCommandPlaneLGPLandLight,					name = _('Landing Light Switch OFF-HVR-APP'),				category = _('Exterior Lights')},
 	{down = iCommandPlaneLGPLightsOff,					name = _('Landing Light Switch APP-HVR-OFF'),				category = _('Exterior Lights')},
 	{down = iCommandPlaneRotorTipLights,				name = _('Air Refueling Probe Light Toggle'),				category = _('Exterior Lights')},
+	
+	-- Cheat
+	{down = iCommandEnginesStart, name = _('Start Procedure'), category = _('Cheat')},
+    {down = iCommandEnginesStop,  name = _('Stop Procedure'),  category = _('Cheat')},
+
 	
 	-- DEBUG
 	{down = iCommandADI_ZeroPitchTrimLeft,  up = iCommandADI_Test_up,  name = _('AOA Indicator Up'), category = _('DEBUG')},

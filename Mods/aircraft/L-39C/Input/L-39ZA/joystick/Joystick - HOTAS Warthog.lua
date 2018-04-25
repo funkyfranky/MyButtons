@@ -324,7 +324,7 @@ keyCommands = {
 {	down = iCommandLeftEngineStart,																	name = _('Throttle - IDLE'),						category = _('Flight Control')},
 {	down = iCommandLeftEngineStop,																	name = _('Throttle - STOP'),						category = _('Flight Control')},
 {	down = device_commands.Button_12,	cockpit_device_id = devices.MECHANICS,	value_down = 1.0,	name = _('Throttle Toggle Position - IDLE/STOP'),	category = _('Flight Control')},
-{	down = iCommandLeftEngineStop,	up = iCommandLeftEngineStart,									name = _("Throttle - Idle/Stop"),					category = _("Engine")},
+{	down = iCommandLeftEngineStop,	up = iCommandLeftEngineStart,									name = _("Throttle - Idle/Stop (hold)"),					category = _("Engine")},
 -- Flaps
 {	down = iCommandPlaneFlaps,	up = iCommandPlaneFlaps,		value_down = 1,	value_up = 4,	name = _('Flaps Flight Position'),		category = {_('Flight Control'), _('Left Console')}},
 {	down = iCommandPlaneFlaps,	up = iCommandPlaneFlaps,		value_down = 2,	value_up = 5,	name = _('Flaps TakeOff Position'),		category = {_('Flight Control'), _('Left Console')}},

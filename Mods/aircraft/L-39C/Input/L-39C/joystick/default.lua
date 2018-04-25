@@ -7,9 +7,10 @@ local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua
 
 join(res.keyCommands,{
 
--- fvh
+-- ff: begin
 {down = device_commands.Button_14, up = device_commands.Button_14, cockpit_device_id = devices.RSBN_5, value_down = 0.2, value_up = 0.1, name = _('RSBN Mode Switch LANDING/NAVIGATION'), category = {_('RSBN-5 Control Panel'), _('Only Front Cockpit'), _('_My Buttons')}},
 {down = device_commands.Button_14, up = device_commands.Button_14, cockpit_device_id = devices.RSBN_5, value_down = 0.0, value_up = 0.1, name = _('RSBN Mode Switch GLIDE PATH/NAVIGATION'), category = {_('RSBN-5 Control Panel'), _('Only Front Cockpit'), _('_My Buttons')}},
+-- ff: end
 
 ------------------------------------------------
 -- Cheat -------------------------------------
@@ -55,7 +56,7 @@ join(res.keyCommands,{
 {down = iCommandLeftEngineStart,																	name = _('Throttle - IDLE'),						category = _('Flight Control')},
 {down = iCommandLeftEngineStop,																	name = _('Throttle - STOP'),						category = _('Flight Control')},
 {down = device_commands.Button_12,	cockpit_device_id = devices.MECHANICS,	value_down = 1.0,	name = _('Throttle Toggle Position - IDLE/STOP'),	category = _('Flight Control')},
-{down = iCommandLeftEngineStop,	up = iCommandLeftEngineStart,									name = _("Throttle - Idle/Stop"),					category = _("Engine")},
+{down = iCommandLeftEngineStop,	up = iCommandLeftEngineStart,									name = _("Throttle - Idle/Stop (hold)"),					category = _("Engine")},
 -- Flaps
 {down = iCommandPlaneFlaps,	up = iCommandPlaneFlaps,		value_down = 1,	value_up = 4,	name = _('Flaps Flight Position'),		category = {_('Flight Control'), _('Left Console')}},
 {down = iCommandPlaneFlaps,	up = iCommandPlaneFlaps,		value_down = 2,	value_up = 5,	name = _('Flaps TakeOff Position'),		category = {_('Flight Control'), _('Left Console')}},
@@ -170,7 +171,7 @@ join(res.keyCommands,{
 
 -- Stick
 {combos = {{key = 'JOY_BTN2'}},	down = 3022,	cockpit_device_id = devices.WEAPON_SYSTEM,	value_down = 1.0,	name = _('Weapon Fire Button Safety'),	category = _('Stick Grip')},
-{combos = {{key = 'JOY_BTN1'}},	down = iCommandPlaneFire,	up = iCommandPlaneFireOff,	name = _('Weapon Fire Button'),	category = _('Stick Grip')},
+{combos = defaultDeviceAssignmentFor("fire"),	down = iCommandPlaneFire,	up = iCommandPlaneFireOff,	name = _('Weapon Fire Button'),	category = _('Stick Grip')},
 
 
 ------------------------------------------------

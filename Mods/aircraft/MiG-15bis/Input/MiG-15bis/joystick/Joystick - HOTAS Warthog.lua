@@ -17,9 +17,9 @@ forceFeedback = {
 },
 keyCommands = {
 
--- fvh
+-- ff: begin additional buttons
 {action = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency,		cockpit_device_id = devices.RSI_6K,	name = _('RSI-6K Antenna Control Handle (fvh)'),	category = {_('RSI-6K Radio')}},
--- end fvh
+-- ff: end additional buttons
 
 -- Debug
 {down = iCommandMissionRestart, name = _('Restart Mission'), category = _('Debug')},

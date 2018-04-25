@@ -236,7 +236,7 @@ keyCommands = {
 
 -- Stick
 {combos = {{key = 'JOY_BTN2'}}, 	down = iCommandPlanePickleOn, up = iCommandPlanePickleOff, name = _('Weapon release'), category = _('Stick')},
-{combos = {{key = 'JOY_BTN1'}}, 	down = iCommandPlaneFire, up = iCommandPlaneFireOff, name = _('MG131/151 fire'), category = _('Stick')},
+{combos = defaultDeviceAssignmentFor("fire"), 	down = iCommandPlaneFire, up = iCommandPlaneFireOff, name = _('MG131/151 fire'), category = _('Stick')},
 {combos = {{key = 'JOY_BTN3'}},		down = device_commands.Button_19, up = device_commands.Button_19, cockpit_device_id  = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('MG131 fire'), category = _('Stick')},
 
 -- Flight Control
@@ -498,7 +498,7 @@ axisCommands = {
 {action = device_commands.Button_7, cockpit_device_id  = devices.EZ42_GUNSIGHT, name = _('EZ42 Gunsight Target Distance Control')},
 {action = device_commands.Button_17, cockpit_device_id  = devices.EZ42_GUNSIGHT, name = _('EZ42 Gunsight Altitude Correction')},
 
--- fvh
+-- ff: additonal axes
 {action = device_commands.Button_13, cockpit_device_id  = devices.CONTROL_SYSTEM,     name = _('Radiator Flaps Control'),category = _('My Axes')},
 {action = device_commands.Button_1,  cockpit_device_id  = devices.ALTIMETER,          name = _('Altimeter Pressure Set'),category = _('My Axes')},
 {action = device_commands.Button_1,  cockpit_device_id  = devices.ARTIFICIAL_HORIZON, name = _('Artificial Horizon Cage'),category = _('My Axes')},

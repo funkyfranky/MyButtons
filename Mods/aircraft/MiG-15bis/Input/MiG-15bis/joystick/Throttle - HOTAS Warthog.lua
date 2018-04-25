@@ -17,9 +17,9 @@ forceFeedback = {
 },
 keyCommands = {
 
--- fvh
+-- ff: begin additional buttons
 {action = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency,		cockpit_device_id = devices.RSI_6K,	name = _('RSI-6K Antenna Control Handle (fvh)'),	category = {_('RSI-6K Radio')}},
--- end fvh
+-- ff: end additional buttons
 
 -- Debug
 {down = iCommandMissionRestart, name = _('Restart Mission'), category = _('Debug')},
@@ -252,8 +252,8 @@ keyCommands = {
 -- Systems
 {down = iCommandPlaneAirBrake,		up = iCommandPlaneAirBrake,		value_down = 1,	value_up = 0,	name = _('Airbrake Button'),		category = _('Systems')},
 {down = control_commands.Mig15_Command_AirBrakeSwitch_EXT, cockpit_device_id = devices.CONTROL_INTERFACE, 	value_down = 1, name = _('Airbrake Switch, Toggle'), category = _('Systems')},
-{down = iCommandPlaneAirBrakeOn,	up = iCommandPlaneAirBrakeOn,	value_down = 1,	value_up = 0,	name = _('Airbrake Switch, OPEN'),	category = _('Systems')},
-{down = iCommandPlaneAirBrakeOff,	up = iCommandPlaneAirBrakeOff, 	value_down = 1,	value_up = 0,	name = _('Airbrake Switch, CLOSE'),	category = _('Systems')},
+{combos = {{key = "JOY_BTN8"}},		down = iCommandPlaneAirBrakeOn,	up = iCommandPlaneAirBrakeOn,	value_down = 1,	value_up = 0,	name = _('Airbrake Switch, OPEN'),	category = _('Systems')},
+{combos = {{key = "JOY_BTN7"}},		down = iCommandPlaneAirBrakeOff,	up = iCommandPlaneAirBrakeOff, 	value_down = 1,	value_up = 0,	name = _('Airbrake Switch, CLOSE'),	category = _('Systems')},
 {down = iCommandPlaneFlaps,					name = _('Wing Flaps Handle, Up/Down'),	category = _('Systems')},
 {down = iCommandPlaneFlapsOn,				name = _('Wing Flaps Handle, Down'),		category = _('Systems')},
 {down = iCommandPlaneFlapsOff,				name = _('Wing Flaps Handle, Up'),		category = _('Systems')},

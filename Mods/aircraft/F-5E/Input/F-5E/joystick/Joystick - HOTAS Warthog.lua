@@ -815,7 +815,7 @@ join(res.keyCommands,{
 ----------------------------------------------
 --				TEST FEATURE!!!				--
 -- Weapon/CMDS Adjustment
-{	down = weapons_commands.ChangeHighCapRate,		cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change LAU-3/-60 Firing Rate - Single/Ripple(17.2ms)/Ripple(60ms)'),		category = {_('Ground Adjustment')}},
+{	down = weapons_commands.ChangeHighCapRate,		cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change LAU-3/-60 Firing Rate - Single/Ripple(17ms)/Ripple (20ms)/Ripple(60ms)'),		category = {_('Ground Adjustment')}},
 {	down = weapons_commands.ChangeLowCapRate,		cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change LAU-68 Firing Rate - Single/Ripple(60ms)'),						category = {_('Ground Adjustment')}},
 {	down = cmds_commands.ChangeChaffBurst,			cockpit_device_id = devices.CMDS,				value_down = 1,	name = _('Change Chaff Burst Count - 1/2/3/4/6/8'),									category = {_('Ground Adjustment')}},
 {	down = cmds_commands.ChangeChaffSalvo,			cockpit_device_id = devices.CMDS,				value_down = 1,	name = _('Change Chaff Salvo Count - 1/2/4/8/C'),									category = {_('Ground Adjustment')}},
@@ -823,7 +823,7 @@ join(res.keyCommands,{
 {	down = cmds_commands.ChangeChaffSalvoIntv,		cockpit_device_id = devices.CMDS,				value_down = 1,	name = _('Change Chaff Salvo Interval (seconds) - 1/2/3/4/5/8/R'),					category = {_('Ground Adjustment')}},
 {	down = cmds_commands.ChangeFlareBurst,			cockpit_device_id = devices.CMDS,				value_down = 1,	name = _('Change Flare Burst Count - 1/2/4/8/C'),									category = {_('Ground Adjustment')}},
 {	down = cmds_commands.ChangeFlareBurstIntv,		cockpit_device_id = devices.CMDS,				value_down = 1,	name = _('Change Flare Burst Interval (seconds) - 3/4/6/8/10'),						category = {_('Ground Adjustment')}},
-{	down = weapons_commands.ChangeLaserCode100,		cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change Laser Code, Hundreds (1..8)'),		category = {_('Ground Adjustment')}},
+{	down = weapons_commands.ChangeLaserCode100,		cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change Laser Code, Hundreds (5..7)'),		category = {_('Ground Adjustment')}},
 {	down = weapons_commands.ChangeLaserCode10,		cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change Laser Code, Tens (1..8)'),			category = {_('Ground Adjustment')}},
 {	down = weapons_commands.ChangeLaserCode1,		cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change Laser Code, Ones (1..8)'),			category = {_('Ground Adjustment')}},
 ----------------------------------------------

@@ -14,7 +14,9 @@ forceFeedback = {
 
 
 keyCommands = {
--- fvh
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- ff: begin addtional buttons
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Magnetos Toggles
 {down = device_commands.Button_15, up = device_commands.Button_15, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Magneto 1 On/Off'), category = _('_My Buttons')},
 {down = device_commands.Button_17, up = device_commands.Button_17, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Magneto 2 On/Off'), category = _('_My Buttons')},
@@ -66,7 +68,9 @@ keyCommands = {
 {down = device_commands.Button_51, up = device_commands.Button_51, cockpit_device_id = devices.CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Canopy Open/Close'), category = _('_My Buttons')},
 -- Side Door Movement Controls
 {down = device_commands.Button_59, up = device_commands.Button_59, cockpit_device_id = devices.CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Side Door Open/Close'), category = _('_My Buttons')},
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- ff: end addtional buttons
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Temporary ------------------------------------------------------------------------------
 {down = iCommandEnginesStart, name = _('Start Procedure'), category = _('Cheat')},
@@ -680,7 +684,6 @@ axisCommands = {
 {                                                           action = device_commands.Button_12, cockpit_device_id = devices.WEAPONS, name = _('Input.SpitfireLFMkIX.gun_sight_span_slider'), category = _('Gunsight')},
 -- Gun Sight Dimmer
 {                                                           action = device_commands.Button_22, cockpit_device_id = devices.WEAPONS, name = _('Input.SpitfireLFMkIX.gun_sight_illumination_slider'), category = _('Gunsight')},
-{                                                           action = device_commands.Button_20, cockpit_device_id = devices.WEAPONS, name = _('My Gunsight illumination'), category = _('Gunsight')},
 -- ----------------------------------------------------------------------------------------
 
 

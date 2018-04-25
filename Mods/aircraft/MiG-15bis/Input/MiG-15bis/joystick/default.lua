@@ -6,9 +6,9 @@ local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua
 
 join(res.keyCommands,{
 
--- fvh
+-- ff: begin additional buttons
 {action = RSI_6K_commands.Mig15_Command_RSI6K_SetReceiverFrequency,		cockpit_device_id = devices.RSI_6K,	name = _('RSI-6K Antenna Control Handle (fvh)'),	category = {_('RSI-6K Radio')}},
--- end fvh
+-- ff: end additional buttons
 
 -- Cheat
 {down = iCommandEnginesStart, name = _('Auto Start'),	category = _('Cheat')},
@@ -223,7 +223,7 @@ join(res.keyCommands,{
 -- Stick
 {									down = device_commands.Button_10, cockpit_device_id  = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Guns Safety Cover'), category = _('Stick')},
 {combos = {{key = 'JOY_BTN2'}}, 	down = iCommandPlanePickleOn, up = iCommandPlanePickleOff, name = _('Weapon Release Button'), category = _('Stick')},
-{combos = {{key = 'JOY_BTN1'}}, 	down = iCommandPlaneFire, up = iCommandPlaneFireOff, name = _('NR-23 Cannon Fire Button'), category = _('Stick')},
+{combos = defaultDeviceAssignmentFor("fire"), 	down = iCommandPlaneFire, up = iCommandPlaneFireOff, name = _('NR-23 Cannon Fire Button'), category = _('Stick')},
 {combos = {{key = 'JOY_BTN3'}},		down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id  = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('N-37D Cannon Fire Button'), category = _('Stick')},
 
 -- ASP-3N
@@ -272,7 +272,6 @@ join(res.axisCommands,{
 {action = RSI_6K_commands.Mig15_Command_RSI6K_Volume_AXIS,					cockpit_device_id = devices.RSI_6K,	name = _('RSI-6K Audio Volume Knob'),		category = {_('RSI-6K Radio')}},
 {action = RSI_6K_commands.Mig15_Command_RSI6K_SetTransmitterFrequency_AXIS,	cockpit_device_id = devices.RSI_6K,	name = _('RSI-6K Wave Control Handle'),		category = {_('RSI-6K Radio')}},
 {action = RSI_6K_commands.Mig15_Command_RSI6K_SetAntennaFrequency_AXIS,		cockpit_device_id = devices.RSI_6K,	name = _('RSI-6K Antenna Control Handle'),	category = {_('RSI-6K Radio')}},
-
 
 -- Right Panel
 {action = hydraulic_commands.Mig15_Command_EmergencyFlapsValve_AXIS,	cockpit_device_id = devices.HYDROSYS_INTERFACE,	name = _('Emergency Flaps Valve'),	category = {_('Right Panel')}},

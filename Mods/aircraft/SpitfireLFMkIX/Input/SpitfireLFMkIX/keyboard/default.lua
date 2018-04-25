@@ -307,11 +307,11 @@ keyCommands = {
 {combos = {{key = 'Q', reformers = {'RShift'}}},            down = device_commands.Button_98, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.clock_mode'), category = _('Front Dash')},
 
 -- Magnetos Toggles
-{                                                           down = device_commands.Button_15, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.magneto0_0'), category = _('Engine Controls')},
-{                                                           down = device_commands.Button_15, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 0.0, name = _('Input.SpitfireLFMkIX.magneto0_1'), category = _('Engine Controls')},
+{                                                           down = device_commands.Button_15, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 0.0, name = _('Input.SpitfireLFMkIX.magneto0_0'), category = _('Engine Controls')},
+{                                                           down = device_commands.Button_15, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.magneto0_1'), category = _('Engine Controls')},
 {combos = {{key = 'End', reformers = {'LShift'}}},          down = device_commands.Button_16, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.magneto0'), category = _('Engine Controls')},
-{                                                           down = device_commands.Button_17, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.magneto1_0'), category = _('Engine Controls')},
-{                                                           down = device_commands.Button_17, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 0.0, name = _('Input.SpitfireLFMkIX.magneto1_1'), category = _('Engine Controls')},
+{                                                           down = device_commands.Button_17, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 0.0, name = _('Input.SpitfireLFMkIX.magneto1_0'), category = _('Engine Controls')},
+{                                                           down = device_commands.Button_17, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.magneto1_1'), category = _('Engine Controls')},
 {combos = {{key = 'End', reformers = {'RShift'}}},          down = device_commands.Button_18, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.magneto1'), category = _('Engine Controls')},
 
 -- Supercharger Mode Toggle
@@ -385,10 +385,10 @@ keyCommands = {
 {                                                           down = device_commands.Button_18, cockpit_device_id = devices.WEAPONS, value_down = 0.0, name = _('Input.SpitfireLFMkIX.gun_sight_master_0'), category = _('Gunsight')},
 {                                                           down = device_commands.Button_19, cockpit_device_id = devices.WEAPONS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.gun_sight_master'), category = _('Gunsight')},
 -- Gun Sight Dimmer
-{                                                           pressed = device_commands.Button_21, cockpit_device_id = devices.TERTIARY_CONTROLS, value_pressed = 1.0, name = _('Input.SpitfireLFMkIX.gun_sight_illumination_plus'), category = _('Gunsight')},
-{                                                           pressed = device_commands.Button_21, cockpit_device_id = devices.TERTIARY_CONTROLS, value_pressed = -1.0, name = _('Input.SpitfireLFMkIX.gun_sight_illumination_minus'), category = _('Gunsight')},
+{                                                           pressed = device_commands.Button_21, cockpit_device_id = devices.WEAPONS, value_pressed = 1.0, name = _('Input.SpitfireLFMkIX.gun_sight_illumination_plus'), category = _('Gunsight')},
+{                                                           pressed = device_commands.Button_21, cockpit_device_id = devices.WEAPONS, value_pressed = -1.0, name = _('Input.SpitfireLFMkIX.gun_sight_illumination_minus'), category = _('Gunsight')},
 -- TODO make available only in slider configuration:
---{                                                           action = device_commands.Button_22, cockpit_device_id = devices.TERTIARY_CONTROLS, name = _('Input.SpitfireLFMkIX.gun_sight_illumination_slider'), category = _('Gunsight')},
+--{                                                           action = device_commands.Button_22, cockpit_device_id = devices.WEAPONS, name = _('Input.SpitfireLFMkIX.gun_sight_illumination_slider'), category = _('Gunsight')},
 -- ----------------------------------------------------------------------------------------
 
 

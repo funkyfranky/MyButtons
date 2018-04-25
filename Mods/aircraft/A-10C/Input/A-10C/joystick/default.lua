@@ -1,7 +1,3 @@
-local cockpit = folder.."../../../Cockpit/Scripts/"
-dofile(cockpit.."devices.lua")
-dofile(cockpit.."command_defs.lua")
-
 return {
 
 forceFeedback = {
@@ -261,7 +257,7 @@ keyCommands = {
 
 -- HOTAS
 {combos = {{key = 'JOY_BTN2'}}, 	down = iCommandPlanePickleOn, up = iCommandPlanePickleOff, name = _('Weapon release'), category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN1'}}, 	down = iCommandPlane_HOTAS_TriggerSecondStage, up = iCommandPlane_HOTAS_TriggerSecondStage_Off, name = _('Gun Trigger'), category = _('HOTAS')},
+{combos = defaultDeviceAssignmentFor("fire"), 	down = iCommandPlane_HOTAS_TriggerSecondStage, up = iCommandPlane_HOTAS_TriggerSecondStage_Off, name = _('Gun Trigger'), category = _('HOTAS')},
 {					down = iCommandPlane_HOTAS_TriggerFirstStage , up = iCommandPlane_HOTAS_TriggerFirstStage_Off, name = _('Gun Trigger (first stage)'), category = _('HOTAS')},
 
 

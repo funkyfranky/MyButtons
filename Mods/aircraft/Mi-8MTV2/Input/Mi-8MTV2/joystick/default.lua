@@ -13,7 +13,7 @@ ignore_features(res.keyCommands,{
 join(res.keyCommands,{
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- funkyfranky
+-- ff: begin additional buttons
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------
@@ -86,7 +86,7 @@ join(res.keyCommands,{
 {down = device_commands.Button_27, up = device_commands.Button_27, cockpit_device_id = devices.WEAPON_SYS, value_down = 1.0, value_up = 0.0, name = _('Weapon Switch Safe/Armed'), category = {_('_My Buttons')}},
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- funkyfranky
+-- ff: end additional buttons
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------
@@ -163,7 +163,7 @@ join(res.keyCommands,{
 {	pressed = iCommandPlaneLeftStart,	up = iCommandPlaneLeftStop,																			name = _('Cyclic - Bank Left'),			category = {_('Ins Cyclic Stick'), _('Flight Control')}},
 {	pressed = iCommandPlaneRightStart,	up = iCommandPlaneRightStop,																		name = _('Cyclic - Bank Right'),		category = {_('Ins Cyclic Stick'), _('Flight Control')}},
 
-{combos = {{key = 'JOY_BTN2'}},	down = iCommandPlaneFire,			up = iCommandPlaneFireOff,																					name = _('Release weapons'),				category = {_('Ins Cyclic Stick'), _('Armament System')}},
+{combos = {{key = 'JOY_BTN2'}},	down = iCommandPlaneFire,			up = iCommandPlaneFire,value_down = 1, value_up = 0,														name = _('Release weapons'),				category = {_('Ins Cyclic Stick'), _('Armament System')}},
 {								down = device_commands.Button_86,	cockpit_device_id = devices.WEAPON_SYS,		value_down = -1.0,												name = _('RS Button Cover - OPEN/CLOSE'),	category = {_('Ins Cyclic Stick'), _('Armament System')}},
 {								down = device_commands.Button_86,	cockpit_device_id = devices.WEAPON_SYS,		value_down = 1.0,												name = _('RS Button Cover - OPEN'),			category = {_('Ins Cyclic Stick'), _('Armament System')}},
 {								down = device_commands.Button_86,	cockpit_device_id = devices.WEAPON_SYS,		value_down = 0.0,												name = _('RS Button Cover - CLOSE'),		category = {_('Ins Cyclic Stick'), _('Armament System')}},
@@ -1152,7 +1152,7 @@ join(res.keyCommands,{
 join(res.axisCommands,{
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- funkyfranky
+-- ff: begin additional axes
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 {action = device_commands.Button_5,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Left Group 1 Rheostat")},
@@ -1163,7 +1163,7 @@ join(res.axisCommands,{
 {action = device_commands.Button_10, cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Central Group 2 Rheostat")},
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- funkyfranky
+-- ff: end additional axes
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- joystick axes

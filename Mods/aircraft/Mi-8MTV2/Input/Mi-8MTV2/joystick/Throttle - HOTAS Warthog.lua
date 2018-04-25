@@ -18,7 +18,7 @@ forceFeedback = {
 keyCommands = {
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- funkyfranky
+-- ff: begin additonal buttons
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ------------------------------------------------
@@ -85,7 +85,7 @@ keyCommands = {
 {down = device_commands.Button_27, up = device_commands.Button_27, cockpit_device_id = devices.WEAPON_SYS, value_down = 1.0, value_up = 0.0, name = _('Weapon Switch Safe/Armed'), category = {_('_My Buttons')}},
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- funkyfranky
+-- ff: end additonal buttons
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Debug
@@ -349,7 +349,7 @@ keyCommands = {
 {	pressed = iCommandPlaneLeftStart,	up = iCommandPlaneLeftStop,																			name = _('Cyclic - Bank Left'),			category = {_('Ins Cyclic Stick'), _('Flight Control')}},
 {	pressed = iCommandPlaneRightStart,	up = iCommandPlaneRightStop,																		name = _('Cyclic - Bank Right'),		category = {_('Ins Cyclic Stick'), _('Flight Control')}},
 
-{	down = iCommandPlaneFire,			up = iCommandPlaneFireOff,																			name = _('Release weapons'),			category = {_('Ins Cyclic Stick'), _('Armament System')}},
+{	down = iCommandPlaneFire,			up = iCommandPlaneFire, value_down = 1, value_up = 0,													name = _('Release weapons'),			category = {_('Ins Cyclic Stick'), _('Armament System')}},
 {down = device_commands.Button_86,	cockpit_device_id = devices.WEAPON_SYS,		value_down = -1.0,												name = _('RS Button Cover - OPEN/CLOSE'),	category = {_('Ins Cyclic Stick'), _('Armament System')}},
 {down = device_commands.Button_86,	cockpit_device_id = devices.WEAPON_SYS,		value_down = 1.0,												name = _('RS Button Cover - OPEN'),			category = {_('Ins Cyclic Stick'), _('Armament System')}},
 {down = device_commands.Button_86,	cockpit_device_id = devices.WEAPON_SYS,		value_down = 0.0,												name = _('RS Button Cover - CLOSE'),		category = {_('Ins Cyclic Stick'), _('Armament System')}},
@@ -1331,7 +1331,7 @@ keyCommands = {
 axisCommands = {
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- funkyfranky
+-- ff: begin additonal axes
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 {action = device_commands.Button_5,  cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Left Group 1 Rheostat")},
@@ -1342,7 +1342,7 @@ axisCommands = {
 {action = device_commands.Button_10, cockpit_device_id = devices.LIGHT_SYSTEM, name = _("Red Lights Brightness Central Group 2 Rheostat")},
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- funkyfranky
+-- ff: end additonal axes
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 {action = iCommandViewHorizontalAbs			, name = _('Absolute Camera Horizontal View')},
