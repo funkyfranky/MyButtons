@@ -310,6 +310,8 @@ join(res.keyCommands,{
 	{down = iCommandPlaneCircuitBreaker_10, 	name = _('Hide/Show Control Stick'),	category = _('Pilot & Seat Controls')},
 	{down = iCommandPlaneCircuitBreaker_11,		name = _('Hide/Show Throttle'),			category = _('Pilot & Seat Controls')},
 	{down = iCommandViewNightVisionGogglesOn,	name = _('Helmet Visor/NVG Toggle'),	category = _('Pilot & Seat Controls')},
+	{down = iCommandPlane_Helmet_Brightess_Up,		name = _('NVG Brightness Up'),			category = _('Pilot & Seat Controls')},
+	{down = iCommandPlane_Helmet_Brightess_Down,	name = _('NVG Brightness Down'),		category = _('Pilot & Seat Controls')},
 	
 	-- HOTAS
 	-- Stick
