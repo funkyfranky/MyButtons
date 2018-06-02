@@ -28,6 +28,8 @@ join(res.keyCommands,{
 { down = elec_commands.BattSw, up = elec_commands.BattSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down = -1.0, value_up =  0.0, name = _('Battery Switch ORIDE/OFF'), category = {_('_My Buttons')}},
 { down = elec_commands.LGenSw, up = elec_commands.LGenSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  1.0, value_up =  0.0, name = _('Left Generator Control Switch NORM/OFF'), category = {_('_My Buttons')}},
 { down = elec_commands.RGenSw, up = elec_commands.RGenSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  1.0, value_up =  0.0, name = _('Right Generator Control Switch NORM/OFF'), category = {_('_My Buttons')}},
+{ down = elec_commands.LGenSw, up = elec_commands.LGenSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  0.0, value_up =  1.0, name = _('Left Generator Control Switch OFF/MORM'), category = {_('_My Buttons')}},
+{ down = elec_commands.RGenSw, up = elec_commands.RGenSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  0.0, value_up =  1.0, name = _('Right Generator Control Switch OFF/NORM'), category = {_('_My Buttons')}},
 
 -- LANDING GEAR
 { down = iCommandPlaneGearUp, up = iCommandPlaneGearDown, name = _('Landing Gear Control Handle UP/DOWN'), category = {_('_My Buttons')}},
