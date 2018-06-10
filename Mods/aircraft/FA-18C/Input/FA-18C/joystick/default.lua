@@ -12,6 +12,8 @@ join(res.keyCommands,{
 
 -- SMS
 { down = SMS_commands.MasterArmSw, up = SMS_commands.MasterArmSw, cockpit_device_id = devices.SMS, value_down =  1.0, value_up = 0.0, name = _('Master Arm Switch ARM/OFF'), category = {_('_My Buttons')}},
+{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.2, value_up = 0.1, name = _('IR Cooling Switch OFF/NORM'), category = {_('_My Buttons')}},
+{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.1, value_up = 0.2, name = _('IR Cooling Switch NORM/OFF'), category = {_('_My Buttons')}},
 
 -- CONTROL INTERFACE
 { down = ctrl_commands.FlapSw, up = ctrl_commands.FlapSw, cockpit_device_id = devices.CONTROL_INTERFACE,  value_down =  1.0, value_up = 0.0, name = _('FLAP Switch AUTO/HALF'), category = {_('_My Buttons')}},
@@ -21,7 +23,8 @@ join(res.keyCommands,{
 { down = extlights_commands.LdgTaxi, up = extlights_commands.LdgTaxi, cockpit_device_id = devices.EXT_LIGHTS, value_down =  1.0, value_up =  0.0, name = _('LDG/TAXI LIGHT Switch ON/OFF'), category = {_('_My Buttons')}},
 
 -- GEAR INTERFACE
-{ down = gear_commands.AntiSkidSw, up = gear_commands.AntiSkidSw, cockpit_device_id = devices.GEAR_INTERFACE, value_down =  1.0, value_up =  0.0, name = _('Anti Skid Switch ON/OFF'), category = {_('_My Buttons')}},
+{ down = gear_commands.AntiSkidSw,           up = gear_commands.AntiSkidSw,           cockpit_device_id = devices.GEAR_INTERFACE, value_down =  1.0, value_up = 0.0, name = _('Anti Skid Switch ON/OFF'), category = {_('_My Buttons')}},
+{ down = gear_commands.EmergParkHandleOnOff, up = gear_commands.EmergParkHandleOnOff, cockpit_device_id = devices.GEAR_INTERFACE, value_down = -1.0, value_up = 1.0, name = _('Emergency/Parking Brake Handle PULL/STOW'), category = {_('_My Buttons')}},
 
 -- ELEC INTERFACE
 { down = elec_commands.BattSw, up = elec_commands.BattSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  1.0, value_up =  0.0, name = _('Battery Switch ON/OFF'), category = {_('_My Buttons')}},
@@ -38,6 +41,13 @@ join(res.keyCommands,{
 { down = HUD_commands.HUD_SymbBrightSelKnob, up = HUD_commands.HUD_SymbBrightSelKnob, cockpit_device_id = devices.HUD, value_down =  1.0, value_up = 0.0, name = _('HUD Symbology Brightness Selector Knob DAY/NIGHT'), category = {_('_My Buttons')}},
 { down = HUD_commands.HUD_AltitudeSw,        up = HUD_commands.HUD_AltitudeSw,        cockpit_device_id = devices.HUD, value_down =  1.0, value_up = 0.0, name = _('Altitude Switch BARO/RDR'), category = {_('_My Buttons')}},
 
+-- FUEL INTERFACE
+{ down = fuel_commands.ProbeControlSw, up = fuel_commands.ProbeControlSw, cockpit_device_id = devices.FUEL_INTERFACE, value_down =  1.0, value_up = 0.0, name = _('Probe Control Switch EXTEND/RETRACT'), category = {_('_My Buttons')}},
+{ down = fuel_commands.ProbeControlSw, up = fuel_commands.ProbeControlSw, cockpit_device_id = devices.FUEL_INTERFACE, value_down = -1.0, value_up = 0.0, name = _('Probe Control Switch EMERG/RETRACT'), category = {_('_My Buttons')}},
+
+-- CPT MECHANICS
+{ down = cpt_commands.CanopySwitchOpen,  up = cpt_commands.CanopySwitchClose, cockpit_device_id = devices.CPT_MECHANICS, value_down =  1.0, value_up = 0.0, name = _('Canopy Control Switch OPEN/HOLD'), category = {_('_My Buttons')}},
+--{ down = cpt_commands.CanopySwitchClose, up = cpt_commands.CanopySwitchClose, cockpit_device_id = devices.CPT_MECHANICS, value_down = -1.0, value_up = 0.0, name = _('Canopy Control Switch CLOSE/HOLD'), category = {_('_My Buttons')}},
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FF: begin additional commands
