@@ -12,9 +12,9 @@ join(res.keyCommands,{
 
 -- SMS
 { down = SMS_commands.MasterArmSw, up = SMS_commands.MasterArmSw, cockpit_device_id = devices.SMS, value_down =  1.0, value_up = 0.0, name = _('Master Arm Switch ARM/OFF'), category = {_('_My Buttons')}},
-{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.2, value_up = 0.1, name = _('IR Cooling Switch ORIDE/NORM'), category = {_('_My Buttons')}},
 { down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.2, value_up = 0.1, name = _('IR Cooling Switch OFF/NORM'), category = {_('_My Buttons')}},
 { down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.1, value_up = 0.2, name = _('IR Cooling Switch NORM/OFF'), category = {_('_My Buttons')}},
+{ down = SMS_commands.AuxRelSw,    up = SMS_commands.AuxRelSw,    cockpit_device_id = devices.SMS, value_down =  1.0, value_up = 0.0, name = _('Auxiliary Release Switch ENABLE/NORM'), category = {_('_My Buttons')}},
 
 -- CONTROL INTERFACE
 { down = ctrl_commands.FlapSw, up = ctrl_commands.FlapSw, cockpit_device_id = devices.CONTROL_INTERFACE,  value_down =  1.0, value_up = 0.0, name = _('FLAP Switch AUTO/HALF'), category = {_('_My Buttons')}},
@@ -22,6 +22,8 @@ join(res.keyCommands,{
 
 -- EXT LIGHTS
 { down = extlights_commands.LdgTaxi, up = extlights_commands.LdgTaxi, cockpit_device_id = devices.EXT_LIGHTS, value_down =  1.0, value_up =  0.0, name = _('LDG/TAXI LIGHT Switch ON/OFF'), category = {_('_My Buttons')}},
+--{ down = extlights_commands.Strobe, up = extlights_commands.Strobe, cockpit_device_id = devices.EXT_LIGHTS, value_down = 1.0, value_up = 0.0, name = _('STROBE Lights Switch BRT/OFF'), category = {_('_My Buttons')}},
+--{ down = extlights_commands.Strobe, up = extlights_commands.Strobe, cockpit_device_id = devices.EXT_LIGHTS, value_down = 1.0, value_up =-1.0, name = _('STROBE Lights Switch DIM/OFF'), category = {_('_My Buttons')}},
 
 -- GEAR INTERFACE
 { down = gear_commands.AntiSkidSw,           up = gear_commands.AntiSkidSw,           cockpit_device_id = devices.GEAR_INTERFACE, value_down =  1.0, value_up = 0.0, name = _('Anti Skid Switch ON/OFF'), category = {_('_My Buttons')}},
@@ -50,6 +52,13 @@ join(res.keyCommands,{
 { down = cpt_commands.CanopySwitchOpen,  up = cpt_commands.CanopySwitchClose, cockpit_device_id = devices.CPT_MECHANICS, value_down =  1.0, value_up = 0.0, name = _('Canopy Control Switch OPEN/HOLD'), category = {_('_My Buttons')}},
 --{ down = cpt_commands.CanopySwitchClose, up = cpt_commands.CanopySwitchClose, cockpit_device_id = devices.CPT_MECHANICS, value_down = -1.0, value_up = 0.0, name = _('Canopy Control Switch CLOSE/HOLD'), category = {_('_My Buttons')}},
 
+-- HOTAS
+{ down = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, up = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, cockpit_device_id = devices.HOTAS,	value_down =  1.0, value_up = 0.0, name = _('Exterior Lights Switch ON/OFF'), category = {_('_My Buttons')}},
+
+-- CMDS
+{ down = cmds_commands.Dispenser, up = cmds_commands.Dispenser, cockpit_device_id = devices.CMDS, value_down =  0.2, value_up= 0.1, name = _('DISPENSER Switch BYPASS/ON'), category = {_('_My Buttons')}},
+{ down = cmds_commands.Dispenser, up = cmds_commands.Dispenser, cockpit_device_id = devices.CMDS, value_down =  0.0, value_up= 0.1, name = _('DISPENSER Switch OFF/ON'), category = {_('_My Buttons')}},
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FF: begin additional commands
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -65,7 +74,8 @@ join(res.keyCommands,{
 ---------------------------------------------
 -- General ----------------------------------
 ---------------------------------------------
-{combos = {{key = 'P',	reformers = {'RShift'}}},				down = iCommandCockpitShowPilotOnOff,	name = _('Show pilot body'),	category = _('General')},
+{combos = {{key = 'P',	reformers = {'RShift'}}},	down = iCommandCockpitShowPilotOnOff,	name = _('Show pilot body'),	category = _('General')},
+{combos = {{key = 'U'}}, 							down = iCommandPlaneShipTakeOff,		name = _('Catapult Hook-Up'),	category = _('General')},
 
 ---------------------------------------------
 -- View Cockpit -----------------------------
@@ -85,7 +95,6 @@ join(res.keyCommands,{
 {combos = {{key = 'Right'}},	down = iCommandPlaneRightStart,			up = iCommandPlaneRightStop,		name = _('Aircraft Bank Right'),						category = {_('Flight Control')}},
 {combos = {{key = 'Z'}},		down = iCommandPlaneLeftRudderStart,	up = iCommandPlaneLeftRudderStop,	name = _('Aircraft Rudder Left'),						category = {_('Flight Control')}},
 {combos = {{key = 'X'}},		down = iCommandPlaneRightRudderStart,	up = iCommandPlaneRightRudderStop,	name = _('Aircraft Rudder Right'),						category = {_('Flight Control')}},
-{combos = {{key = 'U'}}, down = iCommandPlaneShipTakeOff, name = _('Landing on carrier'), category = _('Debug')},
 
 ---------------------------------------------
 -- Stick ------------------------------------
@@ -134,11 +143,12 @@ join(res.keyCommands,{
 {combos = {{key = 'End',		reformers = {'RShift'}}},	down = iCommandRightEngineStop,																																									name = _('Throttle (Right) - OFF'),										category = {_('Throttle Quadrant')}},
 {															down = iCommandLeftEngineStop,							up = iCommandLeftEngineStart,																		value_down =  1.0,	value_up = 1.0,	name = _('Throttle (Left) - OFF/IDLE'),									category = {_('Throttle Quadrant')}},
 {															down = iCommandRightEngineStop,							up = iCommandRightEngineStart,																		value_down =  1.0,	value_up = 1.0,	name = _('Throttle (Right) - OFF/IDLE'),								category = {_('Throttle Quadrant')}},
-{combos = {{key = '9'}},									down = hotas_commands.THROTTLE_LEFT_FINGERLIFT_EXT,		up = hotas_commands.THROTTLE_LEFT_FINGERLIFT_EXT,	cockpit_device_id = devices.HOTAS,				value_down =  1.0,	value_up = 0.0,	name = _('Throttle Finger Lift (Left) - UP/DOWN'),						category = {_('Throttle Quadrant'), _('HOTAS')}},
-{combos = {{key = '0'}},									down = hotas_commands.THROTTLE_RIGHT_FINGERLIFT_EXT,	up = hotas_commands.THROTTLE_RIGHT_FINGERLIFT_EXT,	cockpit_device_id = devices.HOTAS,				value_down =  1.0,	value_up = 0.0,	name = _('Throttle Finger Lift (Right) - UP/DOWN'),						category = {_('Throttle Quadrant'), _('HOTAS')}},
-{															down = hotas_commands.THROTTLE_BOTH_FINGERLIFT_EXT,		up = hotas_commands.THROTTLE_BOTH_FINGERLIFT_EXT,	cockpit_device_id = devices.HOTAS,				value_down =  1.0,	value_up = 0.0,	name = _('Throttle Finger Lift (Both) - UP/DOWN'),						category = {_('Throttle Quadrant'), _('HOTAS')}},
+{															down = hotas_commands.THROTTLE_LEFT_FINGERLIFT_EXT,		up = hotas_commands.THROTTLE_LEFT_FINGERLIFT_EXT,	cockpit_device_id = devices.HOTAS,				value_down =  1.0,	value_up = 0.0,	name = _('Throttle Finger Lift (Left) - UP/DOWN'),						category = {_('Throttle Quadrant'), _('HOTAS')}},
+{															down = hotas_commands.THROTTLE_RIGHT_FINGERLIFT_EXT,	up = hotas_commands.THROTTLE_RIGHT_FINGERLIFT_EXT,	cockpit_device_id = devices.HOTAS,				value_down =  1.0,	value_up = 0.0,	name = _('Throttle Finger Lift (Right) - UP/DOWN'),						category = {_('Throttle Quadrant'), _('HOTAS')}},
+{combos = {{key = '0'}},									down = hotas_commands.THROTTLE_BOTH_FINGERLIFT_EXT,		up = hotas_commands.THROTTLE_BOTH_FINGERLIFT_EXT,	cockpit_device_id = devices.HOTAS,				value_down =  1.0,	value_up = 0.0,	name = _('Throttle Finger Lift (Both) - UP/DOWN'),						category = {_('Throttle Quadrant'), _('HOTAS')}},
 {															pressed = ctrl_commands.FrictionLever_EXT,																	cockpit_device_id = devices.CONTROL_INTERFACE,	value_pressed = -0.5,				name = _('Throttles Friction Adjusting Lever - Aft/Decrease'),			category = {_('Throttle Quadrant')}},
 {															pressed = ctrl_commands.FrictionLever_EXT,																	cockpit_device_id = devices.CONTROL_INTERFACE,	value_pressed =  0.5,				name = _('Throttles Friction Adjusting Lever - Forward/Increase'),		category = {_('Throttle Quadrant')}},
+{															down = ctrl_commands.AB_DETENT,																				cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  1.0,					name = _('Cycle Afterburner Detent - ON/OFF'),							category = {_('Throttle Quadrant')}},
 
 ---------------------------------------------
 -- Throttle Grip ----------------------------
@@ -196,12 +206,22 @@ join(res.keyCommands,{
 {							down = SMS_commands.MasterArmSw,												cockpit_device_id = devices.SMS,	value_down =  1.0,					name = _('Master Arm Switch - ARM'),		category = {_('Instrument Panel'), _('Master Arm Panel')}},
 {							down = SMS_commands.MasterArmSw,												cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Master Arm Switch - SAFE'),		category = {_('Instrument Panel'), _('Master Arm Panel')}},
 -- jettison
-{							down = SMS_commands.EmerJettSw,			up = SMS_commands.EmerJettSw,			cockpit_device_id = devices.SMS,	value_down =  1.0,	value_up = 0.0,	name = _('Emergency Jettison Button'),					category = {_('Instrument Panel')}},
-{							down = SMS_commands.JettStationLOBtn,	up = SMS_commands.JettStationLOBtn,		cockpit_device_id = devices.SMS,	value_down =  1.0,	value_up = 0.0,	name = _('Station Jettison Select Button - LEFT OUT'),	category = {_('Instrument Panel')}},
-{							down = SMS_commands.JettStationLIBtn,	up = SMS_commands.JettStationLIBtn,		cockpit_device_id = devices.SMS,	value_down =  1.0,	value_up = 0.0,	name = _('Station Jettison Select Button - LEFT IN'),	category = {_('Instrument Panel')}},
-{							down = SMS_commands.JettStationCntrBtn,	up = SMS_commands.JettStationCntrBtn,	cockpit_device_id = devices.SMS,	value_down =  1.0,	value_up = 0.0,	name = _('Station Jettison Select Button - CENTER'),	category = {_('Instrument Panel')}},
-{							down = SMS_commands.JettStationRIBtn,	up = SMS_commands.JettStationRIBtn,		cockpit_device_id = devices.SMS,	value_down =  1.0,	value_up = 0.0,	name = _('Station Jettison Select Button - RIGHT IN'),	category = {_('Instrument Panel')}},
-{							down = SMS_commands.JettStationROBtn,	up = SMS_commands.JettStationROBtn,		cockpit_device_id = devices.SMS,	value_down =  1.0,	value_up = 0.0,	name = _('Station Jettison Select Button - RIGHT OUT'),	category = {_('Instrument Panel')}},
+{							down = SMS_commands.EmerJettSw,				up = SMS_commands.EmerJettSw,		cockpit_device_id = devices.SMS,	value_down =  1.0,	value_up = 0.0,	name = _('Emergency Jettison Button'),							category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationLOBtn_ITER,										cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Station Jettison Select Button LEFT OUT - ON/OFF'),	category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationLOBtn,											cockpit_device_id = devices.SMS,	value_down =  1.0,					name = _('Station Jettison Select Button LEFT OUT - ON'),		category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationLOBtn,											cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Station Jettison Select Button LEFT OUT - OFF'),		category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationLIBtn_ITER,										cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Station Jettison Select Button LEFT IN - ON/OFF'),	category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationLIBtn,											cockpit_device_id = devices.SMS,	value_down =  1.0,					name = _('Station Jettison Select Button LEFT IN - ON'),		category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationLIBtn,											cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Station Jettison Select Button LEFT IN - OFF'),		category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationCntrBtn_ITER,									cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Station Jettison Select Button CENTER - ON/OFF'),		category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationCntrBtn,											cockpit_device_id = devices.SMS,	value_down =  1.0,					name = _('Station Jettison Select Button CENTER - ON'),			category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationCntrBtn,											cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Station Jettison Select Button CENTER - OFF'),		category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationRIBtn_ITER,										cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Station Jettison Select Button RIGHT IN - ON/OFF'),	category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationRIBtn,											cockpit_device_id = devices.SMS,	value_down =  1.0,					name = _('Station Jettison Select Button RIGHT IN - ON'),		category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationRIBtn,											cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Station Jettison Select Button RIGHT IN - OFF'),		category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationROBtn_ITER,										cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Station Jettison Select Button RIGHT OUT - ON/OFF'),	category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationROBtn,											cockpit_device_id = devices.SMS,	value_down =  1.0,					name = _('Station Jettison Select Button RIGHT OUT - ON'),		category = {_('Instrument Panel')}},
+{							down = SMS_commands.JettStationROBtn,											cockpit_device_id = devices.SMS,	value_down =  0.0,					name = _('Station Jettison Select Button RIGHT OUT - OFF'),		category = {_('Instrument Panel')}},
 -- IFEI
 {							down = IFEI_commands.IFEI_BTN_MODE,				up = IFEI_commands.IFEI_BTN_MODE,		cockpit_device_id = devices.IFEI,	value_down =  1.0,	value_up = 0.0,	name = _('IFEI Mode Button'),								category = {_('Instrument Panel')}},
 {							down = IFEI_commands.IFEI_BTN_QTY,				up = IFEI_commands.IFEI_BTN_QTY,		cockpit_device_id = devices.IFEI,	value_down =  1.0,	value_up = 0.0,	name = _('IFEI QTY Button'),								category = {_('Instrument Panel')}},
@@ -619,8 +639,8 @@ join(res.keyCommands,{
 {							down = ctrl_commands.GainSw,																	cockpit_device_id = devices.CONTROL_INTERFACE,		value_down =  0.0,						name = _('GAIN Switch - NORM'),										category = {_('Left Console'), _('FCS Panel')}},
 -- Power Plant Start
 {							down = engines_commands.APU_ControlSw,				up = engines_commands.APU_ControlSw,		cockpit_device_id = devices.ENGINES_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('APU Control Switch - ON/OFF'),							category = {_('Left Console')}},
-{							down = engines_commands.EngineCrankLSw,				up = engines_commands.EngineCrankLSw,		cockpit_device_id = devices.ENGINES_INTERFACE,		value_down = -1.0,		value_up = 0.0,	name = _('Engine Crank Switch - Left'),								category = {_('Left Console')}},
-{							down = engines_commands.EngineCrankRSw,				up = engines_commands.EngineCrankRSw,		cockpit_device_id = devices.ENGINES_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('Engine Crank Switch - Right'),							category = {_('Left Console')}},
+{							down = engines_commands.EngineCrankLSw,				up = engines_commands.EngineCrankLSw,		cockpit_device_id = devices.ENGINES_INTERFACE,		value_down = -1.0,		value_up = 0.0,	name = _('Engine Crank Switch - Cycle Left'),						category = {_('Left Console')}},
+{							down = engines_commands.EngineCrankRSw,				up = engines_commands.EngineCrankRSw,		cockpit_device_id = devices.ENGINES_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('Engine Crank Switch - Cycle Right'),						category = {_('Left Console')}},
 {							down = engines_commands.EngineCrankRSw_EXT,			up = engines_commands.EngineCrankRSw_EXT,	cockpit_device_id = devices.ENGINES_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('Engine Crank Switch - RIGHT'),							category = {_('Left Console')}},
 {							down = engines_commands.EngineCrankRSw_EXT,														cockpit_device_id = devices.ENGINES_INTERFACE,		value_down = -1.0,						name = _('Engine Crank Switch - OFF'),								category = {_('Left Console')}},
 {							down = engines_commands.EngineCrankLSw_EXT,			up = engines_commands.EngineCrankLSw_EXT,	cockpit_device_id = devices.ENGINES_INTERFACE,		value_down = -1.0,		value_up = 0.0,	name = _('Engine Crank Switch - LEFT'),								category = {_('Left Console')}},
