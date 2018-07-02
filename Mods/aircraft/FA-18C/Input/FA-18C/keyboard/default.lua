@@ -12,8 +12,9 @@ join(res.keyCommands,{
 
 -- SMS
 { down = SMS_commands.MasterArmSw, up = SMS_commands.MasterArmSw, cockpit_device_id = devices.SMS, value_down =  1.0, value_up = 0.0, name = _('Master Arm Switch ARM/OFF'), category = {_('_My Buttons')}},
-{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.2, value_up = 0.1, name = _('IR Cooling Switch OFF/NORM'), category = {_('_My Buttons')}},
-{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.1, value_up = 0.2, name = _('IR Cooling Switch NORM/OFF'), category = {_('_My Buttons')}},
+{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.2, value_up = 0.1, name = _('IR Cooling Switch ORIDE/NORM'), category = {_('_My Buttons')}},
+{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.0, value_up = 0.1, name = _('IR Cooling Switch OFF/NORM'), category = {_('_My Buttons')}},
+{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.1, value_up = 0.0, name = _('IR Cooling Switch NORM/OFF'), category = {_('_My Buttons')}},
 { down = SMS_commands.AuxRelSw,    up = SMS_commands.AuxRelSw,    cockpit_device_id = devices.SMS, value_down =  1.0, value_up = 0.0, name = _('Auxiliary Release Switch ENABLE/NORM'), category = {_('_My Buttons')}},
 
 -- CONTROL INTERFACE
@@ -37,6 +38,9 @@ join(res.keyCommands,{
 { down = elec_commands.LGenSw, up = elec_commands.LGenSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  0.0, value_up =  1.0, name = _('Left Generator Control Switch OFF/MORM'), category = {_('_My Buttons')}},
 { down = elec_commands.RGenSw, up = elec_commands.RGenSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  0.0, value_up =  1.0, name = _('Right Generator Control Switch OFF/NORM'), category = {_('_My Buttons')}},
 
+-- ECS INTERFACE
+{ down = ECS_commands.AV_COOL_Sw, up = ECS_commands.AV_COOL_Sw, cockpit_device_id = devices.ECS_INTERFACE, value_down =  1.0, value_up = 0.0, name = _('AV COOL Switch - EMERG/NORM'), category = {_('_My Buttons')}},
+
 -- LANDING GEAR
 { down = iCommandPlaneGearUp, up = iCommandPlaneGearDown, name = _('Landing Gear Control Handle UP/DOWN'), category = {_('_My Buttons')}},
 
@@ -53,11 +57,23 @@ join(res.keyCommands,{
 --{ down = cpt_commands.CanopySwitchClose, up = cpt_commands.CanopySwitchClose, cockpit_device_id = devices.CPT_MECHANICS, value_down = -1.0, value_up = 0.0, name = _('Canopy Control Switch CLOSE/HOLD'), category = {_('_My Buttons')}},
 
 -- HOTAS
-{ down = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, up = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, cockpit_device_id = devices.HOTAS,	value_down =  1.0, value_up = 0.0, name = _('Exterior Lights Switch ON/OFF'), category = {_('_My Buttons')}},
+{ down = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, up = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, cockpit_device_id = devices.HOTAS,  value_down =  1.0, value_up = 0.0, name = _('Exterior Lights Switch ON/OFF'), category = {_('_My Buttons')}},
 
 -- CMDS
 { down = cmds_commands.Dispenser, up = cmds_commands.Dispenser, cockpit_device_id = devices.CMDS, value_down =  0.2, value_up= 0.1, name = _('DISPENSER Switch BYPASS/ON'), category = {_('_My Buttons')}},
 { down = cmds_commands.Dispenser, up = cmds_commands.Dispenser, cockpit_device_id = devices.CMDS, value_down =  0.0, value_up= 0.1, name = _('DISPENSER Switch OFF/ON'), category = {_('_My Buttons')}},
+
+-- Test CMDS
+{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.1, value_up= 0.0, name = _('ALQ-126 ECM Mode Switch STBY/OFF'), category = {_('_My Buttons')}},
+{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.4, value_up= 0.0, name = _('ALQ-126 ECM Mode Switch XMIT/OFF'), category = {_('_My Buttons')}},
+{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.4, value_up= 0.1, name = _('ALQ-126 ECM Mode Switch XMIT/STBY'), category = {_('_My Buttons')}},
+
+-- Test FLIR
+{ down = 3110, up = 3110, cockpit_device_id = devices.FLIR, value_down =  1.0, value_up= 0.0, name = _('FLIR Switch ON/STBY'), category = {_('_My Buttons')}},
+{ down = 3110, up = 3110, cockpit_device_id = devices.FLIR, value_down = -1.0, value_up= 0.0, name = _('FLIR Switch OFF/ON'), category = {_('_My Buttons')}},
+{ down = 3111, up = 3111, cockpit_device_id = devices.FLIR, value_down =  1.0, value_up= 0.0, name = _('LTD/R Switch ARM/SAFE'), category = {_('_My Buttons')}},
+{ down = 3111, up = 3111, cockpit_device_id = devices.FLIR, value_down = -1.0, value_up= 0.0, name = _('LTD/R Switch AFT/SAFE'), category = {_('_My Buttons')}},
+{ down = 3112, up = 3112, cockpit_device_id = devices.FLIR, value_down =  1.0, value_up= 0.0, name = _('LST/NFLR Switch ON/OFF'), category = {_('_My Buttons')}},
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FF: begin additional commands
