@@ -212,7 +212,7 @@ join(res.keyCommands,{
     {combos = {{key = 'H'}}, down = 3303, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = 'Autopilot mode HÖJD (Altitude Hold)', category = 'Autopilot'}, 
     {combos = {{key = 'E'}}, down = 3301, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = 'SAS mode SPAK flight stabiliser', category = 'Autopilot'}, 
     {combos = {{key = "O"}}, pressed = 3305, up = 3305, cockpit_device_id  = devices.FLIGHTDATAUNIT, value_pressed = 1.0, value_up = 0.0, name = 'Roll centrering (Roll trim reset) '  , category = 'Flight Control'},
-    
+	{down = iCommandToggleMirrors,	name = _('Toggle Mirrors'), category = _('View Cockpit')},																						 
     
     
     --HUD
@@ -378,6 +378,7 @@ join(res.keyCommands,{
     {down = 3300, value_down = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'Trigger safety bracket SAFE', category = 'Weapons'},
     {down = 3314, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = "IR-missile uncage", category = "Weapons"},
     {down = 3311, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = "Autothrottle disconnect / IR-missile fast select", category = "Weapons"},
+	{down = 3000, cockpit_device_id = devices.ENGINEPANEL,	 value_down = 1.0, name =("Missile Select Button"), category = _("Weapons")},																																 
     -- countermeasures
     {down = 3001, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Fast countermeasure dispense', category = 'Countermeasures'},
     {down = 3004, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Countermeasure dispense OFF', category = 'Countermeasures'},

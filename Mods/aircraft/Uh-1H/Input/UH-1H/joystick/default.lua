@@ -304,7 +304,6 @@ keyCommands = {
 
 
 -- External Cargo
-{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.CARGO_CAM, value_down = 1, value_up = 0,				name = _('Toggle External Cargo Camera'),		category = _("External Cargo")},
 {down = iCommandExtCargoHook,																														name = _('External Cargo Hook'),				category = _("External Cargo")},
 {down = iCommandExternalCargoAutounhook,																											name = _('External Cargo Autounhook'),			category = _("External Cargo")},
 {down = iCommandExternalCargoIndicator,																												name = _("External Cargo Indicator"),			category = _("External Cargo"), },

@@ -219,7 +219,6 @@ keyCommands = {
 {combos = {{key = 'F1', reformers = {'LShift'}}},  down = iCommandViewTransposeModeOn, up = iCommandViewTransposeModeOff, name = _('Camera transpose mode (press and hold)'), category = _('View Cockpit')},
 
 -- External Cargo
-{combos = {{key = 'C', reformers = {'LCtrl','LShift'}}},		down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.CARGO_CAM, value_down = 1, value_up = 0,				name = _('Toggle External Cargo Camera'),		category = _("External Cargo")},
 {combos = {{key = 'L', reformers = {'RCtrl','RShift'}}},		down = iCommandExtCargoHook,																														name = _('External Cargo Hook'),				category = _("External Cargo")},
 {combos = {{key = 'K', reformers = {'RCtrl','RShift'}}},		down = iCommandExternalCargoAutounhook,																												name = _('External Cargo Autounhook'),			category = _("External Cargo")},
 {combos = {{key = 'P', reformers = {'RCtrl','RShift'}}},		down = iCommandExternalCargoIndicator,																												name = _('External Cargo Indicator'),			category = _("External Cargo")},
@@ -263,8 +262,8 @@ keyCommands = {
 {combos = {{key = 'F',   reformers = {'LCtrl'}}}, down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.SYS_CONTROLLER, value_down = -1.0, value_up = 0.0, name = _('Caution Panel Dim Switch Dim'), category = _('Pedestal')},
 
 -- Ins Cyclick Stick
-{combos = {{key = 'Space'}}, down = iCommandPlaneFire, up = iCommandPlaneFireOff, name = _('Pilot weapon release/Machinegun fire'), category = _('Ins Cyclic Stick')},
-{combos = {{key = 'Space',   reformers = {'RAlt'}}}, down = iCommandPlanePickleOn,    up = iCommandPlanePickleOff, name = _('Copilot weapon release'), category = _('Ins Cyclic Stick')},
+{combos = {{key = 'Space'}}, down = iCommandPlaneFire, up = iCommandPlaneFire, value_down = 1, value_up = 0, name = _('Pilot weapon release/Machinegun fire'), category = _('Ins Cyclic Stick')},
+{combos = {{key = 'Space',   reformers = {'RAlt'}}}, down = iCommandPlanePickleOn, up = iCommandPlanePickleOn, value_down = 1, value_up = 0, name = _('Copilot weapon release'), category = _('Ins Cyclic Stick')},
 
 {combos = {{key = 'Up'}},    pressed = iCommandPlaneUpStart    , up = iCommandPlaneUpStop  ,   name = _('Cyclic nose down'), category = _('Ins Cyclic Stick')},
 {combos = {{key = 'Down'}},  pressed = iCommandPlaneDownStart  , up = iCommandPlaneDownStop,   name = _('Cyclic nose up'), category = _('Ins Cyclic Stick')},

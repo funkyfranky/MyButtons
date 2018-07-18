@@ -210,7 +210,7 @@ join(res.keyCommands,{
     {down = 3648, up = 3648, cockpit_device_id = 4,  value_down = 1,  value_up = 0, name = _('Right Fuel Boost Pump ON, else OFF'),  category = _('3-Pos. Switch Abstractions')},
 	{down = 3900, up = 3900, cockpit_device_id = 22, value_down = 1,  value_up = 0, name = _('Seat Height Increase, else STOP'),     category = _('3-Pos. Switch Abstractions')},
 	{down = 3234, up = 3234, cockpit_device_id = 6,  value_up = -1,   value_down = 1,   name = _('Master ARMED, else SAFE'),         category = _('3-Pos. Switch Abstractions')},
-    {down = 3463, up = 3463, cockpit_device_id = 6,  value_up = -1,   value_down = 1,   name = _('Gun ARMED, else SAFE'),            category = _('3-Pos. Switch Abstractions')},
+    {down = 3463, up = 3463, cockpit_device_id = 6,  value_up = 0,   value_down = 1,   name = _('Gun ARMED, else SAFE'),            category = _('3-Pos. Switch Abstractions')},
     {down = 3486, up = 3486, cockpit_device_id = 11, value_up = 0.67,    value_down = 1, name = _('Radar ON, else STANDBY'),          category = _('3-Pos. Switch Abstractions')},
     {down = 3486, up = 3486, cockpit_device_id = 11, value_up = 0,  value_down = 0.33,   name = _('Radar WARM UP, else OFF'),         category = _('3-Pos. Switch Abstractions')},
     {down = 3249, up = 3249, cockpit_device_id = 6,  value_up = 0,    value_down = 1,   name = _('Selective Jettison ON, else OFF'), category = _('3-Pos. Switch Abstractions')},

@@ -922,6 +922,10 @@ join(res.keyCommands,{
 --{	down = ky58_commands.KY58_FillSw,															cockpit_device_id = devices.KY58,				value_down =  ,						name = _('KY-58 Fill Select Knob - Z ALL'),					category = {_('Right Console'), _('KY-58 Control Panel')}},
 --{	down = ky58_commands.KY58_FillSw_Pull,			up = ky58_commands.KY58_FillSw_Pull,		cockpit_device_id = devices.KY58,				value_down =  1.0,		value_up = 0.0,	name = _('KY-58 Fill Select Knob - PULL'),					category = {_('Right Console'), _('KY-58 Control Panel')}},
 
+--NightVision
+{combos = {{key = 'H', reformers = {'RShift'}}}		   , down    = iCommandViewNightVisionGogglesOn   , name = _('Toggle goggles')   , category = _('Sensors')},
+{combos = {{key = 'H', reformers = {'RShift','RCtrl'}}}, pressed = iCommandPlane_Helmet_Brightess_Up  , name = _('Gain goggles up')  , category = _('Sensors')},
+{combos = {{key = 'H', reformers = {'RShift','RAlt'}}} , pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Gain goggles down'), category = _('Sensors')},
 
 ---------------------------------------------
 -- Ejection Seat ----------------------------

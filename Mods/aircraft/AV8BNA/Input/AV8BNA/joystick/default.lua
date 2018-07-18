@@ -240,6 +240,16 @@ join(res.keyCommands,{
 -- funkyfranky end custom assignments
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+    -- Joystick switch abstractions (Example, ON else OFF)
+    {down = fcs_commands.Switch_FLAP_SELECT,    up = fcs_commands.Switch_FLAP_SELECT,   cockpit_device_id=devices.VREST,            value_down=1.0, value_up=0.5,   name= _('Flaps CRUISE else AUTO'),  category=_('Switch Abstractions')},
+    {down = fcs_commands.Switch_FLAP_SELECT,    up = fcs_commands.Switch_FLAP_SELECT,   cockpit_device_id=devices.VREST,            value_down=0.0, value_up=0.5,   name= _('Flaps STOL else AUTO'),    category=_('Switch Abstractions')},    
+    {down = fcs_commands.Switch_ANTISKID,       up = fcs_commands.Switch_ANTISKID,      cockpit_device_id=devices.FLIGHTCONTROLS,   value_down=0.0, value_up=0.5,   name= _('Anti-Skid NWS else ON'),   category=_('Switch Abstractions')},
+    {down = smc_commands.Switch_Master_Arm,     up = smc_commands.Switch_Master_Arm,    cockpit_device_id=devices.SMC,              value_down=1.0, value_up=0.0,   name= _('MasterArm ON else OFF'),   category=_('Switch Abstractions')},
+    {down = engine_commands.Switch_H20,         up = engine_commands.Switch_H20,        cockpit_device_id=devices.DECS,             value_down=1.0, value_up=0.5,   name= _('H2O TO else OFF'),         category=_('Switch Abstractions')},
+    {down = engine_commands.Switch_H20,         up = engine_commands.Switch_H20,        cockpit_device_id=devices.DECS,             value_down=0.0, value_up=0.5,   name= _('H2O LN else OFF'),         category=_('Switch Abstractions')},        
+    {down = iCommandPlaneGearUp,                up = iCommandPlaneGearDown,     name = _('Landing Gear UP else DOWN'),  category = _('Switch Abstractions')},
+    {down = iCommandPlaneAirBrakeOn,            up = iCommandPlaneAirBrakeOff,  name = _('Airbrake ON else OFF'),       category = _('Switch Abstractions')},	
+
 	-- Master Modes
 	{down = iCommandHelicopter_PPR_button_K, name = _('Master Mode NAV'),	category = _('Master Modes')},
 	{down = iCommandHelicopter_PPR_button_H, name = _('Master Mode VSTOL'),	category = _('Master Modes')},
@@ -285,6 +295,9 @@ join(res.keyCommands,{
 	{down = iCommandPlaneSAUHRadio,						name = _('Stability Augmentation - Pitch'),						category = _('Stability Augmentation & Autopilot')},
 	{down = iCommandPlaneSAUAutomatic,					name = _('Stability Augmentation - Yaw'),						category = _('Stability Augmentation & Autopilot')},
 	{down = iCommandPlaneSAUHorizon,					name = _('Stability Augmentation - Roll'),						category = _('Stability Augmentation & Autopilot')},
+    {down = fcs_commands.Switch_RPS_YAW, cockpit_device_id = devices.FLIGHTCONTROLS, value_down = 0.0, name = _('RPS/YAW Shaker Switch OFF'),	category = _('Stability Augmentation & Autopilot')},
+    {down = fcs_commands.Switch_RPS_YAW, cockpit_device_id = devices.FLIGHTCONTROLS, value_down = 0.5, name = _('RPS/YAW Shaker Switch ON'),	category = _('Stability Augmentation & Autopilot')},
+    {down = fcs_commands.Switch_RPS_YAW, cockpit_device_id = devices.FLIGHTCONTROLS, value_down = 1.0, name = _('RPS/YAW Shaker Switch TEST'),	category = _('Stability Augmentation & Autopilot')},
 	
 	-- Hydraulic & Mechanical
     {down = iCommandPlaneWheelBrakeOn,      up = iCommandPlaneWheelBrakeOff,      name = _('Wheel Brakes'),      category = _('Hydraulic & Mechanical')},
@@ -296,12 +309,66 @@ join(res.keyCommands,{
     {down = iCommandPlaneFonar,    name = _('Canopy Open/Close'),   category = _('Hydraulic & Mechanical')},
     {down = fcs_commands.Handle_PARKING_BRAKE, cockpit_device_id = devices.FLIGHTCONTROLS, value_down= 0, name = _('Parking Brake ON'), category = _('Hydraulic & Mechanical')},
     {down = fcs_commands.Handle_PARKING_BRAKE, cockpit_device_id = devices.FLIGHTCONTROLS, value_down= 1, name = _('Parking Brake OFF'), category = _('Hydraulic & Mechanical')},
+	{down = fcs_commands.Switch_ANTISKID, cockpit_device_id = devices.FLIGHTCONTROLS, value_down = 1, name = _('Antiskid TEST'), category = _('Hydraulic & Mechanical')},
+	{down = fcs_commands.Switch_ANTISKID, cockpit_device_id = devices.FLIGHTCONTROLS, value_down = 0, name = _('Antiskid NWS'), category = _('Hydraulic & Mechanical')},
+	{down = fcs_commands.Switch_ANTISKID, cockpit_device_id = devices.FLIGHTCONTROLS, value_down = 0.5, name = _('Antiskid ON'), category = _('Hydraulic & Mechanical')},
 	
 	-- Engine & Fuel
-	{down = iCommandLeftEngineStart, 		name = _('Engines START'),							category = _('Engine & Fuel')},
-	{down = iCommandLeftEngineStop,  		name = _('Engines STOP'),							category = _('Engine & Fuel')},
 	{down = iCommandPlaneHook,  			name = _('Air Refueling Probe Toggle IN/OUT'),		category = _('Engine & Fuel')},
 	{down = iCommandThrottle1Stop,			name = _('Fuel Shutoff Lever lock release'),		category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_LIDS,	        cockpit_device_id = devices.VREST, value_down = 0, name = _('LIDS Switch NORM'),		        category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_LIDS,	        cockpit_device_id = devices.VREST, value_down = 1, name = _('LIDS Switch RETRACT'),		        category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_ENG_RPM,	        cockpit_device_id = devices.DECS, value_down = 0, name = _('ENG RPM Switch LOW'),		        category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_ENG_RPM,	        cockpit_device_id = devices.DECS, value_down = 1, name = _('ENG RPM Switch HI'),		        category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_EFC,	            cockpit_device_id = devices.DECS, value_down = 0, name = _('EFC Switch POS 2'),		            category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_EFC,	            cockpit_device_id = devices.DECS, value_down = 1, name = _('EFC Switch POS 1'),		            category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_H20,	            cockpit_device_id = devices.DECS, value_down = 0.5, name = _('H2O Switch OFF'),		            category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_H20,	            cockpit_device_id = devices.DECS, value_down = 0, name = _('H2O Switch LDG'),		            category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_H20,	            cockpit_device_id = devices.DECS, value_down = 1, name = _('H2O Switch TO'),		            category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_H20_DUMP,	    cockpit_device_id = devices.DECS, value_down = 0, name = _('H2O Dump Switch OFF'),	            category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_H20_DUMP,	    cockpit_device_id = devices.DECS, value_down = 1, name = _('H2O Dump Switch DUMP'),	            category = _('Engine & Fuel')},
+    {down = engine_commands.Button_CMBT, up = engine_commands.Button_CMBT, cockpit_device_id = devices.DECS, value_down = 1, value_up = 0, name = _('CMBT Button PRESS'),	category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_JPTL,	        cockpit_device_id = devices.DECS, value_down = 0, name = _('JPTL Switch ON'),		            category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_JPTL,	        cockpit_device_id = devices.DECS, value_down = 1, name = _('JPTL Switch OFF'),		            category = _('Engine & Fuel')},
+    {down = engine_commands.Button_EMS, up = engine_commands.Button_EMS, cockpit_device_id = devices.DECS, value_down = 1, value_up = 0, name = _('EMS Button PRESS'),	category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_MAN_FUEL,	    cockpit_device_id = devices.DECS, value_down = 0, name = _('MFS Switch OFF'),		            category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_MAN_FUEL,	    cockpit_device_id = devices.DECS, value_down = 1, name = _('MFS Switch ON'),		            category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PROP,	    cockpit_device_id = devices.DECS, value_down = 0, name = _('Fuel PROP Switch OFF'),		        category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PROP,	    cockpit_device_id = devices.DECS, value_down = 1, name = _('Fuel PROP Switch ON'),		        category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PUMP_L,	    cockpit_device_id = devices.DECS, value_down = 0.5, name = _('Fuel Pump Left Switch OFF'),		category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PUMP_L,	    cockpit_device_id = devices.DECS, value_down = 0, name = _('Fuel Pump Left Switch ON'),		    category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PUMP_L,	    cockpit_device_id = devices.DECS, value_down = 1, name = _('Fuel Pump Left Switch DC OPR'),		category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PUMP_R,	    cockpit_device_id = devices.DECS, value_down = 0.5, name = _('Fuel Pump Right Switch OFF'),		category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PUMP_R,	    cockpit_device_id = devices.DECS, value_down = 0, name = _('Fuel Pump Right Switch ON'),		category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PUMP_R,	    cockpit_device_id = devices.DECS, value_down = 1, name = _('Fuel Pump Right Switch DC OPR'),	category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PRESS,	    cockpit_device_id = devices.DECS, value_down = 0, name = _('Air Refueling Probe Switch IN'),	category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PRESS,	    cockpit_device_id = devices.DECS, value_down = 0.5, name = _('Air Refueling Probe Switch OUT'),	category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_PRESS,	    cockpit_device_id = devices.DECS, value_down = 1, name = _('Air Refueling Probe Switch PRESS'),	category = _('Engine & Fuel')},        
+    {down = engine_commands.Switch_FUEL_DUMP_L,	    cockpit_device_id = devices.DECS, value_down = 0, name = _('Fuel Dump Left Switch NORM'),		category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_DUMP_L,	    cockpit_device_id = devices.DECS, value_down = 1, name = _('Fuel Dump Left Switch DUMP'),		category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_DUMP_R,	    cockpit_device_id = devices.DECS, value_down = 0, name = _('Fuel Dump Right Switch NORM'),		category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_FUEL_DUMP_R,	    cockpit_device_id = devices.DECS, value_down = 1, name = _('Fuel Dump Right Switch DUMP'),		category = _('Engine & Fuel')},
+    {down = engine_commands.Handle_FUEL_SHUT_OFF,	cockpit_device_id = devices.DECS, value_down = 0, name = _('Fuel Shutoff Lever OFF'),		    category = _('Engine & Fuel')},
+    {down = engine_commands.Handle_FUEL_SHUT_OFF,	cockpit_device_id = devices.DECS, value_down = 1, name = _('Fuel Shutoff Lever ON'),		    category = _('Engine & Fuel')},
+    {down = engine_commands.Switch_DECS,	        cockpit_device_id = devices.DECS, value_down = 0, name = _('DECS Switch OFF'),		            category = _('Engine & Fuel')},      
+    {down = engine_commands.Switch_DECS,	        cockpit_device_id = devices.DECS, value_down = 1, name = _('DECS Switch ON'),		            category = _('Engine & Fuel')},      
+	
+    -- ECS
+    {down = psp_commands.Switch_OXY,	cockpit_device_id = devices.ECS, name = _('Oxygen Switch OFF'),  category = _('Environmental Control')},   	
+    {down = psp_commands.Switch_OXY,	cockpit_device_id = devices.ECS, name = _('Oxygen Switch ON'),  category = _('Environmental Control')},   	
+     
+	-- Electrical Panel
+	{down = elec_commands.Switch_BATT, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('Battery ON'), category = _('Electrical Panel')},
+	{down = elec_commands.Switch_BATT, cockpit_device_id = devices.ELECTRIC, value_down = 0.5, name = _('Battery OFF'), category = _('Electrical Panel')},
+	{down = elec_commands.Switch_BATT, cockpit_device_id = devices.ELECTRIC, value_down = 0, name = _('Battery Alert'), category = _('Electrical Panel')},
+	{down = elec_commands.Switch_GEN, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('Generator ON'), category = _('Electrical Panel')},
+	{down = elec_commands.Switch_GEN, cockpit_device_id = devices.ELECTRIC, value_down = 0.5, name = _('Generator OFF'), category = _('Electrical Panel')},
+	{down = elec_commands.Switch_GEN, cockpit_device_id = devices.ELECTRIC, value_down = 0, name = _('Generator Test'), category = _('Electrical Panel')},
+	{down = elec_commands.Switch_ENG_START, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('Engine Start ON'), category = _('Electrical Panel')},
+	{down = elec_commands.Switch_ENG_START, cockpit_device_id = devices.ELECTRIC, value_down = 0, name = _('Engine Start OFF'), category = _('Electrical Panel')},
+	{down = elec_commands.Switch_APU_GEN, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('APU Generator Switch RESET'), category = _('Electrical Panel')},
+	{down = elec_commands.Switch_APU_GEN, cockpit_device_id = devices.ELECTRIC, value_down = 0.5, name = _('APU Generator Switch ON'), category = _('Electrical Panel')},
+	{down = elec_commands.Switch_APU_GEN, cockpit_device_id = devices.ELECTRIC, value_down = 0, name = _('APU Generator Switch OFF'), category = _('Electrical Panel')},
 	
 	-- Pilot & Seat Controls 
 	{down = iCommandToggleMirrors,				name = _('Mirrors TOGGLE'),				category = _('Pilot & Seat Controls')},
@@ -310,6 +377,7 @@ join(res.keyCommands,{
 	{down = iCommandPlaneCircuitBreaker_10, 	name = _('Hide/Show Control Stick'),	category = _('Pilot & Seat Controls')},
 	{down = iCommandPlaneCircuitBreaker_11,		name = _('Hide/Show Throttle'),			category = _('Pilot & Seat Controls')},
 	{down = iCommandViewNightVisionGogglesOn,	name = _('Helmet Visor/NVG Toggle'),	category = _('Pilot & Seat Controls')},
+	{															down = iCommandPlaneModeFI0,				name = _('Switch the Helmet Visor for NVG and viceversa'),	category = _('Pilot & Seat Controls')},																																				   
 	{down = iCommandPlane_Helmet_Brightess_Up,		name = _('NVG Brightness Up'),			category = _('Pilot & Seat Controls')},
 	{down = iCommandPlane_Helmet_Brightess_Down,	name = _('NVG Brightness Down'),		category = _('Pilot & Seat Controls')},
 	
@@ -326,7 +394,7 @@ join(res.keyCommands,{
 	{pressed = iCommandPlaneTrimLeft,  up = iCommandPlaneTrimStop,  name = _('Trim Bank LEFT'),							category = _('HOTAS')},
 	{pressed = iCommandPlaneTrimRight, up = iCommandPlaneTrimStop,  name = _('Trim Bank RIGHT'),						category = _('HOTAS')},
 	
-	{down = iCommandPlane_HOTAS_PinkySwitchCenter,																name = _('WP Increment'),									category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_PinkySwitchForward,			up = iCommandPlane_HOTAS_PinkySwitchCenter,			name = _('WP Increment'),								    category = _('HOTAS')},
 	{down = iCommandPlaneAutopilotOverrideOn,				up = iCommandPlaneAutopilotOverrideOff,				name = _('Emergency SAAHS Disconnect'),						category = _('HOTAS')},
 	{down = iCommandPlane_HOTAS_DataManagementSwitchUp,		up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select FWD: INS, IRMV/EOMV'),  			category = _('HOTAS')},
 	{down = iCommandPlane_HOTAS_DataManagementSwitchDown,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select AFT: DMT: LST/TV'),  				category = _('HOTAS')},

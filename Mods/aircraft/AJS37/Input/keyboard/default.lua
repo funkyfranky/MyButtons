@@ -213,7 +213,7 @@ join(res.keyCommands,{
     {combos = {{key = 'H', reformers = {'RAlt'}}}, down = 3401, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = _('HUD shift to lower position'), category = _('Navigation')}, 
     {combos = {{key = "S", reformers = {'RAlt'}}}, pressed = 3404, up = 3404, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 1.0, value_up = 0, name = _('Seat adjustment up'), category = _('Navigation')},
     {combos = {{key = "S", reformers = {'RCtrl'}}}, pressed = 3404, up = 3404, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = -1.0, value_up = 0, name = _('Seat adjustment down'), category = _('Navigation')},
-    
+	{combos = {{key = 'M', reformers = {'LAlt'}}},down = iCommandToggleMirrors,	name = _('Toggle Mirrors'), category = _('View Cockpit')},																																	  
     
     -- Flight Control
     {combos = {{key = 'Up'}}, down = iCommandPlaneUpStart, up = iCommandPlaneUpStop, name = _('Aircraft Pitch Down'), category = _('Flight Control')},
@@ -376,6 +376,8 @@ join(res.keyCommands,{
     {combos = {{key = "J", reformers = {"RCtrl","RShift"}}}, down = 3320, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("Fuel tank jettison Button"), category = _("Weapons")},
     {combos = {{key = "C", reformers = {"LAlt","LCtrl"}}}, down = 3314, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("IR-missile uncage"), category = _("Weapons")},
     {combos = {{key = "S", reformers = {"LAlt","LCtrl"}}}, down = 3311, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("IR-missile fast select"), category = _("Weapons")},
+															--{down = 3000, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = _("Missile Select Button"), category = _("Weapons")},
+
     -- {combos = {{key = "W", reformers = {"LAlt"}}}, down = 3030, cockpit_device_id = 14, value_down = 1.0, name = _("Datapanel Rotary Clockwise"), category = _("Navigation")},
     -- {combos = {{key = "Q", reformers = {"LAlt"}}}, down = 3031, cockpit_device_id = 14, value_down = 1.0, name = _("Datapanel Rotary Counterclockwise"), category = _("Navigation")},
     
