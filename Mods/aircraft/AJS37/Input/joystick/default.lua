@@ -1,7 +1,7 @@
 local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
 join(res.keyCommands,{
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- begin custom assignments
+-- FF: begin custom assignments
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- flight data unit
 {down = 3200, up = 3200, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('HÖJD CISI LD/RHM (toggle)'), category = _('_My Buttons')}, --working, toggle only
@@ -202,7 +202,7 @@ join(res.keyCommands,{
 {down = 3001, cockpit_device_id = devices.ERRORPANEL, value_down = 1.0,  name = _('Master caution reset'), category = _('Caution panel')},
 {down=iCommandPlaneEject,name = _('Eject (3 times)'), category = _('Flight Control')},
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- end custom assignments
+-- FF end custom assignments
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     -- Autopilot
@@ -212,7 +212,7 @@ join(res.keyCommands,{
     {combos = {{key = 'H'}}, down = 3303, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = 'Autopilot mode HÖJD (Altitude Hold)', category = 'Autopilot'}, 
     {combos = {{key = 'E'}}, down = 3301, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = 'SAS mode SPAK flight stabiliser', category = 'Autopilot'}, 
     {combos = {{key = "O"}}, pressed = 3305, up = 3305, cockpit_device_id  = devices.FLIGHTDATAUNIT, value_pressed = 1.0, value_up = 0.0, name = 'Roll centrering (Roll trim reset) '  , category = 'Flight Control'},
-	{down = iCommandToggleMirrors,	name = _('Toggle Mirrors'), category = _('View Cockpit')},																						 
+    {down = iCommandToggleMirrors,	name = _('Toggle Mirrors'), category = _('View Cockpit')},																						 
     
     
     --HUD
@@ -292,6 +292,9 @@ join(res.keyCommands,{
     {down = 3009, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.1, name = "Datapanel Rotary Mode 2 - TAKT", category = "Navigation"},
     {down = 3009, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.0, name = "Datapanel Rotary Mode 1 - ID-NR", category = "Navigation"},
     
+    {down = 3011, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, name = "Datapanel Rotary Clockwise", category = "Navigation"},
+    {down = 3011, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = -1.0, name = "Datapanel Rotary Counterclockwise", category = "Navigation"},
+	
     {down = 3304, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.5, name = "Weapon Selector Knob Mode 6 - IR-RB", category = "Weapons"},
     {down = 3304, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.4, name = "Weapon Selector Knob Mode 5 - ATTACK", category = "Weapons"},
     {down = 3304, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.3, name = "Weapon Selector Knob Mode 4 - AKAN JAKT", category = "Weapons"},
@@ -372,13 +375,13 @@ join(res.keyCommands,{
     {down = 3321, up = 3321, value_down = 1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'Rb05 stick yaw right', category = 'Weapons'},
     {down = 3322, up = 3322, value_down = 1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'Rb05 stick pitch up', category = 'Weapons'},
     {down = 3322, up = 3322, value_down = -1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'Rb05 stick pitch down', category = 'Weapons'},
-    {down = 3323, up = 3323, value_down = 1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = "Rb05 switch input with flight stick (hold)", category = 'Weapons'},	  
+    {down = 3323, up = 3323, value_down = 1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = "Rb05 switch input with flight stick (hold)", category = 'Weapons'},
     {down = 3300, up = 3300, value_down = 1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'Trigger safety bracket (hold)', category = 'Weapons'},
     {down = 3300, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'Trigger safety bracket ARM', category = 'Weapons'},
     {down = 3300, value_down = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'Trigger safety bracket SAFE', category = 'Weapons'},
     {down = 3314, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = "IR-missile uncage", category = "Weapons"},
     {down = 3311, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = "Autothrottle disconnect / IR-missile fast select", category = "Weapons"},
-	{down = 3000, cockpit_device_id = devices.ENGINEPANEL,	 value_down = 1.0, name =("Missile Select Button"), category = _("Weapons")},																																 
+	{down = 3000, cockpit_device_id = devices.ENGINEPANEL,	 value_down = 1.0, name =("Missile Select Button"), category = _("Weapons")},
     -- countermeasures
     {down = 3001, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Fast countermeasure dispense', category = 'Countermeasures'},
     {down = 3004, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Countermeasure dispense OFF', category = 'Countermeasures'},
@@ -481,6 +484,7 @@ join(res.keyCommands,{
     {down = 3006, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, name = "T1 Fix", category = "Radar"},
     {down = 3007, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, name = "TV Fix", category = "Radar"},
     {down = 3007, up = 3006, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, value_up = 1.0, name = "TV Fix (Three position switch)", category = "Radar"},
+	{down = 3006, up = 3005, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, value_up = 1.0, name = "T1 Fix (Two-stage trigger middle position)", category = "Radar"},
     {down = 3090, up = 3090, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = "Reference button", category = "Navigation"},
     
     -- Lights panel
@@ -488,7 +492,7 @@ join(res.keyCommands,{
     {down = 3002, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Navigation lights switch', category = 'Lights panel'},
     {down = 3003, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Formation lights switch', category = 'Lights panel'},
     {down = 3004, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Taxi/landing lights switch', category = 'Lights panel'},
-    --{down = 3004, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = _('Taxi/landing lights switch'), category = _('Lights')}, --duplicate?
+    --{down = 3004, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = _('Taxi/landing lights switch'), category = _('Lights')}, -- FF dublicate?!
     {down = 3001, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Anti collision lights switch - ON', category = 'Lights'},
     {down = 3001, cockpit_device_id = devices.LIGHTS, value_down = 0.0, name = 'Anti collision lights switch - OFF' , category = 'Lights'},
     {down = 3002, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Navigation lights switch - HEL', category = 'Lights'},
@@ -547,8 +551,8 @@ join(res.keyCommands,{
     {down = 3714, value_down = -1.000000, up = 3714, value_up = 0.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Magnetic correction left'), category = _('Navigation')},
     {down = 3714, value_down = 1.000000, up = 3714, value_up = 0.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Magnetic correction right'), category = _('Navigation')},
     {down = 3001, value_down = 1.000000, cockpit_device_id = devices.DOPPLER, name = _('Radar alitmeter land/sea mode'), category = _('Navigation')},
-    {up = 3404, value_up = 0.000000, pressed = 3404, value_pressed = -1.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Seat adjustment down'), category = _('Navigation')},
-    {up = 3404, value_up = 0.000000, pressed = 3404, value_pressed = 1.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Seat adjustment up'), category = _('Navigation')},
+    {up = 3404, value_up = 0.000000, pressed = 3404, value_pressed = 1.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Seat adjustment down'), category = _('Navigation')},
+    {up = 3404, value_up = 0.000000, pressed = 3404, value_pressed = -1.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Seat adjustment up'), category = _('Navigation')},
     {down = 3010, value_down = -1.000000, cockpit_device_id = devices.NAVIGATIONPANEL, name = _('Select Data Cartridge - Down'), category = _('Navigation')},
     {down = 3010, value_down = 1.000000, cockpit_device_id = devices.NAVIGATIONPANEL, name = _('Select Data Cartridge - Up'), category = _('Navigation')},
     {down = 3504, value_down = 1.000000, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Confirm Ground Crew Orders'), category = _('Weapons')},
@@ -571,7 +575,7 @@ join(res.keyCommands,{
 --joystick axes 
 join(res.axisCommands,{
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- begin custom assignments
+-- FF: begin custom assignments
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 {action = 3409, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('HUD Brightness Knob'), category = _('_My Buttons')}, --working best with user defined curve
 {action = 3006, cockpit_device_id = devices.LIGHTS,         name = _('Panel Lights'),        category = _('_My Buttons')}, --working best with user defined curve
@@ -587,13 +591,15 @@ join(res.axisCommands,{
 --{action = 3005, cockpit_device_id = devices.FR22,           name = _('Radio Manual Frequency Setting Knob Inner Right'),  category = _('_My Buttons')}, --working best with user defined curve
 --{action = 3006, cockpit_device_id = devices.FR22,           name = _('Radio Manual Frequency Setting Knob Outer Right'),  category = _('_My Buttons')}, --working best with user defined curve
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- end custom assignments
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------																																																					  
+-- FF: end custom assignments
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 {action = 3321, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'Rb05 stick yaw'},
 {action = 3322, cockpit_device_id = devices.WEAPON_SYSTEM, name = 'Rb05 stick pitch'},
 {action = 3321, cockpit_device_id = devices.RADAR, name = 'Radar stick horizontal'},
 {action = 3322, cockpit_device_id = devices.RADAR, name = 'Radar stick vertical'},
 {action = 3327, cockpit_device_id = devices.RADAR, name = 'Radar MKR Gain'},
+
+{action = 3910, cockpit_device_id = devices.FLIGHTDATAUNIT, name = 'Master Mode select'},
 
 
 {action = iCommandWheelBrake,		name = 'Wheel Brake'},
