@@ -211,9 +211,9 @@ join(res.keyCommands,{
     {combos = {{key = 'E'}}, down = 3301, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = _('SAS mode SPAK flight stabiliser'), category = _('Autopilot')}, 
     {combos = {{key = "O"}}, pressed = 3305, up = 3305, cockpit_device_id  = devices.FLIGHTDATAUNIT, value_pressed = 1.0, value_up = 0.0, name = _('Roll centrering (Roll trim reset)'), category = _('Flight Control')},
     {combos = {{key = 'H', reformers = {'RAlt'}}}, down = 3401, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = _('HUD shift to lower position'), category = _('Navigation')}, 
-    {combos = {{key = "S", reformers = {'RAlt'}}}, pressed = 3404, up = 3404, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 1.0, value_up = 0, name = _('Seat adjustment up'), category = _('Navigation')},
-    {combos = {{key = "S", reformers = {'RCtrl'}}}, pressed = 3404, up = 3404, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = -1.0, value_up = 0, name = _('Seat adjustment down'), category = _('Navigation')},
-	{combos = {{key = 'M', reformers = {'LAlt'}}},down = iCommandToggleMirrors,	name = _('Toggle Mirrors'), category = _('View Cockpit')},																																	  
+    {combos = {{key = "S", reformers = {'RAlt'}}}, pressed = 3404, up = 3404, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = -1.0, value_up = 0, name = _('Seat adjustment up'), category = _('Navigation')},
+    {combos = {{key = "S", reformers = {'RCtrl'}}}, pressed = 3404, up = 3404, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 1.0, value_up = 0, name = _('Seat adjustment down'), category = _('Navigation')},
+    {combos = {{key = 'M', reformers = {'LAlt'}}},down = iCommandToggleMirrors,	name = _('Toggle Mirrors'), category = _('View Cockpit')},
     
     -- Flight Control
     {combos = {{key = 'Up'}}, down = iCommandPlaneUpStart, up = iCommandPlaneUpStop, name = _('Aircraft Pitch Down'), category = _('Flight Control')},
@@ -302,6 +302,9 @@ join(res.keyCommands,{
     {down = 3009, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.2, name = "Datapanel Rotary Mode 3 - TID", category = "Navigation"},
     {down = 3009, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.1, name = "Datapanel Rotary Mode 2 - TAKT", category = "Navigation"},
     {down = 3009, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.0, name = "Datapanel Rotary Mode 1 - ID-NR", category = "Navigation"},
+	
+    {down = 3011, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, name = "Datapanel Rotary Clockwise", category = "Navigation"},
+    {down = 3011, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = -1.0, name = "Datapanel Rotary Counterclockwise", category = "Navigation"},
     
     {down = 3304, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.5, name = "Weapon Selector Knob Mode 6 - IR-RB", category = "Weapons"},
     {down = 3304, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.4, name = "Weapon Selector Knob Mode 5 - ATTACK", category = "Weapons"},
@@ -377,7 +380,7 @@ join(res.keyCommands,{
     {combos = {{key = "C", reformers = {"LAlt","LCtrl"}}}, down = 3314, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("IR-missile uncage"), category = _("Weapons")},
     {combos = {{key = "S", reformers = {"LAlt","LCtrl"}}}, down = 3311, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("IR-missile fast select"), category = _("Weapons")},
 															--{down = 3000, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = _("Missile Select Button"), category = _("Weapons")},
-
+	
     -- {combos = {{key = "W", reformers = {"LAlt"}}}, down = 3030, cockpit_device_id = 14, value_down = 1.0, name = _("Datapanel Rotary Clockwise"), category = _("Navigation")},
     -- {combos = {{key = "Q", reformers = {"LAlt"}}}, down = 3031, cockpit_device_id = 14, value_down = 1.0, name = _("Datapanel Rotary Counterclockwise"), category = _("Navigation")},
     
@@ -565,6 +568,8 @@ join(res.keyCommands,{
     {combos = {{key = 'Enter', reformers = {'LCtrl', "LAlt"}}},down = 3504, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Confirm Ground Crew Orders'), category = _('Weapons')},
     {combos = {{key = 'C', reformers = {'LCtrl', "LShift"}}},down = 3010, value_down = 1.0, cockpit_device_id = devices.NAVIGATIONPANEL, name = _('Select Data Cartridge - Up'), category = _('Navigation')},
     {combos = {{key = 'C', reformers = {'LCtrl', "LAlt"}}},down = 3010, value_down = -1.0, cockpit_device_id = devices.NAVIGATIONPANEL, name = _('Select Data Cartridge - Down'), category = _('Navigation')},
+    {combos = {{key = 'M', reformers = {'LCtrl', "LShift"}}},down = 3001, value_down = 1.0, cockpit_device_id = devices.MISSIONGENERATOR, name = _('Increase Generated Cartride Time Margin'), category = _('Navigation')},
+    {combos = {{key = 'M', reformers = {'LCtrl', "LAlt"}}},down = 3001, value_down = -1.0, cockpit_device_id = devices.MISSIONGENERATOR, name = _('Decrease Generated Cartride Time Margin'), category = _('Navigation')},
     
     -- Reporting tool
     --{combos = {{key = 'M', reformers = {'LCtrl', "LAlt"}}},down = 3001, value_down = 1.0, cockpit_device_id = devices.REPORTER, name = _('Contact HeatBlur'), category = _('Debug')},

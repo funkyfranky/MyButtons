@@ -249,7 +249,7 @@ join(res.keyCommands,{
     {down = engine_commands.Switch_H20,         up = engine_commands.Switch_H20,        cockpit_device_id=devices.DECS,             value_down=0.0, value_up=0.5,   name= _('H2O LN else OFF'),         category=_('Switch Abstractions')},        
     {down = iCommandPlaneGearUp,                up = iCommandPlaneGearDown,     name = _('Landing Gear UP else DOWN'),  category = _('Switch Abstractions')},
     {down = iCommandPlaneAirBrakeOn,            up = iCommandPlaneAirBrakeOff,  name = _('Airbrake ON else OFF'),       category = _('Switch Abstractions')},	
-
+    
 	-- Master Modes
 	{down = iCommandHelicopter_PPR_button_K, name = _('Master Mode NAV'),	category = _('Master Modes')},
 	{down = iCommandHelicopter_PPR_button_H, name = _('Master Mode VSTOL'),	category = _('Master Modes')},
@@ -314,8 +314,8 @@ join(res.keyCommands,{
 	{down = fcs_commands.Switch_ANTISKID, cockpit_device_id = devices.FLIGHTCONTROLS, value_down = 0.5, name = _('Antiskid ON'), category = _('Hydraulic & Mechanical')},
 	
 	-- Engine & Fuel
-	{down = iCommandPlaneHook,  			name = _('Air Refueling Probe Toggle IN/OUT'),		category = _('Engine & Fuel')},
-	{down = iCommandThrottle1Stop,			name = _('Fuel Shutoff Lever lock release'),		category = _('Engine & Fuel')},
+	{down = iCommandPlaneHook,  			        name = _('Air Refueling Probe Toggle IN/OUT'),		category = _('Engine & Fuel')},
+	{down = iCommandThrottle1Stop,			        name = _('Fuel Shutoff Lever lock release'),		category = _('Engine & Fuel')},
     {down = engine_commands.Switch_LIDS,	        cockpit_device_id = devices.VREST, value_down = 0, name = _('LIDS Switch NORM'),		        category = _('Engine & Fuel')},
     {down = engine_commands.Switch_LIDS,	        cockpit_device_id = devices.VREST, value_down = 1, name = _('LIDS Switch RETRACT'),		        category = _('Engine & Fuel')},
     {down = engine_commands.Switch_ENG_RPM,	        cockpit_device_id = devices.DECS, value_down = 0, name = _('ENG RPM Switch LOW'),		        category = _('Engine & Fuel')},
@@ -371,15 +371,15 @@ join(res.keyCommands,{
 	{down = elec_commands.Switch_APU_GEN, cockpit_device_id = devices.ELECTRIC, value_down = 0, name = _('APU Generator Switch OFF'), category = _('Electrical Panel')},
 	
 	-- Pilot & Seat Controls 
-	{down = iCommandToggleMirrors,				name = _('Mirrors TOGGLE'),				category = _('Pilot & Seat Controls')},
-    {down = iCommandPlaneEject,					name = _('Eject (3 times)'),			category = _('Pilot & Seat Controls')},	
-	{down = iCommandCockpitShowPilotOnOff,  	name = _('Hide/Show Pilot Body'),		category = _('Pilot & Seat Controls')},
-	{down = iCommandPlaneCircuitBreaker_10, 	name = _('Hide/Show Control Stick'),	category = _('Pilot & Seat Controls')},
-	{down = iCommandPlaneCircuitBreaker_11,		name = _('Hide/Show Throttle'),			category = _('Pilot & Seat Controls')},
-	{down = iCommandViewNightVisionGogglesOn,	name = _('Helmet Visor/NVG Toggle'),	category = _('Pilot & Seat Controls')},
-	{															down = iCommandPlaneModeFI0,				name = _('Switch the Helmet Visor for NVG and viceversa'),	category = _('Pilot & Seat Controls')},																																				   
-	{down = iCommandPlane_Helmet_Brightess_Up,		name = _('NVG Brightness Up'),			category = _('Pilot & Seat Controls')},
-	{down = iCommandPlane_Helmet_Brightess_Down,	name = _('NVG Brightness Down'),		category = _('Pilot & Seat Controls')},
+	{down = iCommandToggleMirrors,					name = _('Mirrors TOGGLE'),				category = _('Pilot & Seat Controls')},
+    {down = iCommandPlaneEject,						name = _('Eject (3 times)'),			category = _('Pilot & Seat Controls')},	
+	{down = iCommandCockpitShowPilotOnOff,  		name = _('Hide/Show Pilot Body'),		category = _('Pilot & Seat Controls')},
+	{down = iCommandPlaneCircuitBreaker_10, 		name = _('Hide/Show Control Stick'),	category = _('Pilot & Seat Controls')},
+	{down = iCommandPlaneCircuitBreaker_11,			name = _('Hide/Show Throttle'),			category = _('Pilot & Seat Controls')},
+	{down = iCommandViewNightVisionGogglesOn,		name = _('Helmet Visor/NVG Toggle'),	category = _('Pilot & Seat Controls')},
+	{															down = iCommandPlaneModeFI0,				name = _('Switch the Helmet Visor for NVG and viceversa'),	category = _('Pilot & Seat Controls')},
+	{															down = iCommandPlane_Helmet_Brightess_Up,	name = _('NVG Brightness Up'),			category = _('Pilot & Seat Controls')},
+	{															down = iCommandPlane_Helmet_Brightess_Down,	name = _('NVG Brightness Down'),		category = _('Pilot & Seat Controls')},
 	
 	-- HOTAS
 	-- Stick
@@ -394,14 +394,14 @@ join(res.keyCommands,{
 	{pressed = iCommandPlaneTrimLeft,  up = iCommandPlaneTrimStop,  name = _('Trim Bank LEFT'),							category = _('HOTAS')},
 	{pressed = iCommandPlaneTrimRight, up = iCommandPlaneTrimStop,  name = _('Trim Bank RIGHT'),						category = _('HOTAS')},
 	
-	{down = iCommandPlane_HOTAS_PinkySwitchForward,			up = iCommandPlane_HOTAS_PinkySwitchCenter,			name = _('WP Increment'),								    category = _('HOTAS')},
-	{down = iCommandPlaneAutopilotOverrideOn,				up = iCommandPlaneAutopilotOverrideOff,				name = _('Emergency SAAHS Disconnect'),						category = _('HOTAS')},
-	{down = iCommandPlane_HOTAS_DataManagementSwitchUp,		up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select FWD: INS, IRMV/EOMV'),  			category = _('HOTAS')},
-	{down = iCommandPlane_HOTAS_DataManagementSwitchDown,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select AFT: DMT: LST/TV'),  				category = _('HOTAS')},
-	{down = iCommandPlane_HOTAS_DataManagementSwitchLeft,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select LEFT: MAP Center/Decenter'),		category = _('HOTAS')},
-	{down = iCommandPlane_HOTAS_DataManagementSwitchRight,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select RIGHT: FLIR BH/WH'),				category = _('HOTAS')},
-	{down = iCommandPlane_HOTAS_ChinaHatForward,			up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select DOWN: HUD Scene Reject/TGP'),		category = _('HOTAS')},
-	{down = iCommandPlane_HOTAS_NoseWheelSteeringButton,	up = iCommandPlane_HOTAS_NoseWheelSteeringButtonOff,name = _('AG Target Undesignate / NWS / FOV Toggle'),		category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_PinkySwitchForward,			up = iCommandPlane_HOTAS_PinkySwitchCenter,			name = _('WP Increment'),								category = _('HOTAS')},
+	{down = iCommandPlaneAutopilotOverrideOn,				up = iCommandPlaneAutopilotOverrideOff,				name = _('Emergency SAAHS Disconnect'),					category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_DataManagementSwitchUp,		up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select FWD: INS, IRMV/EOMV'),  		category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_DataManagementSwitchDown,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select AFT: DMT: LST/TV'),  			category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_DataManagementSwitchLeft,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select LEFT: MAP Center/Decenter'),	category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_DataManagementSwitchRight,	up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select RIGHT: FLIR BH/WH'),			category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_ChinaHatForward,			up = iCommandPlane_HOTAS_DataManagementSwitchOff,	name = _('Sensor Select DOWN: HUD Scene Reject/TGP'),	category = _('HOTAS')},
+	{down = iCommandPlane_HOTAS_NoseWheelSteeringButton,	up = iCommandPlane_HOTAS_NoseWheelSteeringButtonOff,name = _('AG Target Undesignate / NWS / FOV Toggle'),	category = _('HOTAS')},
 	
 	-- Throttle
 	{down = iCommandPlaneDropChaffOnce,						name = _('ECM Dispense AFT: Chaff'),		category = _('HOTAS')},
@@ -537,7 +537,8 @@ join(res.keyCommands,{
 	{down = iCommandPlaneNav_PB8,					name = _('IR Cooling control'),						category = _('Armament Control')},
 	
 	{down = iCommandPlaneJettisonFuelTanks,			name = _('Emergency Jettison Pushbutton'),			category = _('Armament Control')},
-	
+	{down = iCommandPlaneWingtipSmokeOnOff,         name = _('Smoke'),                                  category = _('Armament Control')},
+    
 	-- UFC
 	{down = iCommandPlaneUFC_1,						name = _('UFC 1 Button'),								category = _('Up Front Control')},
 	{down = iCommandPlaneUFC_2,						name = _('UFC 2/N Button'),								category = _('Up Front Control')},
@@ -568,8 +569,8 @@ join(res.keyCommands,{
 	{down = iCommandPlaneUFC_SEL_DOWN,				name = _('UFC EMCON Toggle Button'),					category = _('Up Front Control')},
 	{down = iCommandPlaneUFC_DEPR_DOWN, up = iCommandPlaneUFC_DEPR_UP,	name = _('UFC I/P Button'),			category = _('Up Front Control')},
 	-- ff: press -> pressed
-	{pressed = iCommandPlaneUFC_INTEN_INCREASE,		name = _('UFC Display Brightness Increase'),			category = _('Up Front Control')},
-	{pressed = iCommandPlaneUFC_INTEN_DECREASE,		name = _('UFC Display Brightness Decrease'),			category = _('Up Front Control')},
+	{pressed = iCommandPlaneUFC_INTEN_INCREASE, 		name = _('UFC Display Brightness Increase'),			category = _('Up Front Control')},
+	{pressed = iCommandPlaneUFC_INTEN_DECREASE, 		name = _('UFC Display Brightness Decrease'),			category = _('Up Front Control')},
 	
 	-- ODU
 	{down = iCommandPlaneCDU_1,						name = _('ODU Option 1'),								category = _('Up Front Control')},

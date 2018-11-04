@@ -6,7 +6,9 @@ local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua
 
 join(res.keyCommands,{
 
---- fvh
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- FF: Begin custom assignments
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 {down = weapons_commands.GunsMslCamrCover, up = weapons_commands.GunsMslCamrCover, cockpit_device_id = devices.WEAPONS_CONTROL,  value_down = 1.0, value_up = 0.0, name = _('Guns, Missile and Camera Switch Cover Toggle'), category = {_('_My Buttons')}},
 {down = extlights_commands.LdgTaxi,        up = extlights_commands.LdgTaxi,        cockpit_device_id = devices.EXTLIGHTS_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Landing & Taxi Light Switch Toggle'), category = {_('_My Buttons')}},
 {down = extlights_commands.Beacon,         up = extlights_commands.Beacon,         cockpit_device_id = devices.EXTLIGHTS_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Exterior Lights Beacon Switch Toggle'), category = {_('_My Buttons')}},
@@ -52,6 +54,9 @@ join(res.keyCommands,{
 
 {down = jettison_commands.SelectJettSw, up = jettison_commands.SelectJettSw, cockpit_device_id = devices.JETTISON_SYSTEM, value_down = 1.0,	value_up = 0.0, name = _('Select Jettison Switch Select/Off'), category = {_('_My Buttons')}},
 {down = jettison_commands.SelectJettSw, up = jettison_commands.SelectJettSw, cockpit_device_id = devices.JETTISON_SYSTEM, value_down =-1.0,	value_up = 0.0, name = _('Select Jettison Switch All Pylons/Off'), category = {_('_My Buttons')}},
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--- FF: End of custom assignments
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ---------------------------------------------
 -- Cheat ------------------------------------
@@ -94,8 +99,8 @@ join(res.keyCommands,{
 {	down = asg31_commands.ResumeSearch,			up = asg31_commands.ResumeSearch,			cockpit_device_id = devices.AN_ASG31,			value_down =  1, value_up = 0,	name = _('Dogfight/Resume Search Switch - CENTER-PRESS (RESUME SEARCH)'),	category = {_('Stick')}},
 {	down = asg31_commands.DgMode,				up = asg31_commands.DgMode,					cockpit_device_id = devices.AN_ASG31,			value_down =  1, value_up = 0,	name = _('Dogfight/Resume Search Switch - AFT (DG)'),						category = {_('Stick')}},
 {	down = control_commands.PitchDamperCutoff,	up = control_commands.PitchDamperCutoff,	cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  1, value_up = 0,	name = _('Pitch Damper Cutoff Switch'),										category = {_('Stick')}},
-{	pressed = iCommandPlaneTrimUp,				up = iCommandPlaneTrimStop,																									name = _('Elevator Trimmer Switch - PUSH(DESCEND)'),						category = {_('Stick'), _('Flight Control')}},
-{	pressed = iCommandPlaneTrimDown,			up = iCommandPlaneTrimStop,																									name = _('Elevator Trimmer Switch - PULL(CLIMB)'),							category = {_('Stick'), _('Flight Control')}},
+{	pressed = iCommandPlaneTrimDown,			up = iCommandPlaneTrimStop,																									name = _('Elevator Trimmer Switch - PUSH(DESCEND)'),						category = {_('Stick'), _('Flight Control')}},
+{	pressed = iCommandPlaneTrimUp,				up = iCommandPlaneTrimStop,																									name = _('Elevator Trimmer Switch - PULL(CLIMB)'),							category = {_('Stick'), _('Flight Control')}},
 {	pressed = iCommandPlaneTrimLeft,			up = iCommandPlaneTrimStop,																									name = _('Aileron Trimmer Switch - LEFT WING DOWN'),						category = {_('Stick'), _('Flight Control')}},
 {	pressed = iCommandPlaneTrimRight,			up = iCommandPlaneTrimStop,																									name = _('Aileron Trimmer Switch - RIGHT WING DOWN'),						category = {_('Stick'), _('Flight Control')}},
 
@@ -640,21 +645,21 @@ join(res.keyCommands,{
 {	down = device_commands.Button_22,									cockpit_device_id = devices.UHF_RADIO,	value_down = 0,					name = _('UHF Radio Hinged Access Door - CLOSE'),				category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},
 {	down = device_commands.Button_24,	up = device_commands.Button_24,	cockpit_device_id = devices.UHF_RADIO,	value_down = 1,	value_up = 0,	name = _('UHF Radio Preset Channel Set Button'),				category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},
 -- ARN-118 TACAN Control Panel
-{	down = device_commands.Button_7,	cockpit_device_id = devices.TACAN_CTRL_PANEL,	value_down = 1,			name = _('TACAN Mode Selector Switch - CW'),		category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	down = device_commands.Button_7,	cockpit_device_id = devices.TACAN_CTRL_PANEL,	value_down = -1,		name = _('TACAN Mode Selector Switch - CCW'),		category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	down = iCommandPlane_TACAN_Mode_Off, 															name = _('TACAN Mode Selector Switch - OFF'),		category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	down = iCommandPlane_TACAN_Mode_Rec, 															name = _('TACAN Mode Selector Switch - REC'),		category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	down = iCommandPlane_TACAN_Mode_TR, 															name = _('TACAN Mode Selector Switch - T/R'),		category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	down = iCommandPlane_TACAN_Mode_AAREC, 															name = _('TACAN Mode Selector Switch - A/A REC'),	category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	down = iCommandPlane_TACAN_Mode_AATR, 															name = _('TACAN Mode Selector Switch - A/A T/R'),	category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	pressed = iCommandPlane_TACAN_Volume_Decrease, 													name = _('TACAN Volume - Decrease'),				category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	pressed = iCommandPlane_TACAN_Volume_Increase, 													name = _('TACAN Volume - Increase'),				category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	pressed = iCommandPlane_TACAN_Chanel_Ones_Decrease,												name = _('TACAN Channel Selector (Ones) - Decrease'),			category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	pressed = iCommandPlane_TACAN_Chanel_Ones_Increase,												name = _('TACAN Channel Selector (Ones) - Increase'),			category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	pressed = iCommandPlane_TACAN_Chanel_Tens_Decrease,												name = _('TACAN Channel Selector (Tens) - Decrease'),			category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	pressed = iCommandPlane_TACAN_Chanel_Tens_Increase,												name = _('TACAN Channel Selector (Tens) - Increase'),			category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	down = iCommandPlane_TACAN_Chanel_XY_Mode, 														name = _('TACAN Mode X/Y Switch'),					category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
-{	down = iCommandPlane_TACAN_Test, up=iCommandPlane_TACAN_Test,	value_down = 1,	value_up = 0,	name = _('TACAN Test Button'),						category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	down = device_commands.Button_7,	cockpit_device_id = devices.TACAN_CTRL_PANEL,	value_down = 1,		name = _('TACAN Mode Selector Switch - CW'),			category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	down = device_commands.Button_7,	cockpit_device_id = devices.TACAN_CTRL_PANEL,	value_down = -1,	name = _('TACAN Mode Selector Switch - CCW'),			category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	down = iCommandPlane_TACAN_Mode_Off, 																	name = _('TACAN Mode Selector Switch - OFF'),			category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	down = iCommandPlane_TACAN_Mode_Rec, 																	name = _('TACAN Mode Selector Switch - REC'),			category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	down = iCommandPlane_TACAN_Mode_TR, 																	name = _('TACAN Mode Selector Switch - T/R'),			category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	down = iCommandPlane_TACAN_Mode_AAREC, 																	name = _('TACAN Mode Selector Switch - A/A REC'),		category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	down = iCommandPlane_TACAN_Mode_AATR, 																	name = _('TACAN Mode Selector Switch - A/A T/R'),		category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	pressed = iCommandPlane_TACAN_Volume_Decrease, 															name = _('TACAN Volume - Decrease'),					category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	pressed = iCommandPlane_TACAN_Volume_Increase, 															name = _('TACAN Volume - Increase'),					category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	pressed = iCommandPlane_TACAN_Chanel_Ones_Decrease,														name = _('TACAN Channel Selector (Ones) - Decrease'),	category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	pressed = iCommandPlane_TACAN_Chanel_Ones_Increase,														name = _('TACAN Channel Selector (Ones) - Increase'),	category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	pressed = iCommandPlane_TACAN_Chanel_Tens_Decrease,														name = _('TACAN Channel Selector (Tens) - Decrease'),	category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	pressed = iCommandPlane_TACAN_Chanel_Tens_Increase,														name = _('TACAN Channel Selector (Tens) - Increase'),	category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	down = iCommandPlane_TACAN_Chanel_XY_Mode, 																name = _('TACAN Mode X/Y Switch'),						category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
+{	down = iCommandPlane_TACAN_Test, up=iCommandPlane_TACAN_Test,	value_down = 1,	value_up = 0,			name = _('TACAN Test Button'),							category = {_('ARN-118 TACAN Control Panel'), _('Pedestal Panels')}},
 --
 {	down = ahrs_commands.AHRS_NAV_MODE_EXT,	cockpit_device_id = devices.AHRS,	value_down = 1.0,	name = _('Nav Mode Selector Switch - DF/TACAN'),	category = {_('Pedestal Panels')}},
 {	down = ahrs_commands.AHRS_NAV_MODE,		cockpit_device_id = devices.AHRS,	value_down = 0.0,	name = _('Nav Mode Selector Switch - DF'),			category = {_('Pedestal Panels')}},
@@ -813,7 +818,7 @@ join(res.keyCommands,{
 ----------------------------------------------
 --				TEST FEATURE!!!				--
 -- Weapon/CMDS Adjustment
-{	down = weapons_commands.ChangeHighCapRate,		cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change LAU-3/-60 Firing Rate - Single/Ripple(17ms)/Ripple (20ms)/Ripple(60ms)'),		category = {_('Ground Adjustment')}},
+{	down = weapons_commands.ChangeHighCapRate,		cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change LAU-3/-60 Firing Rate - Single/Ripple(17ms)/Ripple(20ms)/Ripple(60ms)'),		category = {_('Ground Adjustment')}},
 {	down = weapons_commands.ChangeLowCapRate,		cockpit_device_id = devices.WEAPONS_CONTROL,	value_down = 1,	name = _('Change LAU-68 Firing Rate - Single/Ripple(60ms)'),						category = {_('Ground Adjustment')}},
 {	down = cmds_commands.ChangeChaffBurst,			cockpit_device_id = devices.CMDS,				value_down = 1,	name = _('Change Chaff Burst Count - 1/2/3/4/6/8'),									category = {_('Ground Adjustment')}},
 {	down = cmds_commands.ChangeChaffSalvo,			cockpit_device_id = devices.CMDS,				value_down = 1,	name = _('Change Chaff Salvo Count - 1/2/4/8/C'),									category = {_('Ground Adjustment')}},
