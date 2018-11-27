@@ -276,9 +276,9 @@ join(res.keyCommands,{
 {	down = SMS_commands.IRCoolingSw,			cockpit_device_id = devices.SMS,				value_down =  0.1,		name = _('IR Cooling Switch - NORM'),					category = {_('Instrument Panel')}},
 {	down = SMS_commands.IRCoolingSw,			cockpit_device_id = devices.SMS,				value_down =  0.0,		name = _('IR Cooling Switch - OFF'),					category = {_('Instrument Panel')}},
 -- HMD Knob
---{	pressed = ,									cockpit_device_id = ,							value_pressed = -0.5,	name = _('HMD OFF/BRT Knob - CCW/Decrease'),			category = {_('Instrument Panel')}},
---{	pressed = ,									cockpit_device_id = ,							value_pressed =  0.5,	name = _('HMD OFF/BRT Knob - CW/Increase'),				category = {_('Instrument Panel')}},
--- Spin Recovery
+{	pressed = hmd_commands.BrtKnob_ITER,		cockpit_device_id = devices.HMD_INTERFACE,		value_pressed = -1.0,	name = _('HMD OFF/BRT Knob - CCW/Decrease'),			category = {_('Instrument Panel')}},
+{	pressed = hmd_commands.BrtKnob_ITER,		cockpit_device_id = devices.HMD_INTERFACE,		value_pressed =  1.0,	name = _('HMD OFF/BRT Knob - CW/Increase'),				category = {_('Instrument Panel')}},
+- Spin Recovery
 {	down = ctrl_commands.SpinRecCover_EXT,		cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  0.0,		name = _('Spin Recovery Switch Cover - OPEN/CLOSE'),	category = {_('Instrument Panel')}},
 {	down = ctrl_commands.SpinRecCover,			cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  1.0,		name = _('Spin Recovery Switch Cover - OPEN'),			category = {_('Instrument Panel')}},
 {	down = ctrl_commands.SpinRecCover,			cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  0.0,		name = _('Spin Recovery Switch Cover - CLOSE'),			category = {_('Instrument Panel')}},
@@ -458,7 +458,9 @@ join(res.keyCommands,{
 {	down = MDI_commands.MDI_Left_CRS_Negative,			up = MDI_commands.MDI_Left_CRS_Negative,	cockpit_device_id = devices.MDI_LEFT,	value_down = -1.0,		value_up = 0.0,	name = _('Course Set Switch - Left'),							category = {_('Instrument Panel')}},
 {	down = MDI_commands.MDI_Left_CRS_Positive,			up = MDI_commands.MDI_Left_CRS_Positive,	cockpit_device_id = devices.MDI_LEFT,	value_down =  1.0,		value_up = 0.0,	name = _('Course Set Switch - Right'),							category = {_('Instrument Panel')}},
 -- ALR-67
-{	down = rwr_commands.Power,			up = rwr_commands.Power,	cockpit_device_id = devices.RWR,	value_down =  1.0,		value_up = 0.0,	name = _('ALR-67 POWER Pushbutton'),								category = {_('Instrument Panel'), _('ALR-67')}},
+{	down = rwr_commands.Power_EXT,									cockpit_device_id = devices.RWR,	value_down =  1.0,						name = _('ALR-67 POWER Pushbutton - ON/OFF'),						category = {_('Instrument Panel'), _('ALR-67')}},
+{	down = rwr_commands.Power,										cockpit_device_id = devices.RWR,	value_down =  1.0,						name = _('ALR-67 POWER Pushbutton - ON'),							category = {_('Instrument Panel'), _('ALR-67')}},
+{	down = rwr_commands.Power,										cockpit_device_id = devices.RWR,	value_down =  0.0,						name = _('ALR-67 POWER Pushbutton - OFF'),							category = {_('Instrument Panel'), _('ALR-67')}},
 {	down = rwr_commands.Display,		up = rwr_commands.Display,	cockpit_device_id = devices.RWR,	value_down =  1.0,		value_up = 0.0,	name = _('ALR-67 DISPLAY Pushbutton'),								category = {_('Instrument Panel'), _('ALR-67')}},
 {	down = rwr_commands.Special,		up = rwr_commands.Special,	cockpit_device_id = devices.RWR,	value_down =  1.0,		value_up = 0.0,	name = _('ALR-67 SPECIAL Pushbutton'),								category = {_('Instrument Panel'), _('ALR-67')}},
 {	down = rwr_commands.Offset,			up = rwr_commands.Offset,	cockpit_device_id = devices.RWR,	value_down =  1.0,		value_up = 0.0,	name = _('ALR-67 OFFSET Pushbutton'),								category = {_('Instrument Panel'), _('ALR-67')}},
@@ -556,9 +558,7 @@ join(res.keyCommands,{
 {	down = gear_commands.HookHandle,															cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,						name = _('Arresting Hook Handle - Up'),						category = {_('Right Vertical Panel')}},
 {	down = gear_commands.HookHandle,															cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  0.0,						name = _('Arresting Hook Handle - Down'),					category = {_('Right Vertical Panel')}},
 --
-{	down = ECS_commands.AV_COOL_Sw_ITER,														cockpit_device_id = devices.ECS_INTERFACE,		value_down =  0.0,						name = _('AV COOL Switch - NORM/EMERG'),					category = {_('Right Vertical Panel')}},
-{	down = ECS_commands.AV_COOL_Sw,																cockpit_device_id = devices.ECS_INTERFACE,		value_down =  1.0,						name = _('AV COOL Switch - EMERG'),							category = {_('Right Vertical Panel')}},
-{	down = ECS_commands.AV_COOL_Sw,																cockpit_device_id = devices.ECS_INTERFACE,		value_down =  0.0,						name = _('AV COOL Switch - NORM'),							category = {_('Right Vertical Panel')}},
+{	down = ECS_commands.AV_COOL_Sw,					up = ECS_commands.AV_COOL_Sw,				cockpit_device_id = devices.ECS_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('AV COOL Switch - EMERG/NORM'),					category = {_('Right Vertical Panel')}},
 -- Wing Fold Control Handle
 {	down = ctrl_commands.WingFoldPull_ITER,														cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  0.0,						name = _('Wing Fold Control Handle - PULL/STOW'),			category = {_('Right Vertical Panel')}},
 {	down = ctrl_commands.WingFoldPull,															cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  1.0,						name = _('Wing Fold Control Handle - PULL'),				category = {_('Right Vertical Panel')}},
@@ -1001,6 +1001,7 @@ join(res.keyCommands,{
 {	down = ky58_commands.KY58_PowerSw,					up = ky58_commands.KY58_PowerSw,				cockpit_device_id = devices.KY58,				value_down =  0.0,	value_up = 0.1,	name = _('KY-58 Power Select Knob - OFF/ON'),							category = {_('Special For Joystick'), _('Right Console'), _('KY-58 Control Panel')}},
 {	down = ky58_commands.KY58_PowerSw,					up = ky58_commands.KY58_PowerSw,				cockpit_device_id = devices.KY58,				value_down =  0.2,	value_up = 0.1,	name = _('KY-58 Power Select Knob - TD/ON'),							category = {_('Special For Joystick'), _('Right Console'), _('KY-58 Control Panel')}},
 {	down = engines_commands.APU_ControlSw_TM_WARTHOG,	up = engines_commands.APU_ControlSw_TM_WARTHOG,	cockpit_device_id = devices.ENGINES_INTERFACE,	value_down =  1.0,	value_up = 0.0,	name = _('APU Control Sw (special) - ON/OFF'),							category = {_('Special For Joystick'), _('Left Console')}},
+{	down = rwr_commands.Power,							up = rwr_commands.Power,						cockpit_device_id = devices.RWR,				value_down =  1.0,	value_up = 0.0,	name = _('ALR-67 POWER Pushbutton (special) - ON/OFF'),					category = {_('Special For Joystick'), _('Instrument Panel'), _('ALR-67')}},
 
 })
 
@@ -1044,7 +1045,7 @@ join(res.axisCommands,{
 -- IFEI
 {	action = IFEI_commands.IFEI_Brightness_AXIS,		cockpit_device_id = devices.IFEI,				name = _('IFEI Brightness Control Knob'),			category = {_('Instrument Panel')}},
 -- HMD
---{	action = _AXIS,										cockpit_device_id = ,							name = _('HMD OFF/BRT Knob'),						category = {_('Instrument Panel')}},
+{	action = hmd_commands.BrtKnob_AXIS,					cockpit_device_id = devices.HMD_INTERFACE,		name = _('HMD OFF/BRT Knob'),						category = {_('Instrument Panel')}},
 -- UFC
 {	action = UFC_commands.Comm1Vol_AXIS,				cockpit_device_id = devices.UFC,				name = _('UFC COMM 1 Volume Control Knob'),			category = {_('Instrument Panel'), _('UFC')}},
 {	action = UFC_commands.Comm2Vol_AXIS,				cockpit_device_id = devices.UFC,				name = _('UFC COMM 2 Volume Control Knob'),			category = {_('Instrument Panel'), _('UFC')}},
