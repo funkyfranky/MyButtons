@@ -278,7 +278,7 @@ join(res.keyCommands,{
 -- HMD Knob
 {	pressed = hmd_commands.BrtKnob_ITER,		cockpit_device_id = devices.HMD_INTERFACE,		value_pressed = -1.0,	name = _('HMD OFF/BRT Knob - CCW/Decrease'),			category = {_('Instrument Panel')}},
 {	pressed = hmd_commands.BrtKnob_ITER,		cockpit_device_id = devices.HMD_INTERFACE,		value_pressed =  1.0,	name = _('HMD OFF/BRT Knob - CW/Increase'),				category = {_('Instrument Panel')}},
-- Spin Recovery
+-- Spin Recovery
 {	down = ctrl_commands.SpinRecCover_EXT,		cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  0.0,		name = _('Spin Recovery Switch Cover - OPEN/CLOSE'),	category = {_('Instrument Panel')}},
 {	down = ctrl_commands.SpinRecCover,			cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  1.0,		name = _('Spin Recovery Switch Cover - OPEN'),			category = {_('Instrument Panel')}},
 {	down = ctrl_commands.SpinRecCover,			cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  0.0,		name = _('Spin Recovery Switch Cover - CLOSE'),			category = {_('Instrument Panel')}},
