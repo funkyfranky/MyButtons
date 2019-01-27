@@ -212,7 +212,7 @@ join(res.keyCommands,{
     {combos = {{key = 'H'}}, down = 3303, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = 'Autopilot mode HÖJD (Altitude Hold)', category = 'Autopilot'}, 
     {combos = {{key = 'E'}}, down = 3301, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = 'SAS mode SPAK flight stabiliser', category = 'Autopilot'}, 
     {combos = {{key = "O"}}, pressed = 3305, up = 3305, cockpit_device_id  = devices.FLIGHTDATAUNIT, value_pressed = 1.0, value_up = 0.0, name = 'Roll centrering (Roll trim reset) '  , category = 'Flight Control'},
-    {down = iCommandToggleMirrors,	name = _('Toggle Mirrors'), category = _('View Cockpit')},																						 
+    {down = iCommandToggleMirrors,	name = _('Toggle Mirrors'), category = _('View Cockpit')},
     
     
     --HUD

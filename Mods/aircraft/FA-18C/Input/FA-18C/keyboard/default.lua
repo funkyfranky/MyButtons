@@ -92,6 +92,8 @@ join(res.keyCommands,{
 ---------------------------------------------
 {combos = {{key = 'P',	reformers = {'RShift'}}},	down = iCommandCockpitShowPilotOnOff,	name = _('Show pilot body'),	category = _('General')},
 {combos = {{key = 'U'}}, 							down = iCommandPlaneShipTakeOff,		name = _('Catapult Hook-Up'),	category = _('General')},
+-- Smoke Device Button
+{												down = cpt_commands.SmokeDevice,	cockpit_device_id = devices.CPT_MECHANICS, value_down = 1.0, name = _('Smoke Device - ON/OFF'),	category = _('General')},
 
 ---------------------------------------------
 -- View Cockpit -----------------------------
@@ -135,7 +137,7 @@ join(res.keyCommands,{
 
 {									down = cpt_commands.StickHide,		cockpit_device_id = devices.CPT_MECHANICS,	value_down =  1.0,	name = _('Control Stick - HIDE'),			category = {_('Stick'), _('HOTAS')}},
 {									down = cpt_commands.StickHide,		cockpit_device_id = devices.CPT_MECHANICS,	value_down =  0.0,	name = _('Control Stick - SHOW'),			category = {_('Stick'), _('HOTAS')}},
-{combos = {{key = 'Backspace'}},	down = cpt_commands.StickHide_EXT,	cockpit_device_id = devices.CPT_MECHANICS,	value_down =  1.0,	name = _('Control Stick - HIDE/SHOW'),		category = {_('Stick'), _('HOTAS')}},
+{combos = {{key = 'Back'}},	down = cpt_commands.StickHide_EXT,	cockpit_device_id = devices.CPT_MECHANICS,	value_down =  1.0,	name = _('Control Stick - HIDE/SHOW'),		category = {_('Stick'), _('HOTAS')}},
 
 ---------------------------------------------
 -- Throttle Quadrant ------------------------
