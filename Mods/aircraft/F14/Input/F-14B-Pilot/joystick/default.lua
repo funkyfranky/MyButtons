@@ -285,8 +285,12 @@ join_override(res.keyCommands,{
 {down = device_commands.LIGHTS_AntiCol, up = device_commands.LIGHTS_AntiCol, cockpit_device_id = devices.COCKPITMECHANICS, value_down = 1.0, value_up = 0.0, name = _('Anti-Collision Lights 1/0'), category = _('_My Buttons')},
 
 {down = device_commands.PilotOxygenOn, up = device_commands.PilotOxygenOn, cockpit_device_id = devices.COCKPITMECHANICS, value_down = 1.0, value_up = 0.0, name = _('Oxygen ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.PilotOxygenOn, cockpit_device_id = devices.COCKPITMECHANICS, value_down = 1.0, name = _('Oxygen ON'), category = _('_My Buttons')},
+{down = device_commands.PilotOxygenOn, cockpit_device_id = devices.COCKPITMECHANICS, value_down = 0.0, name = _('Oxygen OFF'), category = _('_My Buttons')},
 
 {down = device_commands.EJECT_ArmPilot, up = device_commands.EJECT_ArmPilotK, cockpit_device_id = devices.COCKPITMECHANICS, value_down = 1.0, value_up = 0.0, name = _('Ejection Seat Safety 1/0'), category = _('_My Buttons')},
+{down = device_commands.EJECT_ArmPilot, cockpit_device_id = devices.COCKPITMECHANICS, value_down = 1.0, name = _('Ejection Seat Safety 1'), category = _('_My Buttons')},
+{down = device_commands.EJECT_ArmPilot, cockpit_device_id = devices.COCKPITMECHANICS, value_down = 0.0, name = _('Ejection Seat Safety 0'), category = _('_My Buttons')},
 
 -- VDI
 {down = device_commands.DISP_VDI_power, up = device_commands.DISP_VDI_power, cockpit_device_id = devices.VDI, value_down = 1.0, value_up = 0.0, name = _('VDI Power On/Off 1/0'), category = _('_My Buttons')},
@@ -335,8 +339,8 @@ join_override(res.keyCommands,{
 {down = device_commands.RADARALT_Test, up = device_commands.RADARALT_Test, cockpit_device_id = devices.RADARALTIMETER, value_down = 1.0, value_up = 0.0, name = _('Radar Altimeter Uncage 1/0'), category = _('_My Buttons')},
 
 -- BAROALTIMETER
-{down = device_commands.ALTIMETER_Mode, up = device_commands.ALTIMETER_Mode, cockpit_device_id = devices.BAROALTIMETER, value_down = 1.0, value_up = 0.0, name = _('Altimeter Mode Switch 1/0'), category = _('_My Buttons')},
-{down = device_commands.ALTIMETER_Mode, up = device_commands.ALTIMETER_Mode, cockpit_device_id = devices.BAROALTIMETER, value_down =-1.0, value_up = 0.0, name = _('Altimeter Mode Switch -1/0'), category = _('_My Buttons')},
+--{down = device_commands.ALTIMETER_Mode, up = device_commands.ALTIMETER_Mode, cockpit_device_id = devices.BAROALTIMETER, value_down = 1.0, value_up = 0.0, name = _('Altimeter Mode Switch 1/0'), category = _('_My Buttons')},
+--{down = device_commands.ALTIMETER_Mode, up = device_commands.ALTIMETER_Mode, cockpit_device_id = devices.BAROALTIMETER, value_down =-1.0, value_up = 0.0, name = _('Altimeter Mode Switch -1/0'), category = _('_My Buttons')},
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FF: end custom assignments
