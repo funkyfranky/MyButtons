@@ -959,6 +959,7 @@ elements["PNT_2136"].sound = {{SOUND_TACAN_SELECTOR_KNOB},{SOUND_TACAN_SELECTOR_
 elements["PNT_2137"] = default_springloaded_3pos_switch(_("AN/ALR-67 Mode"), devices.RWR, device_commands.RWR_DISPLAY_MODE, device_commands.RWR_DISPLAY_MODE, -1, 0, 1, cockpit_args.ALR67_RIO_RWR_MODE)
 elements["PNT_2140"] = default_springloaded_3pos_switch(_("AN/ALR-67 Test"), devices.RWR, device_commands.RWR_TEST_SWITCH, device_commands.RWR_TEST_SWITCH, -1, 0, 1, cockpit_args.ALR67_RIO_RWR_TEST)
 elements["PNT_2139"] = default_2_position_tumb(_("AN/ALR-67 Power"), devices.RWR, device_commands.RWR_POWER, cockpit_args.ALR67_RIO_RWR_PWR)
+-- FF why devices.ICS?
 elements["PNT_2138"] = default_axis(_("AN/ALR-67 Volume"), devices.ICS, device_commands.RWR_ALR67_Volume, cockpit_args.ALR67_RIO_RWR_VOL, 1.0, 0.1, true, false)
 
 -- AN/ALE-39 Mode Panel
