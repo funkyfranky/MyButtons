@@ -47,6 +47,9 @@ join_override(res.keyCommands,{
 {down = device_commands.BIT_Selector, cockpit_device_id = devices.BITPANEL, value_down = 10/11, name = _('Master Test Selector 10/11'), category = _('_My Buttons')},
 {down = device_commands.BIT_Selector, cockpit_device_id = devices.BITPANEL, value_down = 11/11, name = _('Master Test Selector 11/11'), category = _('_My Buttons')},
 
+{pressed = device_commands.BIT_Selector, up = device_commands.BIT_Selector, cockpit_device_id = devices.BITPANEL, value_pressed =-1/11, value_up=0.0, name = _('Master Test Selector Decrease'), category = _('_My Buttons')},
+{pressed = device_commands.BIT_Selector, up = device_commands.BIT_Selector, cockpit_device_id = devices.BITPANEL, value_pressed = 1/11, value_up=0.0, name = _('Master Test Selector Increase'), category = _('_My Buttons')},
+
 {down = device_commands.BIT_SelectorPush, up = device_commands.BIT_SelectorPush, cockpit_device_id = devices.BITPANEL, value_down = 1.0, value_up = 0.0, name = _('Master Test Selector Push 1/0'), category = _('_My Buttons')},
 {down = device_commands.BIT_SelectorPush, cockpit_device_id = devices.BITPANEL, value_down = 1.0, name = _('Master Test Selector Push 1'), category = _('_My Buttons')},
 {down = device_commands.BIT_SelectorPush, cockpit_device_id = devices.BITPANEL, value_down = 0.0, name = _('Master Test Selector Push 0'), category = _('_My Buttons')},
@@ -208,6 +211,7 @@ join_override(res.keyCommands,{
 {down = device_commands.FUELSYSTEM_WingExt_Trans, cockpit_device_id = devices.FUELSYSTEM, value_down =-1.0, name = _('Wing/Ext Trans -1'), category = _('_My Buttons')},
 
 {down = device_commands.FUELSYSTEM_Dump, up = device_commands.FUELSYSTEM_Dump, cockpit_device_id = devices.FUELSYSTEM, value_down = 1.0, value_up = 0.0, name = _('Fuel Dump 1/0'), category = _('_My Buttons')},
+{down = device_commands.FUELSYSTEM_Dump, up = device_commands.FUELSYSTEM_Dump, cockpit_device_id = devices.FUELSYSTEM, value_down = 0.0, value_up = 1.0, name = _('Fuel Dump 0/1'), category = _('_My Buttons')},
 {down = device_commands.FUELSYSTEM_Dump, cockpit_device_id = devices.FUELSYSTEM, value_down = 1.0, name = _('Fuel Dump 1'), category = _('_My Buttons')},
 {down = device_commands.FUELSYSTEM_Dump, cockpit_device_id = devices.FUELSYSTEM, value_down = 0.0, name = _('Fuel Dump 0'), category = _('_My Buttons')},
 
@@ -282,6 +286,8 @@ join_override(res.keyCommands,{
 
 {down = device_commands.LIGHTS_PositionFlash, up = device_commands.LIGHTS_PositionFlash, cockpit_device_id = devices.COCKPITMECHANICS, value_down = 1.0, value_up = 0.0, name = _('Position Lights Flash 1/0'), category = _('_My Buttons')},
 
+{down=device_commands.LIGHTS_Exterior_Master_Switch, up=device_commands.LIGHTS_Exterior_Master_Switch, cockpit_device_id=devices.COCKPITMECHANICS, value_down=0.0, value_down=1.0, name=_('Exterior Lights Master Switch OFF/ON'),   category=_('_My Buttons')},
+
 {down = device_commands.LIGHTS_AntiCol, up = device_commands.LIGHTS_AntiCol, cockpit_device_id = devices.COCKPITMECHANICS, value_down = 1.0, value_up = 0.0, name = _('Anti-Collision Lights 1/0'), category = _('_My Buttons')},
 
 {down = device_commands.PilotOxygenOn, up = device_commands.PilotOxygenOn, cockpit_device_id = devices.COCKPITMECHANICS, value_down = 1.0, value_up = 0.0, name = _('Oxygen ON/OFF'), category = _('_My Buttons')},
@@ -330,6 +336,26 @@ join_override(res.keyCommands,{
 {down = device_commands.WINGSWEEP_EmergencySweepCover, cockpit_device_id = devices.WINGSWEEP, value_down = 1.0, name = _('Emergency Wing Sweep Handle Cover 1'), category = _('_My Buttons')},
 {down = device_commands.WINGSWEEP_EmergencySweepCover, cockpit_device_id = devices.WINGSWEEP, value_down = 0.0, name = _('Emergency Wing Sweep Handle Cover 0'), category = _('_My Buttons')},
 
+{down = device_commands.WINGSWEEP_EmergencySweepLever, up = device_commands.WINGSWEEP_EmergencySweepLever, cockpit_device_id = devices.WINGSWEEP, value_down = 1.0, value_up = 0.0, name = _('Emergency Wing Sweep Handle 1/0'), category = _('_My Buttons')},
+{down = device_commands.WINGSWEEP_EmergencySweepLever, up = device_commands.WINGSWEEP_EmergencySweepLever, cockpit_device_id = devices.WINGSWEEP, value_down =-1.0, value_up = 0.0, name = _('Emergency Wing Sweep Handle -1/0'), category = _('_My Buttons')},
+{down = device_commands.WINGSWEEP_EmergencySweepLever, cockpit_device_id = devices.WINGSWEEP, value_down = 1.0, name = _('Emergency Wing Sweep Handle 1'), category = _('_My Buttons')},
+{down = device_commands.WINGSWEEP_EmergencySweepLever, cockpit_device_id = devices.WINGSWEEP, value_down = 0.0, name = _('Emergency Wing Sweep Handle 0'), category = _('_My Buttons')},
+{down = device_commands.WINGSWEEP_EmergencySweepLever, cockpit_device_id = devices.WINGSWEEP, value_down =-1.0, name = _('Emergency Wing Sweep Handle -1'), category = _('_My Buttons')},
+
+{down = device_commands.WINGSWEEP_EmergencyLeverExtended, up = device_commands.WINGSWEEP_EmergencyLeverExtended, cockpit_device_id = devices.WINGSWEEP, value_down = 1.0, value_up = 0.0, name = _('Emergency Wing Sweep Handle Pop Out 1/0'), category = _('_My Buttons')},
+{down = device_commands.WINGSWEEP_EmergencyLeverExtended, cockpit_device_id = devices.WINGSWEEP, value_down = 1.0, name = _('Emergency Wing Sweep Handle Pop Out 1'), category = _('_My Buttons')},
+{down = device_commands.WINGSWEEP_EmergencyLeverExtended, cockpit_device_id = devices.WINGSWEEP, value_down = 0.0, name = _('Emergency Wing Sweep Handle Pop Out 0'), category = _('_My Buttons')},
+
+{pressed = device_commands.WINGSWEEP_EmergencySweepCover, cockpit_device_id = devices.WINGSWEEP, value_pressed = 1.0, name = _('Emergency Wing Sweep Handle Cover Press 1'), category = _('_My Buttons')},
+{pressed = device_commands.WINGSWEEP_EmergencySweepCover, cockpit_device_id = devices.WINGSWEEP, value_pressed = 0.0, name = _('Emergency Wing Sweep Handle Cover Press 0'), category = _('_My Buttons')},
+
+{up=device_commands.WINGSWEEP_EmergencyLeverExtended, down=device_commands.WINGSWEEP_EmergencySweepCover, cockpit_device_id=devices.WINGSWEEP, value_up=1.0, value_down=1.0, name=_('Emergency Wing Sweep Open & Extend'),	 category=_('_My Buttons')},
+{up=device_commands.WINGSWEEP_EmergencySweepCover, down=device_commands.WINGSWEEP_EmergencySweepLever, pressed=device_commands.WINGSWEEP_EmergencyLeverExtended, cockpit_device_id=devices.WINGSWEEP, value_down=0.30, value_pressed=0.0, value_up=0.0, name=_('Emergency Wing Sweep to 68°, Lock & Close'), category=_('_My Buttons')},
+{up=device_commands.WINGSWEEP_EmergencySweepCover, down=device_commands.WINGSWEEP_EmergencySweepLever, pressed=device_commands.WINGSWEEP_EmergencyLeverExtended, cockpit_device_id=devices.WINGSWEEP, value_down=1.00, value_pressed=0.0, value_up=0.0, name=_('Emergency Wing Sweep Forward, Lock & Close'), category=_('_My Buttons')},
+
+{up=device_commands.WINGSWEEP_EmergencySweepCover, pressed=device_commands.WINGSWEEP_EmergencyLeverExtended, cockpit_device_id=devices.WINGSWEEP, value_pressed=0.0, value_up=0.0, name=_('Emergency Wing Sweep Lock & Close'), category=_('_My Buttons')},
+{up=device_commands.WINGSWEEP_EmergencySweepCover, pressed=device_commands.WINGSWEEP_EmergencyLeverExtended, cockpit_device_id=devices.WINGSWEEP, value_pressed=1.0, value_up=1.0, name=_('Emergency Wing Sweep Unlock & Open'), category=_('_My Buttons')},
+
 
 -- AOASYSTEM
 {down = device_commands.AoA_HookBypass, up = device_commands.AoA_HookBypass, cockpit_device_id = devices.AOASYSTEM, value_down = 1.0, value_up = 0.0, name = _('Hook Bypass 1/0'), category = _('_My Buttons')},
@@ -337,6 +363,51 @@ join_override(res.keyCommands,{
 
 -- RADARALTIMETER
 {down = device_commands.RADARALT_Test, up = device_commands.RADARALT_Test, cockpit_device_id = devices.RADARALTIMETER, value_down = 1.0, value_up = 0.0, name = _('Radar Altimeter Uncage 1/0'), category = _('_My Buttons')},
+
+-- ARC-159
+{pressed = device_commands.RADIO_UHF_FREQ_MODE_STEP_Pilot, cockpit_device_id = devices.ARC159, value_pressed = 0.5, value_up = 0, name = _('UHF ARC-159 Mode CW'), category = _('_My Buttons')},
+{pressed = device_commands.RADIO_UHF_FREQ_MODE_STEP_Pilot, cockpit_device_id = devices.ARC159, value_pressed = -0.5, value_up = 0, name = _('UHF ARC-159 Mode CCW'), category = _('_My Buttons')},
+
+{pressed = device_commands.RADIO_UHF_CHAN_STEP_Pilot, cockpit_device_id = devices.ARC159, value_pressed = 1/3, value_up = 0, name = _('UHF ARC-159 CHAN SEL CW'), category = _('_My Buttons')},
+{pressed = device_commands.RADIO_UHF_CHAN_STEP_Pilot, cockpit_device_id = devices.ARC159, value_pressed = -1/3, value_up = 0, name = _('UHF ARC-159 CHAN SEL CCW'), category = _('_My Buttons')},
+
+{down=device_commands.CANOPY_Open, up=device_commands.CANOPY_Open, cockpit_device_id=devices.COCKPITMECHANICS, value_down=1.0,  value_up=0.0, name=_('Canopy OPEN/HOLD'),  category=_('_My Buttons')},
+{down=device_commands.CANOPY_Open, up=device_commands.CANOPY_Open, cockpit_device_id=devices.COCKPITMECHANICS, value_down=-1.0, value_up=0.0, name=_('Canopy CLOSE/HOLD'), category=_('_My Buttons')},
+{down=device_commands.CANOPY_Open, up=device_commands.CANOPY_Open, cockpit_device_id=devices.COCKPITMECHANICS, value_down=-1.0, value_up=0.0, name=_('Canopy OPEN/CLOSE'), category=_('_My Buttons')},
+
+
+{down=device_commands.RADARALT_Test, up=device_commands.RADARALT_Test, cockpit_device_id=devices.RADARALTIMETER, value_down=1.0, value_up=0.0, name=_('Radar Alt Control Knob - PUSH'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{pressed=device_commands.RADARALT_Knob, up=device_commands.RADARALT_Knob, cockpit_device_id=devices.RADARALTIMETER, value_pressed=0.01, value_up=0.0, name=_('Radar Alt Control Knob CW'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{pressed=device_commands.RADARALT_Knob, up=device_commands.RADARALT_Knob, cockpit_device_id=devices.RADARALTIMETER, value_pressed=-0.01, value_up=0.0, name=_('Radar Alt Control Knob CCW'), category=_('_My Buttons')}, -- *** CUSTOM ***
+
+{down=device_commands.ALTIMETER_Mode, up=device_commands.ALTIMETER_Mode, cockpit_device_id=devices.BAROALTIMETER, value_down=-1.0, value_up=0.0, name=_('Altimeter Mode Select - STBY'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{down=device_commands.ALTIMETER_Mode, up=device_commands.ALTIMETER_Mode, cockpit_device_id=devices.BAROALTIMETER, value_down=1.0, value_up=0.0, name=_('Altimeter Mode Select - RESET'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{pressed=device_commands.ALTIMETER_Knob, up=device_commands.ALTIMETER_Knob, cockpit_device_id=devices.BAROALTIMETER, value_pressed=0.05, value_up=0.0, name=_('Altimeter Baroset Knob CW'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{pressed=device_commands.ALTIMETER_Knob, up=device_commands.ALTIMETER_Knob, cockpit_device_id=devices.BAROALTIMETER, value_pressed=-0.05, value_up=0.0, name=_('Altimeter Baroset Knob CCW'), category=_('_My Buttons')}, -- *** CUSTOM ***
+
+{down=device_commands.AIRSPEED_KnobSwitch, cockpit_device_id=devices.MACHANDAIRSPEED, value_down=1.0, name=_('Airspeed/Mach Indicator Index Knob - PUSH'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{down=device_commands.AIRSPEED_KnobSwitch, cockpit_device_id=devices.MACHANDAIRSPEED, value_down=0.0, name=_('Airspeed/Mach Indicator Index Knob - PULL'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{down=device_commands.AIRSPEED_KnobSwitch, up=device_commands.AIRSPEED_KnobSwitch, cockpit_device_id=devices.MACHANDAIRSPEED, value_down=1.0, value_up=0.0, name=_('Airspeed/Mach Indicator Index Knob - PUSH>PULL [MOM]'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{down=device_commands.AIRSPEED_KnobSwitch, up=device_commands.AIRSPEED_KnobSwitch, cockpit_device_id=devices.MACHANDAIRSPEED, value_down=0.0, value_up=1.0, name=_('Airspeed/Mach Indicator Index Knob - PULL>PUSH [MOM]'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{pressed=device_commands.AIRSPEED_Knob, up=device_commands.AIRSPEED_Knob, cockpit_device_id=devices.MACHANDAIRSPEED, value_pressed=0.1, value_up=0.0, name=_('Airspeed/Mach Indicator Index Knob CW'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{pressed=device_commands.AIRSPEED_Knob, up=device_commands.AIRSPEED_Knob, cockpit_device_id=devices.MACHANDAIRSPEED, value_pressed=-0.1, value_up=0.0, name=_('Airspeed/Mach Indicator Index Knob CCW'), category=_('_My Buttons')}, -- *** CUSTOM ***
+
+{down=device_commands.FUELSYSTEM_Shutoff_L, cockpit_device_id=devices.FUELSYSTEM, value_down=1, name=_('Fuel Shutoff Handle: LEFT ENG - PULL'), category=_('_My Buttons')}, -- *** CUSTOM ***
+{down=device_commands.FUELSYSTEM_Shutoff_L, cockpit_device_id=devices.FUELSYSTEM, value_down=0, name=_('Fuel Shutoff Handle: LEFT ENG - PUSH'),category=_('_My Buttons')}, -- *** CUSTOM ***
+{down=device_commands.FIRESYSTEM_Bottle_Fire_L, up=device_commands.FIRESYSTEM_Bottle_Fire_L, cockpit_device_id=devices.FIRE, value_down=1, value_up=0, name=_('Fuel Shutoff Handle: LEFT ENG - Fire Ext Bottle'), category=_('_My Buttons')}, -- *** CUSTOM ***
+
+-- [19] Horizontal Situation Display Indicator (HSD)
+{pressed=device_commands.HSD_Knob_Course,   up=device_commands.HSD_Knob_Course,   cockpit_device_id=devices.HSD, value_pressed=0.0005,  value_up=0.0, name=_('Course Knob CW'), category=_('_My Buttons')},
+{pressed=device_commands.HSD_Knob_Course,   up=device_commands.HSD_Knob_Course,   cockpit_device_id=devices.HSD, value_pressed=-0.0005, value_up=0.0, name=_('Course Knob CCW'), category=_('_My Buttons')},
+{pressed=device_commands.HSD_Knob_Heading,  up=device_commands.HSD_Knob_Heading,  cockpit_device_id=devices.HSD, value_pressed=0.0005,  value_up=0.0, name=_('Heading Knob CW'), category=_('_My Buttons')},
+{pressed=device_commands.HSD_Knob_Heading,  up=device_commands.HSD_Knob_Heading,  cockpit_device_id=devices.HSD, value_pressed=-0.0005, value_up=0.0, name=_('Heading Knob CCW'), category=_('_My Buttons')},
+
+{down=device_commands.VDIG_VDI_handle, up=device_commands.VDIG_VDI_handle,  cockpit_device_id=devices.HUD, value_down=1.0, value_up=0.0, name=_('HUD filter ON/OFF'), category=_('_My Buttons')},
+{down=device_commands.VDIG_VDI_handle,  cockpit_device_id=devices.HUD, value_down=1.0, name=_('HUD filter ON'), category=_('_My Buttons')},
+{down=device_commands.VDIG_VDI_handle,  cockpit_device_id=devices.HUD, value_down=0.0, name=_('HUD filter OFF'), category=_('_My Buttons')},
+
+{pressed=device_commands.STDBYADI_trim, up=device_commands.STDBYADI_trim, cockpit_device_id=devices.STDBYAI, value_pressed=0.1, value_up=0.0, name=_('Standby ADI Knob Increase'), category=_('_My Buttons')},
+{pressed=device_commands.STDBYADI_trim, up=device_commands.STDBYADI_trim, cockpit_device_id=devices.STDBYAI, value_pressed=-0.1, value_up=0.0, name=_('Standby ADI Knob Decrease'), category=_('_My Buttons')},
 
 -- BAROALTIMETER
 --{down = device_commands.ALTIMETER_Mode, up = device_commands.ALTIMETER_Mode, cockpit_device_id = devices.BAROALTIMETER, value_down = 1.0, value_up = 0.0, name = _('Altimeter Mode Switch 1/0'), category = _('_My Buttons')},
@@ -398,6 +469,8 @@ join_override(res.keyCommands,{
 
 { down=device_commands.AP_Engage_Toggle, cockpit_device_id=devices.AFCS, value_down=0.0, name=_('Autopilot toggle'),	 category=_('Flight Control')},
 
+
+
 -- pilot display control panel
 { down=device_commands.DISP_mode_takeoff, cockpit_device_id=devices.HUD, value_down=1.0, name=_('Display mode takeoff'), category=_('PDCP')},
 { down=device_commands.DISP_mode_cruise, cockpit_device_id=devices.HUD, value_down=1.0, name=_('Display mode cruise'), category=_('PDCP')},
@@ -430,6 +503,7 @@ join_override(res.keyCommands,{
 {cockpit_device_id=devices.JESTERAI, down=device_commands.JESTER_MenuDiag135, up=device_commands.JESTER_MenuDiag135, value_down=1.0, value_up=0.0, name=_('Jester Menu Down Right'),	 category=_('Jester AI')},
 {cockpit_device_id=devices.JESTERAI, down=device_commands.JESTER_MenuDiag135, up=device_commands.JESTER_MenuDiag135, value_down=-1.0, value_up=0.0, name=_('Jester Menu Up Left'),	 category=_('Jester AI')},
 
+{cockpit_device_id=devices.JESTERAI, down=device_commands.JESTER_CloseMenu, value_down=1.0,  name=_('Close Menu'),	 category=_('Jester AI')},
 
 
 
@@ -470,49 +544,63 @@ join_override(res.keyCommands,{
 join_override(res.axisCommands,{
 
 -- FF: axes
-{action = devices.BAROALTIMETER, cockpit_device_id=device_commands.ALTIMETER_Knob, name = _('Altimeter Pressure Setting')},
+{action=device_commands.ALTIMETER_Knob, cockpit_device_id=devices.BAROALTIMETER, name = _('Altimeter Pressure Setting')},
 
-{action = devices.FUELSYSTEM, cockpit_device_id=device_commands.FUELSYSTEM_Bingo_Knob, name = _('BINGO Fuel Level Knob')},
+{action=device_commands.FUELSYSTEM_Bingo_Knob , cockpit_device_id=devices.FUELSYSTEM, name = _('BINGO Fuel Level Knob')},
 
-{action = devices.HSD, cockpit_device_id=device_commands.HSD_Knob_Heading, name = _('HSD Selected Heading')},
-{action = devices.HSD, cockpit_device_id=device_commands.HSD_Knob_Course, name = _('HSD Selected Course')},
-{action = devices.HSD, cockpit_device_id=device_commands.HSD_Knob_Brightness, name = _('HSD Brightness')},
+{action=device_commands.HSD_Knob_Heading, cockpit_device_id=devices.HSD, name = _('HSD Selected Heading')},
+{action=device_commands.HSD_Knob_Course, cockpit_device_id=devices.HSD, name = _('HSD Selected Course')},
+{action=device_commands.HSD_Knob_Brightness, cockpit_device_id=devices.HSD, name = _('HSD Brightness')},
 
-{action = devices.ECMD, cockpit_device_id=device_commands.ECMD_Knob_Brightness, name = _('ECMD Brightness')},
+{action=device_commands.ECMD_Knob_Brightness, cockpit_device_id=devices.ECMD, name = _('ECMD Brightness')},
 
-{action = devices.TACAN, cockpit_device_id=device_commands.TACAN_Knob_Vol_Pilot, name = _('TACAN Volume')},
+{action=device_commands.TACAN_Knob_Vol_Pilot, cockpit_device_id=devices.TACAN, name = _('TACAN Volume')},
 
-{action = devices.ICS, cockpit_device_id=device_commands.RADIO_ICS_Vol_ALR67_Pilot, name = _('ALR-67 Volume')},
-{action = devices.ICS, cockpit_device_id=device_commands.RADIO_ICS_Vol_Sidewinder, name = _('Sidewinder Volume')},
-{action = devices.ICS, cockpit_device_id=device_commands.RADIO_ICS_Vol_Pilot, name = _('ICS Volume')},
+{action=device_commands.RADIO_ICS_Vol_ALR67_Pilot, cockpit_device_id=devices.ICS, name = _('ALR-67 Volume')},
+{action=device_commands.RADIO_ICS_Vol_Sidewinder, cockpit_device_id=devices.ICS, name = _('Sidewinder Volume')},
+{action=device_commands.RADIO_ICS_Vol_Pilot, cockpit_device_id=devices.ICS, name = _('ICS Volume')},
 
-{action = devices.ARC159, cockpit_device_id=device_commands.RADIO_UHF_VOL_Pilot, name = _('UHF ARC-159 Volume Pilot')},
-{action = devices.ARC159, cockpit_device_id=device_commands.RADIO_UHF_BRT_Pilot, name = _('UHF ARC-159 Display Brightness')},
-{action = devices.ARC159, cockpit_device_id=device_commands.RADIO_UHF_Remote_DISP_BRT_Pilot, name = _('UHF Radio Remote Display Brightness')},
+{action=device_commands.RADIO_UHF_VOL_Pilot , cockpit_device_id=devices.ARC159, name = _('UHF ARC-159 Volume Pilot')},
+{action=device_commands.RADIO_UHF_BRT_Pilot , cockpit_device_id=devices.ARC159, name = _('UHF ARC-159 Display Brightness')},
+{action=device_commands.RADIO_UHF_Remote_DISP_BRT_Pilot, cockpit_device_id=devices.ARC159, name = _('UHF Radio Remote Display Brightness')},
 
 
-{action = devices.ARC182, cockpit_device_id=device_commands.RADIO_VHF_VOL_PILOT, name = _('VHF/UHF ARC-182 Volume Pilot')},
-{action = devices.ARC182, cockpit_device_id=device_commands.RADIO_VHF_Remote_DISP_BRT_Pilot, name = _('VHF/UHF Radio Remote Display Brightness')},
+{action=device_commands.RADIO_VHF_VOL_PILOT , cockpit_device_id=devices.ARC182, name = _('VHF/UHF ARC-182 Volume Pilot')},
+{action=device_commands.RADIO_VHF_Remote_DISP_BRT_Pilot , cockpit_device_id=devices.ARC182, name = _('VHF/UHF Radio Remote Display Brightness')},
 
-{action = devices.DECM, cockpit_device_id=device_commands.DECM_Vol_Knob, name = _('DECM ALQ-100 Volume')},
+{action=device_commands.DECM_Vol_Knob , cockpit_device_id=devices.DECM, name = _('DECM ALQ-100 Volume')},
 
-{action = devices.RWR, cockpit_device_id=device_commands.RWR_Brightness_Pilot, name = _('AN/ALR-67 Display Brightness')},
+{action=device_commands.RWR_Brightness_Pilot , cockpit_device_id=devices.RWR, name = _('AN/ALR-67 Display Brightness')},
 -- {action = devices.RWR, cockpit_device_id=device_commands.RWR_Brightness_Pilot, name = _('AN/ALR-67 Volume')}, -- volume axis is strange
 
-{action = devices.AHRS, cockpit_device_id=device_commands.AHRS_LatCorrection, name = _('Compass LAT Correction')},
+{action=device_commands.AHRS_LatCorrection, cockpit_device_id=devices.AHRS, name = _('Compass LAT Correction')},
 
-{action = devices.WEAPONS, cockpit_device_id=device_commands.WEAP_Gun_Elevation, name = _('Gun Elevation Lead Adjustment')},
-{action = devices.WEAPONS, cockpit_device_id=device_commands.WEAP_Gun_Ammo_adjust, name = _('Gun Ammunition Counter Adjustment')},
+{action=device_commands.WEAP_Gun_Elevation, cockpit_device_id=devices.WEAPONS, name = _('Gun Elevation Lead Adjustment')},
+{action=device_commands.WEAP_Gun_Ammo_adjust , cockpit_device_id=devices.WEAPONS, name = _('Gun Ammunition Counter Adjustment')},
 
-{action = devices.HUD, cockpit_device_id=device_commands.DISP_HUD_pitch_bright, name = _('HUD Pitch Ladder Brightness')},
-{action = devices.HUD, cockpit_device_id=device_commands.VDIG_HUD_trim, name = _('HUD Trim')},
-{action = devices.HUD, cockpit_device_id=device_commands.VDIG_HUD_bright, name = _('HUD Brightness')},
+{action=device_commands.DISP_HUD_pitch_bright , cockpit_device_id=devices.HUD, name = _('HUD Pitch Ladder Brightness')},
+{action=device_commands.VDIG_HUD_trim , cockpit_device_id=devices.HUD, name = _('HUD Trim')},
+{action=device_commands.VDIG_HUD_bright , cockpit_device_id=devices.HUD, name = _('HUD Brightness')},
 
-{action = devices.VDI, cockpit_device_id=device_commands.VDIG_VSDI_trim, name = _('VSDI Screen Trim')},
-{action = devices.VDI, cockpit_device_id=device_commands.VDIG_VDI_contrast, name = _('VDI Screen Contrast')},
-{action = devices.VDI, cockpit_device_id=device_commands.VDIG_VSDI_bright, name = _('VSDI Screen Brightness')},
+{action=device_commands.VDIG_VSDI_trim, cockpit_device_id=devices.VDI, name = _('VSDI Screen Trim')},
+{action=device_commands.VDIG_VDI_contrast , cockpit_device_id=devices.VDI, name = _('VDI Screen Contrast')},
+{action=device_commands.VDIG_VSDI_bright , cockpit_device_id=devices.VDI, name = _('VSDI Screen Brightness')},
 
-{action = devices.CLOCK, cockpit_device_id=device_commands.CLOCK_Wind, name = _('Clock Wind')},
+{action=device_commands.CLOCK_Wind , cockpit_device_id=devices.CLOCK, name = _('Clock Wind')},
+
+{action=device_commands.LIGHTS_Instruments, cockpit_device_id=devices.COCKPITMECHANICS, name=_('Instruments Light BRT Wheel')}, 
+{action=device_commands.LIGHTS_Console, cockpit_device_id=devices.COCKPITMECHANICS, name=_('Console Light BRT Wheel')},
+{action=device_commands.LIGHTS_ACMPanel, cockpit_device_id=devices.COCKPITMECHANICS, name=_('ACM Panel Light BRT Wheel')},
+{action=device_commands.LIGHTS_Formation, cockpit_device_id=devices.COCKPITMECHANICS, name=_('Formation Light BRT Wheel')},
+{action=device_commands.AoA_IndexerStrength, cockpit_device_id=devices.AOASYSTEM, name=_('AOA Indexer Light BRT Wheel')},
+
+{action=device_commands.LIGHTS_WhiteFlood, cockpit_device_id=devices.COCKPITMECHANICS, name=_('White Flood Light Switch')},
+{action=device_commands.LIGHTS_RedFlood, cockpit_device_id=devices.COCKPITMECHANICS, name=_('Red Flood Light Switch')}, 
+
+{action=device_commands.LIGHTS_PositionWings, cockpit_device_id=devices.COCKPITMECHANICS, name=_('Position Lights Switch: Wing')}, 
+{action=device_commands.LIGHTS_PositionTail, cockpit_device_id=devices.COCKPITMECHANICS, name=_('Position Lights Switch: Tail')}, 
+
+{action=device_commands.WINGSWEEP_EmergencySweepLever, cockpit_device_id=devices.WINGSWEEP, name=_('Emergency Wing Sweep Handle')}, 
 
 -- FF: axes
 
@@ -528,6 +616,7 @@ join_override(res.axisCommands,{
 {action = iCommandRightWheelBrake, name = _('Wheel Brake Right')},
 {action = iCommandWheelBrake, name = _('Wheel Brake both')},
 
+{action = device_commands.FLAPS_Lever_Axis, cockpit_device_id=devices.FLAPS, name = _('Flap Lever')},
 {action = device_commands.STICK_DLC_ManDec_Thumbwheel, cockpit_device_id=devices.HOTAS, name = _('DLC / Maneuver Flaps Retract')},
 
 {action = iCommandViewHorizontalAbs			, name = _('Absolute Camera Horizontal View')},
