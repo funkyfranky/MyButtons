@@ -1,7 +1,9 @@
 local res = external_profile("Config/Input/Aircrafts/common_keyboard_binding.lua")
 dofile(folder.."../../Cockpit/Scripts/devices.lua")
 dofile(folder.."../../Cockpit/Scripts/command_defs.lua")
-join(res.keyCommands,{
+
+local keycommands = {
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- begin custom assignments
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -186,8 +188,8 @@ join(res.keyCommands,{
 {down = 3001, up = 3002, cockpit_device_id = devices.RWR, value_down = 1.0, value_up = 1.0,  name = _('RWR KB Off/Lights'), category = _('_My Buttons')}, --added v0.4
 {down = 3003, up = 3002, cockpit_device_id = devices.RWR, value_down = 1.0, value_up = 1.0,  name = _('RWR KB Lights+Sound/Lights'), category = _('_My Buttons')}, --added v0.4
 -- countermeasures
-{down = 3003, up = 3004, cockpit_device_id = devices.COUNTERMEASURE, value_down = 1.0, value_up = 1.0, name = _('Countermeasure dispense Int/Off'), category = _('_My Buttons')}, --added v0.4
-{down = 3002, up = 3004, cockpit_device_id = devices.COUNTERMEASURE, value_down = 1.0, value_up = 1.0, name = _('Countermeasure dispense Kont/Off'), category = _('_My Buttons')}, --added v0.4
+{down = 3500, up = 3500, cockpit_device_id = devices.COUNTERMEASURE, value_down = 0.0, value_up =-1.0, name = _('Countermeasure dispense Int/Off'), category = _('_My Buttons')}, --added v0.4, adjusted v1.4
+{down = 3500, up = 3500, cockpit_device_id = devices.COUNTERMEASURE, value_down = 1.0, value_up =-1.0, name = _('Countermeasure dispense Kont/Off'), category = _('_My Buttons')}, --added v0.4, adjusted v1.4
 {down = 3010, up = 3010, cockpit_device_id = devices.COUNTERMEASURE, value_down = 1.0, value_up = 0.0, name = _('Countermeasure KB Stråk Mod 4/0'), category = _('_My Buttons')}, --added v0.4
 {down = 3028, up = 3028, cockpit_device_id = devices.COUNTERMEASURE, value_down = 0.0, value_up = 0.1, name = _('Countermeasure Chaff/Flares Selector R/RF'), category = _('_My Buttons')}, --added v0.4
 {down = 3028, up = 3028, cockpit_device_id = devices.COUNTERMEASURE, value_down = 0.2, value_up = 0.1, name = _('Countermeasure Chaff/Flares Selector F/RF'), category = _('_My Buttons')}, --added v0.4
@@ -373,7 +375,7 @@ join(res.keyCommands,{
     {combos = {{key = "J", reformers = {"LCtrl","LAlt"}}}, down = 3302, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("Weapon jettison Cover"), category = _("Weapons")},
     {combos = {{key = "J", reformers = {"LShift","LCtrl"}}}, down = 3303, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("Weapon jettison Button"), category = _("Weapons")},
     {combos = {{key = "W", reformers = {"LShift","LCtrl"}}}, down = 3969, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = -1.0, name = _("Weapon selector turn clockwise"), category = _("Weapons")},
--- FF fix: added LShift modifier to Weapon selector because of conflict with parking brake assignment																								  
+-- FF fix: added LShift modifier to Weapon selector because of conflict with parking brake assignment															   
     {combos = {{key = "W", reformers = {"LAlt","LCtrl","LShift"}}}, down = 3969, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("Weapon selector turn counterclockwise"), category = _("Weapons")},
     {combos = {{key = "J", reformers = {"RCtrl","RAlt"}}}, down = 3402, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("Fuel tank jettison Cover"), category = _("Weapons")},
     {combos = {{key = "J", reformers = {"RCtrl","RShift"}}}, down = 3320, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("Fuel tank jettison Button"), category = _("Weapons")},
@@ -422,10 +424,10 @@ join(res.keyCommands,{
     {down = 3316, value_down = -1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('EP13 Brightness down'), category = _('Weapons')},
     {down = 3317, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('EP13 Contrast up'), category = _('Weapons')},
     {down = 3317, value_down = -1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('EP13 Contrast down'), category = _('Weapons')},
+    
+    
+    
     {down = 3001, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = _('Fast countermeasure dispense'), category = _('Countermeasures')},
-    {down = 3004, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = _('Countermeasure dispense OFF'), category = _('Countermeasures')},
-    {down = 3003, up = 3004, value_down = 1.0, value_up = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = _('Countermeasure dispense INT'), category = _('Countermeasures')},
-    {down = 3002, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = _('Countermeasure dispense KONT'), category = _('Countermeasures')},
     {down = 3005, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = _('Countermeasure KB Mod A'), category = _('Countermeasures')},
     {down = 3006, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = _('Countermeasure KB Mod 0'), category = _('Countermeasures')},
     {down = 3007, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = _('Countermeasure KB Mod 1'), category = _('Countermeasures')},
@@ -525,7 +527,7 @@ join(res.keyCommands,{
     {combos = {{key = 'L', reformers = {'LShift'}}}, down = 3001, cockpit_device_id = devices.LIGHTS, value_down = -1.0, name = _('Anti collision lights switch'), category = _('Lights')},
     {combos = {{key = 'L', reformers = {'RCtrl'}}}, down = 3002, cockpit_device_id = devices.LIGHTS, value_down = -2.0, name = _('Navigation lights switch'), category = _('Lights')},
     {combos = {{key = 'L', reformers = {'LCtrl'}}}, down = 3003, cockpit_device_id = devices.LIGHTS, value_down = -1.0, name = _('Formation lights switch'), category = _('Lights')},
-    --{down = 3004, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = _('Taxi/landing lights switch'), category = _('Lights')}, -- FF fix: Taxi/landing is 3009. 3004 is for position lights!
+    --{down = 3004, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = _('Taxi/landing lights switch'), category = _('Lights')},
     {down = 3001, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Anti collision lights switch - ON', category = 'Lights'},
     {down = 3001, cockpit_device_id = devices.LIGHTS, value_down = 0.0, name = 'Anti collision lights switch - OFF' , category = 'Lights'},
     {down = 3002, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Navigation lights switch - HEL', category = 'Lights'},
@@ -590,5 +592,12 @@ join(res.keyCommands,{
     {down = 3300, value_down = 0.000000, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Trigger safety bracket SAFE'), category = _('Weapons')},
     
 	}
-	)
+
+local autogeneratedkeys = dofile(folder.."../keyboardbindings.lua")
+
+-- Join them
+join(keycommands, autogeneratedkeys)
+
+join(res.keyCommands, keycommands)
+
 return res

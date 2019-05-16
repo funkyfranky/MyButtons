@@ -1,5 +1,7 @@
 local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
-join(res.keyCommands,{
+
+local keycommands = {
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FF: begin custom assignments
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -184,8 +186,8 @@ join(res.keyCommands,{
 {down = 3001, up = 3002, cockpit_device_id = devices.RWR, value_down = 1.0, value_up = 1.0,  name = _('RWR KB Off/Lights'), category = _('_My Buttons')}, --added v0.4
 {down = 3003, up = 3002, cockpit_device_id = devices.RWR, value_down = 1.0, value_up = 1.0,  name = _('RWR KB Lights+Sound/Lights'), category = _('_My Buttons')}, --added v0.4
 -- countermeasures
-{down = 3003, up = 3004, cockpit_device_id = devices.COUNTERMEASURE, value_down = 1.0, value_up = 1.0, name = _('Countermeasure dispense Int/Off'), category = _('_My Buttons')}, --added v0.4
-{down = 3002, up = 3004, cockpit_device_id = devices.COUNTERMEASURE, value_down = 1.0, value_up = 1.0, name = _('Countermeasure dispense Kont/Off'), category = _('_My Buttons')}, --added v0.4
+{down = 3500, up = 3500, cockpit_device_id = devices.COUNTERMEASURE, value_down = 0.0, value_up =-1.0, name = _('Countermeasure dispense Int/Off'), category = _('_My Buttons')}, --added v0.4, adjusted v1.4
+{down = 3500, up = 3500, cockpit_device_id = devices.COUNTERMEASURE, value_down = 1.0, value_up =-1.0, name = _('Countermeasure dispense Kont/Off'), category = _('_My Buttons')}, --added v0.4, adjusted v1.4
 {down = 3010, up = 3010, cockpit_device_id = devices.COUNTERMEASURE, value_down = 1.0, value_up = 0.0, name = _('Countermeasure KB Stråk Mod 4/0'), category = _('_My Buttons')}, --added v0.4
 {down = 3028, up = 3028, cockpit_device_id = devices.COUNTERMEASURE, value_down = 0.0, value_up = 0.1, name = _('Countermeasure Chaff/Flares Selector R/RF'), category = _('_My Buttons')}, --added v0.4
 {down = 3028, up = 3028, cockpit_device_id = devices.COUNTERMEASURE, value_down = 0.2, value_up = 0.1, name = _('Countermeasure Chaff/Flares Selector F/RF'), category = _('_My Buttons')}, --added v0.4
@@ -384,9 +386,6 @@ join(res.keyCommands,{
 	{down = 3000, cockpit_device_id = devices.ENGINEPANEL,	 value_down = 1.0, name =("Missile Select Button"), category = _("Weapons")},
     -- countermeasures
     {down = 3001, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Fast countermeasure dispense', category = 'Countermeasures'},
-    {down = 3004, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Countermeasure dispense OFF', category = 'Countermeasures'},
-    {down = 3003, up = 3004, value_down = 1.0, value_up = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Countermeasure dispense INT', category = 'Countermeasures'},
-    {down = 3002, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Countermeasure dispense KONT', category = 'Countermeasures'},
     {down = 3005, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Countermeasure KB Mod A', category = 'Countermeasures'},
     {down = 3006, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Countermeasure KB Mod 0', category = 'Countermeasures'},
     {down = 3007, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Countermeasure KB Mod 1', category = 'Countermeasures'},
@@ -492,7 +491,7 @@ join(res.keyCommands,{
     {down = 3002, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Navigation lights switch', category = 'Lights panel'},
     {down = 3003, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Formation lights switch', category = 'Lights panel'},
     {down = 3004, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Taxi/landing lights switch', category = 'Lights panel'},
-    --{down = 3004, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = _('Taxi/landing lights switch'), category = _('Lights')}, -- FF dublicate?!
+    --{down = 3004, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = _('Taxi/landing lights switch'), category = _('Lights')},
     {down = 3001, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Anti collision lights switch - ON', category = 'Lights'},
     {down = 3001, cockpit_device_id = devices.LIGHTS, value_down = 0.0, name = 'Anti collision lights switch - OFF' , category = 'Lights'},
     {down = 3002, cockpit_device_id = devices.LIGHTS, value_down = 1.0, name = 'Navigation lights switch - HEL', category = 'Lights'},
@@ -570,10 +569,17 @@ join(res.keyCommands,{
     {down = 3969, value_down = -1.000000, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Weapon selector turn clockwise'), category = _('Weapons')},
     {down = 3969, value_down = 1.000000, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Weapon selector turn counterclockwise'), category = _('Weapons')},
         
-    })
+    }
+
+
+local autogeneratedkeys = dofile(folder.."../joystickbindings.lua")
+join(keycommands, autogeneratedkeys)
+join(res.keyCommands, keycommands)
+
 
 --joystick axes 
-join(res.axisCommands,{
+
+local axiscommands = {
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FF: begin custom assignments
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -610,5 +616,9 @@ join(res.axisCommands,{
 {combos = defaultDeviceAssignmentFor("pitch") ,  action = iCommandPlanePitch	   , name = _('Pitch')},
 {combos = defaultDeviceAssignmentFor("rudder"),  action = iCommandPlaneRudder	   , name = _('Rudder')},
 {combos = defaultDeviceAssignmentFor("thrust"),  action = iCommandPlaneThrustCommon, name = _('Thrust')},
-})
+}
+
+local autogeneratedaxis = dofile(folder.."../joystickaxisbindings.lua")
+join(axiscommands, autogeneratedaxis)
+join(res.axisCommands, axiscommands)
 return res
