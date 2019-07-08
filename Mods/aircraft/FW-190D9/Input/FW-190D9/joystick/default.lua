@@ -70,6 +70,7 @@ keyCommands = {
 {down = iCommandPlane_ShowControls, name = _('Controls indicator') , category = _('General')},
 {down = iCommandCockpitShowPilotOnOff, name = _('Show pilot'), category = _('General')},
 {down = iCommandMissionResourcesManagement, name = _('Rearming and Refueling Window'), category = _('General')},
+{down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},
 
 
 -- Communications
@@ -291,10 +292,10 @@ keyCommands = {
 {pressed = device_commands.Button_6, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = 1.0,	 name = _('EZ42 Gunsight Brightness Control - CW/Decrease'), category = _('EZ42 Gunsight')},
 {pressed = device_commands.Button_10, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = 0.5,   name = _('EZ42 Gunsight Target Wingspan Knob - CW/Increase'), category = _('EZ42 Gunsight')},
 {pressed = device_commands.Button_10, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = -0.5,   name = _('EZ42 Gunsight Target Wingspan Knob - CCW/Decrease'), category = _('EZ42 Gunsight')},
-{pressed = device_commands.Button_16, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = 0.7,	 name = _('EZ42 Gunsight Target Distance Control (Throttle Twist Grip) - CW/Increase'), category = _('EZ42 Gunsight')},
-{pressed = device_commands.Button_16, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = -0.7,	 name = _('EZ42 Gunsight Target Distance Control (Throttle Twist Grip) - CCW/Decrease'), category = _('EZ42 Gunsight')},
-{pressed = device_commands.Button_18, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = 1.0,	 name = _('EZ42 Gunsight Altitude Aiming Correction Adjusting Knob I - CW/Increase'), category = _('EZ42 Gunsight')},
-{pressed = device_commands.Button_18, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = -1.0,	 name = _('EZ42 Gunsight Altitude Aiming Correction Adjusting Knob I - CCW/Decrease'), category = _('EZ42 Gunsight')},
+{pressed = device_commands.Button_16, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = 0.14,	 name = _('EZ42 Gunsight Target Distance Control (Throttle Twist Grip) - CW/Increase'), category = _('EZ42 Gunsight')},
+{pressed = device_commands.Button_16, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = -0.14,	 name = _('EZ42 Gunsight Target Distance Control (Throttle Twist Grip) - CCW/Decrease'), category = _('EZ42 Gunsight')},
+{pressed = device_commands.Button_18, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = 0.2,	 name = _('EZ42 Gunsight Altitude Aiming Correction Adjusting Knob I - CW/Increase'), category = _('EZ42 Gunsight')},
+{pressed = device_commands.Button_18, cockpit_device_id  = devices.EZ42_GUNSIGHT, value_pressed = -0.2,	 name = _('EZ42 Gunsight Altitude Aiming Correction Adjusting Knob I - CCW/Decrease'), category = _('EZ42 Gunsight')},
 
 
 

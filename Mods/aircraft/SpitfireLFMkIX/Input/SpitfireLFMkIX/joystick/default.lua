@@ -101,6 +101,8 @@ keyCommands = {
 {down = iCommandCockpitShowPilotOnOff, name = _('Show pilot'), category = _('General')},
 
 {down = iCommandMissionResourcesManagement, name = _('Rearming and Refueling Window'), category = _('General')},
+{down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},
+
 -- ----------------------------------------------------------------------------------------
 
 {down = iCommandToggleMirrors, name = _('Toggle Mirrors'), category = _('View Cockpit')},

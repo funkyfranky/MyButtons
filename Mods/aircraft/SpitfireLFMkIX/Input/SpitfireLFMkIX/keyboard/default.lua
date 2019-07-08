@@ -36,6 +36,8 @@ keyCommands = {
 {combos = {{key = 'P', reformers = {'RShift'}}},            down = iCommandCockpitShowPilotOnOff, name = _('Show pilot'), category = _('General')},
 
 {combos = {{key = '\'', reformers = {'LAlt'}}},             down = iCommandMissionResourcesManagement, name = _('Rearming and Refueling Window'), category = _('General')},
+{combos = {{key = 'S',	 reformers = {'LCtrl'}}},			down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},
+
 -- ----------------------------------------------------------------------------------------
 
 {down = iCommandToggleMirrors, name = _('Toggle Mirrors'), category = _('View Cockpit')},

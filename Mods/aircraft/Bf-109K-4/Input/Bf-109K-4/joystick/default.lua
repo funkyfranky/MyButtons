@@ -77,6 +77,8 @@ return {
         {															down = iCommandPlane_ShowControls, name = _('Controls indicator') , category = _('General')},
         {															down = iCommandCockpitShowPilotOnOff, name = _('Show pilot'), category = _('General')},
         {															down = iCommandMissionResourcesManagement, name = _('Rearming and Refueling Window'), category = _('General')},
+		{															down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},
+
         -- ----------------------------------------------------------------------------------------
 
 

@@ -74,6 +74,7 @@ keyCommands = {
 {down = iCommandActivePauseOnOff, name = _('Active Pause'), category = _('Cheat')},
 {down = iCommandEnginesStart, name = _('Start Procedure'), category = _('Cheat')},
 {down = iCommandEnginesStop, name = _('Stop Procedure'), category = _('Cheat')},
+{down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},																				  
 
 
 -- View                                                    

@@ -633,8 +633,8 @@ keyCommands={
 {combos={{key='2',reformers={'LAlt'}}},down=device_commands.ASPgunReload2,up=device_commands.ASPgunReload2,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,value_up=0.0,name=_('Gun reload - 2'),category=_('Weapons')},
 {combos={{key='3',reformers={'LAlt'}}},down=device_commands.ASPgunReload3,up=device_commands.ASPgunReload3,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,value_up=0.0,name=_('Gun reload - 3'),category=_('Weapons')},
 
---{combos={{key='JOY_BTN1'}},down=device_commands.GunFireBtn,up=device_commands.GunFireBtn,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,value_up=0.0,name=_('Fire Gun'),category=_('Weapons')},
---{combos={{key='JOY_BTN_2'}},down=device_commands.PuskBtn,up=device_commands.PuskBtn,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,value_up=0.0,name=_('Weapon Release'),category=_('Weapons')},
+{combos={{key='Space'}},down=device_commands.GunFireBtn,up=device_commands.GunFireBtn,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,value_up=0.0,name=_('Fire Gun'),category=_('Weapons')},
+{combos={{key='Space',reformers={'RAlt'}}},down=device_commands.PuskBtn,up=device_commands.PuskBtn,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,value_up=0.0,name=_('Weapon Release'),category=_('Weapons')},
 
 {combos={{key='=',reformers={'RShift'}}},down=device_commands.PuskBtnSafetyCover,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Weapon Release Cover Open'),category=_('Weapons')},
 {combos={{key='=',reformers={'RShift','RCtrl'}}},down=device_commands.PuskBtnSafetyCover,cockpit_device_id=devices.WEAPON_CONTROL,value_down=0.0,name=_('Weapon Release Cover Close'),category=_('Weapons')},

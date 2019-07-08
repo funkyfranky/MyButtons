@@ -91,6 +91,7 @@ keyCommands = {
 {combos = {{key = '\'', reformers = {'LAlt'}}}, 			down = iCommandMissionResourcesManagement, name = _('Rearming and Refueling Window'), category = _('General')},
 {combos = {{key = '\'', reformers = {'RShift'}}}, 			down = iCommandDebriefing, name = _('Debriefing window'), category = _('General')},
 {combos = {{key = 'B', reformers = {'LAlt'}}},				down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
+{combos = {{key = 'S',	 reformers = {'LWin'}}},			down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},																																   
 
 
 -- View                                                    
@@ -224,7 +225,7 @@ keyCommands = {
 {combos = {{key = 'P', reformers = {'RCtrl','RShift'}}},		down = iCommandExternalCargoIndicator,																												name = _('External Cargo Indicator'),			category = _("External Cargo")},
 {combos = {{key = 'P', reformers = {'RCtrl','RShift','RAlt'}}},	down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,		name = _('External Cargo Pilot Unhook'),		category = _("External Cargo")},
 {combos = {{key = 'C', reformers = {'RCtrl','RShift','RAlt'}}},	down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,		name = _('External Cargo CoPilot Unhook'),		category = _("External Cargo")},
-{combos = {{key = 'S', reformers = {'RCtrl','RShift','RAlt'}}},	down = device_commands.Button_4, value_down = 1,cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, 									name = _('External Cargo Safety'),				category = _("External Cargo")},
+{combos = {{key = 'S', reformers = {'RCtrl','RShift','RAlt'}}},	down = device_commands.Button_4, up = device_commands.Button_4, value_down = 1,cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, 									name = _('External Cargo Safety'),				category = _("External Cargo")},
 -- View Extended
 {combos = {{key = 'J', reformers = {'LShift'}}}, down = iCommandViewCameraJiggle, name = _('Camera jiggle toggle'), category = _('View Extended')},
 {combos = {{key = 'K', reformers = {'LAlt'}}}, down = iCommandViewKeepTerrain, name = _('Keep terrain camera altitude'), category = _('View Extended')},

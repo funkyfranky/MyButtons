@@ -641,9 +641,7 @@ keyCommands = {
 {                                                           down = device_commands.Button_57, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.Yak52.canopy'),   category = _('Systems')},
 {                                                           down = device_commands.Button_58, cockpit_device_id = devices.CONTROLS, value_down = 0.0, name = _('Input.Yak52.canopy_0'), category = _('Systems')},
 {                                                           down = device_commands.Button_58, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.Yak52.canopy_1'), category = _('Systems')},
-
---// -- Cockpit Jettison Pull Ball
---// {combos = {{key = 'C', reformers = {'LShift', 'LCtrl'}}},   down = device_commands.Button_61, up = device_commands.Button_61, cockpit_device_id = devices.CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Input.Yak52.canopy_jettison'), category = _('Systems')},
+{                                                           down = device_commands.Button_58, cockpit_device_id = devices.CONTROLS, value_down = 0.5, name = _('Input.Yak52.canopy_v'), category = _('Systems')},
 -- ----------------------------------------------------------------------------------------
 
 

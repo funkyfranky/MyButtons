@@ -170,7 +170,6 @@ keyCommands = {
 {down = 3018, cockpit_device_id = 1, value_down = 0.28,  name = _("CB FORCE Trim"),  category = _("Circuit breaker panel"), },
 {down = iCommandBrakeGo,  name = _("Pause"),  category = _("General"), },
 {pressed = iCommandViewUpLeftSlow, up = iCommandViewStopSlow,  name = _("View Up Left slow"),  category = _("View"), },
-{down = 3004, up = 3004, cockpit_device_id = 48, value_down = 1, value_up = 0,  name = _("Toggle External Cargo Camera"),  category = _("External Cargo"), },
 {down = iCommandExternalCargoIndicator,  name = _("External Cargo Indicator"),  category = _("External Cargo"), },
 {down = 3018, cockpit_device_id = 1, value_down = 0.27,  name = _("CB HYD Control"),  category = _("Circuit breaker panel"), },
 {down = 3029, cockpit_device_id = 9, value_down = 1,  name = _("AutoPilot LEVEL FLIGHT"),  category = _("Cheat"), },

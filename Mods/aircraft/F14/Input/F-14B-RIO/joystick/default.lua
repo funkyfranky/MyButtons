@@ -177,18 +177,18 @@ join_override(res.keyCommands,{
 
 
 -- RIO HCU
-{ up=device_commands.HCU_halfaction, down=device_commands.HCU_halfaction, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU half action'),	 category=_('HCU')},
-{ up=device_commands.HCU_fullaction, down=device_commands.HCU_fullaction, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU full action'),	 category=_('HCU')},
-{ up=device_commands.HCU_offset, down=device_commands.HCU_offset, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU offset'),	 category=_('HCU')},
-{ up=device_commands.HCU_MRL, down=device_commands.HCU_MRL, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU MRL'),	 category=_('HCU')},
-{ up = device_commands.HCU_thumb, down = device_commands.HCU_thumb, cockpit_device_id=devices.RADAR, value_up = 0, value_down = 1, name = _('HCU thumb up'), category = _('HCU')},
-{ up = device_commands.HCU_thumb_center, down = device_commands.HCU_thumb_center, cockpit_device_id=devices.RADAR, value_up = 0, value_down = 1, name = _('HCU thumb re-center'), category = _('HCU')},
-{ up = device_commands.HCU_thumb, down = device_commands.HCU_thumb, cockpit_device_id=devices.RADAR, value_up = 0, value_down = -1, name = _('HCU thumb down'), category = _('HCU')},
+{ up=device_commands.HCU_halfaction, down=device_commands.HCU_halfaction, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU half action'),	 category=_('Hand Control Unit')},
+{ up=device_commands.HCU_fullaction, down=device_commands.HCU_fullaction, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU full action'),	 category=_('Hand Control Unit')},
+{ up=device_commands.HCU_offset, down=device_commands.HCU_offset, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU offset'),	 category=_('Hand Control Unit')},
+{ up=device_commands.HCU_MRL, down=device_commands.HCU_MRL, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU MRL'),	 category=_('Hand Control Unit')},
+{ up = device_commands.HCU_thumb, down = device_commands.HCU_thumb, cockpit_device_id=devices.RADAR, value_up = 0, value_down = 1, name = _('HCU thumb up'), category = _('Hand Control Unit')},
+{ up = device_commands.HCU_thumb_center, down = device_commands.HCU_thumb_center, cockpit_device_id=devices.RADAR, value_up = 0, value_down = 1, name = _('HCU thumb re-center'), category = _('Hand Control Unit')},
+{ up = device_commands.HCU_thumb, down = device_commands.HCU_thumb, cockpit_device_id=devices.RADAR, value_up = 0, value_down = -1, name = _('HCU thumb down'), category = _('Hand Control Unit')},
 
-{ up=device_commands.HCU_IR_TV, down=device_commands.HCU_IR_TV, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU TCS mode'),	 category=_('HCU')},
-{ up=device_commands.HCU_RDR, down=device_commands.HCU_RDR, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU radar mode'),	 category=_('HCU')},
-{ up=device_commands.HCU_DDD_cursor, down=device_commands.HCU_DDD_cursor, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU DDD mode'),	 category=_('HCU')},
-{ up=device_commands.HCU_TID_cursor, down=device_commands.HCU_TID_cursor, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU TID mode'),	 category=_('HCU')},
+{ up=device_commands.HCU_IR_TV, down=device_commands.HCU_IR_TV, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU TCS mode'),	 category=_('Hand Control Unit')},
+{ up=device_commands.HCU_RDR, down=device_commands.HCU_RDR, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU radar mode'),	 category=_('Hand Control Unit')},
+{ up=device_commands.HCU_DDD_cursor, down=device_commands.HCU_DDD_cursor, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU DDD mode'),	 category=_('Hand Control Unit')},
+{ up=device_commands.HCU_TID_cursor, down=device_commands.HCU_TID_cursor, cockpit_device_id=devices.HCU, value_up=0.0, value_down=1.0, 	name=_('HCU TID mode'),	 category=_('Hand Control Unit')},
 
 { up = device_commands.RADAR_elevation_updown, down = device_commands.RADAR_elevation_updown, cockpit_device_id=devices.RADAR, value_down = 1, value_up = 0, name = _('Radar elevation up'), category = _('Radar Control Panel')},
 { up = device_commands.RADAR_elevation_updown, down = device_commands.RADAR_elevation_updown, cockpit_device_id=devices.RADAR, value_down = -1, value_up = 0, name = _('Radar elevation down'), category = _('Radar Control Panel')},
@@ -280,6 +280,8 @@ join_override(res.axisCommands,{
 {action = device_commands.LANTIRN_S3_YAxis, cockpit_device_id=devices.LANTIRN, name = _('LANTIRN S3 HAT Y Axis (AREA, POINT)')},
 {action = device_commands.RADIO_ICS_ButtonAxisThresh_ICS_RIO, cockpit_device_id=devices.ICS, name = _('ICS Button ICS (Intercom) PTT (axis threshold)')},
 {action = device_commands.RADIO_ICS_ButtonAxisThresh_MIC_RIO, cockpit_device_id=devices.ICS, name = _('ICS Button MIC (UHF) PTT (axis threshold)')},
+{action = device_commands.RADIO_ICS_ButtonAxisThresh_ICS_RIO_Export_Only, cockpit_device_id=devices.ICS, name = _('ICS Button ICS (Intercom) PTT (axis threshold) - SRS Only / No Menu')},
+{action = device_commands.RADIO_ICS_ButtonAxisThresh_MIC_RIO_Export_Only, cockpit_device_id=devices.ICS, name = _('ICS Button MIC (UHF) PTT (axis threshold) - SRS Only / No Menu')},
 {action = device_commands.RADAR_elevation_center_knob, cockpit_device_id=devices.RADAR, name = _('Radar elevation control')},
 {action = device_commands.RADAR_azimuth_center_knob, cockpit_device_id=devices.RADAR, name = _('Radar azimuth control')},
 {action = device_commands.RADAR_DDD_erase_axis, cockpit_device_id=devices.RADAR, name = _('DDD erase')},

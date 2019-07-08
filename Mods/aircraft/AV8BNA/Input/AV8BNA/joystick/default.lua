@@ -241,15 +241,15 @@ join(res.keyCommands,{
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     -- Joystick switch abstractions (Example, ON else OFF)
-    {down = fcs_commands.Switch_FLAP_SELECT,    up = fcs_commands.Switch_FLAP_SELECT,   cockpit_device_id=devices.VREST,            value_down=1.0, value_up=0.5,   name= _('Flaps CRUISE else AUTO'),  category=_('Switch Abstractions')},
-    {down = fcs_commands.Switch_FLAP_SELECT,    up = fcs_commands.Switch_FLAP_SELECT,   cockpit_device_id=devices.VREST,            value_down=0.0, value_up=0.5,   name= _('Flaps STOL else AUTO'),    category=_('Switch Abstractions')},    
-    {down = fcs_commands.Switch_ANTISKID,       up = fcs_commands.Switch_ANTISKID,      cockpit_device_id=devices.FLIGHTCONTROLS,   value_down=0.0, value_up=0.5,   name= _('Anti-Skid NWS else ON'),   category=_('Switch Abstractions')},
-    {down = smc_commands.Switch_Master_Arm,     up = smc_commands.Switch_Master_Arm,    cockpit_device_id=devices.SMC,              value_down=1.0, value_up=0.0,   name= _('MasterArm ON else OFF'),   category=_('Switch Abstractions')},
-    {down = engine_commands.Switch_H20,         up = engine_commands.Switch_H20,        cockpit_device_id=devices.DECS,             value_down=1.0, value_up=0.5,   name= _('H2O TO else OFF'),         category=_('Switch Abstractions')},
-    {down = engine_commands.Switch_H20,         up = engine_commands.Switch_H20,        cockpit_device_id=devices.DECS,             value_down=0.0, value_up=0.5,   name= _('H2O LN else OFF'),         category=_('Switch Abstractions')},        
-    {down = iCommandPlaneGearUp,                up = iCommandPlaneGearDown,     name = _('Landing Gear UP else DOWN'),  category = _('Switch Abstractions')},
-    {down = iCommandPlaneAirBrakeOn,            up = iCommandPlaneAirBrakeOff,  name = _('Airbrake ON else OFF'),       category = _('Switch Abstractions')},	
-    
+    {down = fcs_commands.Switch_FLAP_SELECT,    up = fcs_commands.Switch_FLAP_SELECT,   cockpit_device_id=devices.VREST,            value_down=1.0, value_up=0.5,   name= _('Flaps CRUISE else AUTO'),  category=_('Joystick Switch Abstractions')},
+    {down = fcs_commands.Switch_FLAP_SELECT,    up = fcs_commands.Switch_FLAP_SELECT,   cockpit_device_id=devices.VREST,            value_down=0.0, value_up=0.5,   name= _('Flaps STOL else AUTO'),    category=_('Joystick Switch Abstractions')},    
+    {down = fcs_commands.Switch_ANTISKID,       up = fcs_commands.Switch_ANTISKID,      cockpit_device_id=devices.FLIGHTCONTROLS,   value_down=0.0, value_up=0.5,   name= _('Anti-Skid NWS else ON'),   category=_('Joystick Switch Abstractions')},
+    {down = smc_commands.Switch_Master_Arm,     up = smc_commands.Switch_Master_Arm,    cockpit_device_id=devices.SMC,              value_down=1.0, value_up=0.0,   name= _('MasterArm ON else OFF'),   category=_('Joystick Switch Abstractions')},
+    {down = engine_commands.Switch_H20,         up = engine_commands.Switch_H20,        cockpit_device_id=devices.DECS,             value_down=1.0, value_up=0.5,   name= _('H2O TO else OFF'),         category=_('Joystick Switch Abstractions')},
+    {down = engine_commands.Switch_H20,         up = engine_commands.Switch_H20,        cockpit_device_id=devices.DECS,             value_down=0.0, value_up=0.5,   name= _('H2O LN else OFF'),         category=_('Joystick Switch Abstractions')},        
+    {down = iCommandPlaneGearUp,                up = iCommandPlaneGearDown,     																					name = _('Landing Gear UP else DOWN'),  category = _('Joystick Switch Abstractions')},
+    {down = iCommandPlaneAirBrakeOn,            up = iCommandPlaneAirBrakeOff,  																					name = _('Airbrake ON else OFF'),       category = _('Joystick Switch Abstractions')},	
+  
 	-- Master Modes
 	{down = iCommandHelicopter_PPR_button_K, name = _('Master Mode NAV'),	category = _('Master Modes')},
 	{down = iCommandHelicopter_PPR_button_H, name = _('Master Mode VSTOL'),	category = _('Master Modes')},
@@ -597,7 +597,7 @@ join(res.keyCommands,{
 	{down = iCommandPlaneNavLights_CodeModeOn,			name = _('Exterior Lights Master Switch OFF-NVG-NORM'),		category = _('Exterior Lights')},
 	{down = iCommandPlaneNavLights_CodeModeOff,			name = _('Exterior Lights Master Switch NORM-NVG-OFF'),		category = _('Exterior Lights')},
 	{pressed = iCommandPlaneFormationLightsIncrease,	name = _('Formation Lights Knob Brightness Increase'),		category = _('Exterior Lights')},
-	{pressed = iCommandPlaneFormationLightsDecrease,	name = _('Formation Lights Knob Brightness Increase'),		category = _('Exterior Lights')},
+	{pressed = iCommandPlaneFormationLightsDecrease,	name = _('Formation Lights Knob Brightness Decrease'),		category = _('Exterior Lights')},
 	{down = iCommandPlanePositionLightsSteady,			name = _('Position Lights Switch OFF-DIM-BRT'),				category = _('Exterior Lights')},
 	{down = iCommandPlanePositionLightsOff,				name = _('Position Lights Switch BRT-DIM-OFF'),				category = _('Exterior Lights')},
 	{down = iCommandPlaneAntiCollisionLights,			name = _('Anti-Collision Lights Toggle'),					category = _('Exterior Lights')},

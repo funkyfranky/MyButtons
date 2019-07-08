@@ -100,6 +100,7 @@ keyCommands = {
 {down = iCommandDebriefing, name = _('Debriefing window'), category = _('General')},
 {down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
 {down = iCommandMissionResourcesManagement, name = _('Rearming and Refueling Window'), category = _('General')},
+{down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},
 
 
 
@@ -309,8 +310,8 @@ keyCommands = {
 {down = iCommandExternalCargoIndicator,																												name = _("External Cargo Indicator"),			category = _("External Cargo"), },
 {down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,																													name = _('External Cargo Pilot Unhook'),		category = _("External Cargo")},
 {down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,		name = _('External Cargo CoPilot Unhook'),		category = _("External Cargo")},
-{down = device_commands.Button_4, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, 								  value_down = 1,					name = _('External Cargo Safety'),				category = _("External Cargo")},
-																																																							 
+{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, 								  value_down = 1,					name = _('External Cargo Safety'),				category = _("External Cargo")},
+
 
 -- Weapon System
 {down = device_commands.Button_20, cockpit_device_id  = devices.WEAPON_SYS, value_down = 1.0, name = _('Armament Off/Safe/Armed Up'), category = _('Armament System')},
