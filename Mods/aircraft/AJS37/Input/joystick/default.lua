@@ -1,6 +1,12 @@
 local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
 
 local keycommands = {
+
+	-- FF Begin
+	{down = 3500, value_down =  1.0, up = 3500, value_up =  0.0, cockpit_device_id = 28, name = _("Countermeasure Dispense - Press: Off Release: Kont"), category = _("Countermeasures")},
+	{down = 3500, value_down =  0.0, up = 3500, value_up =  1.0, cockpit_device_id = 28, name = _("Countermeasure Dispense - Press: Kont Release: Off"), category = _("Countermeasures")},
+	-- FF End
+
     -- Autopilot
     {down = 3402, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = 'Autothrottle 12 or 15.5 alpha mode', category = 'Autopilot'}, 
     {combos = {{key = 'A'}}, down = 3302, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,name = 'Autopilot mode ATT (Attitude hold)', category = 'Autopilot'}, 
