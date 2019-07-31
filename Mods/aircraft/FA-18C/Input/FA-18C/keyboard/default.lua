@@ -57,23 +57,24 @@ join(res.keyCommands,{
 --{ down = cpt_commands.CanopySwitchClose, up = cpt_commands.CanopySwitchClose, cockpit_device_id = devices.CPT_MECHANICS, value_down = -1.0, value_up = 0.0, name = _('Canopy Control Switch CLOSE/HOLD'), category = {_('_My Buttons')}},
 
 -- HOTAS
-{ down = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, up = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, cockpit_device_id = devices.HOTAS,  value_down =  1.0, value_up = 0.0, name = _('Exterior Lights Switch ON/OFF'), category = {_('_My Buttons')}},
+{ down = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, up = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, cockpit_device_id = devices.HOTAS,	value_down =  1.0, value_up = 0.0, name = _('Exterior Lights Switch ON/OFF'), category = {_('_My Buttons')}},
 
 -- CMDS
 { down = cmds_commands.Dispenser, up = cmds_commands.Dispenser, cockpit_device_id = devices.CMDS, value_down =  0.2, value_up= 0.1, name = _('DISPENSER Switch BYPASS/ON'), category = {_('_My Buttons')}},
 { down = cmds_commands.Dispenser, up = cmds_commands.Dispenser, cockpit_device_id = devices.CMDS, value_down =  0.0, value_up= 0.1, name = _('DISPENSER Switch OFF/ON'), category = {_('_My Buttons')}},
 
--- Test CMDS
-{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.1, value_up= 0.0, name = _('ALQ-126 ECM Mode Switch STBY/OFF'), category = {_('_My Buttons')}},
-{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.4, value_up= 0.0, name = _('ALQ-126 ECM Mode Switch XMIT/OFF'), category = {_('_My Buttons')}},
-{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.4, value_up= 0.1, name = _('ALQ-126 ECM Mode Switch XMIT/STBY'), category = {_('_My Buttons')}},
+-- TGP INTERFACE
+{ down = tgp_commands.Flir, up = tgp_commands.Flir, cockpit_device_id = devices.TGP_INTERFACE, value_down =  1.0, value_up= 0.0, name = _('FLIR Switch ON/STBY'),   category = {_('_My Buttons')}},
+{ down = tgp_commands.Flir, up = tgp_commands.Flir, cockpit_device_id = devices.TGP_INTERFACE, value_down = -1.0, value_up= 0.0, name = _('FLIR Switch OFF/STBY'),  category = {_('_My Buttons')}},
+{ down = tgp_commands.Ltdr, up = tgp_commands.Ltdr, cockpit_device_id = devices.TGP_INTERFACE, value_down =  1.0, value_up= 0.0, name = _('LTD/R Switch ARM/SAFE'), category = {_('_My Buttons')}},
+{ down = tgp_commands.Ltdr, up = tgp_commands.Ltdr, cockpit_device_id = devices.TGP_INTERFACE, value_down = -1.0, value_up= 0.0, name = _('LTD/R Switch AFT/SAFE'), category = {_('_My Buttons')}},
 
--- Test FLIR
-{ down = 3110, up = 3110, cockpit_device_id = devices.FLIR, value_down =  1.0, value_up= 0.0, name = _('FLIR Switch ON/STBY'), category = {_('_My Buttons')}},
-{ down = 3110, up = 3110, cockpit_device_id = devices.FLIR, value_down = -1.0, value_up= 0.0, name = _('FLIR Switch OFF/ON'), category = {_('_My Buttons')}},
-{ down = 3111, up = 3111, cockpit_device_id = devices.FLIR, value_down =  1.0, value_up= 0.0, name = _('LTD/R Switch ARM/SAFE'), category = {_('_My Buttons')}},
-{ down = 3111, up = 3111, cockpit_device_id = devices.FLIR, value_down = -1.0, value_up= 0.0, name = _('LTD/R Switch AFT/SAFE'), category = {_('_My Buttons')}},
-{ down = 3112, up = 3112, cockpit_device_id = devices.FLIR, value_down =  1.0, value_up= 0.0, name = _('LST/NFLR Switch ON/OFF'), category = {_('_My Buttons')}},
+--{ down = 3112, up = 3112, cockpit_device_id = devices.FLIR, value_down =  1.0, value_up= 0.0, name = _('LST/NFLR Switch ON/OFF'), category = {_('_My Buttons')}},
+
+-- CMDS (not implemented yet)
+--{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.1, value_up= 0.0, name = _('ALQ-126 ECM Mode Switch STBY/OFF'), category = {_('_My Buttons')}},
+--{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.4, value_up= 0.0, name = _('ALQ-126 ECM Mode Switch XMIT/OFF'), category = {_('_My Buttons')}},
+--{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.4, value_up= 0.1, name = _('ALQ-126 ECM Mode Switch XMIT/STBY'), category = {_('_My Buttons')}},
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FF: begin additional commands
