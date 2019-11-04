@@ -6,80 +6,6 @@ local res = external_profile("Config/Input/Aircrafts/common_keyboard_binding.lua
 
 join(res.keyCommands,{
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- FF: begin additional commands
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
--- SMS
-{ down = SMS_commands.MasterArmSw, up = SMS_commands.MasterArmSw, cockpit_device_id = devices.SMS, value_down =  1.0, value_up = 0.0, name = _('Master Arm Switch ARM/OFF'), category = {_('_My Buttons')}},
-{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.2, value_up = 0.1, name = _('IR Cooling Switch ORIDE/NORM'), category = {_('_My Buttons')}},
-{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.0, value_up = 0.1, name = _('IR Cooling Switch OFF/NORM'), category = {_('_My Buttons')}},
-{ down = SMS_commands.IRCoolingSw, up = SMS_commands.IRCoolingSw, cockpit_device_id = devices.SMS, value_down =  0.1, value_up = 0.0, name = _('IR Cooling Switch NORM/OFF'), category = {_('_My Buttons')}},
-{ down = SMS_commands.AuxRelSw,    up = SMS_commands.AuxRelSw,    cockpit_device_id = devices.SMS, value_down =  1.0, value_up = 0.0, name = _('Auxiliary Release Switch ENABLE/NORM'), category = {_('_My Buttons')}},
-
--- CONTROL INTERFACE
-{ down = ctrl_commands.FlapSw, up = ctrl_commands.FlapSw, cockpit_device_id = devices.CONTROL_INTERFACE,  value_down =  1.0, value_up = 0.0, name = _('FLAP Switch AUTO/HALF'), category = {_('_My Buttons')}},
-{ down = ctrl_commands.FlapSw, up = ctrl_commands.FlapSw, cockpit_device_id = devices.CONTROL_INTERFACE,  value_down = -1.0, value_up = 0.0, name = _('FLAP Switch FULL/HALF'), category = {_('_My Buttons')}},
-
--- EXT LIGHTS
-{ down = extlights_commands.LdgTaxi, up = extlights_commands.LdgTaxi, cockpit_device_id = devices.EXT_LIGHTS, value_down =  1.0, value_up =  0.0, name = _('LDG/TAXI LIGHT Switch ON/OFF'), category = {_('_My Buttons')}},
---{ down = extlights_commands.Strobe, up = extlights_commands.Strobe, cockpit_device_id = devices.EXT_LIGHTS, value_down = 1.0, value_up = 0.0, name = _('STROBE Lights Switch BRT/OFF'), category = {_('_My Buttons')}},
---{ down = extlights_commands.Strobe, up = extlights_commands.Strobe, cockpit_device_id = devices.EXT_LIGHTS, value_down = 1.0, value_up =-1.0, name = _('STROBE Lights Switch DIM/OFF'), category = {_('_My Buttons')}},
-
--- GEAR INTERFACE
-{ down = gear_commands.AntiSkidSw,           up = gear_commands.AntiSkidSw,           cockpit_device_id = devices.GEAR_INTERFACE, value_down =  1.0, value_up = 0.0, name = _('Anti Skid Switch ON/OFF'), category = {_('_My Buttons')}},
-{ down = gear_commands.EmergParkHandleOnOff, up = gear_commands.EmergParkHandleOnOff, cockpit_device_id = devices.GEAR_INTERFACE, value_down = -1.0, value_up = 1.0, name = _('Emergency/Parking Brake Handle PULL/STOW'), category = {_('_My Buttons')}},
-
--- ELEC INTERFACE
-{ down = elec_commands.BattSw, up = elec_commands.BattSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  1.0, value_up =  0.0, name = _('Battery Switch ON/OFF'), category = {_('_My Buttons')}},
-{ down = elec_commands.BattSw, up = elec_commands.BattSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down = -1.0, value_up =  0.0, name = _('Battery Switch ORIDE/OFF'), category = {_('_My Buttons')}},
-{ down = elec_commands.LGenSw, up = elec_commands.LGenSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  1.0, value_up =  0.0, name = _('Left Generator Control Switch NORM/OFF'), category = {_('_My Buttons')}},
-{ down = elec_commands.RGenSw, up = elec_commands.RGenSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  1.0, value_up =  0.0, name = _('Right Generator Control Switch NORM/OFF'), category = {_('_My Buttons')}},
-{ down = elec_commands.LGenSw, up = elec_commands.LGenSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  0.0, value_up =  1.0, name = _('Left Generator Control Switch OFF/MORM'), category = {_('_My Buttons')}},
-{ down = elec_commands.RGenSw, up = elec_commands.RGenSw, cockpit_device_id = devices.ELEC_INTERFACE, value_down =  0.0, value_up =  1.0, name = _('Right Generator Control Switch OFF/NORM'), category = {_('_My Buttons')}},
-
--- ECS INTERFACE
-{ down = ECS_commands.AV_COOL_Sw, up = ECS_commands.AV_COOL_Sw, cockpit_device_id = devices.ECS_INTERFACE, value_down =  1.0, value_up = 0.0, name = _('AV COOL Switch - EMERG/NORM'), category = {_('_My Buttons')}},
-
--- LANDING GEAR
-{ down = iCommandPlaneGearUp, up = iCommandPlaneGearDown, name = _('Landing Gear Control Handle UP/DOWN'), category = {_('_My Buttons')}},
-
--- HUD
-{ down = HUD_commands.HUD_SymbBrightSelKnob, up = HUD_commands.HUD_SymbBrightSelKnob, cockpit_device_id = devices.HUD, value_down =  1.0, value_up = 0.0, name = _('HUD Symbology Brightness Selector Knob DAY/NIGHT'), category = {_('_My Buttons')}},
-{ down = HUD_commands.HUD_AltitudeSw,        up = HUD_commands.HUD_AltitudeSw,        cockpit_device_id = devices.HUD, value_down =  1.0, value_up = 0.0, name = _('Altitude Switch BARO/RDR'), category = {_('_My Buttons')}},
-
--- FUEL INTERFACE
-{ down = fuel_commands.ProbeControlSw, up = fuel_commands.ProbeControlSw, cockpit_device_id = devices.FUEL_INTERFACE, value_down =  1.0, value_up = 0.0, name = _('Probe Control Switch EXTEND/RETRACT'), category = {_('_My Buttons')}},
-{ down = fuel_commands.ProbeControlSw, up = fuel_commands.ProbeControlSw, cockpit_device_id = devices.FUEL_INTERFACE, value_down = -1.0, value_up = 0.0, name = _('Probe Control Switch EMERG/RETRACT'), category = {_('_My Buttons')}},
-
--- CPT MECHANICS
-{ down = cpt_commands.CanopySwitchOpen,  up = cpt_commands.CanopySwitchClose, cockpit_device_id = devices.CPT_MECHANICS, value_down =  1.0, value_up = 0.0, name = _('Canopy Control Switch OPEN/HOLD'), category = {_('_My Buttons')}},
---{ down = cpt_commands.CanopySwitchClose, up = cpt_commands.CanopySwitchClose, cockpit_device_id = devices.CPT_MECHANICS, value_down = -1.0, value_up = 0.0, name = _('Canopy Control Switch CLOSE/HOLD'), category = {_('_My Buttons')}},
-
--- HOTAS
-{ down = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, up = hotas_commands.THROTTLE_EXTERIOR_LIGTHS, cockpit_device_id = devices.HOTAS,	value_down =  1.0, value_up = 0.0, name = _('Exterior Lights Switch ON/OFF'), category = {_('_My Buttons')}},
-
--- CMDS
-{ down = cmds_commands.Dispenser, up = cmds_commands.Dispenser, cockpit_device_id = devices.CMDS, value_down =  0.2, value_up= 0.1, name = _('DISPENSER Switch BYPASS/ON'), category = {_('_My Buttons')}},
-{ down = cmds_commands.Dispenser, up = cmds_commands.Dispenser, cockpit_device_id = devices.CMDS, value_down =  0.0, value_up= 0.1, name = _('DISPENSER Switch OFF/ON'), category = {_('_My Buttons')}},
-
--- TGP INTERFACE
-{ down = tgp_commands.Flir, up = tgp_commands.Flir, cockpit_device_id = devices.TGP_INTERFACE, value_down =  1.0, value_up= 0.0, name = _('FLIR Switch ON/STBY'),   category = {_('_My Buttons')}},
-{ down = tgp_commands.Flir, up = tgp_commands.Flir, cockpit_device_id = devices.TGP_INTERFACE, value_down = -1.0, value_up= 0.0, name = _('FLIR Switch OFF/STBY'),  category = {_('_My Buttons')}},
-{ down = tgp_commands.Ltdr, up = tgp_commands.Ltdr, cockpit_device_id = devices.TGP_INTERFACE, value_down =  1.0, value_up= 0.0, name = _('LTD/R Switch ARM/SAFE'), category = {_('_My Buttons')}},
-{ down = tgp_commands.Ltdr, up = tgp_commands.Ltdr, cockpit_device_id = devices.TGP_INTERFACE, value_down = -1.0, value_up= 0.0, name = _('LTD/R Switch AFT/SAFE'), category = {_('_My Buttons')}},
-
---{ down = 3112, up = 3112, cockpit_device_id = devices.FLIR, value_down =  1.0, value_up= 0.0, name = _('LST/NFLR Switch ON/OFF'), category = {_('_My Buttons')}},
-
--- CMDS (not implemented yet)
---{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.1, value_up= 0.0, name = _('ALQ-126 ECM Mode Switch STBY/OFF'), category = {_('_My Buttons')}},
---{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.4, value_up= 0.0, name = _('ALQ-126 ECM Mode Switch XMIT/OFF'), category = {_('_My Buttons')}},
---{ down = 3116, up = 3116, cockpit_device_id = devices.CMDS, value_down =  0.4, value_up= 0.1, name = _('ALQ-126 ECM Mode Switch XMIT/STBY'), category = {_('_My Buttons')}},
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
--- FF: begin additional commands
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 ---------------------------------------------
 -- Cheat ------------------------------------
 ---------------------------------------------
@@ -884,19 +810,19 @@ join(res.keyCommands,{
 {							down = INS_commands.INS_SwitchChange,														cockpit_device_id = devices.INS,				value_down =  0.5,						name = _('INS Switch - GYRO'),								category = {_('Right Console'), _('Sensor Panel')}},
 {							down = INS_commands.INS_SwitchChange,														cockpit_device_id = devices.INS,				value_down =  0.6,						name = _('INS Switch - GB'),								category = {_('Right Console'), _('Sensor Panel')}},
 {							down = INS_commands.INS_SwitchChange,														cockpit_device_id = devices.INS,				value_down =  0.7,						name = _('INS Switch - TEST'),								category = {_('Right Console'), _('Sensor Panel')}},
---{							down = _ITER,													cockpit_device_id = devices.,				value_down =  1.0,						name = _('FLIR Switch - Up'),								category = {_('Right Console'), _('Sensor Panel')}},
---{							down = _ITER,													cockpit_device_id = devices.,				value_down = -1.0,						name = _('FLIR Switch - Down'),								category = {_('Right Console'), _('Sensor Panel')}},
---{							down = ,														cockpit_device_id = devices.,				value_down =  1.0,						name = _('FLIR Switch - ON'),								category = {_('Right Console'), _('Sensor Panel')}},
---{							down = ,														cockpit_device_id = devices.,				value_down =  0.5,						name = _('FLIR Switch - STBY'),								category = {_('Right Console'), _('Sensor Panel')}},
---{							down = ,														cockpit_device_id = devices.,				value_down =  0.0,						name = _('FLIR Switch - OFF'),								category = {_('Right Console'), _('Sensor Panel')}},
---{							down = _ITER,													cockpit_device_id = devices.,				value_down =  1.0,						name = _('LTD/R Switch - Up'),								category = {_('Right Console'), _('Sensor Panel')}},
---{							down = _ITER,													cockpit_device_id = devices.,				value_down = -1.0,						name = _('LTD/R Switch - Down'),							category = {_('Right Console'), _('Sensor Panel')}},
---{							down = ,														cockpit_device_id = devices.,				value_down =  1.0,						name = _('LTD/R Switch - ARM'),								category = {_('Right Console'), _('Sensor Panel')}},
---{							down = ,														cockpit_device_id = devices.,				value_down =  0.5,						name = _('LTD/R Switch - SAFE'),							category = {_('Right Console'), _('Sensor Panel')}},
---{							down = ,														cockpit_device_id = devices.,				value_down =  0.0,						name = _('LTD/R Switch - AFT'),								category = {_('Right Console'), _('Sensor Panel')}},
---{							down = _ITER,													cockpit_device_id = devices.,				value_down =  0.0,						name = _('LST/NFLR Switch - ON/OFF'),						category = {_('Right Console'), _('Sensor Panel')}},
---{							down = ,														cockpit_device_id = devices.,				value_down =  1.0,						name = _('LST/NFLR Switch - ON'),							category = {_('Right Console'), _('Sensor Panel')}},
---{							down = ,														cockpit_device_id = devices.,				value_down =  0.0,						name = _('LST/NFLR Switch - OFF'),							category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Flir_ITER,																cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,						name = _('FLIR Switch - Up'),								category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Flir_ITER,																cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,						name = _('FLIR Switch - Down'),								category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Flir,																	cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,						name = _('FLIR Switch - ON'),								category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Flir,																	cockpit_device_id = devices.TGP_INTERFACE,		value_down =  0.0,						name = _('FLIR Switch - STBY'),								category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Flir,																	cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,						name = _('FLIR Switch - OFF'),								category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Ltdr_ITER,					up = tgp_commands.Ltdr_ITER,				cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('LTD/R Switch - Up'),								category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Ltdr_ITER,																cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,						name = _('LTD/R Switch - Down'),							category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Ltdr_EXT,					up = tgp_commands.LtdrArm,					cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('LTD/R Switch - ARM'),								category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Ltdr_EXT,																cockpit_device_id = devices.TGP_INTERFACE,		value_down =  0.0,						name = _('LTD/R Switch - SAFE'),							category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Ltdr_EXT,																cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,						name = _('LTD/R Switch - AFT'),								category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Lst_ITER,																cockpit_device_id = devices.TGP_INTERFACE,		value_down =  0.0,						name = _('LST/NFLR Switch - ON/OFF'),						category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Lst,																	cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,						name = _('LST/NFLR Switch - ON'),							category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.Lst,																	cockpit_device_id = devices.TGP_INTERFACE,		value_down =  0.0,						name = _('LST/NFLR Switch - OFF'),							category = {_('Right Console'), _('Sensor Panel')}},
 -- KY-58 Control Panel
 {							down = ky58_commands.KY58_ModeSw_ITER,														cockpit_device_id = devices.KY58,				value_down = -1.0,						name = _('KY-58 Mode Select Knob - CCW'),					category = {_('Right Console'), _('KY-58 Control Panel')}},
 {							down = ky58_commands.KY58_ModeSw_ITER,														cockpit_device_id = devices.KY58,				value_down =  1.0,						name = _('KY-58 Mode Select Knob - CW'),					category = {_('Right Console'), _('KY-58 Control Panel')}},

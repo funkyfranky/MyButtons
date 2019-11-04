@@ -926,9 +926,9 @@ join(res.keyCommands,{
 --{	down = ky58_commands.KY58_FillSw_Pull,			up = ky58_commands.KY58_FillSw_Pull,		cockpit_device_id = devices.KY58,				value_down =  1.0,		value_up = 0.0,	name = _('KY-58 Fill Select Knob - PULL'),					category = {_('Right Console'), _('KY-58 Control Panel')}},
 
 --NightVision
-{combos = {{key = 'H', reformers = {'RShift'}}}		   , down    = iCommandViewNightVisionGogglesOn   , name = _('Toggle goggles')   , category = _('Sensors')},
-{combos = {{key = 'H', reformers = {'RShift','RCtrl'}}}, pressed = iCommandPlane_Helmet_Brightess_Up  , name = _('Gain goggles up')  , category = _('Sensors')},
-{combos = {{key = 'H', reformers = {'RShift','RAlt'}}} , pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Gain goggles down'), category = _('Sensors')},
+{	down    = iCommandViewNightVisionGogglesOn   , name = _('Toggle goggles')   , category = _('Sensors')},
+{	pressed = iCommandPlane_Helmet_Brightess_Up  , name = _('Gain goggles up')  , category = _('Sensors')},
+{	pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Gain goggles down'), category = _('Sensors')},
 
 ---------------------------------------------
 -- Ejection Seat ----------------------------
@@ -1005,6 +1005,9 @@ join(res.keyCommands,{
 {	down = ky58_commands.KY58_PowerSw,					up = ky58_commands.KY58_PowerSw,				cockpit_device_id = devices.KY58,				value_down =  0.2,	value_up = 0.1,	name = _('KY-58 Power Select Knob - TD/ON'),							category = {_('Special For Joystick'), _('Right Console'), _('KY-58 Control Panel')}},
 {	down = engines_commands.APU_ControlSw_TM_WARTHOG,	up = engines_commands.APU_ControlSw_TM_WARTHOG,	cockpit_device_id = devices.ENGINES_INTERFACE,	value_down =  1.0,	value_up = 0.0,	name = _('APU Control Sw (special) - ON/OFF'),							category = {_('Special For Joystick'), _('Left Console')}},
 {	down = rwr_commands.Power,							up = rwr_commands.Power,						cockpit_device_id = devices.RWR,				value_down =  1.0,	value_up = 0.0,	name = _('ALR-67 POWER Pushbutton (special) - ON/OFF'),					category = {_('Special For Joystick'), _('Instrument Panel'), _('ALR-67')}},
+{	down = tgp_commands.Flir,							up = tgp_commands.Flir,							cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('FLIR Switch - ON/STBY'),										category = {_('Special For Joystick'), _('Right Console'), _('Sensor Panel')}},
+{	down = tgp_commands.Flir,							up = tgp_commands.Flir,							cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,	value_up = 0.0,	name = _('FLIR Switch - OFF/STBY'),										category = {_('Special For Joystick'), _('Right Console'), _('Sensor Panel')}},
+{	down = tgp_commands.Ltdr,							up = tgp_commands.Ltdr,							cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,	value_up = 0.0,	name = _('LTD/R Switch - AFT/SAFE'),									category = {_('Special For Joystick'), _('Right Console'), _('Sensor Panel')}},
 
 })
 

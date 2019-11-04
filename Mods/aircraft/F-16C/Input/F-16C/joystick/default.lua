@@ -6,6 +6,53 @@ local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua
 
 join(res.keyCommands,{
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- FF begin additional commands
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+{down = iCommandPlaneGearUp, up = iCommandPlaneGearDown, name = _('LG Handle UP/DOWN'), category = {_('_My Buttons')}},
+
+-- SAI
+{down = sai_commands.cage, up = sai_commands.cage, pressed = sai_commands.reference_EXT, cockpit_device_id = devices.SAI, value_down = 1.0, value_up = 0.0, value_pressed = 0.3, name = _('SAI Cage Knob PULL/CW'), category = {_('_My Buttons')}},
+{down = sai_commands.cage, up = sai_commands.cage, pressed = sai_commands.reference_EXT, cockpit_device_id = devices.SAI, value_down = 1.0, value_up = 0.0, value_pressed =-0.3, name = _('SAI Cage Knob PULL/CCW'), category = {_('_My Buttons')}},
+
+{down = control_commands.ApRoll, up = control_commands.ApRoll, cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =-1.0, value_up= 0.0, name = _('Autopilot ROLL Switch STRG SEL/ATT HOLD'), category = {_('_My Buttons')}},
+{down = control_commands.ApRoll, up = control_commands.ApRoll, cockpit_device_id = devices.CONTROL_INTERFACE,	value_down = 1.0, value_up= 0.0, name = _('Autopilot ROLL Switch HDG SEL/ATT HOLD'), category = {_('_My Buttons')}},
+
+-- ELEC INTERFACE
+{down = 3102, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, name = _('GPS Switch GPS'), category = {_('_My Buttons')}},
+{down = 3102, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 0.0, name = _('GPS Switch OFF'), category = {_('_My Buttons')}},
+{down = 3103, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, name = _('DL Switch DL'), category = {_('_My Buttons')}},
+{down = 3103, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 0.0, name = _('DL Switch OFF'), category = {_('_My Buttons')}},
+{down = engine_commands.EngContSw, up = engine_commands.EngContSw, cockpit_device_id = devices.ENGINE_INTERFACE, value_down =  1.0, value_up =  0.0, name = _('ENG CONT Switch SEC/PRI'), category = {_('_My Buttons')}},
+
+-- SMS INTERFACE
+{ down = sms_commands.LaserSw, up = sms_commands.LaserSw, cockpit_device_id = devices.SMS, value_down = 1.0, value_up = 0.0, name = _('LASER ARM Switch ARM/OFF'), category = {_('_My Buttons')}},
+
+-- SNSR PWR Control Panel
+{down = sms_commands.LeftHDPT,  up = sms_commands.LeftHDPT,  cockpit_device_id = devices.SMS, value_down = 1.0, value_up = 0.0, name = _('LEFT HDPT Switch ON/OFF'),  category = {_('_My Buttons')}},
+{down = sms_commands.RightHDPT, up = sms_commands.RightHDPT, cockpit_device_id = devices.SMS, value_down = 1.0, value_up = 0.0, name = _('RIGHT HDPT Switch ON/OFF'), category = {_('_My Buttons')}},
+{down = fcr_commands.PwrSw,     up = fcr_commands.PwrSw,     cockpit_device_id = devices.FCR, value_down = 1.0, value_up = 0.0, name = _('FCR Switch ON/OFF'),        category = {_('_My Buttons')}},
+
+-- FUEL INTERFACE
+{down = fuel_commands.AirRefuelSw, up = fuel_commands.AirRefuelSw, cockpit_device_id = devices.FUEL_INTERFACE, value_down =  1.0, value_up = 0.0,  name = _('AIR REFUEL Switch OPEN/CLOSE'), category = {_('_My Buttons')}},
+
+-- ENGINE INTERFACE
+{down = engine_commands.MaxPowerSw, up = engine_commands.MaxPowerSw, cockpit_device_id = devices.ENGINE_INTERFACE, value_down =  1.0, value_up = 0.0, name = _('MAX POWER Switch ON/OFF'), category = {_('_My Buttons')}},
+
+-- CONTROL INTERFACE
+{down = control_commands.StoresConfig, up = control_commands.StoresConfig, cockpit_device_id = devices.CONTROL_INTERFACE, value_down = 0.0, value_up = 1.0, name = _('STORES CONFIG Switch CAT I/III'), category = {_('_My Buttons')}},
+
+-- CPT_MECH
+{down = cpt_commands.EjectionSafetyLever, cockpit_device_id = devices.CPT_MECH, value_down = 1.0, name = _('Ejection Safety Lever ARMED'),  category = {_('_My Buttons')}},
+{down = cpt_commands.EjectionSafetyLever, cockpit_device_id = devices.CPT_MECH, value_down = 0.0, name = _('Ejection Safety Lever LOCKED'), category = {_('_My Buttons')}},
+{down = cpt_commands.EjectionSafetyLever, up = cpt_commands.EjectionSafetyLever, cockpit_device_id = devices.CPT_MECH, value_down = 1.0, value_up = 0.0, name = _('Ejection Safety Lever ARMED/LOCKED'),  category = {_('_My Buttons')}},
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-- FF end additional commands
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 ---------------------------------------------
 -- Cheat ------------------------------------
 ---------------------------------------------
@@ -520,19 +567,19 @@ join(res.keyCommands,{
 {	down = ecs_commands.AirSourceKnob_ITER,		cockpit_device_id = devices.ECS_INTERFACE,	value_down = -1.0,		name = _('AIR SOURCE Knob - CCW'),		category = {_('Right Console'), _('AIR COND Control Panel')}},
 
 -- OXYGEN REGULATOR Panel
-{	down = oxygen_commands.SupplyLever,			cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  0.0,	name = _('Supply Lever - OFF'),					category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.SupplyLever,			cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  0.5,	name = _('Supply Lever - ON'),					category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.SupplyLever,			cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,	name = _('Supply Lever - PBG'),					category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.SupplyLever_ITER,	cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,	name = _('Supply Lever - Up'),					category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.SupplyLever_ITER,	cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down = -1.0,	name = _('Supply Lever - Down'),				category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.DiluterLever,		cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  0.0,	name = _('Diluter Lever - NORM'),				category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.DiluterLever,		cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,	name = _('Diluter Lever - 100 percent'),		category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.DiluterLever_ITER,	cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,	name = _('Diluter Lever - 100 percent/NORM'),	category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.EmergencyLever,		cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down = -1.0,	name = _('Emergency Lever - TEST MASK'),		category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.EmergencyLever,		cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  0.0,	name = _('Emergency Lever - NORMAL'),			category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.EmergencyLever,		cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,	name = _('Emergency Lever - EMERGENCY'),		category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.EmergencyLever_ITER,	cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,	name = _('Emergency Lever - Up'),				category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
-{	down = oxygen_commands.EmergencyLever_ITER,	cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down = -1.0,	name = _('Emergency Lever - Down'),				category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.SupplyLever,																cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  0.0,					name = _('Supply Lever - OFF'),					category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.SupplyLever,																cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  0.5,					name = _('Supply Lever - ON'),					category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.SupplyLever,																cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,					name = _('Supply Lever - PBG'),					category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.SupplyLever_ITER,														cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,					name = _('Supply Lever - Up'),					category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.SupplyLever_ITER,														cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down = -1.0,					name = _('Supply Lever - Down'),				category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.DiluterLever,															cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  0.0,					name = _('Diluter Lever - NORM'),				category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.DiluterLever,															cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,					name = _('Diluter Lever - 100 percent'),		category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.DiluterLever_ITER,														cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,					name = _('Diluter Lever - 100 percent/NORM'),	category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.EmergencyLever_ITER,		up = oxygen_commands.EmergencyLever_ITER,		cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down = -1.0,	value_up = 0.0,	name = _('Emergency Lever - TEST MASK'),		category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.EmergencyLever_ITER,														cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  0.0,					name = _('Emergency Lever - NORMAL'),			category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.EmergencyLever_ITER,														cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,					name = _('Emergency Lever - EMERGENCY'),		category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.EmergencyLever,															cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,					name = _('Emergency Lever - Up'),				category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
+{	down = oxygen_commands.EmergencyLeverTestMask,	up = oxygen_commands.EmergencyLeverTestMask,	cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down = -1.0,	value_up = 0.0,	name = _('Emergency Lever - Down'),				category = {_('Right Console'), _('OXYGEN REGULATOR Panel')}},
 
 -- Secure Voice Control Panel
 {	down = ky58_commands.KY58_ModeSw_ITER,											cockpit_device_id = devices.KY58,	value_down = -1.0,					name = _('KY-58 MODE Knob - CCW'),				category = {_('Right Console'), _('Secure Voice Control Panel')}},
@@ -573,8 +620,10 @@ join(res.keyCommands,{
 {	down = ufc_commands.UFC_Sw,			cockpit_device_id = devices.UFC,	value_down =  0.0,	name = _('UFC Switch - OFF'),				category = {_('Right Console'), _('AVIONICS POWER Panel')}},
 {	down = ufc_commands.UFC_Sw,			cockpit_device_id = devices.UFC,	value_down =  1.0,	name = _('UFC Switch - UFC'),				category = {_('Right Console'), _('AVIONICS POWER Panel')}},
 {	down = ufc_commands.UFC_Sw_ITER,	cockpit_device_id = devices.UFC,	value_down =  1.0,	name = _('UFC Switch - UFC/OFF'),			category = {_('Right Console'), _('AVIONICS POWER Panel')}},
+{	down = gps_commands.PwrSw,			cockpit_device_id = devices.GPS,	value_down =  0.0,	name = _('GPS Switch - OFF'),				category = {_('Right Console'), _('AVIONICS POWER Panel')}},
+{	down = gps_commands.PwrSw,			cockpit_device_id = devices.GPS,	value_down =  1.0,	name = _('GPS Switch - GPS'),				category = {_('Right Console'), _('AVIONICS POWER Panel')}},
+{	down = gps_commands.PwrSw_ITER,		cockpit_device_id = devices.GPS,	value_down =  1.0,	name = _('GPS Switch - GPS/OFF'),			category = {_('Right Console'), _('AVIONICS POWER Panel')}},
 -- TODO: MAP Switch
--- TODO: GPS Switch
 -- TODO: DL Switch
 {	down = ins_commands.ModeKnob,		cockpit_device_id = devices.INS,	value_down =  0.0,	name = _('INS Knob - OFF'),					category = {_('Right Console'), _('AVIONICS POWER Panel')}},
 {	down = ins_commands.ModeKnob,		cockpit_device_id = devices.INS,	value_down =  0.1,	name = _('INS Knob - STOR HDG (ALIGN)'),	category = {_('Right Console'), _('AVIONICS POWER Panel')}},
@@ -765,13 +814,12 @@ join(res.keyCommands,{
 
 -- TEST Switch Panel
 {	down = engine_commands.FireOheatTestBtn,	up = engine_commands.FireOheatTestBtn,	cockpit_device_id = devices.ENGINE_INTERFACE,	value_down =  1.0,	value_up = 0.0,	name = _('FIRE & OHEAT DETECT Test Button'),	category = {_('Left Console'), _('TEST Switch Panel')}},
--- TODO:
---{	down = ,									up = ,									cockpit_device_id = devices.,					value_down =  1.0,	value_up = 0.0,	name = _('OBOGS BIT Switch - BIT/OFF'),			category = {_('Left Console'), _('TEST Switch Panel')}},
+{	down = oxygen_commands.ObogsBitSw,			up = oxygen_commands.ObogsBitSw,		cockpit_device_id = devices.OXYGEN_INTERFACE,	value_down =  1.0,	value_up = 0.0,	name = _('OBOGS BIT Switch - BIT/OFF'),			category = {_('Left Console'), _('TEST Switch Panel')}},
 {	down = cptlights_commands.MalIndLtsTest,	up = cptlights_commands.MalIndLtsTest,	cockpit_device_id = devices.CPTLIGHTS_SYSTEM,	value_down =  1.0,	value_up = 0.0,	name = _('MAL & IND LTS Test Button'),			category = {_('Left Console'), _('TEST Switch Panel')}},
-{	down = elec_commands.ProbeHeatSw,													cockpit_device_id = devices.ELEC_INTERFACE,		value_down = -1.0,					name = _('PROBE HEAT Switch - TEST'),			category = {_('Left Console'), _('TEST Switch Panel')}},
+{	down = elec_commands.ProbeHeatSwTEST,		up = elec_commands.ProbeHeatSwTEST,		cockpit_device_id = devices.ELEC_INTERFACE,		value_down = -1.0,	value_up = 0.0,	name = _('PROBE HEAT Switch - TEST'),			category = {_('Left Console'), _('TEST Switch Panel')}},
 {	down = elec_commands.ProbeHeatSw,													cockpit_device_id = devices.ELEC_INTERFACE,		value_down =  0.0,					name = _('PROBE HEAT Switch - OFF'),			category = {_('Left Console'), _('TEST Switch Panel')}},
 {	down = elec_commands.ProbeHeatSw,													cockpit_device_id = devices.ELEC_INTERFACE,		value_down =  1.0,					name = _('PROBE HEAT Switch - PROBE HEAT'),		category = {_('Left Console'), _('TEST Switch Panel')}},
-{	down = elec_commands.ProbeHeatSw_ITER,												cockpit_device_id = devices.ELEC_INTERFACE,		value_down = -1.0,					name = _('PROBE HEAT Switch - Down'),			category = {_('Left Console'), _('TEST Switch Panel')}},
+{	down = elec_commands.ProbeHeatSw_ITER,		up = elec_commands.ProbeHeatSw_ITER,	cockpit_device_id = devices.ELEC_INTERFACE,		value_down = -1.0,	value_up = 0.0,	name = _('PROBE HEAT Switch - Down'),			category = {_('Left Console'), _('TEST Switch Panel')}},
 {	down = elec_commands.ProbeHeatSw_ITER,												cockpit_device_id = devices.ELEC_INTERFACE,		value_down =  1.0,					name = _('PROBE HEAT Switch - Up'),				category = {_('Left Console'), _('TEST Switch Panel')}},
 {	down = elec_commands.EPU_GEN_TestSw,		up = elec_commands.EPU_GEN_TestSw,		cockpit_device_id = devices.ELEC_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('EPU/GEN Test Switch'),				category = {_('Left Console'), _('TEST Switch Panel')}},
 {	down = elec_commands.FlcsPwrTestSwMAINT,											cockpit_device_id = devices.ELEC_INTERFACE,		value_down = -1.0,					name = _('FLCS PWR TEST Switch - MAINT'),		category = {_('Left Console'), _('TEST Switch Panel')}},
@@ -968,8 +1016,6 @@ join(res.keyCommands,{
 {	down = extlights_commands.PosWingTail,			up = extlights_commands.PosWingTail,			cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down =  1.0,	value_up = 0.0,	name = _('WING/TAIL Switch - BRT/OFF'),												category = {_('Special For Joystick'), _('Left Console'), _('EXT LIGHTING Control Panel')}},
 {	down = extlights_commands.PosFus,				up = extlights_commands.PosFus,					cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down = -1.0,	value_up = 0.0,	name = _('FUSELAGE Switch - DIM/OFF'),												category = {_('Special For Joystick'), _('Left Console'), _('EXT LIGHTING Control Panel')}},
 {	down = extlights_commands.PosFus,				up = extlights_commands.PosFus,					cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down =  1.0,	value_up = 0.0,	name = _('FUSELAGE Switch - BRT/OFF'),												category = {_('Special For Joystick'), _('Left Console'), _('EXT LIGHTING Control Panel')}},
-{	down = elec_commands.ProbeHeatSw,				up = elec_commands.ProbeHeatSw,					cockpit_device_id = devices.ELEC_INTERFACE,		value_down = -1.0,	value_up = 0.0,	name = _('PROBE HEAT Switch - TEST/OFF'),											category = {_('Special For Joystick'), _('Left Console'), _('TEST Switch Panel')}},
-{	down = elec_commands.ProbeHeatSw,				up = elec_commands.ProbeHeatSw,					cockpit_device_id = devices.ELEC_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('PROBE HEAT Switch - PROBE HEAT/OFF'),										category = {_('Special For Joystick'), _('Left Console'), _('TEST Switch Panel')}},
 {	down = elec_commands.FlcsPwrTestSwMAINT,		up = elec_commands.FlcsPwrTestSwMAINT,			cockpit_device_id = devices.ELEC_INTERFACE,		value_down = -1.0,	value_up = 0.0,	name = _('FLCS PWR TEST Switch (special) - MAINT/NORM'),							category = {_('Special For Joystick'), _('Left Console'), _('TEST Switch Panel')}},
 {	down = iff_commands.M4CodeSw,					up = iff_commands.M4CodeSw,						cockpit_device_id = devices.IFF_CONTROL_PANEL,	value_down = -1.0,	value_up = 0.0,	name = _('IFF M-4 CODE Switch - HOLD/ A/B'),										category = {_('Special For Joystick'), _('Left Console'), _('IFF Control Panel')}},
 {	down = iff_commands.M4CodeSw,					up = iff_commands.M4CodeSw,						cockpit_device_id = devices.IFF_CONTROL_PANEL,	value_down =  1.0,	value_up = 0.0,	name = _('IFF M-4 CODE Switch - ZERO/ A/B'),										category = {_('Special For Joystick'), _('Left Console'), _('IFF Control Panel')}},
