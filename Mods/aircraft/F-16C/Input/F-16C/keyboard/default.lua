@@ -64,6 +64,10 @@ join(res.keyCommands,{
 {combos = {{key = 'Space'}},							down = hotas_commands.STICK_TRIGGER_2ND_DETENT,		up = hotas_commands.STICK_TRIGGER_2ND_DETENT,	cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,	name = _('CAMERA/GUN Trigger - SECOND DETENT'),			category = {_('Stick'), _('HOTAS')}},
 {combos = {{key = 'Space',	reformers = {'RAlt'}}},		down = hotas_commands.STICK_WEAPON_RELEASE,  		up = hotas_commands.STICK_WEAPON_RELEASE,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,	name = _('WPN REL Button - Depress'),					category = {_('Stick'), _('HOTAS')}},
 
+{								down = cpt_commands.StickHide,		cockpit_device_id = devices.CPT_MECH,	value_down =  1.0,	name = _('Control Stick - HIDE'),			category = {_('Stick'), _('HOTAS')}},
+{								down = cpt_commands.StickHide,		cockpit_device_id = devices.CPT_MECH,	value_down =  0.0,	name = _('Control Stick - SHOW'),			category = {_('Stick'), _('HOTAS')}},
+{combos = {{key = 'Back'}},		down = cpt_commands.StickHide_EXT,	cockpit_device_id = devices.CPT_MECH,	value_down =  1.0,	name = _('Control Stick - HIDE/SHOW'),		category = {_('Stick'), _('HOTAS')}},
+
 ---------------------------------------------
 -- Throttle Quadrant ------------------------
 ---------------------------------------------
@@ -90,8 +94,8 @@ join(res.keyCommands,{
 {combos = {{key = 'C'}},							down = hotas_commands.THROTTLE_UNCAGE,				up = hotas_commands.THROTTLE_UNCAGE,			cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('UNCAGE Switch'),												category = {_('Throttle Grip'), _('HOTAS')}},
 {													pressed = hotas_commands.THROTTLE_MAN_RNG_INC,														cockpit_device_id = devices.HOTAS,	value_pressed =  1.0,					name = _('MAN RNG Knob - CW'),											category = {_('Throttle Grip'), _('HOTAS')}},
 {													pressed = hotas_commands.THROTTLE_MAN_RNG_DEC,														cockpit_device_id = devices.HOTAS,	value_pressed = -1.0,					name = _('MAN RNG Knob - CCW'),											category = {_('Throttle Grip'), _('HOTAS')}},
-{combos = {{key = '='}},							down = hotas_commands.THROTTLE_ANT_ELEV_UP,			up = hotas_commands.THROTTLE_ANT_ELEV_UP,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('ANT ELEV Knob - CW'),											category = {_('Throttle Grip'), _('HOTAS')}},
-{combos = {{key = '-'}},							down = hotas_commands.THROTTLE_ANT_ELEV_DOWN,		up = hotas_commands.THROTTLE_ANT_ELEV_DOWN,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('ANT ELEV Knob - CCW'),										category = {_('Throttle Grip'), _('HOTAS')}},
+{combos = {{key = '='}},							pressed = hotas_commands.THROTTLE_ANT_ELEV_UP,														cockpit_device_id = devices.HOTAS,	value_pressed =  1.0,					name = _('ANT ELEV Knob - CW'),											category = {_('Throttle Grip'), _('HOTAS')}},
+{combos = {{key = '-'}},							pressed = hotas_commands.THROTTLE_ANT_ELEV_DOWN,													cockpit_device_id = devices.HOTAS,	value_pressed = -1.0,					name = _('ANT ELEV Knob - CCW'),										category = {_('Throttle Grip'), _('HOTAS')}},
 {													down = hotas_commands.THROTTLE_DOG_FIGHT,															cockpit_device_id = devices.HOTAS,	value_down =  1.0,						name = _('DOGFIGHT/Missile Override Switch - DOGFIGHT'),				category = {_('Throttle Grip'), _('HOTAS')}},
 {													down = hotas_commands.THROTTLE_DOG_FIGHT,															cockpit_device_id = devices.HOTAS,	value_down =  0.0,						name = _('DOGFIGHT/Missile Override Switch - CENTER'),					category = {_('Throttle Grip'), _('HOTAS')}},
 {													down = hotas_commands.THROTTLE_DOG_FIGHT,															cockpit_device_id = devices.HOTAS,	value_down = -1.0,						name = _('DOGFIGHT/Missile Override Switch - MISSILE OVERRIDE'),		category = {_('Throttle Grip'), _('HOTAS')}},
@@ -124,6 +128,10 @@ join(res.keyCommands,{
 ---------------------------------------------
 -- Instrument Panel -------------------------
 ---------------------------------------------
+{													pressed = cptlights_commands.IndBrtAoA_ITER,	cockpit_device_id = devices.CPTLIGHTS_SYSTEM,	value_pressed = -0.3,		name = _('AOA Indexer Dimming Lever - Down/Decrease'),			category = {_('Instrument Panel')}},
+{													pressed = cptlights_commands.IndBrtAoA_ITER,	cockpit_device_id = devices.CPTLIGHTS_SYSTEM,	value_pressed =  0.3,		name = _('AOA Indexer Dimming Lever - Up/Increase'),			category = {_('Instrument Panel')}},
+{													pressed = cptlights_commands.IndBrtAR_ITER,		cockpit_device_id = devices.CPTLIGHTS_SYSTEM,	value_pressed = -0.3,		name = _('AR Status Indicator Dimming Lever - Down/Decrease'),	category = {_('Instrument Panel')}},
+{													pressed = cptlights_commands.IndBrtAR_ITER,		cockpit_device_id = devices.CPTLIGHTS_SYSTEM,	value_pressed =  0.3,		name = _('AR Status Indicator Dimming Lever - Up/Increase'),	category = {_('Instrument Panel')}},
 
 ----------------------------------------------------------------------
 -- Upfront Controls (UFC) / Integrated Control Panel (ICP) -----------
@@ -340,14 +348,14 @@ join(res.keyCommands,{
 {combos = {{key = 'G',	reformers = {'LCtrl'}}},	down = iCommandPlaneGearUp,																																		name = _('LG Handle - UP'),							category = {_('Left Auxiliary Console')}},
 {combos = {{key = 'G',	reformers = {'LShift'}}},	down = iCommandPlaneGearDown,																																	name = _('LG Handle - DN'),							category = {_('Left Auxiliary Console')}},
 {													down = mmc_commands.EmerStoresJett,		up = mmc_commands.EmerStoresJett,	cockpit_device_id = devices.MMC,				value_down =  1.0,	value_up = 0.0,	name = _('EMER STORES JETTISON Button'),			category = {_('Left Auxiliary Console')}},
-{													down = gear_commands.HookSw,												cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  0.0,					name = _('HOOK Switch - UP'),						category = {_('Left Auxiliary Console')}},
-{													down = gear_commands.HookSw,												cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,					name = _('HOOK Switch - DN'),						category = {_('Left Auxiliary Console')}},
+{													down = gear_commands.HookSw,												cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,					name = _('HOOK Switch - UP'),						category = {_('Left Auxiliary Console')}},
+{													down = gear_commands.HookSw,												cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  0.0,					name = _('HOOK Switch - DN'),						category = {_('Left Auxiliary Console')}},
 {													down = gear_commands.HookSw_ITER,											cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,					name = _('HOOK Switch - UP/DN'),					category = {_('Left Auxiliary Console')}},
 {													down = mmc_commands.GroundJett,												cockpit_device_id = devices.MMC,				value_down =  1.0,					name = _('GND JETT ENABLE Switch - ENABLE'),		category = {_('Left Auxiliary Console')}},
 {													down = mmc_commands.GroundJett,												cockpit_device_id = devices.MMC,				value_down =  0.0,					name = _('GND JETT ENABLE Switch - OFF'),			category = {_('Left Auxiliary Console')}},
 {													down = mmc_commands.GroundJett_ITER,										cockpit_device_id = devices.MMC,				value_down =  1.0,					name = _('GND JETT ENABLE Switch - ENABLE/OFF'),	category = {_('Left Auxiliary Console')}},
-{													down = gear_commands.BrakesChannelSw,										cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  0.0,					name = _('BRAKES Channel Switch - CHAN 1'),			category = {_('Left Auxiliary Console')}},
-{													down = gear_commands.BrakesChannelSw,										cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,					name = _('BRAKES Channel Switch - CHAN 2'),			category = {_('Left Auxiliary Console')}},
+{													down = gear_commands.BrakesChannelSw,										cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,					name = _('BRAKES Channel Switch - CHAN 1'),			category = {_('Left Auxiliary Console')}},
+{													down = gear_commands.BrakesChannelSw,										cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  0.0,					name = _('BRAKES Channel Switch - CHAN 2'),			category = {_('Left Auxiliary Console')}},
 {													down = gear_commands.BrakesChannelSw_ITER,									cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,					name = _('BRAKES Channel Switch - CHAN 1/CHAN 2'),	category = {_('Left Auxiliary Console')}},
 {													down = gear_commands.AntiSkidSw_EXT,										cockpit_device_id = devices.GEAR_INTERFACE,		value_down = -1.0,					name = _('ANTI-SKID Switch - OFF'),					category = {_('Left Auxiliary Console')}},
 {													down = gear_commands.AntiSkidSw_EXT,										cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  0.0,					name = _('ANTI-SKID Switch - ANTI-SKID'),			category = {_('Left Auxiliary Console')}},
@@ -355,9 +363,9 @@ join(res.keyCommands,{
 {													down = gear_commands.ParkingSw,			up = gear_commands.ParkingSw,		cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('ANTI-SKID Switch - Up'),					category = {_('Left Auxiliary Console')}},
 {													down = gear_commands.AntiSkidSw,											cockpit_device_id = devices.GEAR_INTERFACE,		value_down = -1.0,					name = _('ANTI-SKID Switch - Down'),				category = {_('Left Auxiliary Console')}},
 {													down = gear_commands.DownLockRelBtn,	up = gear_commands.DownLockRelBtn,	cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('DN LOCK REL Button'),						category = {_('Left Auxiliary Console')}},
-{													down = control_commands.StoresConfig,										cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  0.0,					name = _('STORES CONFIG Switch - CAT I'),			category = {_('Left Auxiliary Console')}},
-{													down = control_commands.StoresConfig,										cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  1.0,					name = _('STORES CONFIG Switch - CAT III'),			category = {_('Left Auxiliary Console')}},
-{													down = control_commands.StoresConfig_ITER,									cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  1.0,					name = _('STORES CONFIG Switch - CAT III/CAT I'),	category = {_('Left Auxiliary Console')}},
+{													down = control_commands.StoresConfig,										cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  1.0,					name = _('STORES CONFIG Switch - CAT I'),			category = {_('Left Auxiliary Console')}},
+{													down = control_commands.StoresConfig,										cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  0.0,					name = _('STORES CONFIG Switch - CAT III'),			category = {_('Left Auxiliary Console')}},
+{													down = control_commands.StoresConfig_ITER,									cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =  1.0,					name = _('STORES CONFIG Switch - CAT I/CAT III'),	category = {_('Left Auxiliary Console')}},
 {													down = gear_commands.HornSilencerBtn,	up = gear_commands.HornSilencerBtn,	cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('HORN SILENCER Button'),					category = {_('Left Auxiliary Console')}},
 {													down = extlights_commands.LandingTaxi,										cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down = -1.0,					name = _('LANDING TAXI LIGHTS Switch - TAXI'),		category = {_('Left Auxiliary Console')}},
 {													down = extlights_commands.LandingTaxi,										cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down =  0.0,					name = _('LANDING TAXI LIGHTS Switch - OFF'),		category = {_('Left Auxiliary Console')}},
@@ -576,8 +584,12 @@ join(res.keyCommands,{
 {													down = gps_commands.PwrSw,			cockpit_device_id = devices.GPS,	value_down =  0.0,	name = _('GPS Switch - OFF'),				category = {_('Right Console'), _('AVIONICS POWER Panel')}},
 {													down = gps_commands.PwrSw,			cockpit_device_id = devices.GPS,	value_down =  1.0,	name = _('GPS Switch - GPS'),				category = {_('Right Console'), _('AVIONICS POWER Panel')}},
 {													down = gps_commands.PwrSw_ITER,		cockpit_device_id = devices.GPS,	value_down =  1.0,	name = _('GPS Switch - GPS/OFF'),			category = {_('Right Console'), _('AVIONICS POWER Panel')}},
--- TODO: MAP Switch
--- TODO: DL Switch
+{													down = map_commands.PwrSw,			cockpit_device_id = devices.MAP,	value_down =  0.0,	name = _('MAP Switch - OFF'),				category = {_('Right Console'), _('AVIONICS POWER Panel')}},
+{													down = map_commands.PwrSw,			cockpit_device_id = devices.MAP,	value_down =  1.0,	name = _('MAP Switch - MAP'),				category = {_('Right Console'), _('AVIONICS POWER Panel')}},
+{													down = map_commands.PwrSw_ITER,		cockpit_device_id = devices.MAP,	value_down =  1.0,	name = _('MAP Switch - MAP/OFF'),			category = {_('Right Console'), _('AVIONICS POWER Panel')}},
+{													down = idm_commands.PwrSw,			cockpit_device_id = devices.IDM,	value_down =  0.0,	name = _('DL Switch - OFF'),				category = {_('Right Console'), _('AVIONICS POWER Panel')}},
+{													down = idm_commands.PwrSw,			cockpit_device_id = devices.IDM,	value_down =  1.0,	name = _('DL Switch - DL'),					category = {_('Right Console'), _('AVIONICS POWER Panel')}},
+{													down = idm_commands.PwrSw_ITER,		cockpit_device_id = devices.IDM,	value_down =  1.0,	name = _('DL Switch - DL/OFF'),				category = {_('Right Console'), _('AVIONICS POWER Panel')}},
 {													down = ins_commands.ModeKnob,		cockpit_device_id = devices.INS,	value_down =  0.0,	name = _('INS Knob - OFF'),					category = {_('Right Console'), _('AVIONICS POWER Panel')}},
 {													down = ins_commands.ModeKnob,		cockpit_device_id = devices.INS,	value_down =  0.1,	name = _('INS Knob - STOR HDG (ALIGN)'),	category = {_('Right Console'), _('AVIONICS POWER Panel')}},
 {													down = ins_commands.ModeKnob,		cockpit_device_id = devices.INS,	value_down =  0.2,	name = _('INS Knob - NORM (ALIGN)'),		category = {_('Right Console'), _('AVIONICS POWER Panel')}},
@@ -921,6 +933,14 @@ join(res.keyCommands,{
 {combos = {{key = 'H', reformers = {'RShift'}}}		   , down    = iCommandViewNightVisionGogglesOn   , name = _('Toggle goggles')   , category = _('Sensors')},
 {combos = {{key = 'H', reformers = {'RShift','RCtrl'}}}, pressed = iCommandPlane_Helmet_Brightess_Up  , name = _('Gain goggles up')  , category = _('Sensors')},
 {combos = {{key = 'H', reformers = {'RShift','RAlt'}}} , pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Gain goggles down'), category = _('Sensors')},
+
+----------------------------------------------
+--				TEST FEATURE!!!				--
+-- Weapon Adjustment
+{combos = {{key = '9', reformers = {'RShift','RAlt'}}},		down = sms_commands.ChangeLaserCode100,		cockpit_device_id = devices.SMS,	value_down = 1,	name = _('Change Laser Code, Hundreds (5..7)'),		category = {_('Ground Adjustment')}},
+{combos = {{key = '0', reformers = {'RShift','RAlt'}}},		down = sms_commands.ChangeLaserCode10,		cockpit_device_id = devices.SMS,	value_down = 1,	name = _('Change Laser Code, Tens (1..8)'),			category = {_('Ground Adjustment')}},
+{combos = {{key = '-', reformers = {'RShift','RAlt'}}},		down = sms_commands.ChangeLaserCode1,		cockpit_device_id = devices.SMS,	value_down = 1,	name = _('Change Laser Code, Ones (1..8)'),			category = {_('Ground Adjustment')}},
+----------------------------------------------
 
 })
 return res

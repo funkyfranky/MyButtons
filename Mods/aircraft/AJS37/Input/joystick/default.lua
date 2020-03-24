@@ -144,13 +144,13 @@ local keycommands = {
     -- Motor kontroll
     {combos = {{key = "F", reformers = {"LAlt"}}}, down = 3040, cockpit_device_id = 15, value_down = 1.0, name = "Low pressure fuel valve LT Kran", category = "Motor"},
     {combos = {{key = "I", reformers = {"LAlt"}}}, down = 3005, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = "High-pressure fuel valve (throttle to idle)", category = "Motor"},
-    {combos = {{key = "I", reformers = {"LAlt"}}}, pressed = 3004, up= 3004, cockpit_device_id = devices.ENGINEPANEL, value_pressed = 1.0, value_up = 0.0, name = "High-pressure fuel valve (For HOTAS, Off if pressed)", category = "Motor"},
     {combos = {{key = "S", reformers = {"LAlt"}}}, down = 3042, up = 3043, cockpit_device_id = 15, value_down = 1.0, value_up = 1.0, name = "Startknapp", category = "Motor"},
     {combos = {{key = "A", reformers = {"RAlt"}}}, down = 3006, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = "Afterburner fuel valve (LTkran EBK)", category = "Motor"},
     {combos = {{key = "M", reformers = {"RAlt"}}}, down = 3007, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = "Manual fuel regulator switch", category = "Motor"},
     {combos = {{key = "+"}}, down = 3301, up = 3301, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = "Throttle down", category = "Motor"},
     {combos = {{key = "-"}}, down = 3302, up = 3302, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = "Throttle up", category = "Motor"},
-    
+    {down = 3004, up= 3005, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 1.0, name = "High-pressure fuel valve (HOTAS Cut off)", category = "Motor"},
+	
     {down = 3001, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = 'Start System - ON', category = 'Motor'},
     {down = 3001, cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0, name = 'Start System - OFF', category = 'Motor'},
     {down = 3003, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = 'Ignition System - ON', category = 'Motor'},
@@ -405,7 +405,7 @@ local keycommands = {
 	{down = 3716, up = 3716, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down =-1.0, value_up = 0.0, name = _('Emergency Roll Trim (NÖDTRIM ROLL) Left(V)/Center'), category = _('Flight Control')}, --added v1.3
 	{down = 3918, up = 3918, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Emergency Yaw Trim (SIDTRIM) Right(H)/Center'), category = _('Flight Control')}, --added v1.3
 	{down = 3918, up = 3918, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down =-1.0, value_up = 0.0, name = _('Emergency Yaw Trim (SIDTRIM) Left(V)/Center'), category = _('Flight Control')}, --added v1.3
-	{down = 3402, up = 3402, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Magnetic Declination Cover Open/Close'), category = _('Navigation')}, -- added v1.3
+	{down = 3742, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _('Magnetic Declination Cover Open/Close'), category = _('Navigation')}, -- added v1.3
 	{pressed = 3724,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 0.010,            name = _("Magnetic Declination Increase"), category = _("Navigation")}, --added v1.3
 	{pressed = 3724,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed =-0.010,            name = _("Magnetic Declination Decrease"), category = _("Navigation")}, --added v1.3
 	{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 0.005,            name = _("Backup Altimeter Setting Up - Slow"), category = _("Navigation")}, --added v1.3
@@ -419,7 +419,7 @@ local keycommands = {
 	{down = 3001, up = 3001, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _("System Start Switch On/Off"), category = _("Motor")}, --working
 	{down = 3002, up = 3002, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Low-pressure Fuel Valve On/Off'), category = _('Motor')}, --working
 	{down = 3003, up = 3003, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Ignition System Man/Aut'), category = _('Motor')}, --working
-	{down = 3004, up = 3004, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Aterstart (Restart) Switch On/Off'), category = _('Motor')}, --added v0.6
+	{down = 3401, up = 3401, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Aterstart (Restart) Switch On/Off'), category = _('Motor')}, --added v0.6
 	{down = 3005, up = 3005, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 1.0, name = _("High-pressure Fuel Valve On/Off (toggle)"), category = _("Motor")}, --working, toggle only
 	{pressed = 3004, up = 3005, cockpit_device_id = devices.ENGINEPANEL, value_pressed = 1.0, value_up = 1.0,  name = _("High-pressure Fuel Valve Off/Idle"), category = _("Motor")}, --added v1.1
 	{down = 3006, up = 3006, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _("Manual Afterburner Fuel Regulator On/Off (toggle)"), category = _("Motor")}, --working
@@ -604,6 +604,7 @@ local axiscommands = {
 {action = 3321, cockpit_device_id = devices.RADAR, name = 'Radar stick horizontal'},
 {action = 3322, cockpit_device_id = devices.RADAR, name = 'Radar stick vertical'},
 {action = 3327, cockpit_device_id = devices.RADAR, name = 'Radar MKR Gain'},
+{action = 3641, cockpit_device_id = devices.RADAR, name = 'Radar elevation'},
 
 {action = 3910, cockpit_device_id = devices.FLIGHTDATAUNIT, name = 'Master Mode select'},
 
