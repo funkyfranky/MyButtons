@@ -368,14 +368,14 @@ join(res.keyCommands,{
 {	down = cptlights_commands.MasterCaution,	up = cptlights_commands.MasterCaution,	cockpit_device_id = devices.CPTLIGHTS_SYSTEM,	value_down =  1.0,	value_up = 0.0,	name = _('Master Caution Button'),				category = {_('Instrument Panel')}},
 
 -- THREAT WARNING Panel
-{	pressed = rwr_commands.IntKnob_ITER,									cockpit_device_id = devices.AN_ALR56,	value_pressed = -0.3,					name = _('RWR Intensity Knob - CCW/Decrease'),				category = {_('Instrument Panel')}},
-{	pressed = rwr_commands.IntKnob_ITER,									cockpit_device_id = devices.AN_ALR56,	value_pressed =  0.3,					name = _('RWR Intensity Knob - CW/Increase'),				category = {_('Instrument Panel')}},
-{	down = rwr_commands.Handoff,			up = rwr_commands.Handoff,		cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control HANDOFF Button'),			category = {_('Instrument Panel')}},
-{	down = rwr_commands.Launch,				up = rwr_commands.Launch,		cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control LAUNCH Button'),			category = {_('Instrument Panel')}},
-{	down = rwr_commands.Mode,				up = rwr_commands.Mode,			cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control MODE Button'),				category = {_('Instrument Panel')}},
-{	down = rwr_commands.UnknownShip,		up = rwr_commands.UnknownShip,	cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control UNKNOWN SHIP Button'),		category = {_('Instrument Panel')}},
-{	down = rwr_commands.SysTest,			up = rwr_commands.SysTest,		cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control SYS TEST Button'),			category = {_('Instrument Panel')}},
-{	down = rwr_commands.TgtSep,				up = rwr_commands.TgtSep,		cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control T Button'),					category = {_('Instrument Panel')}},
+{	pressed = rwr_commands.IntKnob_ITER,									cockpit_device_id = devices.RWR,	value_pressed = -0.3,					name = _('RWR Intensity Knob - CCW/Decrease'),				category = {_('Instrument Panel'), _("RWR")}},
+{	pressed = rwr_commands.IntKnob_ITER,									cockpit_device_id = devices.RWR,	value_pressed =  0.3,					name = _('RWR Intensity Knob - CW/Increase'),				category = {_('Instrument Panel'), _("RWR")}},
+{	down = rwr_commands.Handoff,			up = rwr_commands.Handoff,		cockpit_device_id = devices.RWR,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control HANDOFF Button'),			category = {_('Instrument Panel'), _("RWR")}},
+{	down = rwr_commands.Launch,				up = rwr_commands.Launch,		cockpit_device_id = devices.RWR,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control LAUNCH Button'),			category = {_('Instrument Panel'), _("RWR")}},
+{	down = rwr_commands.Mode,				up = rwr_commands.Mode,			cockpit_device_id = devices.RWR,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control MODE Button'),				category = {_('Instrument Panel'), _("RWR")}},
+{	down = rwr_commands.UnknownShip,		up = rwr_commands.UnknownShip,	cockpit_device_id = devices.RWR,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control UNKNOWN SHIP Button'),		category = {_('Instrument Panel'), _("RWR")}},
+{	down = rwr_commands.SysTest,			up = rwr_commands.SysTest,		cockpit_device_id = devices.RWR,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control SYS TEST Button'),			category = {_('Instrument Panel'), _("RWR")}},
+{	down = rwr_commands.TgtSep,				up = rwr_commands.TgtSep,		cockpit_device_id = devices.RWR,	value_down =  1.0,		value_up = 0.0,	name = _('RWR Indicator Control T Button'),					category = {_('Instrument Panel'), _("RWR")}},
 
 
 ---------------------------------------------
@@ -466,14 +466,14 @@ join(res.keyCommands,{
 {	pressed = hmcs_commands.IntKnob_ITER,	cockpit_device_id = devices.HMCS,	value_pressed =  0.3,	name = _('HMCS SYMBOLOGY INT Knob - CW/Increase'),	category = {_('Left Auxiliary Console')}},
 
 -- THREAT WARNING AUX Panel
-{	pressed = rwr_commands.BrtKnob_ITER,						cockpit_device_id = devices.AN_ALR56,	value_pressed = -0.3,				name = _('RWR Indicator Control DIM Knob - CCW/Decrease'),				category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel')}},
-{	pressed = rwr_commands.BrtKnob_ITER,						cockpit_device_id = devices.AN_ALR56,	value_pressed =  0.3,				name = _('RWR Indicator Control DIM Knob - CW/Increase'),				category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel')}},
-{	down = rwr_commands.Power,									cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,					name = _('RWR Indicator Control POWER Button - Depressed'),				category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel')}},
-{	down = rwr_commands.Power,									cockpit_device_id = devices.AN_ALR56,	value_down =  0.0,					name = _('RWR Indicator Control POWER Button - Released'),				category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel')}},
-{	down = rwr_commands.Power_ITER,								cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,					name = _('RWR Indicator Control POWER Button - Depressed/Released'),	category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel')}},
-{	down = rwr_commands.Search,		up = rwr_commands.Search,	cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,	value_up = 0.0,	name = _('RWR Indicator Control SEARCH Button'),						category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel')}},
-{	down = rwr_commands.ActPwr,		up = rwr_commands.ActPwr,	cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,	value_up = 0.0,	name = _('RWR Indicator Control ACT/PWR Button'),						category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel')}},
-{	down = rwr_commands.Altitude,	up = rwr_commands.Altitude,	cockpit_device_id = devices.AN_ALR56,	value_down =  1.0,	value_up = 0.0,	name = _('RWR Indicator Control ALTITUDE Button'),						category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel')}},
+{	pressed = rwr_commands.BrtKnob_ITER,						cockpit_device_id = devices.RWR,	value_pressed = -0.3,				name = _('RWR Indicator Control DIM Knob - CCW/Decrease'),				category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
+{	pressed = rwr_commands.BrtKnob_ITER,						cockpit_device_id = devices.RWR,	value_pressed =  0.3,				name = _('RWR Indicator Control DIM Knob - CW/Increase'),				category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
+{	down = rwr_commands.Power,									cockpit_device_id = devices.RWR,	value_down =  1.0,					name = _('RWR Indicator Control POWER Button - Depressed'),				category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
+{	down = rwr_commands.Power,									cockpit_device_id = devices.RWR,	value_down =  0.0,					name = _('RWR Indicator Control POWER Button - Released'),				category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
+{	down = rwr_commands.Power_ITER,								cockpit_device_id = devices.RWR,	value_down =  1.0,					name = _('RWR Indicator Control POWER Button - Depressed/Released'),	category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
+{	down = rwr_commands.Search,		up = rwr_commands.Search,	cockpit_device_id = devices.RWR,	value_down =  1.0,	value_up = 0.0,	name = _('RWR Indicator Control SEARCH Button'),						category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
+{	down = rwr_commands.ActPwr,		up = rwr_commands.ActPwr,	cockpit_device_id = devices.RWR,	value_down =  1.0,	value_up = 0.0,	name = _('RWR Indicator Control ACT/PWR Button'),						category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
+{	down = rwr_commands.Altitude,	up = rwr_commands.Altitude,	cockpit_device_id = devices.RWR,	value_down =  1.0,	value_up = 0.0,	name = _('RWR Indicator Control ALTITUDE Button'),						category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
 
 -- ALT GEAR Handle
 -- TODO:

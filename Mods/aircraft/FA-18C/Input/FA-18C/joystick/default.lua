@@ -946,6 +946,11 @@ join(res.keyCommands,{
 {	down = cpt_commands.SeatHeightAdjustmentSwitchUp,			up = cpt_commands.SeatHeightAdjustmentSwitchUp,	cockpit_device_id = devices.CPT_MECHANICS,	value_down = -1.0,	value_up = 0.0,	name = _('Seat Height Adjustment Switch - UP/HOLD'),			category = {_('Ejection Seat')}},
 {	down = cpt_commands.SeatHeightAdjustmentSwitchDn,			up = cpt_commands.SeatHeightAdjustmentSwitchDn,	cockpit_device_id = devices.CPT_MECHANICS,	value_down =  1.0,	value_up = 0.0,	name = _('Seat Height Adjustment Switch - DOWN/HOLD'),			category = {_('Ejection Seat')}},
 
+-- Carrier
+{	down = iCommandPilotGestureSalute,																		name = _('Pilot Salute'),	category = _('Communications')},
+{	down = intercom_commands.MsgHornetBall_EXT,	cockpit_device_id = devices.INTERCOM,	value_down =  1.0,	name = _('Hornet Ball'),	category = _('Communications')},
+
+
 --------------------------------------------------------------------------------------
 -- Special input for 3-pos 2-signals switches on joystick ----------------------------
 --------------------------------------------------------------------------------------
