@@ -815,11 +815,9 @@ join(res.keyCommands,{
 {							down = tgp_commands.Flir,																	cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,						name = _('FLIR Switch - ON'),								category = {_('Right Console'), _('Sensor Panel')}},
 {							down = tgp_commands.Flir,																	cockpit_device_id = devices.TGP_INTERFACE,		value_down =  0.0,						name = _('FLIR Switch - STBY'),								category = {_('Right Console'), _('Sensor Panel')}},
 {							down = tgp_commands.Flir,																	cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,						name = _('FLIR Switch - OFF'),								category = {_('Right Console'), _('Sensor Panel')}},
-{							down = tgp_commands.Ltdr_ITER,					up = tgp_commands.Ltdr_ITER,				cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('LTD/R Switch - Up'),								category = {_('Right Console'), _('Sensor Panel')}},
-{							down = tgp_commands.Ltdr_ITER,																cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,						name = _('LTD/R Switch - Down'),							category = {_('Right Console'), _('Sensor Panel')}},
-{							down = tgp_commands.Ltdr_EXT,					up = tgp_commands.LtdrArm,					cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('LTD/R Switch - ARM'),								category = {_('Right Console'), _('Sensor Panel')}},
-{							down = tgp_commands.Ltdr_EXT,																cockpit_device_id = devices.TGP_INTERFACE,		value_down =  0.0,						name = _('LTD/R Switch - SAFE'),							category = {_('Right Console'), _('Sensor Panel')}},
-{							down = tgp_commands.Ltdr_EXT,																cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,						name = _('LTD/R Switch - AFT'),								category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.LtdrArm_ITER,				up = tgp_commands.LtdrArm_ITER,				cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('LTD/R Switch - Cycle'),							category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.LtdrArm_EXT,				up = tgp_commands.LtdrArm_EXT,				cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,		value_up = 0.0,	name = _('LTD/R Switch - ARM'),								category = {_('Right Console'), _('Sensor Panel')}},
+{							down = tgp_commands.LtdrArm_EXT,															cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,						name = _('LTD/R Switch - SAFE'),							category = {_('Right Console'), _('Sensor Panel')}},
 {							down = tgp_commands.Lst_ITER,																cockpit_device_id = devices.TGP_INTERFACE,		value_down =  0.0,						name = _('LST/NFLR Switch - ON/OFF'),						category = {_('Right Console'), _('Sensor Panel')}},
 {							down = tgp_commands.Lst,																	cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,						name = _('LST/NFLR Switch - ON'),							category = {_('Right Console'), _('Sensor Panel')}},
 {							down = tgp_commands.Lst,																	cockpit_device_id = devices.TGP_INTERFACE,		value_down =  0.0,						name = _('LST/NFLR Switch - OFF'),							category = {_('Right Console'), _('Sensor Panel')}},
@@ -869,6 +867,11 @@ join(res.keyCommands,{
 {							down = cpt_commands.ShoulderHarnessControlHandle,															cockpit_device_id = devices.CPT_MECHANICS,	value_down =  0.0,					name = _('Shoulder Harness Control Handle - UNLOCK'),			category = {_('Ejection Seat')}},
 {							down = cpt_commands.SeatHeightAdjustmentSwitchUp,			up = cpt_commands.SeatHeightAdjustmentSwitchUp,	cockpit_device_id = devices.CPT_MECHANICS,	value_down = -1.0,	value_up = 0.0,	name = _('Seat Height Adjustment Switch - UP/HOLD'),			category = {_('Ejection Seat')}},
 {							down = cpt_commands.SeatHeightAdjustmentSwitchDn,			up = cpt_commands.SeatHeightAdjustmentSwitchDn,	cockpit_device_id = devices.CPT_MECHANICS,	value_down =  1.0,	value_up = 0.0,	name = _('Seat Height Adjustment Switch - DOWN/HOLD'),			category = {_('Ejection Seat')}},
+
+-- Carrier
+{combos = {{key = 'S', reformers = {'LShift','LCtrl'}}},	down = iCommandPilotGestureSalute,																		name = _('Pilot Salute'),	category = _('Communications')},
+{															down = intercom_commands.MsgHornetBall_EXT,	cockpit_device_id = devices.INTERCOM,	value_down =  1.0,	name = _('Hornet Ball'),	category = _('Communications')},
+
 
 })
 return res
