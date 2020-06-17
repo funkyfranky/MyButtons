@@ -1122,8 +1122,8 @@ join(res.axisCommands,{
 {	action = hmcs_commands.IntKnob_AXIS,				cockpit_device_id = devices.HMCS,				name = _('HMCS SYMBOLOGY INT Knob'),				category = {_('Left Auxiliary Console')}},
 
 -- RWR
-{	action = rwr_commands.BrtKnob_AXIS,					cockpit_device_id = devices.AN_ALR56,			name = _('RWR Indicator Control DIM Knob'),			category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel')}},
-{	action = rwr_commands.IntKnob_AXIS,					cockpit_device_id = devices.AN_ALR56,			name = _('RWR Intensity Knob'),						category = {_('Instrument Panel')}},
+{	action = rwr_commands.BrtKnob_AXIS,					cockpit_device_id = devices.RWR,			name = _('RWR Indicator Control DIM Knob'),			category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
+{	action = rwr_commands.IntKnob_AXIS,					cockpit_device_id = devices.RWR,			name = _('RWR Intensity Knob'),						category = {_('Instrument Panel'), _("RWR")}},
 
 -- Secure Voice
 {	action = ky58_commands.KY58_Volume_AXIS,			cockpit_device_id = devices.KY58,				name = _('KY-58 VOLUME Knob'),						category = {_('Right Console'), _('Secure Voice Control Panel')}},

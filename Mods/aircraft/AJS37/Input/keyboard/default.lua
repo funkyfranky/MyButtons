@@ -1,6 +1,7 @@
-local res = external_profile("Config/Input/Aircrafts/common_keyboard_binding.lua")
+
 dofile(folder.."../../Cockpit/Scripts/devices.lua")
 dofile(folder.."../../Cockpit/Scripts/command_defs.lua")
+local res = external_profile("Config/Input/Aircrafts/common_keyboard_binding.lua")
 
 local keycommands = {
 	-- Autopilot
@@ -14,7 +15,8 @@ local keycommands = {
     {combos = {{key = "S", reformers = {'RAlt'}}}, pressed = 3404, up = 3404, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = -1.0, value_up = 0, name = _('Seat adjustment up'), category = _('Navigation')},
     {combos = {{key = "S", reformers = {'RCtrl'}}}, pressed = 3404, up = 3404, cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 1.0, value_up = 0, name = _('Seat adjustment down'), category = _('Navigation')},
     {combos = {{key = 'M', reformers = {'LAlt'}}},down = iCommandToggleMirrors,	name = _('Toggle Mirrors'), category = _('View Cockpit')},
-    
+    {combos = {{key = 'P', reformers = {'LShift'}}},down = iCommandCockpitShowPilotOnOff, name = _('Toggle Pilot'), category = _('View Cockpit')},
+
     -- Flight Control
     {combos = {{key = 'Up'}}, down = iCommandPlaneUpStart, up = iCommandPlaneUpStop, name = _('Aircraft Pitch Down'), category = _('Flight Control')},
     {combos = {{key = 'Down'}}, down = iCommandPlaneDownStart, up = iCommandPlaneDownStop, name = _('Aircraft Pitch Up'), category = _('Flight Control')},
@@ -193,7 +195,7 @@ local keycommands = {
     {combos = {{key = "-"}}, down = 3302, up = 3302, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _("Throttle up"), category = _("Motor")},
     {combos = {{key = "I", reformers = {"RAlt"}}}, down = 3008, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = _("Engine De-ice switch"), category = _("Motor")},
     {combos = {{key = "R", reformers = {"RAlt"}}}, down = 3002, cockpit_device_id = devices.RADARALT, value_down = 1.0, name = _("Radar altimeter switch"), category = _("Flight Data")},
-    
+    {down = 3004, up= 3005, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 1.0, name = "High-pressure fuel valve (HOTAS Cut off)", category = "Motor"},
     {down = 3001, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = 'Start System - ON', category = 'Motor'},
     {down = 3001, cockpit_device_id = devices.ENGINEPANEL, value_down = 0.0, name = 'Start System - OFF', category = 'Motor'},
     {down = 3003, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = 'Ignition System - ON', category = 'Motor'},
@@ -217,7 +219,11 @@ local keycommands = {
     {down = 3321, up = 3321, value_down = 1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Rb05 stick yaw right'), category = _('Weapons')},
     {down = 3322, up = 3322, value_down = 1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Rb05 stick pitch up'), category = _('Weapons')},
     {down = 3322, up = 3322, value_down = -1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Rb05 stick pitch down'), category = _('Weapons')},
-    {down = 3316, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('EP13 Brightness up'), category = _('Weapons')},
+    {down = 3510, up = 3510, value_down = 1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Rb05 stick up right'), category = 'Weapons'},
+    {down = 3510, up = 3510, value_down = -1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Rb05 stick down left'), category = 'Weapons'},
+    {down = 3511, up = 3511, value_down = 1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Rb05 stick up left'), category = 'Weapons'},
+    {down = 3511, up = 3511, value_down = -1.0, value_up = 0.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Rb05 stick down right'), category = 'Weapons'},
+	{down = 3316, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('EP13 Brightness up'), category = _('Weapons')},
     {down = 3316, value_down = -1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('EP13 Brightness down'), category = _('Weapons')},
     {down = 3317, value_down = 1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('EP13 Contrast up'), category = _('Weapons')},
     {down = 3317, value_down = -1.0, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('EP13 Contrast down'), category = _('Weapons')},
@@ -373,7 +379,8 @@ local keycommands = {
     -- Reporting tool
     --{combos = {{key = 'M', reformers = {'LCtrl', "LAlt"}}},down = 3001, value_down = 1.0, cockpit_device_id = devices.REPORTER, name = _('Contact HeatBlur'), category = _('Debug')},
     
-    
+     {combos = {{key = 'Home',  reformers = {'LWin'}}},	down = iCommandEnginesStart, name = _('Auto Start'),	category = _('Cheat')},
+	{combos = {{key = 'End' ,  reformers = {'LWin'}}},	down = iCommandEnginesStop,  name = _('Auto Stop') ,	category = _('Cheat')},
     
     -- test radio squelch
     --{down = iCommandPlaneDropFlareOnce, up = iCommandPlaneDropChaffOnce, name = _('Test command'), category = _('Weapons')},
@@ -381,7 +388,6 @@ local keycommands = {
     
 
     -- Synced from joystick
-    {up = 3004, value_up = 0.000000, pressed = 3004, value_pressed = 1.000000, cockpit_device_id = devices.ENGINEPANEL, name = _('High-pressure fuel valve (For HOTAS, Off if pressed)'), category = _('Motor')},
     {down = 3323, value_down = 1.000000, up = 3323, value_up = 0.000000, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Rb05 switch input with flight stick (hold)'), category = _('Weapons')},
     {down = 3300, value_down = 1.000000, up = 3300, value_up = 0.000000, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Trigger safety bracket (hold)'), category = _('Weapons')},
     {down = 3300, value_down = 1.000000, cockpit_device_id = devices.WEAPON_SYSTEM, name = _('Trigger safety bracket ARM'), category = _('Weapons')},
@@ -420,7 +426,7 @@ local keycommands = {
 	{down = 3716, up = 3716, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down =-1.0, value_up = 0.0, name = _('Emergency Roll Trim (NÖDTRIM ROLL) Left(V)/Center'), category = _('Flight Control')}, --added v1.3
 	{down = 3918, up = 3918, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Emergency Yaw Trim (SIDTRIM) Right(H)/Center'), category = _('Flight Control')}, --added v1.3
 	{down = 3918, up = 3918, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down =-1.0, value_up = 0.0, name = _('Emergency Yaw Trim (SIDTRIM) Left(V)/Center'), category = _('Flight Control')}, --added v1.3
-	{down = 3402, up = 3402, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Magnetic Declination Cover Open/Close'), category = _('Navigation')}, -- added v1.3
+	{down = 3742, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _('Magnetic Declination Cover Open/Close'), category = _('Navigation')}, -- added v1.3
 	{pressed = 3724,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 0.010,            name = _("Magnetic Declination Increase"), category = _("Navigation")}, --added v1.3
 	{pressed = 3724,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed =-0.010,            name = _("Magnetic Declination Decrease"), category = _("Navigation")}, --added v1.3
 	{pressed = 3721,         cockpit_device_id = devices.FLIGHTDATAUNIT, value_pressed = 0.005,            name = _("Backup Altimeter Setting Up - Slow"), category = _("Navigation")}, --added v1.3
@@ -434,7 +440,7 @@ local keycommands = {
 	{down = 3001, up = 3001, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _("System Start Switch On/Off"), category = _("Motor")}, --working
 	{down = 3002, up = 3002, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Low-pressure Fuel Valve On/Off'), category = _('Motor')}, --working
 	{down = 3003, up = 3003, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Ignition System Man/Aut'), category = _('Motor')}, --working
-	{down = 3004, up = 3004, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Aterstart (Restart) Switch On/Off'), category = _('Motor')}, --added v0.6
+	{down = 3401, up = 3401, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _('Aterstart (Restart) Switch On/Off'), category = _('Motor')}, --added v0.6
 	{down = 3005, up = 3005, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 1.0, name = _("High-pressure Fuel Valve On/Off (toggle)"), category = _("Motor")}, --working, toggle only
 	{pressed = 3004, up = 3005, cockpit_device_id = devices.ENGINEPANEL, value_pressed = 1.0, value_up = 1.0,  name = _("High-pressure Fuel Valve Off/Idle"), category = _("Motor")}, --added v1.1
 	{down = 3006, up = 3006, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, value_up = 0.0, name = _("Manual Afterburner Fuel Regulator On/Off (toggle)"), category = _("Motor")}, --working
@@ -583,7 +589,7 @@ local keycommands = {
 	{down = 3009, up = 3009, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Button LS"), category = _("Navigation")}, --added v0.4
 	{down = 3010, up = 3010, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Waypoint BX"), category = _("Navigation")}, --added v0.4
 	-- end added missing buttons
-  	
+
 }
 
 local autogeneratedkeys = dofile(folder.."../keyboardbindings.lua")
