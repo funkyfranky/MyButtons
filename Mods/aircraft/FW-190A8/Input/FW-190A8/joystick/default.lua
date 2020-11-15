@@ -18,9 +18,11 @@ keyCommands = {
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- WEAPON_SYSTEM
-{down = device_commands.Button_1,  up = device_commands.Button_1,  cockpit_device_id = devices.WEAPON_SYSTEM,  value_down = 1.0, value_up = 0.0, name = _('Master Arm ON/OFF'), category = _('_My Buttons')},
-{down = device_commands.Button_20, up = device_commands.Button_20, cockpit_device_id = devices.WEAPON_SYSTEM,  value_down = 1.0, value_up = 0.0, name = _('Outer Wing Guns Arm ON/OFF'), category = _('_My Buttons')},
-{down = device_commands.Button_18, up = device_commands.Button_18, cockpit_device_id = devices.WEAPON_SYSTEM,  value_down = 1.0, value_up = 0.0, name = _('Jettison Fuselage Stores ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_1,  up = device_commands.Button_1,  cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Master Arm ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_20, up = device_commands.Button_20, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Outer Wing Guns Arm ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_18, up = device_commands.Button_18, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Jettison Fuselage Stores ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_22, up = device_commands.Button_22, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Main Rocket Switch ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_24, up = device_commands.Button_24, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Rocket Emergency Release ON/OFF'), category = _('_My Buttons')},
 
 -- CONTROL_SYSTEM
 {down = device_commands.Button_5,  up = device_commands.Button_7,  cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 1.0, value_up = 1.0, name = _('Landing Gear RETRACT/EXTEND'), category = _('_My Buttons')},
@@ -42,6 +44,9 @@ keyCommands = {
 
 -- COCKPIT SIGHT
 {down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.PILOT_SIGHT, value_down = 1.0, value_up = 0.0, name = _('Gun Sight Smoked Screen ON/OFF'), category = _('_My Buttons')},
+
+-- ARTIFICIAL HORIZON
+{down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id  = devices.ARTIFICIAL_HORIZON, value_down = -1.0, value_up = 1.0, name = _('Horizon CAGE/UNCAGE'), category = _('_My Buttons')},
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FF: end additional commands
@@ -321,6 +326,16 @@ keyCommands = {
 {pressed = device_commands.Button_10, cockpit_device_id  = devices.WEAPON_SYSTEM, value_pressed = -0.1,   name = _('Ammo counter 4 Decrease'), category = _('Weapon System')},
 {pressed = device_commands.Button_10, cockpit_device_id  = devices.WEAPON_SYSTEM, value_pressed = 0.1,   name = _('Ammo counter 4 Increase'), category = _('Weapon System')},
 
+{down = device_commands.Button_22, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Main Rocket Switch ON'), category = _('Weapon System')},
+{down = device_commands.Button_22, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.0, name = _('Main Rocket Switch OFF'), category = _('Weapon System')},
+{down = device_commands.Button_23, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Main Rocket Switch - toggle ON / OFF'), category = _('Weapon System')},
+
+{down = device_commands.Button_24, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Rocket Emergency Release ON'), category = _('Weapon System')},
+{down = device_commands.Button_24, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.0, name = _('Rocket Emergency Release OFF'), category = _('Weapon System')},
+{down = device_commands.Button_25, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Rocket Emergency Release - toggle ON / OFF'), category = _('Weapon System')},
+
+
+
 --landing gear
 {down = device_commands.Button_10, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = 1.0, name = _('Landing Gear Up/Down'), category = _('Systems')},
 
@@ -344,6 +359,8 @@ keyCommands = {
 {down = device_commands.Button_8, up = device_commands.Button_10, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 0.0, value_up = 0.5, name = _('Starter Power'), category = _('Engine Control')},
 {down = device_commands.Button_9, up = device_commands.Button_10, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.5, name = _('Starter Clutch'), category = _('Engine Control')},
 {down = device_commands.Button_7, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Starter Switch Cover'), category = _('Engine Control')},
+{down = device_commands.Button_17, up = device_commands.Button_17, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Starter Brushes Retract'), category = _('Engine Control')},
+
 
 {down = device_commands.Button_5, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0,	 name = _('Magneto Switch Forward'), category = _('Engine Control')},
 {down = device_commands.Button_5, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = -1.0,	 name = _('Magneto Switch Backward'), category = _('Engine Control')},
@@ -354,20 +371,17 @@ keyCommands = {
 {down = device_commands.Button_4, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 0.9, name = _('Magneto Switch 1+2'), category = _('Engine Control')},
 
 {down = device_commands.Button_14, up = device_commands.Button_14, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Engine RPM Increase'), category = _('Engine Control')}, --TODO: RENAME!!
-{down = device_commands.Button_14, up = device_commands.Button_14, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = -1.0, value_up = 0.0, name = _('Engine RPM Decrease'), category = _('Engine Control')}, --TODO: RENAME!!
-{down = device_commands.Button_14,                                 cockpit_device_id = devices.ENGINE_SYSTEM, value_down = -1.0, value_up = 0.0, name = _('Prop Feathering'), category = _('Engine Control')}, --TODO: RENAME!!
+{down = device_commands.Button_15, up = device_commands.Button_15, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = -1.0, value_up = 0.0, name = _('Engine RPM Decrease'), category = _('Engine Control')}, --TODO: RENAME!!
+{down = device_commands.Button_15,                                 cockpit_device_id = devices.ENGINE_SYSTEM, value_down = -1.0, name = _('Prop Feathering'), category = _('Engine Control')}, --TODO: RENAME!!
 
 
 {down = iCommandLeftEngineStart, name = _('Throttle to START'), category = _('Engine Control')},
-{down = iCommandLeftEngineStop, name = _('Throttle to IDLE'), category = _('Engine Control')},
+{down = iCommandLeftEngineStop, name = _('Throttle to STOP'), category = _('Engine Control')},
 {down = device_commands.Button_12, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Throttle Control Lock'), category = _('Engine Control')},
-
-{down = device_commands.Button_14, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Input.Bf109K4.cb_b102_plus'), category = _('Engine Control')},
-{down = device_commands.Button_14, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = -1.0, name = _('Input.Bf109K4.cb_b102_minus'), category = _('Engine Control')},
 
 {down = device_commands.Button_13, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Input.Bf109K4.cb_e103_0'), category = _('Engine Control')},
 {down = device_commands.Button_13, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 0.0, name = _('Input.Bf109K4.cb_e103_1'), category = _('Engine Control')},
-{down = device_commands.Button_15, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Input.Bf109K4.cb_e103'), category = _('Engine Control')},
+{down = device_commands.Button_16, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Input.Bf109K4.cb_e103'), category = _('Engine Control')},
 
 
 --oxygen
@@ -382,16 +396,16 @@ keyCommands = {
 {down = device_commands.Button_12, up = device_commands.Button_12, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Trim Elevator Down'), category = _('Flight Control')},
 {down = device_commands.Button_12, up = device_commands.Button_12, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = -1.0, value_up = 0.0, name = _('Trim Elevator Up'), category = _('Flight Control')},
 
-{pressed = device_commands.Button_14, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = -0.1, name = _('Radiator Flaps Close'), category = _('Engine Control')},
-{pressed = device_commands.Button_14, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = 0.1, name = _('Radiator Flaps Open'), category = _('Engine Control')},
+{pressed = device_commands.Button_14, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = -0.4, name = _('Radiator Flaps Close'), category = _('Engine Control')},
+{pressed = device_commands.Button_14, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = 0.4, name = _('Radiator Flaps Open'), category = _('Engine Control')},
 
 --fuel system
 {down = device_commands.Button_5, cockpit_device_id  = devices.FUEL_SYSTEM, value_down = 1.0, name = _('Fuel Selector Valve Up'), category = _('Fuel Control')},
 {down = device_commands.Button_5, cockpit_device_id  = devices.FUEL_SYSTEM, value_down = -1.0, name = _('Fuel Selector Valve Down'), category = _('Fuel Control')},
 {down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.0, name = _('Fuel Selector Valve OFF'), category = _('Fuel Control')},
 {down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.1, name = _('Fuel Selector Valve AFT Tank Closed'), category = _('Fuel Control')},
-{down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.2, name = _('Fuel Selector Valve FWD Tank Closed'), category = _('Fuel Control')},
-{down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.3, name = _('Fuel Selector Valve Open'), category = _('Fuel Control')},
+{down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.3, name = _('Fuel Selector Valve FWD Tank Closed'), category = _('Fuel Control')},
+{down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.2, name = _('Fuel Selector Valve Open'), category = _('Fuel Control')},
 
 {down = device_commands.Button_6, cockpit_device_id  = devices.FUEL_SYSTEM, value_down = 1.0, name = _('Fuel Gauge Selector to the Right'), category = _('Fuel Control')},
 {down = device_commands.Button_6, cockpit_device_id  = devices.FUEL_SYSTEM, value_down = -1.0, name = _('Fuel Gauge Selector to the Left'), category = _('Fuel Control')},
@@ -586,14 +600,18 @@ keyCommands = {
 {pressed = device_commands.Button_1, cockpit_device_id = devices.LIGHT_SYSTEM, value_pressed = 0.007, name = _('Instrument Brightness Increase'), category = _('Electric System')},
 {pressed = device_commands.Button_1, cockpit_device_id = devices.LIGHT_SYSTEM, value_pressed = -0.007, name = _('Instrument Brightness Decrease'), category = _('Electric System')},
 
---Clock
-{down = device_commands.Button_3, up = device_commands.Button_3, cockpit_device_id = devices.CLOCK, value_down = 1.0, value_up = 0.0,name = _('Stopwatch'), category = _('Clock')},
-
-{down = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_down = 1.0, name = _('Clock Stop'), category = _('Clock')},
-{down = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_down = 0.0, name = _('Clock Start'), category = _('Clock')},
-
-{pressed = device_commands.Button_4, cockpit_device_id = devices.CLOCK, value_pressed = 0.002, name = _('Clock Bezel CW'), category = _('Clock')},
-{pressed = device_commands.Button_4, cockpit_device_id = devices.CLOCK, value_pressed = -0.002, name = _('Clock Bezel CCW'), category = _('Clock')},
+-- Clock Bezel
+{                                                           pressed = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_pressed = 1.0, name = _('Input.Bf109K4.clock_scale_plus'), category = _('Front Dash')},
+{                                                           pressed = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_pressed = -1.0, name = _('Input.Bf109K4.clock_scale_minus'), category = _('Front Dash')},
+-- Clock Setter Pinion
+{                                                           pressed = device_commands.Button_5, cockpit_device_id = devices.CLOCK, value_pressed = -1.0, name = _('Input.Bf109K4.clock_pinion_minus'), category = _('Front Dash')},
+{                                                           pressed = device_commands.Button_5, cockpit_device_id = devices.CLOCK, value_pressed = 1.0, name = _('Input.Bf109K4.clock_pinion_plus'), category = _('Front Dash')},
+-- Clock Freeze Lever
+{                                                           down = device_commands.Button_6, cockpit_device_id = devices.CLOCK, value_down = 1.0, name = _('Input.Bf109K4.clock_stop_1'), category = _('Front Dash')},
+{                                                           down = device_commands.Button_6, cockpit_device_id = devices.CLOCK, value_down = 0.0, name = _('Input.Bf109K4.clock_stop_0'), category = _('Front Dash')},
+{                                                           down = device_commands.Button_7, cockpit_device_id = devices.CLOCK, value_down = 1.0, name = _('Input.Bf109K4.clock_stop'), category = _('Front Dash')},
+-- Clock Stopwatch Button
+{                                                           down = device_commands.Button_8, up = device_commands.Button_8, cockpit_device_id = devices.CLOCK, value_down = 1.0, value_up = 0.0, name = _('Input.Bf109K4.clock_stopwatch'), category = _('Front Dash')},
 
 },
 axisCommands = {
@@ -632,5 +650,9 @@ axisCommands = {
 {action = device_commands.Button_4, cockpit_device_id  = devices.CPT_MECH, name = _('Canopy Crank')},
 
 {action = device_commands.Button_3, cockpit_device_id = devices.PILOT_SIGHT, name = _('Input.Bf109K4.cb_p112_slider', 'Gunsight Brightness (analog)'), category = _('REVI 16 B Gunsight')},
+
+    -- Clock Bezel
+    {                                                           action = device_commands.Button_3, cockpit_device_id = devices.CLOCK, name = _('Input.Bf109K4.clock_scale_slider'), category = _('Front Dash')},
+
 },
 }
