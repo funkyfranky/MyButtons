@@ -291,6 +291,9 @@ join_override(res.axisCommands,{
 {action = device_commands.RADAR_elevation_analog_adjust, cockpit_device_id=devices.RADAR, name = _('Radar elevation relative adjustment')},
 {action = device_commands.HCU_thumb_analog_adjust, cockpit_device_id=devices.RADAR, name = _('HCU vernier thumbwheel relative adjustment')},
 
+{action = device_commands.TCS_Trim_az_axis, cockpit_device_id=devices.TCS, name = _('TCS azimuth trim axis')},
+{action = device_commands.TCS_Trim_el_axis, cockpit_device_id=devices.TCS, name = _('TCS elevation trim axis')},
+
 {action = iCommandViewHorizontalAbs			, name = _('Absolute Camera Horizontal View')},
 {action = iCommandViewVerticalAbs			, name = _('Absolute Camera Vertical View')},
 {action = iCommandViewZoomAbs				, name = _('Zoom View')},

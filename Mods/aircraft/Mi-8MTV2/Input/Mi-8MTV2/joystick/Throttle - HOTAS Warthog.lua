@@ -312,9 +312,9 @@ keyCommands = {
 {	down = device_commands.Button_1, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Set Pilot Seat'),					category = _('View Cockpit')},
 {	down = device_commands.Button_2, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Set Copilot Seat'),				category = _('View Cockpit')},
 {	down = device_commands.Button_3, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Set Technician Seat'),			category = _('View Cockpit')},
---{	down = device_commands.Button_4, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Set Gunner Seat'),				category = _('View Cockpit')},
+{	down = device_commands.Button_4, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Set Gunner Seat'),				category = _('View Cockpit')},
 {	down = iCommandViewTransposeModeOn, up = iCommandViewTransposeModeOff,							name = _('Camera transpose mode on/off'),	category = _('View Cockpit')},
-
+{down = device_commands.Button_6, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Cargo Hatch View'),		category = _('View Cockpit')},
 ------------------------------------------------
 -- External Cargo ------------------------------
 ------------------------------------------------
@@ -450,8 +450,8 @@ keyCommands = {
 {	down = device_commands.Button_3,	cockpit_device_id = devices.HSI_L, value_down = 0,													name = _('Left HSI Radio Compass Selector Switch - ARC-9'),			category = {_('Left Dashboard'), _('Instruments')}},
 {	down = device_commands.Button_3,	cockpit_device_id = devices.HSI_L, value_down = 1,													name = _('Left HSI Radio Compass Selector Switch - ARC-UD'),		category = {_('Left Dashboard'), _('Instruments')}},
 -- Radio Altimeter
-{	pressed = iCommandRALT_DangerousAltitudeRotaryRight,																					name = _('Radar Altimeter Dangerous Altitude Knob - CW/Increase'),	category = {_('Left Dashboard'), _('Instruments')}},
-{	pressed = iCommandRALT_DangerousAltitudeRotaryLeft,																						name = _('Radar Altimeter Dangerous Altitude Knob - CCW/Decrease'),	category = {_('Left Dashboard'), _('Instruments')}},
+{	pressed = iCommandRALT_DangerousAltitudeRotaryRight,																					name = _('Radar Altimeter Dangerous Altitude Knob - CCW/Decrease'),	category = {_('Left Dashboard'), _('Instruments')}},
+{	pressed = iCommandRALT_DangerousAltitudeRotaryLeft,																						name = _('Radar Altimeter Dangerous Altitude Knob - CW/Increase'),	category = {_('Left Dashboard'), _('Instruments')}},
 {	down = iCommandRALT_Test, up = iCommandRALT_Test_up,																					name = _('Radar Altimeter Test Button'),							category = {_('Left Dashboard'), _('Instruments')}},
 {	down = device_commands.Button_4,	cockpit_device_id = devices.RADAR_ALTIMETER,	value_down = 1,										name = _('Radar Altimeter Power Switch - ON/OFF'),					category = {_('Left Dashboard'), _('Instruments')}},
 {	down = device_commands.Button_3,	cockpit_device_id = devices.RADAR_ALTIMETER,	value_down = 1,										name = _('Radar Altimeter Power Switch - ON'),						category = {_('Left Dashboard'), _('Instruments')}},
@@ -1325,7 +1325,7 @@ keyCommands = {
 {	down = device_commands.Button_92, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.1, name = _('AI Gunner Burst Switch'), category = _('Gunners AI Panel')},
 {	down = device_commands.Button_93, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.0, name = _('AI Back Gunner ROE Iterate'), category = _('Gunners AI Panel')},
 {	down = device_commands.Button_93, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.1, name = _('AI Back Gunner Burst Switch'), category = _('Gunners AI Panel')},
-
+{	down = device_commands.Button_96,	cockpit_device_id = devices.WEAPON_SYS,		value_down = 1.0,	name = _('Show Gunners Panel'),	category = {_('Hints'), _('Armament System')}},
 
 },
 axisCommands = {

@@ -185,7 +185,8 @@ local keycommands = {
     {down = 3314, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = "IR-missile uncage", category = "Weapons"},
     {down = 3311, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = "Autothrottle disconnect / IR-missile fast select", category = "Weapons"},
 	{down = 3000, cockpit_device_id = devices.ENGINEPANEL,	 value_down = 1.0, name =("Missile Select Button"), category = _("Weapons")},
-    -- countermeasures
+    {down = 3803, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _("Autopilot Quick Disengage"), category = _("Navigation")},
+	-- countermeasures
     {down = 3001, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Fast countermeasure dispense', category = 'Countermeasures'},
     {down = 3005, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Countermeasure KB Mod A', category = 'Countermeasures'},
     {down = 3006, value_down = 1.0, cockpit_device_id = devices.COUNTERMEASURE, name = 'Countermeasure KB Mod 0', category = 'Countermeasures'},
@@ -572,6 +573,11 @@ local keycommands = {
 	{down = 3009, up = 3009, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Button LS"), category = _("Navigation")}, --added v0.4
 	{down = 3010, up = 3010, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Waypoint BX"), category = _("Navigation")}, --added v0.4
 	-- end added missing buttons
+	
+	--Night Vision Goggles
+	{down    = iCommandViewNightVisionGogglesOn   , name = _('Night Vision Goggles')   , category = _('Sensors')},
+	{pressed = iCommandPlane_Helmet_Brightess_Up  , name = _('Night Vision Goggles Gain Up')  , category = _('Sensors')},
+	{pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Night Vision Goggles Gain Down'), category = _('Sensors')},
   
 }
 

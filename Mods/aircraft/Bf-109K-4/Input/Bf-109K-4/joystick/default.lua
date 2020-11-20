@@ -403,17 +403,17 @@ return {
 
 -- Dashboard Mechanical -------------------------------------------------------------------
 -- Clock Scale
-{                                                           pressed = device_commands.Button_52, cockpit_device_id = devices.CONTROLS, value_pressed = 1.0, name = _('Input.Bf109K4.clock_scale_plus'), category = _('Front Dash')},
-{                                                           pressed = device_commands.Button_52, cockpit_device_id = devices.CONTROLS, value_pressed = -1.0, name = _('Input.Bf109K4.clock_scale_minus'), category = _('Front Dash')},
+{                                                           pressed = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_pressed = 1.0, name = _('Input.Bf109K4.clock_scale_plus'), category = _('Front Dash')},
+{                                                           pressed = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_pressed = -1.0, name = _('Input.Bf109K4.clock_scale_minus'), category = _('Front Dash')},
 -- Clock Setter Pinion
-{                                                           pressed = device_commands.Button_55, cockpit_device_id = devices.CONTROLS, value_pressed = -1.0, name = _('Input.Bf109K4.clock_pinion_minus'), category = _('Front Dash')},
-{                                                           pressed = device_commands.Button_55, cockpit_device_id = devices.CONTROLS, value_pressed = 1.0, name = _('Input.Bf109K4.clock_pinion_plus'), category = _('Front Dash')},
+{                                                           pressed = device_commands.Button_5, cockpit_device_id = devices.CLOCK, value_pressed = -1.0, name = _('Input.Bf109K4.clock_pinion_minus'), category = _('Front Dash')},
+{                                                           pressed = device_commands.Button_5, cockpit_device_id = devices.CLOCK, value_pressed = 1.0, name = _('Input.Bf109K4.clock_pinion_plus'), category = _('Front Dash')},
 -- Clock Freeze Lever
-{                                                           down = device_commands.Button_56, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.Bf109K4.clock_stop_1'), category = _('Front Dash')},
-{                                                           down = device_commands.Button_56, cockpit_device_id = devices.CONTROLS, value_down = 0.0, name = _('Input.Bf109K4.clock_stop_0'), category = _('Front Dash')},
-{                                                           down = device_commands.Button_57, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.Bf109K4.clock_stop'), category = _('Front Dash')},
+{                                                           down = device_commands.Button_6, cockpit_device_id = devices.CLOCK, value_down = 1.0, name = _('Input.Bf109K4.clock_stop_1'), category = _('Front Dash')},
+{                                                           down = device_commands.Button_6, cockpit_device_id = devices.CLOCK, value_down = 0.0, name = _('Input.Bf109K4.clock_stop_0'), category = _('Front Dash')},
+{                                                           down = device_commands.Button_7, cockpit_device_id = devices.CLOCK, value_down = 1.0, name = _('Input.Bf109K4.clock_stop'), category = _('Front Dash')},
 -- Clock Stopwatch Button
-{                                                           down = device_commands.Button_58, up = device_commands.Button_58, cockpit_device_id = devices.CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Input.Bf109K4.clock_stopwatch'), category = _('Front Dash')},
+{                                                           down = device_commands.Button_8, up = device_commands.Button_8, cockpit_device_id = devices.CLOCK, value_down = 1.0, value_up = 0.0, name = _('Input.Bf109K4.clock_stopwatch'), category = _('Front Dash')},
 
 -- Remote compass 
 {                                                           pressed = device_commands.Button_2, cockpit_device_id = devices.REMOTE_COMPASS, value_pressed = -1.0, name = _('Input.Bf109K4.repeater_compass_minus'), category = _('Front Dash')},
@@ -452,11 +452,11 @@ return {
 -- ----------------------------------------------------------------------------------------
 
 -- Signal Flare Controls ------------------------------------------------------------------
-{                                                           down = device_commands.Button_95, up = device_commands.Button_95, cockpit_device_id = devices.CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Input.Bf109K4.trigger_flare'), category = _('Flare Gun')},
-{                                                           down = device_commands.Button_96, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.Bf109K4.flare_green'), category = _('Flare Gun')},
-{                                                           down = device_commands.Button_97, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.Bf109K4.flare_red'), category = _('Flare Gun')},
-{                                                           down = device_commands.Button_98, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.Bf109K4.flare_white'), category = _('Flare Gun')},
-{                                                           down = device_commands.Button_99, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.Bf109K4.flare_yellow'), category = _('Flare Gun')},
+{                                                           down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.FLARE_GUN, value_down = 1.0, value_up = 0.0, name = _('Input.Generic.flare_trigger'),       category = _('Flare Gun')},
+{                                                           down = device_commands.Button_3, up = device_commands.Button_3, cockpit_device_id = devices.FLARE_GUN, value_down = 1.0, value_up = 0.0, name = _('Input.Generic.flare_select_green'),  category = _('Flare Gun')},
+{                                                           down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.FLARE_GUN, value_down = 1.0, value_up = 0.0, name = _('Input.Generic.flare_select_red'),    category = _('Flare Gun')},
+{                                                           down = device_commands.Button_5, up = device_commands.Button_5, cockpit_device_id = devices.FLARE_GUN, value_down = 1.0, value_up = 0.0, name = _('Input.Generic.flare_select_white'),  category = _('Flare Gun')},
+{                                                           down = device_commands.Button_6, up = device_commands.Button_6, cockpit_device_id = devices.FLARE_GUN, value_down = 1.0, value_up = 0.0, name = _('Input.Generic.flare_select_yellow'), category = _('Flare Gun')},
 -- Signal Flare Controls ------------------------------------------------------------------
 
 
@@ -632,6 +632,10 @@ return {
 {                                                           down = device_commands.Button_2, cockpit_device_id = devices.VHF_RADIO, value_down = 0.3, name = _('Input.Bf109K4.fug16zy_mode_sq'), category = _('VHF Radio')},
 
 {                                                           down = device_commands.Button_7, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, name = _('Input.Bf109K4.fug16zy_ftftyzf'), category = _('VHF Radio')},
+{															pressed = device_commands.Button_4, cockpit_device_id = devices.VHF_RADIO, value_pressed = -1.0, name = _('Input.Bf109K4.fug16zy_volume_minus'), category = _('VHF Radio')},
+{															pressed = device_commands.Button_4, cockpit_device_id = devices.VHF_RADIO, value_pressed = 1.0,  name = _('Input.Bf109K4.fug16zy_volume_plus'), category = _('VHF Radio')},
+{															pressed = device_commands.Button_9, cockpit_device_id = devices.VHF_RADIO, value_pressed = -1.0, name = _('Input.Bf109K4.fug16zy_tune_minus'), category = _('VHF Radio')},
+{															pressed = device_commands.Button_9, cockpit_device_id = devices.VHF_RADIO, value_pressed = 1.0,  name = _('Input.Bf109K4.fug16zy_tune_plus'), category = _('VHF Radio')},
 -- ----------------------------------------------------------------------------------------
 
 
@@ -672,16 +676,16 @@ return {
 
         -- Dashboard Electrical -------------------------------------------------------------------
         -- P 102 / LH SZ 500 Counter Pinion
-        {                                                           action = device_commands.Button_3, cockpit_device_id = devices.WAPONS_CONTROLS, name = _('Input.Bf109K4.szkk3_pinion_lh_slider'), category = _('Front Dash')},
+        {                                                           action = device_commands.Button_3, cockpit_device_id = devices.WEAPONS_CONTROLS, name = _('Input.Bf109K4.szkk3_pinion_lh_slider'), category = _('Front Dash')},
         -- P 102 / RH SZ 500 Counter Pinion
-        {                                                           action = device_commands.Button_6, cockpit_device_id = devices.WAPONS_CONTROLS, name = _('Input.Bf109K4.szkk3_pinion_rh_slider'), category = _('Front Dash')},
+        {                                                           action = device_commands.Button_6, cockpit_device_id = devices.WEAPONS_CONTROLS, name = _('Input.Bf109K4.szkk3_pinion_rh_slider'), category = _('Front Dash')},
         -- ----------------------------------------------------------------------------------------
 
 
 
         -- Dashboard Mechanical -------------------------------------------------------------------
         -- Clock Scale
-        {                                                           action = device_commands.Button_53, cockpit_device_id = devices.CONTROLS, name = _('Input.Bf109K4.clock_scale_slider'), category = _('Front Dash')},
+        {                                                           action = device_commands.Button_3, cockpit_device_id = devices.CLOCK, name = _('Input.Bf109K4.clock_scale_slider'), category = _('Front Dash')},
 
         --Remote compass 
         {                                                           action = device_commands.Button_1, cockpit_device_id = devices.REMOTE_COMPASS, name = _('Input.Bf109K4.repeater_compass_slider'), category = _('Front Dash')},

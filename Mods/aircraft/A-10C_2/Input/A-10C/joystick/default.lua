@@ -209,6 +209,11 @@ keyCommands = {
 {down = iCommandViewObjectIgnore, name = _('Object exclude '), category = _('View Extended')},
 {down = iCommandViewObjectsAll, name = _('Objects all excluded - include'), category = _('View Extended')},
 
+--	Head Tracker View
+{down = iHeadTrackerZoomToggle,			up = iHeadTrackerZoomToggle, 		 value_down = 1.0, value_up = 0.0, name = _('VR tracker Zoom'),			 category = _('View Head Tracker')},
+{down = iHeadTrackerSpyglassZoomToggle,	up = iHeadTrackerSpyglassZoomToggle, value_down = 1.0, value_up = 0.0, name = _('VR tracker Spyglass Zoom'), category = _('View Head Tracker')},
+{down = iHeadTrackerPosReset,																				   name = _('VR tracker Reset Base'),	 category = _('View Head Tracker')},
+
 --General
 {down = iCommandQuit, name = _('End mission'), category = _('General')},
 {down = iCommandBrakeGo, name = _('Pause'), category = _('General')},

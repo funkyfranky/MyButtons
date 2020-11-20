@@ -91,8 +91,10 @@ keyCommands = {
 {combos = {{key = '\'', reformers = {'LAlt'}}}, 			down = iCommandMissionResourcesManagement, name = _('Rearming and Refueling Window'), category = _('General')},
 {combos = {{key = '\'', reformers = {'RShift'}}}, 			down = iCommandDebriefing, name = _('Debriefing window'), category = _('General')},
 {combos = {{key = 'B', reformers = {'LAlt'}}},				down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
-{combos = {{key = 'S',	 reformers = {'LWin'}}},			down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},																																   
+{combos = {{key = 'S',	 reformers = {'LWin'}}},			down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},
 
+{combos = {{key = 'C'}},	down = device_commands.Button_1,	cockpit_device_id = devices.NETWORK_SYNCH_CONTROLLER,	value_down = 0.0,	name = _('Request Aircraft Control'),	category = _('Flight Control')},
+{combos = {{key = 'Enter', reformers = {'RCtrl', 'RWin'}}}, down = device_commands.Button_1, cockpit_device_id = devices.CREWE, value_down = 1.0, name = _('Show crew indicator'), category = _('General')},
 
 -- View                                                    
 {combos = {{key = 'Num4'}}, pressed = iCommandViewLeftSlow, up = iCommandViewStopSlow, name = _('View Left slow'), category = _('View')},
@@ -223,9 +225,7 @@ keyCommands = {
 {combos = {{key = 'L', reformers = {'RCtrl','RShift'}}},		down = iCommandExtCargoHook,																														name = _('External Cargo Hook'),				category = _("External Cargo")},
 {combos = {{key = 'K', reformers = {'RCtrl','RShift'}}},		down = iCommandExternalCargoAutounhook,																												name = _('External Cargo Autounhook'),			category = _("External Cargo")},
 {combos = {{key = 'P', reformers = {'RCtrl','RShift'}}},		down = iCommandExternalCargoIndicator,																												name = _('External Cargo Indicator'),			category = _("External Cargo")},
-{combos = {{key = 'P', reformers = {'RCtrl','RShift','RAlt'}}},	down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,		name = _('External Cargo Pilot Unhook'),		category = _("External Cargo")},
-{combos = {{key = 'C', reformers = {'RCtrl','RShift','RAlt'}}},	down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,		name = _('External Cargo CoPilot Unhook'),		category = _("External Cargo")},
-{combos = {{key = 'S', reformers = {'RCtrl','RShift','RAlt'}}},	down = device_commands.Button_4, up = device_commands.Button_4, value_down = 1,cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, 									name = _('External Cargo Safety'),				category = _("External Cargo")},
+{combos = {{key = ';', reformers = {'RCtrl','RShift'}}},		down = device_commands.Button_5, up = device_commands.Button_5, cockpit_device_id = devices.EXT_CARGO_EQUIPMENT, value_down = 1, value_up = 0,		name = _('External Cargo Unhook'),				category = _("External Cargo")},
 -- View Extended
 {combos = {{key = 'J', reformers = {'LShift'}}}, down = iCommandViewCameraJiggle, name = _('Camera jiggle toggle'), category = _('View Extended')},
 {combos = {{key = 'K', reformers = {'LAlt'}}}, down = iCommandViewKeepTerrain, name = _('Keep terrain camera altitude'), category = _('View Extended')},
@@ -334,13 +334,13 @@ keyCommands = {
 --LandingLight Control
 {combos = {{key = ',', reformers = {'RCtrl'}}}, down = device_commands.Button_12, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 1.0, name = _('Landing Light Switch'), category = _('Ins Collective Stick')},
 
-{combos = {{key = '/', reformers = {'RCtrl'}}}, down = device_commands.Button_7, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 1.0, name = _('Landing light Extend'), category = _('Ins Collective Stick')},
-{combos = {{key = '/', reformers = {'RAlt'}}}, down = device_commands.Button_7, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 0.0, name = _('Landing light Stop'), category = _('Ins Collective Stick')},
-{combos = {{key = '/', reformers = {'RWin'}}}, down = device_commands.Button_7, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = -1.0, name = _('Landing light Retract'), category = _('Ins Collective Stick')},
+{combos = {{key = '/', reformers = {'RCtrl'}}}, down = device_commands.Button_38, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 1.0, name = _('Landing light Extend'), category = _('Ins Collective Stick')},
+{combos = {{key = '/', reformers = {'RAlt'}}}, down = device_commands.Button_38, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 0.0, name = _('Landing light Stop'), category = _('Ins Collective Stick')},
+{combos = {{key = '/', reformers = {'RWin'}}}, down = device_commands.Button_38, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = -1.0, name = _('Landing light Retract'), category = _('Ins Collective Stick')},
 
-{combos = {{key = ';', reformers = {'RCtrl'}}}, down = device_commands.Button_6, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 1.0, name = _('Search light On'), category = _('Ins Collective Stick')},
-{combos = {{key = ';', reformers = {'RAlt'}}}, down = device_commands.Button_6, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 0.0, name = _('Search light Off'), category = _('Ins Collective Stick')},
-{combos = {{key = ';', reformers = {'RWin'}}}, down = device_commands.Button_6, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = -1.0, name = _('Search light Stow'), category = _('Ins Collective Stick')},
+{combos = {{key = ';', reformers = {'RCtrl'}}}, down = device_commands.Button_37, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 1.0, name = _('Search light On'), category = _('Ins Collective Stick')},
+{combos = {{key = ';', reformers = {'RAlt'}}}, down = device_commands.Button_37, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = 0.0, name = _('Search light Off'), category = _('Ins Collective Stick')},
+{combos = {{key = ';', reformers = {'RWin'}}}, down = device_commands.Button_37, cockpit_device_id = devices.NAVLIGHT_SYSTEM, value_down = -1.0, name = _('Search light Stow'), category = _('Ins Collective Stick')},
 --{combos = {{key = ';', reformers = {'RCtrl'}}}, 			pressed = device_commands.Button_12, cockpit_device_id = 12, value_pressed = 0.05, name = _('Trim Elevator Down'), category = _('Flight Control')},
 
 {combos = {{key = 'Home'}}, down = device_commands.Button_18, up = device_commands.Button_18, cockpit_device_id = devices.ENGINE_INTERFACE, value_down = 1.0, value_up = 0.0, name = _('Start-up engine'), category = _('Ins Collective Stick')},

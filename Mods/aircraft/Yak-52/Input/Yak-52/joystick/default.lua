@@ -111,6 +111,7 @@ keyCommands = {
 {down = iCommandCockpitShowPilotOnOff, name = _('Show pilot'), category = _('General')},
 
 {down = iCommandMissionResourcesManagement, name = _('Rearming and Refueling Window'), category = _('General')},
+{down = device_commands.Button_1, cockpit_device_id = devices.CREWE, value_down = 1.0, name = _('Show crew indicator'), category = _('General')},
 -- ----------------------------------------------------------------------------------------
 
 ------------------------------------------------
@@ -436,6 +437,25 @@ keyCommands = {
 {                                                           down = device_commands.Button_21,   cockpit_device_id = devices.VHF_RADIO, value_down = 1.0,     name = _('Input.Yak52.radio_squelch'),        category = {_('Front Dash'), _('VHF Radio')}},
 {                                                           down = device_commands.Button_22,   cockpit_device_id = devices.VHF_RADIO, value_down = 0.0,     name = _('Input.Yak52.radio_squelch_0'),      category = {_('Front Dash'), _('VHF Radio')}},
 {                                                           down = device_commands.Button_22,   cockpit_device_id = devices.VHF_RADIO, value_down = 1.0,     name = _('Input.Yak52.radio_squelch_1'),      category = {_('Front Dash'), _('VHF Radio')}},
+
+    -- SPU-9 ------------------------------------------------------------------------------
+    -- Intercom Volume Knob
+    {                                                       pressed = device_commands.Button_21,                              cockpit_device_id = devices.INTERCOM, value_pressed = -1.0,             name = _('Input.Generic.intercom_volume_minus'),              category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       pressed = device_commands.Button_21,                              cockpit_device_id = devices.INTERCOM, value_pressed =  1.0,             name = _('Input.Generic.intercom_volume_plus'),               category = {_('Front Dash'), _('Intercom Control Panel')}},
+    -- Radio Volume Knob
+    {                                                       pressed = device_commands.Button_23,                              cockpit_device_id = devices.INTERCOM, value_pressed = -1.0,             name = _('Input.Generic.radio_volume_minus'),                 category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       pressed = device_commands.Button_23,                              cockpit_device_id = devices.INTERCOM, value_pressed =  1.0,             name = _('Input.Generic.radio_volume_plus'),                  category = {_('Front Dash'), _('Intercom Control Panel')}},
+    -- Standby Distributive Amplifier Toggle
+    {                                                       down = device_commands.Button_26,                                 cockpit_device_id = devices.INTERCOM, value_down = 1.0,                 name = _('Input.Generic.intercom_stby_distributive_cycle'),   category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_25,                                 cockpit_device_id = devices.INTERCOM, value_down = 0.0,                 name = _('Input.Generic.intercom_stby_distributive_set_off'), category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_25,                                 cockpit_device_id = devices.INTERCOM, value_down = 1.0,                 name = _('Input.Generic.intercom_stby_distributive_set_on'),  category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_25, up = device_commands.Button_25, cockpit_device_id = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _('Input.Generic.intercom_stby_distributive_hon'),     category = {_('Front Dash'), _('Intercom Control Panel')}},
+    -- Standby Distributive Amplifier Toggle
+    {                                                       down = device_commands.Button_28,                                 cockpit_device_id = devices.INTERCOM, value_down = 1.0,                 name = _('Input.Generic.intercom_rdf_cycle'),                 category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_27,                                 cockpit_device_id = devices.INTERCOM, value_down = 0.0,                 name = _('Input.Generic.intercom_rdf_set_off'),               category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_27,                                 cockpit_device_id = devices.INTERCOM, value_down = 1.0,                 name = _('Input.Generic.intercom_rdf_set_on'),                category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_27, up = device_commands.Button_27, cockpit_device_id = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _('Input.Generic.intercom_rdf_hon'),                   category = {_('Front Dash'), _('Intercom Control Panel')}},
+    -- ------------------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------------------
 
 
@@ -662,8 +682,8 @@ keyCommands = {
 
 
 
-{                                                           down = device_commands.Button_53, up = device_commands.Button_53, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('Radio Button'), category = {_('Communications'), _('Throttle Grip')}},
-{                                                           down = device_commands.Button_54, up = device_commands.Button_54, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('INT Button'), category = {_('Communications'), _('Throttle Grip')}},
+{                                                           down = device_commands.Button_53, up = device_commands.Button_53, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('Radio Button'), category = {_('VHF Radio'), _('Communications'), _('Throttle Grip')}},
+{                                                           down = device_commands.Button_54, up = device_commands.Button_54, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('INT Button'), category = {_('VHF Radio'), _('Communications'), _('Throttle Grip')}},
 },
 
 
@@ -692,6 +712,8 @@ axisCommands = {
 {                                                           action = device_commands.Button_59, cockpit_device_id = devices.ENGINE_CONTROLS, name = _('Input.Yak52.rh_friction_slider'), category = _('Engine Controls')},
 {                                                           cockpit_device_id = devices.TERTIARY_CONTROLS, action = device_commands.Button_51, name = _('Input.Yak52.emergency_valve_slider'), category = {_('Systems')}},
 {                                                           cockpit_device_id = devices.NAVIGATIONAL_CONTROLS, action = device_commands.Button_17, name = _('Input.Yak52.rdf_volume_slider'), category = {_('Right Side Panel'), _('RDF Control Panel')}},
+{                                                           cockpit_device_id = devices.INTERCOM, action = device_commands.Button_22, name = _('Input.Generic.intercom_volume_slider'), category = {_('Front Dash'), _('Intercom Control Panel')}},
+{                                                           cockpit_device_id = devices.INTERCOM, action = device_commands.Button_24, name = _('Input.Generic.radio_volume_slider'), category = {_('Front Dash'), _('Intercom Control Panel')}},
 -- ----------------------------------------------------------------------------------------
 
 -- TrackIR axes ---------------------------------------------------------------------------

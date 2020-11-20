@@ -7,7 +7,8 @@ dofile(cockpit.."command_defs.lua")
 local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
 
 ignore_features(res.keyCommands,{
-"Camera jiggle"
+"Camera jiggle",
+"AWACS Bogey Dope"
 })
 
 join(res.keyCommands,{
@@ -101,6 +102,7 @@ join(res.keyCommands,{
 {	down = iCommandCockpitShowPilotOnOff,	name = _('Show Pilot Body'),	category = _('General')},
 {	down = iCommandDebriefing,				name = _('Debriefing window'),	category = _('General')},
 {	down = iCommandToggleMirrors,			name = _('Toggle mirrors'),		category = _('General')},
+{down = device_commands.Button_1, cockpit_device_id = devices.CREWE, value_down = 1.0, name = _('Show crew indicator'), category = _('General')},
 
 ------------------------------------------------
 -- View ----------------------------------------
@@ -114,9 +116,10 @@ join(res.keyCommands,{
 {	down = device_commands.Button_1, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Set Pilot Seat'),					category = _('View Cockpit')},
 {	down = device_commands.Button_2, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Set Copilot Seat'),				category = _('View Cockpit')},
 {	down = device_commands.Button_3, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Set Technician Seat'),			category = _('View Cockpit')},
---{	down = device_commands.Button_4, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Set Gunner Seat'),				category = _('View Cockpit')},
+{	down = device_commands.Button_4, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Set Gunner Seat'),				category = _('View Cockpit')},
 {	down = iCommandViewTransposeModeOn, up = iCommandViewTransposeModeOff,							name = _('Camera transpose mode on/off'),	category = _('View Cockpit')},
 {	down = device_commands.Button_5, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('TrackIR Aiming On/Off'),			category = _('View Cockpit')},
+{down = device_commands.Button_6, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Cargo Hatch View'),		category = _('View Cockpit')},
 
 ------------------------------------------------
 -- External Cargo ------------------------------
@@ -242,8 +245,8 @@ join(res.keyCommands,{
 {	down = device_commands.Button_3,	cockpit_device_id = devices.HSI_L, value_down = 0,													name = _('Left HSI Radio Compass Selector Switch - ARC-9'),			category = {_('Left Dashboard'), _('Instruments')}},
 {	down = device_commands.Button_3,	cockpit_device_id = devices.HSI_L, value_down = 1,													name = _('Left HSI Radio Compass Selector Switch - ARC-UD'),		category = {_('Left Dashboard'), _('Instruments')}},
 -- Radio Altimeter
-{	pressed = iCommandRALT_DangerousAltitudeRotaryRight,																					name = _('Radar Altimeter Dangerous Altitude Knob - CW/Increase'),	category = {_('Left Dashboard'), _('Instruments')}},
-{	pressed = iCommandRALT_DangerousAltitudeRotaryLeft,																						name = _('Radar Altimeter Dangerous Altitude Knob - CCW/Decrease'),	category = {_('Left Dashboard'), _('Instruments')}},
+{	pressed = iCommandRALT_DangerousAltitudeRotaryRight,																					name = _('Radar Altimeter Dangerous Altitude Knob - CCW/Decrease'),	category = {_('Left Dashboard'), _('Instruments')}},
+{	pressed = iCommandRALT_DangerousAltitudeRotaryLeft,																						name = _('Radar Altimeter Dangerous Altitude Knob - CW/Increase'),	category = {_('Left Dashboard'), _('Instruments')}},
 {	down = iCommandRALT_Test, up = iCommandRALT_Test_up,																					name = _('Radar Altimeter Test Button'),							category = {_('Left Dashboard'), _('Instruments')}},
 {	down = device_commands.Button_4,	cockpit_device_id = devices.RADAR_ALTIMETER,	value_down = 1,										name = _('Radar Altimeter Power Switch - ON/OFF'),					category = {_('Left Dashboard'), _('Instruments')}},
 {	down = device_commands.Button_3,	cockpit_device_id = devices.RADAR_ALTIMETER,	value_down = 1,										name = _('Radar Altimeter Power Switch - ON'),						category = {_('Left Dashboard'), _('Instruments')}},
@@ -1100,6 +1103,12 @@ join(res.keyCommands,{
 {	down = device_commands.Button_12,	cockpit_device_id = devices.WEAPON_SYS,	value_down = 0,			name = _('ESBR Heating Switch - OFF'),									category = {_('Right Weapons Control Panel'), _('Armament System')}},
 {	down = device_commands.Button_71,	cockpit_device_id = devices.WEAPON_SYS,	value_down = 1.0,		name = _('Pylon Setup Selector Switch - CW'),							category = {_('Right Weapons Control Panel'), _('Armament System')}},
 {	down = device_commands.Button_71,	cockpit_device_id = devices.WEAPON_SYS,	value_down = -1.0,		name = _('Pylon Setup Selector Switch - CCW'),							category = {_('Right Weapons Control Panel'), _('Armament System')}},
+{   down = device_commands.Button_71,   cockpit_device_id = devices.WEAPON_SYS, value_down = 0.0,       name = _('Pylon Setup Selector Switch - set to I'),                     category = {_('Right Weapons Control Panel'), _('Armament System')}},
+{   down = device_commands.Button_71,   cockpit_device_id = devices.WEAPON_SYS, value_down = 0.1,       name = _('Pylon Setup Selector Switch - set to II'),                    category = {_('Right Weapons Control Panel'), _('Armament System')}},
+{   down = device_commands.Button_71,   cockpit_device_id = devices.WEAPON_SYS, value_down = 0.2,       name = _('Pylon Setup Selector Switch - set to III'),                   category = {_('Right Weapons Control Panel'), _('Armament System')}},
+{   down = device_commands.Button_71,   cockpit_device_id = devices.WEAPON_SYS, value_down = 0.3,       name = _('Pylon Setup Selector Switch - set to IV'),                    category = {_('Right Weapons Control Panel'), _('Armament System')}},
+{   down = device_commands.Button_71,   cockpit_device_id = devices.WEAPON_SYS, value_down = 0.4,       name = _('Pylon Setup Selector Switch - set to V'),                     category = {_('Right Weapons Control Panel'), _('Armament System')}},
+{   down = device_commands.Button_71,   cockpit_device_id = devices.WEAPON_SYS, value_down = 0.5,       name = _('Pylon Setup Selector Switch - set to GUN'),                   category = {_('Right Weapons Control Panel'), _('Armament System')}},
 
 ------------------------------------------------
 -- Armament System -----------------------------
@@ -1120,7 +1129,7 @@ join(res.keyCommands,{
 {	down = device_commands.Button_93, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.0, name = _('AI Back Gunner ROE Iterate'), category = _('Gunners AI Panel')},
 {	down = device_commands.Button_93, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.1, name = _('AI Back Gunner Burst Switch'), category = _('Gunners AI Panel')},
 
-
+{	down = device_commands.Button_96,	cockpit_device_id = devices.WEAPON_SYS,		value_down = 1.0,	name = _('Show Gunners Panel'),	category = {_('Hints'), _('Armament System')}},
 
 })
 
@@ -1155,12 +1164,15 @@ join(res.axisCommands,{
 
 {action = iCommandWheelBrake, name = _('Wheel brake')},
 
-{action = device_commands.Button_65, cockpit_device_id = devices.ENGINE_INTERFACE, name = _("Throttle Left")},
-{action = device_commands.Button_66, cockpit_device_id = devices.ENGINE_INTERFACE, name = _("Throttle Right")},
+{action = device_commands.Button_86, cockpit_device_id = devices.ENGINE_INTERFACE, name = _("Throttle Left")},
+{action = device_commands.Button_87, cockpit_device_id = devices.ENGINE_INTERFACE, name = _("Throttle Right")},
 
 {action = device_commands.Button_16, cockpit_device_id = devices.AUTOPILOT, name = _("Autopilot Heading Adjustment")},
 {action = device_commands.Button_17, cockpit_device_id = devices.AUTOPILOT, name = _("Autopilot Roll Adjustment")},
 {action = device_commands.Button_18, cockpit_device_id = devices.AUTOPILOT, name = _("Autopilot Pitch Adjustment")},
+
+{action = device_commands.Button_9, cockpit_device_id = devices.PKV, name = _('Sight Intensity Adjustment')},
+{action = device_commands.Button_10, cockpit_device_id = devices.PKV, name = _('Sight Limb Adjustment')},
 
 })
 

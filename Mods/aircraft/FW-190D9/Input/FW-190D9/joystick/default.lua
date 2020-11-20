@@ -369,7 +369,7 @@ keyCommands = {
 
 
 {down = iCommandLeftEngineStart, name = _('Throttle to START'), category = _('Engine Control')},
-{down = iCommandLeftEngineStop, name = _('Throttle to IDLE'), category = _('Engine Control')},
+{down = iCommandLeftEngineStop, name = _('Throttle to STOP'), category = _('Engine Control')},
 {down = device_commands.Button_12, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Throttle Control Lock'), category = _('Engine Control')},
 
 --oxygen
@@ -463,13 +463,14 @@ keyCommands = {
 {pressed = device_commands.Button_1, cockpit_device_id = devices.LIGHT_SYSTEM, value_pressed = -0.007, name = _('Instrument Brightness Decrease'), category = _('Electric System')},
 
 --Clock
-{down = device_commands.Button_3, up = device_commands.Button_3, cockpit_device_id = devices.CLOCK, value_down = 1.0, value_up = 0.0,name = _('Stopwatch'), category = _('Clock')},
-
-{down = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_down = 1.0, name = _('Clock Stop'), category = _('Clock')},
-{down = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_down = 0.0, name = _('Clock Start'), category = _('Clock')},
-
-{pressed = device_commands.Button_4, cockpit_device_id = devices.CLOCK, value_pressed = 0.002, name = _('Clock Bezel CW'), category = _('Clock')},
-{pressed = device_commands.Button_4, cockpit_device_id = devices.CLOCK, value_pressed = -0.002, name = _('Clock Bezel CCW'), category = _('Clock')},
+{pressed = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_pressed = 1.0, name = _('Input.Bf109K4.clock_scale_plus'), category = _('Clock')},
+{pressed = device_commands.Button_2, cockpit_device_id = devices.CLOCK, value_pressed = -1.0, name = _('Input.Bf109K4.clock_scale_minus'), category = _('Clock')},
+{pressed = device_commands.Button_5, cockpit_device_id = devices.CLOCK, value_pressed = -1.0, name = _('Input.Bf109K4.clock_pinion_minus'), category = _('Clock')},
+{pressed = device_commands.Button_5, cockpit_device_id = devices.CLOCK, value_pressed = 1.0, name = _('Input.Bf109K4.clock_pinion_plus'), category = _('Clock')},
+{down = device_commands.Button_6, cockpit_device_id = devices.CLOCK, value_down = 1.0, name = _('Input.Bf109K4.clock_stop_1'), category = _('Clock')},
+{down = device_commands.Button_6, cockpit_device_id = devices.CLOCK, value_down = 0.0, name = _('Input.Bf109K4.clock_stop_0'), category = _('Clock')},
+{down = device_commands.Button_7, cockpit_device_id = devices.CLOCK, value_down = 1.0, name = _('Input.Bf109K4.clock_stop'), category = _('Clock')},
+{down = device_commands.Button_8, up = device_commands.Button_8, cockpit_device_id = devices.CLOCK, value_down = 1.0, value_up = 0.0, name = _('Input.Bf109K4.clock_stopwatch'), category = _('Clock')},
 
 },
 axisCommands = {

@@ -89,7 +89,7 @@ join(res.keyCommands, {
 {                                                           down = iCommandTrkEsc, name = _('Playback track cancel'), category = _('General')},
 {combos = {{key = 'Pause', reformers = {'RShift'}}},        down = iCommandOneFrame, name = _('One frame mode'), category = _('General')},
 {combos = {{key = 'P', reformers = {'RShift'}}},            down = iCommandCockpitShowPilotOnOff, name = _('Show pilot'), category = _('General')},
-
+{combos = {{key = 'Enter', reformers = {'RCtrl', 'RWin'}}}, down = device_commands.Button_1, cockpit_device_id = devices.CREWE, value_down = 1.0, name = _('Show crew indicator'), category = _('General')},
 -- ----------------------------------------------------------------------------------------
 
 
@@ -256,6 +256,25 @@ join(res.keyCommands, {
 {                                                           down = device_commands.Button_21,   cockpit_device_id = devices.VHF_RADIO, value_down = 1.0,     name = _('Input.Yak52.radio_squelch'),        category = {_('Front Dash'), _('VHF Radio')}},
 {                                                           down = device_commands.Button_22,   cockpit_device_id = devices.VHF_RADIO, value_down = 0.0,     name = _('Input.Yak52.radio_squelch_0'),      category = {_('Front Dash'), _('VHF Radio')}},
 {                                                           down = device_commands.Button_22,   cockpit_device_id = devices.VHF_RADIO, value_down = 1.0,     name = _('Input.Yak52.radio_squelch_1'),      category = {_('Front Dash'), _('VHF Radio')}},
+
+    -- SPU-9 ------------------------------------------------------------------------------
+    -- Intercom Volume Knob
+    {                                                       pressed = device_commands.Button_21,                              cockpit_device_id = devices.INTERCOM, value_pressed = -1.0,             name = _('Input.Generic.intercom_volume_minus'),              category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       pressed = device_commands.Button_21,                              cockpit_device_id = devices.INTERCOM, value_pressed =  1.0,             name = _('Input.Generic.intercom_volume_plus'),               category = {_('Front Dash'), _('Intercom Control Panel')}},
+    -- Radio Volume Knob
+    {                                                       pressed = device_commands.Button_23,                              cockpit_device_id = devices.INTERCOM, value_pressed = -1.0,             name = _('Input.Generic.radio_volume_minus'),                 category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       pressed = device_commands.Button_23,                              cockpit_device_id = devices.INTERCOM, value_pressed =  1.0,             name = _('Input.Generic.radio_volume_plus'),                  category = {_('Front Dash'), _('Intercom Control Panel')}},
+    -- Standby Distributive Amplifier Toggle
+    {                                                       down = device_commands.Button_26,                                 cockpit_device_id = devices.INTERCOM, value_down = 1.0,                 name = _('Input.Generic.intercom_stby_distributive_cycle'),   category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_25,                                 cockpit_device_id = devices.INTERCOM, value_down = 0.0,                 name = _('Input.Generic.intercom_stby_distributive_set_off'), category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_25,                                 cockpit_device_id = devices.INTERCOM, value_down = 1.0,                 name = _('Input.Generic.intercom_stby_distributive_set_on'),  category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_25, up = device_commands.Button_25, cockpit_device_id = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _('Input.Generic.intercom_stby_distributive_hon'),     category = {_('Front Dash'), _('Intercom Control Panel')}},
+    -- Standby Distributive Amplifier Toggle
+    {                                                       down = device_commands.Button_28,                                 cockpit_device_id = devices.INTERCOM, value_down = 1.0,                 name = _('Input.Generic.intercom_rdf_cycle'),                 category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_27,                                 cockpit_device_id = devices.INTERCOM, value_down = 0.0,                 name = _('Input.Generic.intercom_rdf_set_off'),               category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_27,                                 cockpit_device_id = devices.INTERCOM, value_down = 1.0,                 name = _('Input.Generic.intercom_rdf_set_on'),                category = {_('Front Dash'), _('Intercom Control Panel')}},
+    {                                                       down = device_commands.Button_27, up = device_commands.Button_27, cockpit_device_id = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _('Input.Generic.intercom_rdf_hon'),                   category = {_('Front Dash'), _('Intercom Control Panel')}},
+    -- ------------------------------------------------------------------------------------
 -- ----------------------------------------------------------------------------------------
 
 
@@ -500,8 +519,8 @@ join(res.keyCommands, {
 
 
 
-{                                                           down = device_commands.Button_53, up = device_commands.Button_53, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('Radio Button'), category = {_('Communications'), _('Throttle Grip')}},
-{                                                           down = device_commands.Button_54, up = device_commands.Button_54, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('INT Button'), category = {_('Communications'), _('Throttle Grip')}},
+{                                                           down = device_commands.Button_53, up = device_commands.Button_53, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('Radio Button'), category = {_('VHF Radio'), _('Communications'), _('Throttle Grip')}},
+{                                                           down = device_commands.Button_54, up = device_commands.Button_54, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('INT Button'), category = {_('VHF Radio'), _('Communications'), _('Throttle Grip')}},
 })
 
 return res

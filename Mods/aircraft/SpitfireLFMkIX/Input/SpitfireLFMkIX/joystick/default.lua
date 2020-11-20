@@ -362,12 +362,12 @@ keyCommands = {
 {                                                           down = device_commands.Button_12, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.uc_blind'), category = _('Front Dash')},
 
 -- Clock Setter Pinion - Wind-up
-{                                                           pressed = device_commands.Button_16, cockpit_device_id = devices.CONTROLS, value_pressed = -1.0, name = _('Input.SpitfireLFMkIX.clock_minus'), category = _('Front Dash')},
-{                                                           pressed = device_commands.Button_16, cockpit_device_id = devices.CONTROLS, value_pressed = 1.0, name = _('Input.SpitfireLFMkIX.clock_plus'), category = _('Front Dash')},
+{                                                           pressed = device_commands.Button_5, cockpit_device_id = devices.CLOCK, value_pressed = -1.0, name = _('Input.SpitfireLFMkIX.clock_minus'), category = _('Front Dash')},
+{                                                           pressed = device_commands.Button_5, cockpit_device_id = devices.CLOCK, value_pressed = 1.0, name = _('Input.SpitfireLFMkIX.clock_plus'), category = _('Front Dash')},
 -- Clock Setter Pinion - Pull
-{                                                           down = device_commands.Button_15, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.clock_mode_1'), category = _('Front Dash')},
-{                                                           down = device_commands.Button_15, cockpit_device_id = devices.CONTROLS, value_down = 0.0, name = _('Input.SpitfireLFMkIX.clock_mode_0'), category = _('Front Dash')},
-{                                                           down = device_commands.Button_98, cockpit_device_id = devices.CONTROLS, value_down = 1.0, name = _('Input.SpitfireLFMkIX.clock_mode'), category = _('Front Dash')},
+{                                                           down = device_commands.Button_6, cockpit_device_id = devices.CLOCK, value_down = 1.0, name = _('Input.SpitfireLFMkIX.clock_mode_1'), category = _('Front Dash')},
+{                                                           down = device_commands.Button_6, cockpit_device_id = devices.CLOCK, value_down = 0.0, name = _('Input.SpitfireLFMkIX.clock_mode_0'), category = _('Front Dash')},
+{                                                           down = device_commands.Button_7, cockpit_device_id = devices.CLOCK, value_down = 1.0, name = _('Input.SpitfireLFMkIX.clock_mode'), category = _('Front Dash')},
 
 -- Magnetos Toggles
 {                                                           down = device_commands.Button_15, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 0.0, name = _('Input.SpitfireLFMkIX.magneto0_0'), category = _('Engine Controls')},

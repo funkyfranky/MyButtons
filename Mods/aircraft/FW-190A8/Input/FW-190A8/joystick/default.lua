@@ -299,7 +299,7 @@ keyCommands = {
 -- Gun Sight Smoked Screen Controls
 {down = device_commands.Button_4, cockpit_device_id = devices.PILOT_SIGHT, value_down = 1.0, name = _('Input.Bf109K4.gun_sight_tint_1'), category = _('REVI 16 B Gunsight')},
 {down = device_commands.Button_4, cockpit_device_id = devices.PILOT_SIGHT, value_down = 0.0, name = _('Input.Bf109K4.gun_sight_tint_0'), category = _('REVI 16 B Gunsight')},
-{down = device_commands.Button_8, cockpit_device_id = devices.PILOT_SIGHT, value_down = 1.0, name = _('Input.Bf109K4.gun_sight_tint'), category = _('REVI 16 B Gunsight')},
+{down = device_commands.Button_5, cockpit_device_id = devices.PILOT_SIGHT, value_down = 1.0, name = _('Input.Bf109K4.gun_sight_tint'), category = _('REVI 16 B Gunsight')},
 -- ----------------------------------------------------------------------------------------
 
 

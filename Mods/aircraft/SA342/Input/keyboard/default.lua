@@ -59,7 +59,7 @@ keyCommands = {
 {down = device_commands.Button_21,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Battery On/Off'), category = _('SA342 Main Panel')},
 {down = device_commands.Button_22,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Alternator On/Off'), category = _('SA342 Main Panel')},
 {down = device_commands.Button_23,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Generator On/Off'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_22,cockpit_device_id = devices.AUTOPILOT, value_down = 1, name = _('SA342 Magnetic brake On/Off'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_22,cockpit_device_id = devices.AUTOPILOT, value_down = 1, name = _('SA342 Trim On/Off'), category = _('SA342 Main Panel')},
 {combos = {{key = 'W', reformers = {'RAlt'}}} , down = iCommandSwitchMasterArm, name = _('SA342 Master arm On/Off'), category = _('SA342 Main Panel')},
 {down = device_commands.Button_24,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Pitot On/Off'), category = _('SA342 Main Panel')},
 {down = device_commands.Button_25, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Pilot Wiper Up'), category = _('SA342 Main Panel')},
@@ -256,7 +256,6 @@ keyCommands = {
 {down = device_commands.Button_11, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Gisement moins'), category = _('SA342 Weapons Panel')},
 {down = device_commands.Button_12, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Lum plus'), category = _('SA342 Weapons Panel')},
 {down = device_commands.Button_13, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Lum moins'), category = _('SA342 Weapons Panel')},
-
 
 -- RWR
 {down = device_commands.Button_8,  up = device_commands.Button_9, cockpit_device_id = devices.RWR, value_down = -1, value_up = 0,name = _('SA342 RWR OFF/ON'), category = _('SA342 RWR')},

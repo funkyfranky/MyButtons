@@ -179,7 +179,7 @@ local keycommands = {
     {combos = {{key = "J", reformers = {"RCtrl","RAlt"}}}, down = 3402, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("Fuel tank jettison Cover"), category = _("Weapons")},
     {combos = {{key = "J", reformers = {"RCtrl","RShift"}}}, down = 3320, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("Fuel tank jettison Button"), category = _("Weapons")},
     {combos = {{key = "C", reformers = {"LAlt","LCtrl","LShift"}}}, down = 3314, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("IR-missile uncage"), category = _("Weapons")},
-    {combos = {{key = "S", reformers = {"LAlt","LCtrl"}}}, down = 3311, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("IR-missile fast select"), category = _("Weapons")},
+    {combos = {{key = "S", reformers = {"LAlt","LCtrl"}}}, down = 3311, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _("Autothrottle disconnect / IR-missile fast select"), category = _("Weapons")},
 															--{down = 3000, cockpit_device_id = devices.ENGINEPANEL, value_down = 1.0, name = _("Missile Select Button"), category = _("Weapons")},
 	
     -- {combos = {{key = "W", reformers = {"LAlt"}}}, down = 3030, cockpit_device_id = 14, value_down = 1.0, name = _("Datapanel Rotary Clockwise"), category = _("Navigation")},
@@ -258,7 +258,7 @@ local keycommands = {
     {down = 3002, value_down = 1.0, cockpit_device_id = devices.IFF, name = _('IK (IFF) Code Up'), category = _('Countermeasures')},
     {down = 3002, value_down = -1.0, cockpit_device_id = devices.IFF, name = _('IK (IFF) Code Down'), category = _('Countermeasures')},
     {down = 3001, value_down = 1.0, cockpit_device_id = devices.FR22, name = _('FR22 Base selector turn right'), category = _('Radios')},
-    {down = 3001, value_down = -1.0, cockpit_device_id = devices.FR22, name = _('F22 Base selector turn left'), category = _('Radios')},
+    {down = 3001, value_down = -1.0, cockpit_device_id = devices.FR22, name = _('FR22 Base selector turn left'), category = _('Radios')},
     {down = 3002, value_down = 0.0, cockpit_device_id = devices.FR22, name = _('FR22 Push-button H'), category = _('Radios')},
     {down = 3002, value_down = 0.05, cockpit_device_id = devices.FR22, name = _('FR22 Push-button Special 1'), category = _('Radios')},
     {down = 3002, value_down = 0.1, cockpit_device_id = devices.FR22, name = _('FR22 Push-button Special 2'), category = _('Radios')},
@@ -320,6 +320,7 @@ local keycommands = {
     {down = 3007, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, name = _("TV Fix"), category = _("Radar")},
     --{down = 3007, up = 3006, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, value_up = 1.0, name = _("TV Fix (Release T1)"), category = _("Radar")},
     {down = 3090, up = 3090, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _("Reference button"), category = _("Navigation")},
+    {down = 3803, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _("Autopilot Quick Disengage"), category = _("Navigation")},
     {down = 3001, cockpit_device_id = devices.DOPPLER, value_down = 1.0, name = _("Radar alitmeter land/sea mode"), category = _("Navigation")},
     
     
@@ -589,6 +590,12 @@ local keycommands = {
 	{down = 3009, up = 3009, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Button LS"), category = _("Navigation")}, --added v0.4
 	{down = 3010, up = 3010, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0.0, name = _("Navigationpanel Waypoint BX"), category = _("Navigation")}, --added v0.4
 	-- end added missing buttons
+	
+	--Night Vision Goggles
+	{combos = {{key = 'H', reformers = {'RShift'}}}		   , 	down    = iCommandViewNightVisionGogglesOn   , name = _('Night Vision Goggles')   , category = _('Sensors')},
+	{combos = {{key = 'H', reformers = {'RShift','RCtrl'}}}, 	pressed = iCommandPlane_Helmet_Brightess_Up  , name = _('Night Vision Goggles Gain Up')  , category = _('Sensors')},
+	{combos = {{key = 'H', reformers = {'RShift','RAlt'}}} , 	pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Night Vision Goggles Gain Down'), category = _('Sensors')},
+
 
 }
 

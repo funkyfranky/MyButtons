@@ -247,7 +247,7 @@ keyCommands={
 {combos={{key='U',reformers={'RShift'}}},down=device_commands.SPSon,cockpit_device_id=devices.SPS,value_down=1,name=_('SPS (BLC) System On/Off'),category=_('Flight Controls')},
 
 -- ARU
-{combos={{key='U',reformers={'RAlt'}}},down=device_commands.ARUmanAuto,cockpit_device_id=devices.ARU,value_down=0,name=_('ARU - Auto/Manual'),category=_('Flight Controls')},
+{combos={{key='U',reformers={'RAlt'}}},down=device_commands.ARUmanAuto,cockpit_device_id=devices.ARU,value_down=1.0,name=_('ARU - Auto/Manual'),category=_('Flight Controls')},
 {combos={{key='U',reformers={'RCtrl'}}},down=device_commands.ARUhighSpeed,up=device_commands.ARUhighSpeed,cockpit_device_id=devices.ARU,value_down=1,value_up=0,name=_('ARU manual - High Speed'),category=_('Flight Controls')},
 {combos={{key='U',reformers={'LCtrl'}}},down=device_commands.ARUlowSpeed,up=device_commands.ARUlowSpeed,cockpit_device_id=devices.ARU,value_down=-1,value_up=0,name=_('ARU manual - Low Speed'),category=_('Flight Controls')},
 

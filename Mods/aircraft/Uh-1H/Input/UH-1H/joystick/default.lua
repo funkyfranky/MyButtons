@@ -101,6 +101,7 @@ keyCommands = {
 {down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
 {down = iCommandMissionResourcesManagement, name = _('Rearming and Refueling Window'), category = _('General')},
 {down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},
+{down = device_commands.Button_1, cockpit_device_id = devices.CREWE, value_down = 1.0, name = _('Show crew indicator'), category = _('General')},
 
 
 
@@ -350,13 +351,13 @@ keyCommands = {
 --LandingLight Control
 {down = device_commands.Button_12, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = 1.0, name = _('Landing Light Switch'), category = _('Ins Collective Stick')},
 
-{down = device_commands.Button_7, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = 1.0, name = _('Landing light Extend'), category = _('Ins Collective Stick')},
-{down = device_commands.Button_7, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = 0.0, name = _('Landing light Stop'), category = _('Ins Collective Stick')},
-{down = device_commands.Button_7, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = -1.0, name = _('Landing light Retract'), category = _('Ins Collective Stick')},
+{down = device_commands.Button_38, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = 1.0, name = _('Landing light Extend'), category = _('Ins Collective Stick')},
+{down = device_commands.Button_38, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = 0.0, name = _('Landing light Stop'), category = _('Ins Collective Stick')},
+{down = device_commands.Button_38, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = -1.0, name = _('Landing light Retract'), category = _('Ins Collective Stick')},
 
-{down = device_commands.Button_6, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = 1.0, name = _('Search light On'), category = _('Ins Collective Stick')},
-{down = device_commands.Button_6, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = 0.0, name = _('Search light Off'), category = _('Ins Collective Stick')},
-{down = device_commands.Button_6, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = -1.0, name = _('Search light Stow'), category = _('Ins Collective Stick')},
+{down = device_commands.Button_37, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = 1.0, name = _('Search light On'), category = _('Ins Collective Stick')},
+{down = device_commands.Button_37, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = 0.0, name = _('Search light Off'), category = _('Ins Collective Stick')},
+{down = device_commands.Button_37, cockpit_device_id  = devices.NAVLIGHT_SYSTEM, value_down = -1.0, name = _('Search light Stow'), category = _('Ins Collective Stick')},
 
 --Ins Rudder
 {down = iCommandPlaneLeftRudderStart, up = iCommandPlaneLeftRudderStop, name = _('Rudder left'), category = _('Ins Rudder')},
