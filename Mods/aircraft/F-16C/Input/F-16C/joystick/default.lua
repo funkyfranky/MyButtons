@@ -19,6 +19,9 @@ join(res.keyCommands,{
 {down = control_commands.ApRoll, up = control_commands.ApRoll, cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =-1.0, value_up= 0.0, name = _('Autopilot ROLL Switch STRG SEL/ATT HOLD'), category = {_('_My Buttons')}},
 {down = control_commands.ApRoll, up = control_commands.ApRoll, cockpit_device_id = devices.CONTROL_INTERFACE,	value_down = 1.0, value_up= 0.0, name = _('Autopilot ROLL Switch HDG SEL/ATT HOLD'), category = {_('_My Buttons')}},
 
+{down = control_commands.ApPitchAlt_EXT, up = control_commands.ApPitchAlt_EXT, cockpit_device_id = devices.CONTROL_INTERFACE,	value_down = 1.0, value_up=-1.0, name = _('Autopilot PITCH Switch ALT HOLD/A/P OFF'), category = {_('_My Buttons')}},
+{down = control_commands.ApPitchAtt_EXT, up = control_commands.ApPitchAlt_EXT, cockpit_device_id = devices.CONTROL_INTERFACE,	value_down =-1.0, value_up=-1.0, name = _('Autopilot PITCH Switch ATT HOLD/A/P OFF'), category = {_('_My Buttons')}},
+
 -- ELEC INTERFACE
 {down = 3102, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1.0, name = _('GPS Switch GPS'), category = {_('_My Buttons')}},
 {down = 3102, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 0.0, name = _('GPS Switch OFF'), category = {_('_My Buttons')}},
