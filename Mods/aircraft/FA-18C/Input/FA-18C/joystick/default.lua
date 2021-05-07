@@ -101,8 +101,8 @@ join(res.keyCommands,{
 {	down = iCommandToggleMirrors, name = _('Toggle Mirrors'), category = _('View Cockpit')},
 -- Utility Light
 {	down = 3255,								cockpit_device_id = 0,					value_down =  1.0,	name = _('Flashlight Color - Toggle Green/White'),	category = {_('View Cockpit'), _('Right Console')}},
-{	down = cptlights_commands.UtilityBrt_EXT,	cockpit_device_id = devices.CPT_LIGTHS,	value_down =  0.1,	name = _('Flashlight BRT Control - Increase'),		category = {_('View Cockpit'), _('Right Console')}},
-{	down = cptlights_commands.UtilityBrt_EXT,	cockpit_device_id = devices.CPT_LIGTHS,	value_down = -0.1,	name = _('Flashlight BRT Control - Decrease'),		category = {_('View Cockpit'), _('Right Console')}},
+{	down = cptlights_commands.UtilityBrt_EXT,	cockpit_device_id = devices.CPT_LIGHTS,	value_down =  0.1,	name = _('Flashlight BRT Control - Increase'),		category = {_('View Cockpit'), _('Right Console')}},
+{	down = cptlights_commands.UtilityBrt_EXT,	cockpit_device_id = devices.CPT_LIGHTS,	value_down = -0.1,	name = _('Flashlight BRT Control - Decrease'),		category = {_('View Cockpit'), _('Right Console')}},
 
 ---------------------------------------------
 -- Flight Control ---------------------------
@@ -271,7 +271,7 @@ join(res.keyCommands,{
 {	down = engines_commands.RENG_FireSw,													cockpit_device_id = devices.ENGINES_INTERFACE,	value_down =  1.0,					name = _('Right Engine/AMAD Fire Warning/Extinguisher Light Switch - PRESS'),			category = {_('Instrument Panel')}},
 {	down = engines_commands.RENG_FireSw,													cockpit_device_id = devices.ENGINES_INTERFACE,	value_down =  0.0,					name = _('Right Engine/AMAD Fire Warning/Extinguisher Light Switch - RELEASE'),			category = {_('Instrument Panel')}},
 -- Master Caution
-{		down = cptlights_commands.MasterCaution,		up = cptlights_commands.MasterCaution,	cockpit_device_id = devices.CPT_LIGTHS,			value_down =  1.0,	value_up = 0.0,	name = _('MASTER CAUTION Reset Button'),												category = {_('Instrument Panel')}},
+{		down = cptlights_commands.MasterCaution,		up = cptlights_commands.MasterCaution,	cockpit_device_id = devices.CPT_LIGHTS,			value_down =  1.0,	value_up = 0.0,	name = _('MASTER CAUTION Reset Button'),												category = {_('Instrument Panel')}},
 -- IR Cooling
 {	down = SMS_commands.IRCoolingSw_ITER,		cockpit_device_id = devices.SMS,				value_down =  1.0,		name = _('IR Cooling Switch - Up'),						category = {_('Instrument Panel')}},
 {	down = SMS_commands.IRCoolingSw_ITER,		cockpit_device_id = devices.SMS,				value_down = -1.0,		name = _('IR Cooling Switch - Down'),					category = {_('Instrument Panel')}},
@@ -481,19 +481,20 @@ join(res.keyCommands,{
 {	down = cmds_commands.EcmJett,									cockpit_device_id = devices.CMDS,	value_down =  1.0,						name = _('ECM JETT JETT SEL Pushbutton Switch - ON'),		category = {_('Instrument Panel'), _('Dispenser')}},
 {	down = cmds_commands.EcmJett,									cockpit_device_id = devices.CMDS,	value_down =  0.0,						name = _('ECM JETT JETT SEL Pushbutton Switch - OFF'),		category = {_('Instrument Panel'), _('Dispenser')}},
 {	down = cmds_commands.EcmJett_EXT,								cockpit_device_id = devices.CMDS,	value_down =  1.0,						name = _('ECM JETT JETT SEL Pushbutton Switch - ON/OFF'),	category = {_('Instrument Panel'), _('Dispenser')}},
-{	down = cmds_commands.Dispenser_EXT,								cockpit_device_id = devices.CMDS,	value_down =  1.0,						name = _('DISPENSER Switch - Up'),						category = {_('Instrument Panel'), _('Dispenser')}},
-{	down = cmds_commands.Dispenser_EXT,								cockpit_device_id = devices.CMDS,	value_down = -1.0,						name = _('DISPENSER Switch - Down'),					category = {_('Instrument Panel'), _('Dispenser')}},
-{	down = cmds_commands.Dispenser,									cockpit_device_id = devices.CMDS,	value_down =  0.2,						name = _('DISPENSER Switch - BYPASS'),					category = {_('Instrument Panel'), _('Dispenser')}},
-{	down = cmds_commands.Dispenser,									cockpit_device_id = devices.CMDS,	value_down =  0.1,						name = _('DISPENSER Switch - ON'),						category = {_('Instrument Panel'), _('Dispenser')}},
-{	down = cmds_commands.Dispenser,									cockpit_device_id = devices.CMDS,	value_down =  0.0,						name = _('DISPENSER Switch - OFF'),						category = {_('Instrument Panel'), _('Dispenser')}},
---{	down = _ITER,				cockpit_device_id = devices.CMDS,	value_down = -1.0,						name = _('ALQ-126 ECM Mode Switch - CCW'),				category = {_('Instrument Panel'), _('Dispenser')}},
---{	down = _ITER,				cockpit_device_id = devices.CMDS,	value_down =  1.0,						name = _('ALQ-126 ECM Mode Switch - CW'),				category = {_('Instrument Panel'), _('Dispenser')}},
---{	down = ,					cockpit_device_id = devices.CMDS,	value_down =  0.4,						name = _('ALQ-126 ECM Mode Switch - XMIT'),				category = {_('Instrument Panel'), _('Dispenser')}},
---{	down = ,					cockpit_device_id = devices.CMDS,	value_down =  0.3,						name = _('ALQ-126 ECM Mode Switch - REC'),				category = {_('Instrument Panel'), _('Dispenser')}},
---{	down = ,					cockpit_device_id = devices.CMDS,	value_down =  0.2,						name = _('ALQ-126 ECM Mode Switch - BIT'),				category = {_('Instrument Panel'), _('Dispenser')}},
---{	down = ,					cockpit_device_id = devices.CMDS,	value_down =  0.1,						name = _('ALQ-126 ECM Mode Switch - STBY'),				category = {_('Instrument Panel'), _('Dispenser')}},
---{	down = ,					cockpit_device_id = devices.CMDS,	value_down =  0.0,						name = _('ALQ-126 ECM Mode Switch - OFF'),				category = {_('Instrument Panel'), _('Dispenser')}},
---
+{	down = cmds_commands.Dispenser_EXT,								cockpit_device_id = devices.CMDS,	value_down =  1.0,						name = _('DISPENSER Switch - Up'),							category = {_('Instrument Panel'), _('Dispenser')}},
+{	down = cmds_commands.Dispenser_EXT,								cockpit_device_id = devices.CMDS,	value_down = -1.0,						name = _('DISPENSER Switch - Down'),						category = {_('Instrument Panel'), _('Dispenser')}},
+{	down = cmds_commands.Dispenser,									cockpit_device_id = devices.CMDS,	value_down =  0.2,						name = _('DISPENSER Switch - BYPASS'),						category = {_('Instrument Panel'), _('Dispenser')}},
+{	down = cmds_commands.Dispenser,									cockpit_device_id = devices.CMDS,	value_down =  0.1,						name = _('DISPENSER Switch - ON'),							category = {_('Instrument Panel'), _('Dispenser')}},
+{	down = cmds_commands.Dispenser,									cockpit_device_id = devices.CMDS,	value_down =  0.0,						name = _('DISPENSER Switch - OFF'),							category = {_('Instrument Panel'), _('Dispenser')}},
+-- AN/ALQ-165 Airborne Self-Protection Jammer (ASPJ)
+{	down = ASPJ_commands.ASPJ_SwitchChange_ITER,					cockpit_device_id = devices.ASPJ,	value_down = -1.0,						name = _('ALQ-165 ECM Mode Switch - CCW'),					category = {_('Instrument Panel'), _('ALQ-165')}},
+{	down = ASPJ_commands.ASPJ_SwitchChange_ITER,					cockpit_device_id = devices.ASPJ,	value_down =  1.0,						name = _('ALQ-165 ECM Mode Switch - CW'),					category = {_('Instrument Panel'), _('ALQ-165')}},
+{	down = ASPJ_commands.ASPJ_SwitchChange,							cockpit_device_id = devices.ASPJ,	value_down =  0.4,						name = _('ALQ-165 ECM Mode Switch - XMIT'),					category = {_('Instrument Panel'), _('ALQ-165')}},
+{	down = ASPJ_commands.ASPJ_SwitchChange,							cockpit_device_id = devices.ASPJ,	value_down =  0.3,						name = _('ALQ-165 ECM Mode Switch - REC'),					category = {_('Instrument Panel'), _('ALQ-165')}},
+{	down = ASPJ_commands.ASPJ_SwitchChange,							cockpit_device_id = devices.ASPJ,	value_down =  0.2,						name = _('ALQ-165 ECM Mode Switch - BIT'),					category = {_('Instrument Panel'), _('ALQ-165')}},
+{	down = ASPJ_commands.ASPJ_SwitchChange,							cockpit_device_id = devices.ASPJ,	value_down =  0.1,						name = _('ALQ-165 ECM Mode Switch - STBY'),					category = {_('Instrument Panel'), _('ALQ-165')}},
+{	down = ASPJ_commands.ASPJ_SwitchChange,							cockpit_device_id = devices.ASPJ,	value_down =  0.0,						name = _('ALQ-165 ECM Mode Switch - OFF'),					category = {_('Instrument Panel'), _('ALQ-165')}},
+
 {	down = SMS_commands.AuxRelSw_ITER,															cockpit_device_id = devices.SMS,			value_down =  0.0,						name = _('Auxiliary Release Switch - ENABLE/NORM'),		category = {_('Instrument Panel')}},
 {	down = SMS_commands.AuxRelSw,																cockpit_device_id = devices.SMS,			value_down =  1.0,						name = _('Auxiliary Release Switch - ENABLE'),			category = {_('Instrument Panel')}},
 {	down = SMS_commands.AuxRelSw,																cockpit_device_id = devices.SMS,			value_down =  0.0,						name = _('Auxiliary Release Switch - NORM'),			category = {_('Instrument Panel')}},
@@ -530,7 +531,7 @@ join(res.keyCommands,{
 --
 {	down = gear_commands.LaunchBarSw,			up = gear_commands.LaunchBarSw,			cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('Launch Bar Control Switch - EXTEND/RETRACT'),						category = {_('Left Vertical Panel')}},
 --
-{	down = cptlights_commands.HookBypass,		up = cptlights_commands.HookBypass,		cockpit_device_id = devices.CPT_LIGTHS,			value_down =  1.0,	value_up = 0.0,	name = _('HOOK BYPASS Switch - FIELD/CARRIER'),								category = {_('Left Vertical Panel')}},
+{	down = cptlights_commands.HookBypass,		up = cptlights_commands.HookBypass,		cockpit_device_id = devices.CPT_LIGHTS,			value_down =  1.0,	value_up = 0.0,	name = _('HOOK BYPASS Switch - FIELD/CARRIER'),								category = {_('Left Vertical Panel')}},
 --
 {	down = extlights_commands.LdgTaxi_EXT,												cockpit_device_id = devices.EXT_LIGHTS,			value_down =  0.0,					name = _('LDG/TAXI LIGHT Switch - ON/OFF'),									category = {_('Left Vertical Panel')}},
 {	down = extlights_commands.LdgTaxi,													cockpit_device_id = devices.EXT_LIGHTS,			value_down =  1.0,					name = _('LDG/TAXI LIGHT Switch - ON'),										category = {_('Left Vertical Panel')}},
@@ -850,22 +851,22 @@ join(res.keyCommands,{
 {	down = ECS_commands.WindshieldSw,															cockpit_device_id = devices.ECS_INTERFACE,		value_down =  0.0,						name = _('Windshield Anti-Ice/Rain Switch - OFF'),			category = {_('Right Console')}},
 {	down = ECS_commands.WindshieldSw,															cockpit_device_id = devices.ECS_INTERFACE,		value_down = -1.0,						name = _('Windshield Anti-Ice/Rain Switch - RAIN'),			category = {_('Right Console')}},
 -- INTR LT Control Panel
-{	pressed = cptlights_commands.Consoles_EXT,													cockpit_device_id = devices.CPT_LIGTHS,			value_pressed = -0.5,					name = _('CONSOLES Lights Dimmer Control - CCW/Decrease'),	category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	pressed = cptlights_commands.Consoles_EXT,													cockpit_device_id = devices.CPT_LIGTHS,			value_pressed =  0.5,					name = _('CONSOLES Lights Dimmer Control - CW/Increase'),	category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	pressed = cptlights_commands.InstPnl_EXT,													cockpit_device_id = devices.CPT_LIGTHS,			value_pressed = -0.5,					name = _('INST PNL Dimmer Control - CCW/Decrease'),			category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	pressed = cptlights_commands.InstPnl_EXT,													cockpit_device_id = devices.CPT_LIGTHS,			value_pressed =  0.5,					name = _('INST PNL Dimmer Control - CW/Increase'),			category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	pressed = cptlights_commands.Flood_EXT,														cockpit_device_id = devices.CPT_LIGTHS,			value_pressed = -0.5,					name = _('FLOOD Light Dimmer Control - CCW/Decrease'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	pressed = cptlights_commands.Flood_EXT,														cockpit_device_id = devices.CPT_LIGTHS,			value_pressed =  0.5,					name = _('FLOOD Light Dimmer Control - CW/Increase'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	pressed = cptlights_commands.Chart_EXT,														cockpit_device_id = devices.CPT_LIGTHS,			value_pressed = -0.5,					name = _('CHART Light Dimmer Control - CCW/Decrease'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	pressed = cptlights_commands.Chart_EXT,														cockpit_device_id = devices.CPT_LIGTHS,			value_pressed =  0.5,					name = _('CHART Light Dimmer Control - CW/Increase'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	pressed = cptlights_commands.WarnCaution_EXT,												cockpit_device_id = devices.CPT_LIGTHS,			value_pressed = -0.5,					name = _('WARN/CAUTION Dimmer Control - CCW/Decrease'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	pressed = cptlights_commands.WarnCaution_EXT,												cockpit_device_id = devices.CPT_LIGTHS,			value_pressed =  0.5,					name = _('WARN/CAUTION Dimmer Control - CW/Increase'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	down = cptlights_commands.ModeSw_EXT,														cockpit_device_id = devices.CPT_LIGTHS,			value_down =  1.0,						name = _('MODE Switch - Up'),								category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	down = cptlights_commands.ModeSw_EXT,														cockpit_device_id = devices.CPT_LIGTHS,			value_down = -1.0,						name = _('MODE Switch - Down'),								category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	down = cptlights_commands.ModeSw,															cockpit_device_id = devices.CPT_LIGTHS,			value_down =  1.0,						name = _('MODE Switch - NVG'),								category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	down = cptlights_commands.ModeSw,															cockpit_device_id = devices.CPT_LIGTHS,			value_down =  0.0,						name = _('MODE Switch - NITE'),								category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	down = cptlights_commands.ModeSw,															cockpit_device_id = devices.CPT_LIGTHS,			value_down = -1.0,						name = _('MODE Switch - DAY'),								category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	down = cptlights_commands.LtTestSw,				up = cptlights_commands.LtTestSw,			cockpit_device_id = devices.CPT_LIGTHS,			value_down =  1.0,		value_up = 0.0,	name = _('Lights Test Switch - TEST/OFF'),					category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	pressed = cptlights_commands.Consoles_EXT,													cockpit_device_id = devices.CPT_LIGHTS,			value_pressed = -0.5,					name = _('CONSOLES Lights Dimmer Control - CCW/Decrease'),	category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	pressed = cptlights_commands.Consoles_EXT,													cockpit_device_id = devices.CPT_LIGHTS,			value_pressed =  0.5,					name = _('CONSOLES Lights Dimmer Control - CW/Increase'),	category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	pressed = cptlights_commands.InstPnl_EXT,													cockpit_device_id = devices.CPT_LIGHTS,			value_pressed = -0.5,					name = _('INST PNL Dimmer Control - CCW/Decrease'),			category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	pressed = cptlights_commands.InstPnl_EXT,													cockpit_device_id = devices.CPT_LIGHTS,			value_pressed =  0.5,					name = _('INST PNL Dimmer Control - CW/Increase'),			category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	pressed = cptlights_commands.Flood_EXT,														cockpit_device_id = devices.CPT_LIGHTS,			value_pressed = -0.5,					name = _('FLOOD Light Dimmer Control - CCW/Decrease'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	pressed = cptlights_commands.Flood_EXT,														cockpit_device_id = devices.CPT_LIGHTS,			value_pressed =  0.5,					name = _('FLOOD Light Dimmer Control - CW/Increase'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	pressed = cptlights_commands.Chart_EXT,														cockpit_device_id = devices.CPT_LIGHTS,			value_pressed = -0.5,					name = _('CHART Light Dimmer Control - CCW/Decrease'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	pressed = cptlights_commands.Chart_EXT,														cockpit_device_id = devices.CPT_LIGHTS,			value_pressed =  0.5,					name = _('CHART Light Dimmer Control - CW/Increase'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	pressed = cptlights_commands.WarnCaution_EXT,												cockpit_device_id = devices.CPT_LIGHTS,			value_pressed = -0.5,					name = _('WARN/CAUTION Dimmer Control - CCW/Decrease'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	pressed = cptlights_commands.WarnCaution_EXT,												cockpit_device_id = devices.CPT_LIGHTS,			value_pressed =  0.5,					name = _('WARN/CAUTION Dimmer Control - CW/Increase'),		category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	down = cptlights_commands.ModeSw_EXT,														cockpit_device_id = devices.CPT_LIGHTS,			value_down =  1.0,						name = _('MODE Switch - Up'),								category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	down = cptlights_commands.ModeSw_EXT,														cockpit_device_id = devices.CPT_LIGHTS,			value_down = -1.0,						name = _('MODE Switch - Down'),								category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	down = cptlights_commands.ModeSw,															cockpit_device_id = devices.CPT_LIGHTS,			value_down =  1.0,						name = _('MODE Switch - NVG'),								category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	down = cptlights_commands.ModeSw,															cockpit_device_id = devices.CPT_LIGHTS,			value_down =  0.0,						name = _('MODE Switch - NITE'),								category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	down = cptlights_commands.ModeSw,															cockpit_device_id = devices.CPT_LIGHTS,			value_down = -1.0,						name = _('MODE Switch - DAY'),								category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	down = cptlights_commands.LtTestSw,				up = cptlights_commands.LtTestSw,			cockpit_device_id = devices.CPT_LIGHTS,			value_down =  1.0,		value_up = 0.0,	name = _('Lights Test Switch - TEST/OFF'),					category = {_('Right Console'), _('INTR LT Control Panel')}},
 -- Sensor Panel
 {	down = RADAR_commands.RADAR_SwitchChange_ITER,												cockpit_device_id = devices.RADAR,				value_down = -1.0,						name = _('RADAR Switch - CCW'),								category = {_('Right Console'), _('Sensor Panel')}},
 {	down = RADAR_commands.RADAR_SwitchChange_ITER,												cockpit_device_id = devices.RADAR,				value_down =  1.0,						name = _('RADAR Switch - CW'),								category = {_('Right Console'), _('Sensor Panel')}},
@@ -1002,8 +1003,8 @@ join(res.keyCommands,{
 {	down = ECS_commands.CabinPressSw,					up = ECS_commands.CabinPressSw,					cockpit_device_id = devices.ECS_INTERFACE,		value_down = -1.0,	value_up = 0.0,	name = _('Cabin Pressure Switch - RAM/DUMP /DUMP'),						category = {_('Special For Joystick'), _('Right Console'), _('ECS Panel')}},
 {	down = ECS_commands.WindshieldSw,					up = ECS_commands.WindshieldSw,					cockpit_device_id = devices.ECS_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('Windshield Anti-Ice/Rain Switch - ANTI ICE/OFF'),				category = {_('Special For Joystick'), _('Right Console')}},
 {	down = ECS_commands.WindshieldSw,					up = ECS_commands.WindshieldSw,					cockpit_device_id = devices.ECS_INTERFACE,		value_down = -1.0,	value_up = 0.0,	name = _('Windshield Anti-Ice/Rain Switch - RAIN/OFF'),					category = {_('Special For Joystick'), _('Right Console')}},
-{	down = cptlights_commands.ModeSw,					up = cptlights_commands.ModeSw,					cockpit_device_id = devices.CPT_LIGTHS,			value_down =  1.0,	value_up = 0.0,	name = _('MODE Switch - NVG/NITE'),										category = {_('Special For Joystick'), _('Right Console'), _('INTR LT Control Panel')}},
-{	down = cptlights_commands.ModeSw,					up = cptlights_commands.ModeSw,					cockpit_device_id = devices.CPT_LIGTHS,			value_down = -1.0,	value_up = 0.0,	name = _('MODE Switch - DAY/NITE'),										category = {_('Special For Joystick'), _('Right Console'), _('INTR LT Control Panel')}},
+{	down = cptlights_commands.ModeSw,					up = cptlights_commands.ModeSw,					cockpit_device_id = devices.CPT_LIGHTS,			value_down =  1.0,	value_up = 0.0,	name = _('MODE Switch - NVG/NITE'),										category = {_('Special For Joystick'), _('Right Console'), _('INTR LT Control Panel')}},
+{	down = cptlights_commands.ModeSw,					up = cptlights_commands.ModeSw,					cockpit_device_id = devices.CPT_LIGHTS,			value_down = -1.0,	value_up = 0.0,	name = _('MODE Switch - DAY/NITE'),										category = {_('Special For Joystick'), _('Right Console'), _('INTR LT Control Panel')}},
 {	down = ky58_commands.KY58_PowerSw,					up = ky58_commands.KY58_PowerSw,				cockpit_device_id = devices.KY58,				value_down =  0.0,	value_up = 0.1,	name = _('KY-58 Power Select Knob - OFF/ON'),							category = {_('Special For Joystick'), _('Right Console'), _('KY-58 Control Panel')}},
 {	down = ky58_commands.KY58_PowerSw,					up = ky58_commands.KY58_PowerSw,				cockpit_device_id = devices.KY58,				value_down =  0.2,	value_up = 0.1,	name = _('KY-58 Power Select Knob - TD/ON'),							category = {_('Special For Joystick'), _('Right Console'), _('KY-58 Control Panel')}},
 {	down = engines_commands.APU_ControlSw_TM_WARTHOG,	up = engines_commands.APU_ControlSw_TM_WARTHOG,	cockpit_device_id = devices.ENGINES_INTERFACE,	value_down =  1.0,	value_up = 0.0,	name = _('APU Control Sw (special) - ON/OFF'),							category = {_('Special For Joystick'), _('Left Console')}},
@@ -1145,13 +1146,13 @@ join(res.axisCommands,{
 --
 {	action = ECS_commands.DefogHandle_AXIS,				cockpit_device_id = devices.ECS_INTERFACE,		name = _('Defog Handle'),							category = {_('Right Console')}},
 -- INTR LT Control Panel
-{	action = cptlights_commands.Consoles_AXIS,			cockpit_device_id = devices.CPT_LIGTHS,			name = _('CONSOLES Lights Dimmer Control'),			category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	action = cptlights_commands.InstPnl_AXIS,			cockpit_device_id = devices.CPT_LIGTHS,			name = _('INST PNL Dimmer Control'),				category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	action = cptlights_commands.Flood_AXIS,				cockpit_device_id = devices.CPT_LIGTHS,			name = _('FLOOD Light Dimmer Control'),				category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	action = cptlights_commands.Chart_AXIS,				cockpit_device_id = devices.CPT_LIGTHS,			name = _('CHART Light Dimmer Control'),				category = {_('Right Console'), _('INTR LT Control Panel')}},
-{	action = cptlights_commands.WarnCaution_AXIS,		cockpit_device_id = devices.CPT_LIGTHS,			name = _('WARN/CAUTION Dimmer Control'),			category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	action = cptlights_commands.Consoles_AXIS,			cockpit_device_id = devices.CPT_LIGHTS,			name = _('CONSOLES Lights Dimmer Control'),			category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	action = cptlights_commands.InstPnl_AXIS,			cockpit_device_id = devices.CPT_LIGHTS,			name = _('INST PNL Dimmer Control'),				category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	action = cptlights_commands.Flood_AXIS,				cockpit_device_id = devices.CPT_LIGHTS,			name = _('FLOOD Light Dimmer Control'),				category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	action = cptlights_commands.Chart_AXIS,				cockpit_device_id = devices.CPT_LIGHTS,			name = _('CHART Light Dimmer Control'),				category = {_('Right Console'), _('INTR LT Control Panel')}},
+{	action = cptlights_commands.WarnCaution_AXIS,		cockpit_device_id = devices.CPT_LIGHTS,			name = _('WARN/CAUTION Dimmer Control'),			category = {_('Right Console'), _('INTR LT Control Panel')}},
 --
-{	action = cptlights_commands.UtilityBrt_AXIS,		cockpit_device_id = devices.CPT_LIGTHS,			name = _('Utility Light BRT Control'),				category = {_('Right Console')}},
+{	action = cptlights_commands.UtilityBrt_AXIS,		cockpit_device_id = devices.CPT_LIGHTS,			name = _('Utility Light BRT Control'),				category = {_('Right Console')}},
 -- KY-58 Control Panel
 {	action = ky58_commands.KY58_Volume_AXIS,			cockpit_device_id = devices.KY58,				name = _('KY-58 Volume Control Knob'),				category = {_('Right Console'), _('KY-58 Control Panel')}},
 
