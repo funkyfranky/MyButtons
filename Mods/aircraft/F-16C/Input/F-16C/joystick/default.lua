@@ -51,6 +51,18 @@ join(res.keyCommands,{
 {down = cpt_commands.EjectionSafetyLever, cockpit_device_id = devices.CPT_MECH, value_down = 0.0, name = _('Ejection Safety Lever LOCKED'), category = {_('_My Buttons')}},
 {down = cpt_commands.EjectionSafetyLever, up = cpt_commands.EjectionSafetyLever, cockpit_device_id = devices.CPT_MECH, value_down = 1.0, value_up = 0.0, name = _('Ejection Safety Lever ARMED/LOCKED'),  category = {_('_My Buttons')}},
 
+-- GEAR INTERFACE
+{down = gear_commands.AntiSkidSw_EXT,	  up = gear_commands.AntiSkidSw,  		cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('ANTI-SKID Switch PARKING BRAKE/ANTI-SKID'),		category = {_('_My Buttons')}},
+
+-- EXTLIGHTS SYSTEM
+{down = extlights_commands.PosFlash,	  up = extlights_commands.PosFlash,  	cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down =  1.0,	value_up = 0.0,	name = _('EXT LIGHTING Control Panel FLASH/STEADY'),	category = {_('_My Buttons')}},
+{down = extlights_commands.LandingTaxi,	  up = extlights_commands.LandingTaxi,  cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down =  1.0,	value_up = 0.0,	name = _('LANDING TAXI LIGHTS Switch LANDING/OFF'),		category = {_('_My Buttons')}},
+{down = extlights_commands.LandingTaxi,	  up = extlights_commands.LandingTaxi,  cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down = -1.0,	value_up = 0.0,	name = _('LANDING TAXI LIGHTS Switch TAXI/OFF'),		category = {_('_My Buttons')}},
+{down = extlights_commands.PosWingTail,	  up = extlights_commands.PosWingTail,  cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down =  1.0,	value_up = 0.0,	name = _('WING/TAIL Switch BRT/OFF'),					category = {_('_My Buttons')}},
+{down = extlights_commands.PosWingTail,	  up = extlights_commands.PosWingTail,  cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down = -1.0,	value_up = 0.0,	name = _('WING/TAIL Switch DIM/OFF'),					category = {_('_My Buttons')}},
+{down = extlights_commands.PosFus,		  up = extlights_commands.PosFus,		cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down =  1.0,	value_up = 0.0,	name = _('FUSELAGE Switch BRT/OFF'),					category = {_('_My Buttons')}},
+{down = extlights_commands.PosFus,		  up = extlights_commands.PosFus,		cockpit_device_id = devices.EXTLIGHTS_SYSTEM,	value_down = -1.0,	value_up = 0.0,	name = _('FUSELAGE Switch DIM/OFF'),					category = {_('_My Buttons')}},
+
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FF end additional commands
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -137,8 +149,12 @@ join(res.keyCommands,{
 ---------------------------------------------
 -- Throttle Grip ----------------------------
 ---------------------------------------------
-{	down = hotas_commands.THROTTLE_TRANSMIT_FWD,		up = hotas_commands.THROTTLE_TRANSMIT_FWD,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - VHF'),										category = {_('Throttle Grip'), _('HOTAS')}},
-{	down = hotas_commands.THROTTLE_TRANSMIT_AFT,		up = hotas_commands.THROTTLE_TRANSMIT_AFT,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - UHF'),										category = {_('Throttle Grip'), _('HOTAS')}},
+{	down = hotas_commands.THROTTLE_TRANSMIT_FWD,		up = hotas_commands.THROTTLE_TRANSMIT_FWD,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - VHF (call radio menu)'),					category = {_('Throttle Grip'), _('HOTAS')}},
+{	down = hotas_commands.THROTTLE_TRANSMIT_AFT,		up = hotas_commands.THROTTLE_TRANSMIT_AFT,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - UHF (call radio menu)'),					category = {_('Throttle Grip'), _('HOTAS')}},
+--[[VOICECHAT_READY
+{	down = hotas_commands.THROTTLE_TRANSMIT_FWD_VOIP,	up = hotas_commands.THROTTLE_TRANSMIT_FWD_VOIP,	cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - VHF (VOIP)'),								category = {_('Throttle Grip'), _('HOTAS')}},
+{	down = hotas_commands.THROTTLE_TRANSMIT_AFT_VOIP,	up = hotas_commands.THROTTLE_TRANSMIT_AFT_VOIP,	cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - UHF (VOIP)'),								category = {_('Throttle Grip'), _('HOTAS')}},
+--]]
 {	down = hotas_commands.THROTTLE_TRANSMIT_LEFT,		up = hotas_commands.THROTTLE_TRANSMIT_LEFT,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - IFF OUT'),									category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_TRANSMIT_RIGHT,		up = hotas_commands.THROTTLE_TRANSMIT_RIGHT,	cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - IFF IN'),									category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_UNCAGE,				up = hotas_commands.THROTTLE_UNCAGE,			cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('UNCAGE Switch'),												category = {_('Throttle Grip'), _('HOTAS')}},
