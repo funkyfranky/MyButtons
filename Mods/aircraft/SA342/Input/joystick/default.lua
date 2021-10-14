@@ -577,7 +577,9 @@ keyCommands = {
 {down = iCommandRecoverHuman, name = _('Get New Plane - respawn'), category = _('General')},
 {down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {down = iCommandScreenShot, name = _('Screenshot'), category = _('General')},
-{down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
+-- obsolete
+--{down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
+--
 {down = iCommandViewCoordinatesInLinearUnits, name = _('Info bar coordinate units toggle'), category = _('General')},
 {down = iCommandCockpitShowPilotOnOff, name = _('Show Pilot Body'), category = _('General')},
 {down = iCommandViewBriefing, name = _('View briefing on/off'), category = _('General')},

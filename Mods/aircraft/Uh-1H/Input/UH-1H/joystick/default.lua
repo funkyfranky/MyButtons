@@ -82,18 +82,12 @@ keyCommands = {
 {down = iCommandActivePauseOnOff, name = _('Active Pause'), category = _('Cheat')},
 
 -- General
-{down = iCommandQuit, name = _('End mission'), category = _('General')},
-{down = iCommandBrakeGo, name = _('Pause'), category = _('General')},
-{down = iCommandAccelerate, name = _('Time accelerate'), category = _('General')},
-{down = iCommandDecelerate, name = _('Time decelerate'), category = _('General')},
-{down = iCommandNoAcceleration, name = _('Time normal'), category = _('General')},
 {down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
 --{down = iCommandTrkEsc, name = _('Playback track cancel'), category = _('General')},
 {down = iCommandInfoOnOff, name = _('Info bar toggle'), category = _('General')},
 {down = iCommandRecoverHuman, name = _('Get New Plane - respawn'), category = _('General')},
 {down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {down = iCommandPlaneJump, name = _('Jump into other aircraft'), category = _('General')},
-{down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {down = iCommandViewCoordinatesInLinearUnits, name = _('Info bar coordinate units toggle'), category = _('General')},
 --{down = iCommandCockpitShowPilotOnOff, name = _('Show Pilot Body'), category = _('General')},
 {down = iCommandPlane_ShowControls, name = _('Show controls indicator') , category = _('General')},
@@ -249,6 +243,11 @@ keyCommands = {
 {down = iCommandAllMissilePadlock, name = _('All missiles padlock'), category = _('View Padlock')},
 {down = iCommandThreatMissilePadlock, name = _('Threat missile padlock'), category = _('View Padlock')},
 {down = iCommandViewTerrainLock, name = _('Lock terrain view'), category = _('View Padlock')},
+
+--	Head Tracker View
+{down = iHeadTrackerZoomToggle,			up = iHeadTrackerZoomToggle, 		 value_down = 1.0, value_up = 0.0, name = _('VR tracker Zoom'),			 category = _('Head Tracker')},
+{down = iHeadTrackerSpyglassZoomToggle,	up = iHeadTrackerSpyglassZoomToggle, value_down = 1.0, value_up = 0.0, name = _('VR tracker Spyglass Zoom'), category = _('Head Tracker')},
+{down = iHeadTrackerPosReset,																				   name = _('VR tracker Reset Base'),	 category = _('Head Tracker')},
 
 -- Labels
 {down = iCommandMarkerState, name = _('All Labels'), category = _('Labels')},
@@ -719,6 +718,9 @@ keyCommands = {
 {down = device_commands.Button_14, cockpit_device_id = devices.XM_130, value_down = 0.0, name = _('Chaff Mode Switch'), category = _('Pedestal')},
 {down = device_commands.Button_6, up = device_commands.Button_6, cockpit_device_id = devices.XM_130, value_down = 1.0, value_up = 0.0, name = _('Flare Dispense Button'), category = _('Pedestal')},
 {down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id = devices.XM_130, value_down = 1.0, value_up = 0.0, name = _('Armed Lamp Test Button'), category = _('Pedestal')},
+
+{down = 3256, cockpit_device_id = 0, value_down = 1.0, name = _('Flashlight'), category = _('View Cockpit')},
+{down = 3255, cockpit_device_id = 0, value_down = 1.0, name = _('Flashlight Color - Toggle Green/White'), category = {_('View Cockpit')}},
 
 },
 

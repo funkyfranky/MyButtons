@@ -69,20 +69,14 @@ keyCommands = {
 
 -- Gameplay
 {down = iCommandActivePauseOnOff, name = _('Pause Active'), category = _('General')},
-{down = iCommandQuit, name = _('Exit mission'), category = _('General')},
 {down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
 {down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
-{down = iCommandBrakeGo, name = _('Pause'), category = _('General')},
-{down = iCommandAccelerate, name = _('Time accelerate'), category = _('General')},
-{down = iCommandDecelerate, name = _('Time decelerate'), category = _('General')},
-{down = iCommandNoAcceleration, name = _('Time normal'), category = _('General')},
 {down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
 {down = iCommandDebriefing, name = _('Show debriefing window'), category = _('General')},
 {down = iCommandRecoverHuman, name = _('Get new plane - respawn'), category = _('General')},
 {down = iCommandTrkEsc, name = _('Playback track cancel'), category = _('General')},
 {down = iCommandInfoOnOff, name = _('Info bar view toggle'), category = _('General')},
 {down = iCommandOneFrame, name = _('One frame mode'), category = _('General')},
-{down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {down = iCommandViewCoordinatesInLinearUnits, name = _('Coordinates units change'), category = _('General')},
 {down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {down = iCommandPlane_ShowControls, name = _('Controls indicator') , category = _('General')},
@@ -353,34 +347,31 @@ keyCommands = {
 {combos = {{key = 'JOY_BTN23'}}, cockpit_device_id = devices.CONTROL_SYSTEM, down = device_commands.Button_3, value_down = 1.0, up = device_commands.Button_2, value_up = 1.0, name = _('Toggle Flaps Dn'), category = _('Flight Control')},
 
 --engine control
-{down = device_commands.Button_8, up = device_commands.Button_10, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 0.0, value_up = 0.5, name = _('Starter Power'), category = _('Engine Control')},
-{down = device_commands.Button_9, up = device_commands.Button_10, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.5, name = _('Starter Clutch'), category = _('Engine Control')},
-{down = device_commands.Button_7, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Starter Switch Cover'), category = _('Engine Control')},
-{down = device_commands.Button_17, up = device_commands.Button_17, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Starter Brushes Retract'), category = _('Engine Control')},
+{down = device_commands.Button_8, up = device_commands.Button_10, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 0.0, value_up = 0.5, name = _('Starter Power'), category = _('Engine Controls')},
+{down = device_commands.Button_9, up = device_commands.Button_10, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.5, name = _('Starter Clutch'), category = _('Engine Controls')},
+{down = device_commands.Button_7, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Starter Switch Cover'), category = _('Engine Controls')},
+{down = device_commands.Button_17, up = device_commands.Button_17, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Starter Brushes Retract'), category = _('Engine Controls')},
 
-{down = device_commands.Button_5, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0,	 name = _('Magneto Switch Forward'), category = _('Engine Control')},
-{down = device_commands.Button_5, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = -1.0,	 name = _('Magneto Switch Backward'), category = _('Engine Control')},
+{down = device_commands.Button_5, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0,	 name = _('Magneto Switch Forward'), category = _('Engine Controls')},
+{down = device_commands.Button_5, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = -1.0,	 name = _('Magneto Switch Backward'), category = _('Engine Controls')},
 
-{down = device_commands.Button_4, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 0.0, name = _('Magneto Switch OFF'), category = _('Engine Control')},
-{down = device_commands.Button_4, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 0.3, name = _('Magneto Switch 1'), category = _('Engine Control')},
-{down = device_commands.Button_4, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 0.6, name = _('Magneto Switch 2'), category = _('Engine Control')},
-{down = device_commands.Button_4, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 0.9, name = _('Magneto Switch 1+2'), category = _('Engine Control')},
+{down = device_commands.Button_4, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 0.0, name = _('Magneto Switch OFF'), category = _('Engine Controls')},
+{down = device_commands.Button_4, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 0.3, name = _('Magneto Switch 1'), category = _('Engine Controls')},
+{down = device_commands.Button_4, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 0.6, name = _('Magneto Switch 2'), category = _('Engine Controls')},
+{down = device_commands.Button_4, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 0.9, name = _('Magneto Switch 1+2'), category = _('Engine Controls')},
 
-{down = device_commands.Button_14, up = device_commands.Button_14, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Engine RPM Increase'), category = _('Engine Control')}, 
-{down = device_commands.Button_15, up = device_commands.Button_15, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = -1.0, value_up = 0.0, name = _('Engine RPM Decrease'), category = _('Engine Control')},
-{down = device_commands.Button_15,                                 cockpit_device_id = devices.ENGINE_SYSTEM, value_down = -1.0, name = _('Prop Feathering'), category = _('Engine Control')}, 
+{down = device_commands.Button_14, up = device_commands.Button_14, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Engine RPM Increase'), category = _('Engine Controls')}, 
+{down = device_commands.Button_15, up = device_commands.Button_15, cockpit_device_id = devices.ENGINE_SYSTEM, value_down = -1.0, value_up = 0.0, name = _('Engine RPM Decrease'), category = _('Engine Controls')},
+{down = device_commands.Button_15,                                 cockpit_device_id = devices.ENGINE_SYSTEM, value_down = -1.0, name = _('Prop Feathering'), category = _('Engine Controls')}, 
 
 
-{down = iCommandLeftEngineStart, name = _('Throttle to START'), category = _('Engine Control')},
-{down = iCommandLeftEngineStop, name = _('Throttle to IDLE'), category = _('Engine Control')},
-{down = device_commands.Button_12, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Throttle Control Lock'), category = _('Engine Control')},
+{down = iCommandLeftEngineStart, name = _('Throttle to START'), category = _('Engine Controls')},
+{down = iCommandLeftEngineStop, name = _('Throttle to IDLE'), category = _('Engine Controls')},
+{down = device_commands.Button_12, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Throttle Control Lock'), category = _('Engine Controls')},
 
-{down = device_commands.Button_14, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Input.Bf109K4.cb_b102_plus'), category = _('Engine Control')},
-{down = device_commands.Button_14, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = -1.0, name = _('Input.Bf109K4.cb_b102_minus'), category = _('Engine Control')},
-
-{down = device_commands.Button_13, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Input.Bf109K4.cb_e103_0'), category = _('Engine Control')},
-{down = device_commands.Button_13, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 0.0, name = _('Input.Bf109K4.cb_e103_1'), category = _('Engine Control')},
-{down = device_commands.Button_16, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Input.Bf109K4.cb_e103'), category = _('Engine Control')},
+{down = device_commands.Button_13, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Input.Bf109K4.cb_e103_0'), category = _('Engine Controls')},
+{down = device_commands.Button_13, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 0.0, name = _('Input.Bf109K4.cb_e103_1'), category = _('Engine Controls')},
+{down = device_commands.Button_16, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Input.Bf109K4.cb_e103'), category = _('Engine Controls')},
 
 
 
@@ -396,8 +387,8 @@ keyCommands = {
 {down = device_commands.Button_12, up = device_commands.Button_12, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Trim Elevator Down'), category = _('Flight Control')},
 {down = device_commands.Button_12, up = device_commands.Button_12, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = -1.0, value_up = 0.0, name = _('Trim Elevator Up'), category = _('Flight Control')},
 
-{pressed = device_commands.Button_14, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = -0.1, name = _('Radiator Flaps Close'), category = _('Engine Control')},
-{pressed = device_commands.Button_14, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = 0.1, name = _('Radiator Flaps Open'), category = _('Engine Control')},
+{pressed = device_commands.Button_14, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = -0.1, name = _('Radiator Flaps Close'), category = _('Engine Controls')},
+{pressed = device_commands.Button_14, cockpit_device_id  = devices.CONTROL_SYSTEM, value_pressed = 0.1, name = _('Radiator Flaps Open'), category = _('Engine Controls')},
 
 --fuel system
 {down = device_commands.Button_5, cockpit_device_id  = devices.FUEL_SYSTEM, value_down = 1.0, name = _('Fuel Selector Valve Up'), category = _('Fuel Control')},

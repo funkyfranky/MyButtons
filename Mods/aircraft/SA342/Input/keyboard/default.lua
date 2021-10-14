@@ -1,5 +1,4 @@
 dofile("Mods/aircraft/SA342/Cockpit/devices.lua")
-dofile("Mods/aircraft/SA342/Cockpit/devices.lua")
 dofile("Mods/aircraft/SA342/Cockpit/command_defs.lua")
 
 return {
@@ -377,7 +376,9 @@ keyCommands = {
 {combos = {{key = 'Tab', reformers = {'RCtrl','RShift'}}}, down = iCommandRecoverHuman, name = _('Get New Plane - respawn'), category = _('General')},
 {combos = {{key = 'C', reformers = {'LAlt'}}}, down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {combos = {{key = 'SysRQ'}}, down = iCommandScreenShot, name = _('Screenshot'), category = _('General')},
-{combos = {{key = 'Pause', reformers = {'RCtrl'}}}, down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
+-- obsolete
+--{combos = {{key = 'Pause', reformers = {'RCtrl'}}}, down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
+--
 {combos = {{key = 'Y', reformers = {'LAlt'}}}, down = iCommandViewCoordinatesInLinearUnits, name = _('Info bar coordinate units toggle'), category = _('General')},
 {combos = {{key = 'P', reformers = {'RShift'}}}, down = iCommandCockpitShowPilotOnOff, name = _('Show Pilot Body'), category = _('General')},
 {combos = {{key = 'B', reformers = {'LAlt'}}},				down = iCommandViewBriefing, name = _('View briefing on/off'), category = _('General')},

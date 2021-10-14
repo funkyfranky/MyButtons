@@ -1,8 +1,3 @@
--- FF: Added device commands
-local cockpit = folder.."../../../Cockpit/Scripts/"
-dofile(cockpit.."devices.lua")
-dofile(cockpit.."command_defs.lua")
-
 return {
 
 forceFeedback = {
@@ -10,7 +5,7 @@ trimmer = 1.0,
 shake = 0.5,
 swapAxes = false,
 },
-fullSync = true,
+
 keyCommands = {
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -78,14 +73,14 @@ keyCommands = {
 {down = ICommandSwitchDialog, name = _('Switch dialog'), category = _('Communications')},
 
 -- View                                                    
-{pressed = iCommandViewLeftSlow, up = iCommandViewStopSlow, name = _('View Left slow'), category = _('View')},
-{pressed = iCommandViewRightSlow, up = iCommandViewStopSlow, name = _('View Right slow'), category = _('View')},
-{pressed = iCommandViewUpSlow, up = iCommandViewStopSlow, name = _('View Up slow'), category = _('View')},
-{pressed = iCommandViewDownSlow, up = iCommandViewStopSlow, name = _('View Down slow'), category = _('View')},
-{pressed = iCommandViewUpRightSlow, up = iCommandViewStopSlow, name = _('View Up Right slow'), category = _('View')},
-{pressed = iCommandViewDownRightSlow, up = iCommandViewStopSlow, name = _('View Down Right slow'), category = _('View')},
-{pressed = iCommandViewDownLeftSlow, up = iCommandViewStopSlow, name = _('View Down Left slow'), category = _('View')},
-{pressed = iCommandViewUpLeftSlow, up = iCommandViewStopSlow, name = _('View Up Left slow'), category = _('View')},
+{combos = {{key = 'JOY_BTN_POV1_L'}}, pressed = iCommandViewLeftSlow, up = iCommandViewStopSlow, name = _('View Left slow'), category = _('View')},
+{combos = {{key = 'JOY_BTN_POV1_R'}}, pressed = iCommandViewRightSlow, up = iCommandViewStopSlow, name = _('View Right slow'), category = _('View')},
+{combos = {{key = 'JOY_BTN_POV1_U'}}, pressed = iCommandViewUpSlow, up = iCommandViewStopSlow, name = _('View Up slow'), category = _('View')},
+{combos = {{key = 'JOY_BTN_POV1_D'}}, pressed = iCommandViewDownSlow, up = iCommandViewStopSlow, name = _('View Down slow'), category = _('View')},
+{combos = {{key = 'JOY_BTN_POV1_UR'}}, pressed = iCommandViewUpRightSlow, up = iCommandViewStopSlow, name = _('View Up Right slow'), category = _('View')},
+{combos = {{key = 'JOY_BTN_POV1_DR'}}, pressed = iCommandViewDownRightSlow, up = iCommandViewStopSlow, name = _('View Down Right slow'), category = _('View')},
+{combos = {{key = 'JOY_BTN_POV1_DL'}}, pressed = iCommandViewDownLeftSlow, up = iCommandViewStopSlow, name = _('View Down Left slow'), category = _('View')},
+{combos = {{key = 'JOY_BTN_POV1_UL'}}, pressed = iCommandViewUpLeftSlow, up = iCommandViewStopSlow, name = _('View Up Left slow'), category = _('View')},
 {pressed = iCommandViewCenter, name = _('View Center'), category = _('View')},
 
 {pressed = iCommandViewForwardSlow, up = iCommandViewForwardSlowStop, name = _('Zoom in slow'), category = _('View')},
@@ -211,17 +206,11 @@ keyCommands = {
 {down = iCommandViewObjectsAll, name = _('Objects all excluded - include'), category = _('View Extended')},
 
 --General
-{down = iCommandQuit, name = _('End mission'), category = _('General')},
-{down = iCommandBrakeGo, name = _('Pause'), category = _('General')},
-{down = iCommandAccelerate, name = _('Time accelerate'), category = _('General')},
-{down = iCommandDecelerate, name = _('Time decelerate'), category = _('General')},
-{down = iCommandNoAcceleration, name = _('Time normal'), category = _('General')},
 {down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
 {down = iCommandRecoverHuman, name = _('Get new plane - respawn'), category = _('General')},
 {down = iCommandTrkEsc, name = _('Playback track cancel'), category = _('General')},
 {down = iCommandInfoOnOff, name = _('Info bar view toggle'), category = _('General')},
 {down = iCommandOneFrame, name = _('One frame mode'), category = _('General')},
-{down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {down = iCommandViewCoordinatesInLinearUnits, name = _('Info bar coordinate units toggle'), category = _('General')},
 {down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {down = iCommandPlane_ShowControls, name = _('Show controls indicator') , category = _('General')},
@@ -229,6 +218,7 @@ keyCommands = {
 {down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
 {down = iCommandDebriefing, name = _('Show debriefing window'), category = _('General')},
 {down = iCommandViewBriefing, name = _('View briefing on/off'), category = _('General')},
+
 
 -- Communications
 {down = iCommandPlaneDoAndHome, name = _('Flight - Complete mission and RTB'), category = _('Communications')},
@@ -243,7 +233,6 @@ keyCommands = {
 {down = iCommandPlane_EngageAirDefenses, name = _('Flight - Attack air defenses'), category = _('Communications')},
 {down = iCommandToggleCommandMenu, name = _('Communication menu'), category = _('Communications')},
 {down = ICommandSwitchToCommonDialog, name = _('Switch to main menu'), category = _('Communications')},
-
 
 
 -- Padlock
@@ -262,62 +251,64 @@ keyCommands = {
 
 
 -- HOTAS
-{down = iCommandPlanePickleOn, up = iCommandPlanePickleOff, name = _('Weapon release'), category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_TriggerSecondStage, up = iCommandPlane_HOTAS_TriggerSecondStage_Off, name = _('Gun Trigger'), category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_TriggerFirstStage , up = iCommandPlane_HOTAS_TriggerFirstStage_Off, name = _('Gun Trigger (first stage)'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN2'}}, 	down = iCommandPlanePickleOn, up = iCommandPlanePickleOff, name = _('Weapon release'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN6'}}, 	down = iCommandPlane_HOTAS_TriggerSecondStage, up = iCommandPlane_HOTAS_TriggerSecondStage_Off, name = _('Gun Trigger'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN1'}}, 	down = iCommandPlane_HOTAS_TriggerFirstStage , up = iCommandPlane_HOTAS_TriggerFirstStage_Off, name = _('Gun Trigger (first stage)'), category = _('HOTAS')},
 
 
-{down = iCommandPlane_HOTAS_DataManagementSwitchUp,    up = iCommandPlane_HOTAS_DataManagementSwitchOff, name = _('HOTAS DMS Forward'),    category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_DataManagementSwitchDown,  up = iCommandPlane_HOTAS_DataManagementSwitchOff, name = _('HOTAS DMS Aft'),  category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_DataManagementSwitchLeft,  up = iCommandPlane_HOTAS_DataManagementSwitchOff, name = _('HOTAS DMS Left'),  category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_DataManagementSwitchRight, up = iCommandPlane_HOTAS_DataManagementSwitchOff, name = _('HOTAS DMS Right'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN11'}}, 	down = iCommandPlane_HOTAS_DataManagementSwitchUp,    up = iCommandPlane_HOTAS_DataManagementSwitchOff, name = _('HOTAS DMS Forward'),    category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN13'}}, 	down = iCommandPlane_HOTAS_DataManagementSwitchDown,  up = iCommandPlane_HOTAS_DataManagementSwitchOff, name = _('HOTAS DMS Aft'),  category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN14'}}, 	down = iCommandPlane_HOTAS_DataManagementSwitchLeft,  up = iCommandPlane_HOTAS_DataManagementSwitchOff, name = _('HOTAS DMS Left'),  category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN12'}}, 	down = iCommandPlane_HOTAS_DataManagementSwitchRight, up = iCommandPlane_HOTAS_DataManagementSwitchOff, name = _('HOTAS DMS Right'), category = _('HOTAS')},
 
-{down = iCommandPlane_HOTAS_TargetManagementSwitchUp,    up = iCommandPlane_HOTAS_TargetManagementSwitchOff, name = _('HOTAS TMS Forward'),    category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_TargetManagementSwitchDown,  up = iCommandPlane_HOTAS_TargetManagementSwitchOff, name = _('HOTAS TMS Aft'),  	category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_TargetManagementSwitchLeft,  up = iCommandPlane_HOTAS_TargetManagementSwitchOff, name = _('HOTAS TMS Left'),  category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_TargetManagementSwitchRight, up = iCommandPlane_HOTAS_TargetManagementSwitchOff, name = _('HOTAS TMS Right'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN7'}}, 	down = iCommandPlane_HOTAS_TargetManagementSwitchUp,    up = iCommandPlane_HOTAS_TargetManagementSwitchOff, name = _('HOTAS TMS Forward'),    category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN9'}}, 	down = iCommandPlane_HOTAS_TargetManagementSwitchDown,  up = iCommandPlane_HOTAS_TargetManagementSwitchOff, name = _('HOTAS TMS Aft'),  category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN10'}}, 	down = iCommandPlane_HOTAS_TargetManagementSwitchLeft,  up = iCommandPlane_HOTAS_TargetManagementSwitchOff, name = _('HOTAS TMS Left'),  category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN8'}}, 	down = iCommandPlane_HOTAS_TargetManagementSwitchRight, up = iCommandPlane_HOTAS_TargetManagementSwitchOff, name = _('HOTAS TMS Right'), category = _('HOTAS')},
 
-{down = iCommandPlane_HOTAS_CMS_Up   , up = iCommandPlane_HOTAS_CMS_Off, name = _('HOTAS CMS Forward'), category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_CMS_Down , up = iCommandPlane_HOTAS_CMS_Off, name = _('HOTAS CMS Aft'),  category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_CMS_Left , up = iCommandPlane_HOTAS_CMS_Off, name = _('HOTAS CMS Left'),  category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_CMS_Right, up = iCommandPlane_HOTAS_CMS_Off, name = _('HOTAS CMS Right'), category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_CMS_Zaxis, up = iCommandPlane_HOTAS_CMS_Zaxis_Off, name = _('HOTAS CMS Z Axis'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN15'}}, 	down = iCommandPlane_HOTAS_CMS_Up   , up = iCommandPlane_HOTAS_CMS_Off, name = _('HOTAS CMS Forward'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN17'}}, 	down = iCommandPlane_HOTAS_CMS_Down , up = iCommandPlane_HOTAS_CMS_Off, name = _('HOTAS CMS Aft'),  category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN18'}}, 	down = iCommandPlane_HOTAS_CMS_Left , up = iCommandPlane_HOTAS_CMS_Off, name = _('HOTAS CMS Left'),  category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN16'}}, 	down = iCommandPlane_HOTAS_CMS_Right, up = iCommandPlane_HOTAS_CMS_Off, name = _('HOTAS CMS Right'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN19'}}, 	down = iCommandPlane_HOTAS_CMS_Zaxis, up = iCommandPlane_HOTAS_CMS_Zaxis_Off, name = _('HOTAS CMS Z Axis'), category = _('HOTAS')},
 
 {pressed = iCommandPlaneRadarUp, up = iCommandPlaneRadarStop, name = _('HOTAS Slew Up'), category = _('HOTAS')},
 {pressed = iCommandPlaneRadarDown, up = iCommandPlaneRadarStop, name = _('HOTAS Slew Down'), category = _('HOTAS')},
 {pressed = iCommandPlaneRadarLeft, up = iCommandPlaneRadarStop, name = _('HOTAS Slew Left'), category = _('HOTAS')},
 {pressed = iCommandPlaneRadarRight, up = iCommandPlaneRadarStop, name = _('HOTAS Slew Right'), category = _('HOTAS')},
 
-{combos = {{key = 'JOY_BTN_POV1_U'}},down = iCommandPlane_HOTAS_CoolieUp,    up = iCommandPlane_HOTAS_CoolieOff, name = _('HOTAS Coolie Switch Up'),    category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN_POV1_D'}},down = iCommandPlane_HOTAS_CoolieDown,  up = iCommandPlane_HOTAS_CoolieOff, name = _('HOTAS Coolie Switch Down'),  category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN_POV1_L'}},down = iCommandPlane_HOTAS_CoolieLeft,  up = iCommandPlane_HOTAS_CoolieOff, name = _('HOTAS Coolie Switch Left'),  category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN_POV1_R'}},down = iCommandPlane_HOTAS_CoolieRight, up = iCommandPlane_HOTAS_CoolieOff, name = _('HOTAS Coolie Switch Right'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_CoolieUp,    up = iCommandPlane_HOTAS_CoolieOff, name = _('HOTAS Coolie Switch Up'),    category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_CoolieDown,  up = iCommandPlane_HOTAS_CoolieOff, name = _('HOTAS Coolie Switch Down'),  category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_CoolieLeft,  up = iCommandPlane_HOTAS_CoolieOff, name = _('HOTAS Coolie Switch Left'),  category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_CoolieRight, up = iCommandPlane_HOTAS_CoolieOff, name = _('HOTAS Coolie Switch Right'), category = _('HOTAS')},
 
-{combos = {{key = 'JOY_BTN10'}}	,down = iCommandPlane_HOTAS_BoatSwitchAft,up = iCommandPlane_HOTAS_BoatSwitchCenter, name = _('HOTAS Boat Switch Aft'), category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN9'}}	,down = iCommandPlane_HOTAS_BoatSwitchForward,up = iCommandPlane_HOTAS_BoatSwitchCenter, name = _('HOTAS Boat Switch Forward'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_BoatSwitchAft, name = _('HOTAS Boat Switch Aft'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_BoatSwitchCenter, name = _('HOTAS Boat Switch Center'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_BoatSwitchForward, name = _('HOTAS Boat Switch Forward'), category = _('HOTAS')},
 
-{combos = {{key = 'JOY_BTN12'}}	,down = iCommandPlane_HOTAS_ChinaHatAft, up = iCommandPlane_HOTAS_ChinaHatOff, name = _('HOTAS China Hat Aft'), category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN11'}}	,down = iCommandPlane_HOTAS_ChinaHatForward, up = iCommandPlane_HOTAS_ChinaHatOff, name = _('HOTAS China Hat Forward'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_ChinaHatAft, up = iCommandPlane_HOTAS_ChinaHatOff, name = _('HOTAS China Hat Aft'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_ChinaHatForward, up = iCommandPlane_HOTAS_ChinaHatOff, name = _('HOTAS China Hat Forward'), category = _('HOTAS')},
 
-{combos = {{key = 'JOY_BTN15'}}	,down = iCommandPlane_HOTAS_LeftThrottleButton, up = iCommandPlane_HOTAS_LeftThrottleButton_Off, name = _('HOTAS Left Throttle Button'), category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_MasterModeControlButton, up = iCommandPlane_HOTAS_MasterModeControlButtonUP, name = _('HOTAS Master Mode Control Button'), category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_NoseWheelSteeringButton, up = iCommandPlane_HOTAS_NoseWheelSteeringButtonOff, name = _('HOTAS Nosewheel Steering Button'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_LeftThrottleButton,  up = iCommandPlane_HOTAS_LeftThrottleButton_Off, name = _('HOTAS Left Throttle Button'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN5'}},down = iCommandPlane_HOTAS_MasterModeControlButton, up = iCommandPlane_HOTAS_MasterModeControlButtonUP, name = _('HOTAS Master Mode Control Button'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN3'}},down = iCommandPlane_HOTAS_NoseWheelSteeringButton, up = iCommandPlane_HOTAS_NoseWheelSteeringButtonOff, name = _('HOTAS Nosewheel Steering Button'), category = _('HOTAS')},
 
-{combos = {{key = 'JOY_BTN8'}}	,down = iCommandPlane_HOTAS_SpeedBrakeSwitchAft, up = iCommandPlane_HOTAS_SpeedBrakeSwitchCenter, name = _('HOTAS Speed Brake Switch Aft'), category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN7'}}	,down = iCommandPlane_HOTAS_SpeedBrakeSwitchForward, up = iCommandPlane_HOTAS_SpeedBrakeSwitchCenter, name = _('HOTAS Speed Brake Switch Forward'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_SpeedBrakeSwitchAft, up = iCommandPlane_HOTAS_SpeedBrakeSwitchCenter, name = _('HOTAS Speed Brake Switch Aft'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_SpeedBrakeSwitchForward, up = iCommandPlane_HOTAS_SpeedBrakeSwitchCenter, name = _('HOTAS Speed Brake Switch Forward'), category = _('HOTAS')},
 
-{combos = {{key = 'JOY_BTN14'}}	,down = iCommandPlane_HOTAS_PinkySwitchAft,     up = iCommandPlane_HOTAS_PinkySwitchCenter, name = _('HOTAS Pinky Switch Aft'),     category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN13'}}	,down = iCommandPlane_HOTAS_PinkySwitchForward, up = iCommandPlane_HOTAS_PinkySwitchCenter, name = _('HOTAS Pinky Switch Forward'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_PinkySwitchAft,  	name = _('HOTAS Pinky Switch Aft'),     category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_PinkySwitchForward, name = _('HOTAS Pinky Switch Forward'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_PinkySwitchCenter , name = _('HOTAS Pinky Switch Center'),  category = _('HOTAS')},
 
-{combos = {{key = 'JOY_BTN3'}}	,down = iCommandPlane_HOTAS_MIC_SwitchUp,    up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Up'),    category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN5'}}	,down = iCommandPlane_HOTAS_MIC_SwitchDown,  up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Down'),  category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN6'}}	,down = iCommandPlane_HOTAS_MIC_SwitchLeft,  up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Aft'),  category = _('HOTAS')},
-{combos = {{key = 'JOY_BTN4'}}	,down = iCommandPlane_HOTAS_MIC_SwitchRight, up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Forward'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_MIC_SwitchUp,    up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Up'),    category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_MIC_SwitchDown,  up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Down'),  category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_MIC_SwitchLeft,  up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Aft'),  category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_MIC_SwitchRight, up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Forward'), category = _('HOTAS')},
 
-{pressed = iCommandPlaneTrimUp, up = iCommandPlaneTrimStop, name = _('Trim: Nose Down'), category = _('HOTAS')},
-{pressed = iCommandPlaneTrimDown, up = iCommandPlaneTrimStop, name = _('Trim: Nose Up'), category = _('HOTAS')},
-{pressed = iCommandPlaneTrimLeft, up = iCommandPlaneTrimStop, name = _('Trim: Left Wing Down'), category = _('HOTAS')},
-{pressed = iCommandPlaneTrimRight, up = iCommandPlaneTrimStop, name = _('Trim: Right Wing Down'), category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN_POV1_U',reformers = {'LCtrl'}}}, pressed = iCommandPlaneTrimUp   , up = iCommandPlaneTrimStop, name = _('Trim: Nose Down')	    , category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN_POV1_D',reformers = {'LCtrl'}}}, pressed = iCommandPlaneTrimDown , up = iCommandPlaneTrimStop, name = _('Trim: Nose Up')	    , category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN_POV1_L',reformers = {'LCtrl'}}}, pressed = iCommandPlaneTrimLeft , up = iCommandPlaneTrimStop, name = _('Trim: Left Wing Down') , category = _('HOTAS')},
+{combos = {{key = 'JOY_BTN_POV1_R',reformers = {'LCtrl'}}}, pressed = iCommandPlaneTrimRight, up = iCommandPlaneTrimStop, name = _('Trim: Right Wing Down'), category = _('HOTAS')},
 
 {down = iCommandPlaneEmergencyDisconnectLever, up = iCommandPlaneEmergencyDisconnectLever, name = _('Emergency Disconnect Lever'), category = _('HOTAS')},
 
@@ -352,6 +343,10 @@ keyCommands = {
 {down = iCommandPlaneWheelBrakeRightOn, up = iCommandPlaneWheelBrakeRightOff, name = _('Wheel Brake Right On/Off'), category = _('Systems')},
 {down = iCommandPlaneWheelBrakeLeftOn, up = iCommandPlaneWheelBrakeLeftOff, name = _('Wheel Brake Left On/Off'), category = _('Systems')},
 {down = iCommandPlaneEmergencyBrake, up = iCommandPlaneEmergencyBrake, name = _('Emergency Wheel Brake'), category = _('Systems')},
+{down = iCommandLeftEngineStart, name = _('Engine Start Left'), category = _('Systems')},
+{down = iCommandRightEngineStart, name = _('Engine Start Right'), category = _('Systems')},
+{down = iCommandLeftEngineStop, name = _('Engine Stop Left'), category = _('Systems')},
+{down = iCommandRightEngineStop, name = _('Engine Stop Right'), category = _('Systems')},
 {down = iCommandPlaneFonar, name = _('Canopy Open/Close'), category = _('Systems')},
 {down = iCommandPlaneEject, name = _('Eject'), category = _('Systems')},
 {down = iCommandPlaneCockpitIllumination, name = _('Cockpit Illumination'), category = _('Systems')},
@@ -364,11 +359,6 @@ keyCommands = {
 {down = iCommandArmGroundSafetyCover,  name = _('Armament ground safety cover'), category = _('Systems')},
 {down = iCommandArmGroundSafetySwitch,  name = _('Armament ground safety switch'), category = _('Systems')},
 
-{combos = {{key = 'JOY_BTN30'}}	,down = iCommandLeftEngineStop , up = iCommandLeftEngineStart,  name = _('Left Engine Throttle Set OFF') , category = _('Systems')},
-{combos = {{key = 'JOY_BTN29'}}	,down = iCommandRightEngineStop, up = iCommandRightEngineStart, name = _('Right Engine Throttle Set OFF'), category = _('Systems')},
-{combos = {{key = 'JOY_BTN22'}}	,down = iCommandPlane_FLAPS_UP, up = iCommandPlane_FLAPS_MNR_from_UP,name = _('Toggle Flaps Up'), category = _('Systems')},
-{combos = {{key = 'JOY_BTN23'}}	,down = iCommandPlane_FLAPS_DN, up = iCommandPlane_FLAPS_MNR_from_DN,name = _('Toggle Flaps Dn'), category = _('Systems')},
-
 {down = iCommand_FireExting_LeftEngineExting					, name = _('Left Engine T-Handle Fire Extinguisher')							, category = _('Fire Extinguishers System')},
 {down = iCommand_FireExting_APUExting							, name = _('APU T-Handle Fire Extinguisher')									, category = _('Fire Extinguishers System')},
 {down = iCommand_FireExting_RightEngineExting					, name = _('Right Engine T-Handle Fire Extinguisher')							, category = _('Fire Extinguishers System')},
@@ -379,23 +369,33 @@ keyCommands = {
 
 
 -- Autopilot
-{combos = {{key = 'JOY_BTN26'}}	, down = iCommandPlaneAutopilot	   , up = iCommandPlaneAutopilot	  , name = _('LAAP Engage/Disengage')    , category = _('LASTE Control Panel')},
-{combos = {{key = 'JOY_BTN27'}}	, down = iCommandPlaneStabPathHold , up = iCommand_LASTE_from_PATH_to_ALTHDG, name = _('LAAP Mode Selector (PATH)'), category = _('LASTE Control Panel')},
-{combos = {{key = 'JOY_BTN28'}}	, down = iCommandPlaneStabHbarBank , up = iCommand_LASTE_from_ALT_to_ALTHDG , name = _('LAAP Mode Selector (ALT)') , category = _('LASTE Control Panel')},
-{combos = {{key = 'JOY_BTN24'}}	, down = iCommandPlane_EAC_ARM     , up = iCommandPlane_EAC_OFF       , name = _('EAC Arm/Off') 			  , category = _('LASTE Control Panel')},
-{combos = {{key = 'JOY_BTN25'}}	, down = iCommandPlane_RDR_ALTM_NRM, up = iCommandPlane_RDR_ALTM_DIS  , name = _('RDR ALTM Normal/Disable')  , category = _('LASTE Control Panel')},
+{down = iCommandPlaneAutopilot, up = iCommandPlaneAutopilot, name 		= _('LAAP Engage/Disengage')     , category = _('LASTE Control Panel')},
+{down = iCommandPlaneStabPathHold, name 	= _('LAAP Path Hold')			  , category = _('LASTE Control Panel')},
+{down = iCommandPlaneStabHbarHeading, name  = _('LAAP Altitude/Heading Hold'), category = _('LASTE Control Panel')},
+{down = iCommandPlaneStabHbarBank, name 	= _('LAAP Altitude/Bank Hold')   , category = _('LASTE Control Panel')},
+{down = iCommandPlane_EAC_ARM, up = iCommandPlane_EAC_ARM, name = _('EAC Arm'), category = _('LASTE Control Panel')},
+{down = iCommandPlane_EAC_OFF, up = iCommandPlane_EAC_OFF, name = _('EAC Off'), category = _('LASTE Control Panel')},
+{down = iCommandPlane_RDR_ALTM_NRM, name 	= _('RDR ALTM Normal')			  , category = _('LASTE Control Panel')},
+{down = iCommandPlane_RDR_ALTM_DIS, name 	= _('RDR ALTM Disable')	      , category = _('LASTE Control Panel')},
+
 
 -- Engine Control Panel
 
-{combos = {{key = 'JOY_BTN21'}}	, down = iCommandPlane_LG_WRN_Silence		, up = iCommandPlane_LG_WRN_Silence				, name = _('Landing Gear Warning Silence')			, category = _('Engine Control Panel')};
-{combos = {{key = 'JOY_BTN20'}}	, down = iCommandPlane_APU_Start			, up = iCommandPlane_APU_Off	   				, name = _('APU Start/Off')						, category = _('Engine Control Panel')};
-{combos = {{key = 'JOY_BTN31'}}	, down = iCommandPlane_L_ENG_OPER_Ign 		, up = iCommandPlane_L_ENG_OPER_Norm_from_Ign	, name = _('Left Engine Oper Ign / Norm')			, category = _('Engine Control Panel')};
-{combos = {{key = 'JOY_BTN18'}}	, down = iCommandPlane_L_ENG_OPER_Motor		, up = iCommandPlane_L_ENG_OPER_Norm_from_Motor	, name = _('Left Engine Oper Motor / Norm')		, category = _('Engine Control Panel')};
-{combos = {{key = 'JOY_BTN32'}}	, down = iCommandPlane_R_ENG_OPER_Ign  		, up = iCommandPlane_R_ENG_OPER_Norm_from_Ign	, name = _('Right Engine Oper Ign / Norm')			, category = _('Engine Control Panel')};
-{combos = {{key = 'JOY_BTN19'}}	, down = iCommandPlane_R_ENG_OPER_Motor		, up = iCommandPlane_R_ENG_OPER_Norm_from_Motor	, name = _('Right Engine Oper Motor / Norm')		, category = _('Engine Control Panel')};
-{combos = {{key = 'JOY_BTN16'}}	, down = iCommandPlane_L_ENG_FUEL_FLOW_Norm	, up = iCommandPlane_L_ENG_FUEL_FLOW_Override	, name = _('Left Engine Fuel Flow Norm/Override')	, category = _('Engine Control Panel')};
-{combos = {{key = 'JOY_BTN17'}}	, down = iCommandPlane_R_ENG_FUEL_FLOW_Norm	, up = iCommandPlane_R_ENG_FUEL_FLOW_Override	, name = _('Right Engine Fuel Flow Norm/Override')	, category = _('Engine Control Panel')};
-
+{down = iCommandPlane_LG_WRN_Silence		, up = iCommandPlane_LG_WRN_Silence		, name = _('Landing Gear Warning Silence')			, category = _('Engine Control Panel')},
+{down = iCommandPlane_APU_Start														, name = _('APU Start')							, category = _('Engine Control Panel')},
+{down = iCommandPlane_APU_Off														, name = _('APU Off')								, category = _('Engine Control Panel')},
+{down = iCommandPlane_L_ENG_OPER_Ign 		, up = iCommandPlane_L_ENG_OPER_Norm	, name = _('Left Engine Oper Ign / Norm')			, category = _('Engine Control Panel')},
+{down = iCommandPlane_L_ENG_OPER_Motor												, name = _('Left Engine Oper Motor')				, category = _('Engine Control Panel')},
+{down = iCommandPlane_L_ENG_OPER_Norm												, name = _('Left Engine Oper Norm')				, category = _('Engine Control Panel')},
+{down = iCommandPlane_R_ENG_OPER_Ign 		, up = iCommandPlane_R_ENG_OPER_Norm	, name = _('Right Engine Oper Ign / Norm')			, category = _('Engine Control Panel')},
+{down = iCommandPlane_R_ENG_OPER_Motor												, name = _('Right Engine Oper Motor')				, category = _('Engine Control Panel')},
+{down = iCommandPlane_R_ENG_OPER_Norm												, name = _('Right Engine Oper Norm')				, category = _('Engine Control Panel')},
+{down = iCommandPlane_L_ENG_FUEL_FLOW_Norm											, name = _('Left Engine Fuel Flow Norm')			, category = _('Engine Control Panel')},
+{down = iCommandPlane_L_ENG_FUEL_FLOW_Override										, name = _('Left Engine Fuel Flow Override')		, category = _('Engine Control Panel')},
+{down = iCommandPlane_R_ENG_FUEL_FLOW_Norm											, name = _('Right Engine Fuel Flow Norm')			, category = _('Engine Control Panel')},
+{down = iCommandPlane_R_ENG_FUEL_FLOW_Override										, name = _('Right Engine Fuel Flow Override')		, category = _('Engine Control Panel')},
+{pressed = iCommandPlaneThrottleFrictionDec											, name = _('Throttle Friction Decrease')			, category = _('Engine Control Panel')},
+{pressed = iCommandPlaneThrottleFrictionInc											, name = _('Throttle Friction Increase')			, category = _('Engine Control Panel')},
 
 --NightVision
 {down    = iCommandViewNightVisionGogglesOn   , name = _('Toggle goggles')   , category = _('Sensors')},
@@ -627,7 +627,7 @@ keyCommands = {
 --UHF Radio
 {down = iCommandPlaneUHFPresetChannelSelectorDec		, name = _('UHF Preset chanel selector decrease'), category = _('UHF Radio')},
 {down = iCommandPlaneUHFPresetChannelSelectorInc		, name = _('UHF Preset chanel selector increase'), category = _('UHF Radio')},
-{down = iCommandPlaneUHF100MhzSelector1					, name = _('UHF 100Mhz selector switch 1'), category = _('UHF Radio')},
+--{down = iCommandPlaneUHF100MhzSelector1					, name = _('UHF 100Mhz selector switch 1'), category = _('UHF Radio')},
 {down = iCommandPlaneUHF100MhzSelector2					, name = _('UHF 100Mhz selector switch 2'), category = _('UHF Radio')},
 {down = iCommandPlaneUHF100MhzSelector3					, name = _('UHF 100Mhz selector switch 3'), category = _('UHF Radio')},
 {down = iCommandPlaneUHF100MhzSelectorA					, name = _('UHF 100Mhz selector switch A'), category = _('UHF Radio')},
@@ -809,6 +809,11 @@ keyCommands = {
 {pressed = iCommandPlaneFloodLightsIncrease,							name = _('Floodlight Increase'), category = _('Lighting Panel')},
 {pressed = iCommandPlaneConsoleLightsDecrease,							name = _('Console Light Decrease'), category = _('Lighting Panel')},
 {pressed = iCommandPlaneConsoleLightsIncrease,							name = _('Console Light Increase'), category = _('Lighting Panel')},
+-- Flashlight (Utility Light)
+{down = 3256, cockpit_device_id = 0, value_down = 1.0, 					name = _('Flashlight'), category = _('View Cockpit')},
+{down = 3255, cockpit_device_id = 0, value_down = 1.0,					name = _('Flashlight Color - Toggle Green/White'), category = {_('View Cockpit'), _('Right Console')}},
+{down = 3019, cockpit_device_id = 49, value_down =  0.1,				name = _('Flashlight BRT Control - Increase'), category = {_('View Cockpit'), _('Right Console')}},
+{down = 3019, cockpit_device_id = 49, value_down = -0.1,				name = _('Flashlight BRT Control - Decrease'), category = {_('View Cockpit'), _('Right Console')}},
 
 --AHCP
 {down = iCommandPlaneAHCPMasterArm, 									name = _('Master switch ARM'), category = _('Armament HUD Control Panel')},
@@ -897,8 +902,8 @@ keyCommands = {
 {down = iCommandPlane_AAP_SteerPt_FLTPLAN, 				name = _('AAP Steer Point FLT PLAN'), category = _('AAP')},
 {down = iCommandPlane_AAP_SteerPt_MARK, 				name = _('AAP Steer Point MARK'), category = _('AAP')},
 {down = iCommandPlane_AAP_SteerPt_MISSION, 				name = _('AAP Steer Point MISSION'), category = _('AAP')},
-{down = iCommandPlane_AAP_SteerSw_Up, up=iCommandPlane_AAP_SteerSw_Up, name = _('AAP STEER Switch Up'), category = _('AAP')},
-{down = iCommandPlane_AAP_SteerSw_Down, up=iCommandPlane_AAP_SteerSw_Down, name = _('AAP STEER Switch Down'), category = _('AAP')},
+{down = 3002, up = 3002, cockpit_device_id = 22, value_down = 1.0,	value_up = 0.0, name = _('AAP STEER Switch Up'), category = _('AAP')},
+{down = 3003, up = 3003, cockpit_device_id = 22, value_down = -1.0,	value_up = 0.0, name = _('AAP STEER Switch Down'), category = _('AAP')},
 
 -- TACAN Control Panel
 {down = iCommandPlane_TACAN_Mode_Off, 					name = _('TACAN Mode Select OFF'), category = _('TACAN Control Panel')},
@@ -957,6 +962,8 @@ keyCommands = {
 {down = iCommandPlane_VHF_FM_Load,up=iCommandPlane_VHF_FM_Load, name = _('VHF FM Load'), category = _('VHF FM Radio Control Panel')},
 {down = 3017, cockpit_device_id = 56, value_down = -1.0,name = _('VHF FM Preset Channel Decrease'), category = _('VHF FM Radio Control Panel')},
 {down = 3017, cockpit_device_id = 56, value_down = 1.0,name = _('VHF FM Preset Channel Increase'), category = _('VHF FM Radio Control Panel')},
+
+
 {pressed = iCommandPlane_VHF_FM_10MHz_Dec, 				name = _('VHF FM 10Mhz Selector Decrease'), category = _('VHF FM Radio Control Panel')},
 {pressed = iCommandPlane_VHF_FM_10MHz_Inc, 				name = _('VHF FM 10Mhz Selector Increase'), category = _('VHF FM Radio Control Panel')},
 
@@ -1052,6 +1059,7 @@ keyCommands = {
 {down = iCommandPlaneShowKneeboard, up = iCommandPlaneShowKneeboard ,value_down = 1.0,value_up = -1.0, name = _('Kneeboard glance view')  , category = _('Kneeboard')},
 {down = 3003	, cockpit_device_id  = 100,value_down = 1.0, name = _('Kneeboard current position mark point')  , category = _('Kneeboard')},
 
+
 },
 
 
@@ -1059,8 +1067,8 @@ keyCommands = {
 axisCommands = {
 
 -- joystick axes 
-{action = iCommandPlaneRoll, name = _('Roll')},
-{action = iCommandPlanePitch, name = _('Pitch')},
+{combos = {{key = 'JOY_X'}}, action = iCommandPlaneRoll, name = _('Roll')},
+{combos = {{key = 'JOY_Y'}}, action = iCommandPlanePitch, name = _('Pitch')},
 {action = iCommandPlaneRudder, name = _('Rudder')},
 {action = iCommandPlaneThrustCommon, name = _('Throttle Both')},
 
@@ -1073,19 +1081,18 @@ axisCommands = {
 {action = iCommandViewRollAbs			, name = _('Absolute Roll Shift Camera View')},
 {action = iCommandViewZoomAbs			, name = _('Zoom View')},
 
-{combos = {{key = 'JOY_RZ'}}, action = iCommandPlaneThrustLeft , name = _('Throttle Left')},
-{combos = {{key = 'JOY_Z'}}, action = iCommandPlaneThrustRight, name = _('Throttle Right')},
+{action = iCommandPlaneThrustLeft , name = _('Throttle Left')},
+{action = iCommandPlaneThrustRight, name = _('Throttle Right')},
 
 {action = iCommandWheelBrake,		name = _('Wheel Brake')},
 {action = iCommandLeftWheelBrake,	name = _('Wheel Brake Left')},
 {action = iCommandRightWheelBrake,	name = _('Wheel Brake Right')},
 
--- Deadzone: 30
--- Saturation X: 100
--- Saturation Y: 15
--- Curve: 0
+{action = iCommandPlaneSelecterHorizontalAbs, name = _('HOTAS Slew Horizontal')},
+{action = iCommandPlaneSelecterVerticalAbs	, name = _('HOTAS Slew Vertical')},
 
-{combos = {{key = 'JOY_X',filter = {saturationY = 0.15,saturationX = 1.0,curvature = {0}, deadzone = 0.3, invert = false, slider = false,}}},action = iCommandPlaneSelecterHorizontalAbs, name = _('HOTAS Slew Horizontal')},
-{combos = {{key = 'JOY_Y',filter = {saturationY = 0.15,saturationX = 1.0,curvature = {0}, deadzone = 0.3, invert = false, slider = false,}}},action = iCommandPlaneSelecterVerticalAbs  , name = _('HOTAS Slew Vertical')},
+-- Flashlight (Utility Light)
+{action = 3020, cockpit_device_id = 49, name = _('Flashlight BRT Control'), category = {_('Right Console')}},
+
 },
 }

@@ -87,8 +87,12 @@ join(res.keyCommands,{
 ---------------------------------------------
 -- Throttle Grip ----------------------------
 ---------------------------------------------
-{combos = {{key = '\\',	reformers = {'RCtrl'}}},	down = hotas_commands.THROTTLE_TRANSMIT_FWD,		up = hotas_commands.THROTTLE_TRANSMIT_FWD,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - VHF'),										category = {_('Throttle Grip'), _('HOTAS')}},
-{combos = {{key = '\\',	reformers = {'RAlt'}}},		down = hotas_commands.THROTTLE_TRANSMIT_AFT,		up = hotas_commands.THROTTLE_TRANSMIT_AFT,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - UHF'),										category = {_('Throttle Grip'), _('HOTAS')}},
+{combos = {{key = '\\',	reformers = {'RCtrl'}}},	down = hotas_commands.THROTTLE_TRANSMIT_FWD,		up = hotas_commands.THROTTLE_TRANSMIT_FWD,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - VHF (call radio menu)'),					category = {_('Throttle Grip'), _('HOTAS')}},
+{combos = {{key = '\\',	reformers = {'RAlt'}}},		down = hotas_commands.THROTTLE_TRANSMIT_AFT,		up = hotas_commands.THROTTLE_TRANSMIT_AFT,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - UHF (call radio menu)'),					category = {_('Throttle Grip'), _('HOTAS')}},
+--[[VOICECHAT_READY
+{													down = hotas_commands.THROTTLE_TRANSMIT_FWD_VOIP,	up = hotas_commands.THROTTLE_TRANSMIT_FWD_VOIP,	cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - VHF (VOIP)'),								category = {_('Throttle Grip'), _('HOTAS')}},
+{													down = hotas_commands.THROTTLE_TRANSMIT_AFT_VOIP,	up = hotas_commands.THROTTLE_TRANSMIT_AFT_VOIP,	cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - UHF (VOIP)'),								category = {_('Throttle Grip'), _('HOTAS')}},
+--]]
 {													down = hotas_commands.THROTTLE_TRANSMIT_LEFT,		up = hotas_commands.THROTTLE_TRANSMIT_LEFT,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - IFF OUT'),									category = {_('Throttle Grip'), _('HOTAS')}},
 {													down = hotas_commands.THROTTLE_TRANSMIT_RIGHT,		up = hotas_commands.THROTTLE_TRANSMIT_RIGHT,	cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - IFF IN'),									category = {_('Throttle Grip'), _('HOTAS')}},
 {combos = {{key = 'C'}},							down = hotas_commands.THROTTLE_UNCAGE,				up = hotas_commands.THROTTLE_UNCAGE,			cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('UNCAGE Switch'),												category = {_('Throttle Grip'), _('HOTAS')}},

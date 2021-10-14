@@ -290,11 +290,11 @@ keyCommands={
 {combos = {{key = "Enter", reformers = {'RCtrl'}}}, down = iCommandPlane_ShowControls, name=_('Show controls indicator'),category=_('General')},
 
 -- Gameplay
-{combos={{key='Esc'}},down=iCommandQuit,name=_('End mission'),category=_('General')},
-{combos={{key='Pause'}},down=iCommandBrakeGo,name=_('Pause'),category=_('General')},
-{combos={{key='Z',reformers={'LCtrl'}}},down=iCommandAccelerate,name=_('Time accelerate'),category=_('General')},
-{combos={{key='Z',reformers={'LWin','LCtrl'}}},down=iCommandDecelerate,name=_('Time decelerate'),category=_('General')},
-{combos={{key='Z',reformers={'LShift'}}},down=iCommandNoAcceleration,name=_('Time normal'),category=_('General')},
+--{combos={{key='Esc'}},down=iCommandQuit,name=_('End mission'),category=_('General')},
+--{combos={{key='Pause'}},down=iCommandBrakeGo,name=_('Pause'),category=_('General')},
+--{combos={{key='Z',reformers={'LCtrl'}}},down=iCommandAccelerate,name=_('Time accelerate'),category=_('General')},
+--{combos={{key='Z',reformers={'LWin','LCtrl'}}},down=iCommandDecelerate,name=_('Time decelerate'),category=_('General')},
+--{combos={{key='Z',reformers={'LShift'}}},down=iCommandNoAcceleration,name=_('Time normal'),category=_('General')},
 {combos={{key='\''}},down=iCommandScoresWindowToggle,name=_('Score window'),category=_('General')},
 {combos={{key=','}},down=iCommandDebriefing,name=_('Show debriefing window'),category=_('General')},
 {combos={{key='.'}},down=iCommandMissionResourcesManagement,name=_('Rearming and Refueling Window'),category=_('General')},
@@ -303,7 +303,6 @@ keyCommands={
 {combos={{key='Tab',reformers={'RCtrl','RShift'}}},down=iCommandRecoverHuman,name=_('Get new plane - respawn'),category=_('General')},
 {combos={{key='J',reformers={'RAlt'}}},down=iCommandPlaneJump,name=_('Jump into other aircraft'),category=_('General')},
 {combos={{key='SysRQ'}},down=iCommandScreenShot,name=_('Screenshot'),category=_('General')},
-{combos={{key='Pause',reformers={'RCtrl'}}},down=iCommandGraphicsFrameRate,name=_('Frame rate counter - Service info'),category=_('General')},
 {combos={{key='Y',reformers={'LAlt'}}},down=iCommandViewCoordinatesInLinearUnits,name=_('Info bar coordinate units toggle'),category=_('General')},
 {combos={{key='C',reformers={'LAlt','LShift'}}},down=iCommandCockpitClickModeOnOff,name=_('Mouse cursor cockpit mode'),category=_('General')},
 {combos={{key='S',reformers={'LWin','LAlt'}}},down=iCommandSoundOnOff,name=_('Sound On/Off'),category=_('General')},
@@ -404,7 +403,7 @@ keyCommands={
 
 -- SPO - RWR
 {combos={{key='Z',reformers={'RShift'}}},down=device_commands.SPOon,cockpit_device_id=devices.SPO,value_down=1,name=_('SPO-10 RWR On/Off'),category=_('Radar and SPO')},
-{combos={{key='Z',reformers={'LAlt'}}},down=device_commands.SPOdayNight,cockpit_device_id=devices.SPO,value_down=1,name=_('SPO-10 Day/Night lights'),category=_('Radar and SPO')},
+{combos={{key='Z',reformers={'RAlt'}}},down=device_commands.SPOdayNight,cockpit_device_id=devices.SPO,value_down=1,name=_('SPO-10 Day/Night lights'),category=_('Radar and SPO')},
 {combos={{key='Z',reformers={'RCtrl'}}},down=device_commands.SPOtest,up=device_commands.SPOtest,cockpit_device_id=devices.SPO,value_down=1.0,value_up=0.0,name=_('SPO-10 Test'),category=_('Radar and SPO')},
 
 --***************************************** Radio *************************************************************
@@ -603,7 +602,6 @@ keyCommands={
 {combos={{key='0'}},down=device_commands.ASPlauncherSelect,cockpit_device_id=devices.WEAPON_CONTROL,value_down=0.5,name=_('Select Weapon AA 3-4'),category=_('Weapons / Select')},
 {combos={{key='-'}},down=device_commands.ASPlauncherSelect,cockpit_device_id=devices.WEAPON_CONTROL,value_down=0.6,name=_('Select Weapon AA 1-2'),category=_('Weapons / Select')},
 
-{combos={{key='-'}},down=device_commands.ASPlauncherSelect,cockpit_device_id=devices.WEAPON_CONTROL,value_down=0.6,name=_('Select Weapon AA 1-2'),category=_('Weapons / Select')},
 
 --/N/ 05.02.2016. 2-way circular toggle weapon selector
 {down=iCommandHelicopter_SelectWeapon_Internal,cockpit_device_id=devices.WEAPON_CONTROL,name=_('Select next weapon'),category=_('Weapons / Select')},

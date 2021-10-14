@@ -133,6 +133,7 @@ keyCommands = {
 {down = iCommandViewSlowMouse, name = _('Camera view mouse rate slow'), category = _('View')},
 {down = iCommandViewNormalMouse, name = _('Camera view mouse rate normal'), category = _('View')},
 
+
 -- Cockpit view
 {down = iCommandViewTempCockpitOn, up = iCommandViewTempCockpitOff, name = _('Cockpit panel view in'), category = _('View Cockpit')},
 {down = iCommandViewTempCockpitToggle, name = _('Cockpit panel view toggle'), category = _('View Cockpit')},
@@ -197,6 +198,13 @@ keyCommands = {
 {down = iCommandViewTransposeModeOn, up = iCommandViewTransposeModeOff, name = _('Camera transpose mode (press and hold)'), category = _('View Cockpit')},
 {down = iCommand_ExplorationStart, name = _('Enable visual recon mode'), category = _('View Cockpit')},
 
+
+--	Head Tracker View
+{down = iHeadTrackerZoomToggle,			up = iHeadTrackerZoomToggle, 		 value_down = 1.0, value_up = 0.0, name = _('VR tracker Zoom'),			 category = _('Head Tracker')},
+{down = iHeadTrackerSpyglassZoomToggle,	up = iHeadTrackerSpyglassZoomToggle, value_down = 1.0, value_up = 0.0, name = _('VR tracker Spyglass Zoom'), category = _('Head Tracker')},
+{down = iHeadTrackerPosReset,																				   name = _('VR tracker Reset Base'),	 category = _('Head Tracker')},
+
+
 -- Extended view
 {down = iCommandViewCameraJiggle, name = _('Camera jiggle toggle'), category = _('View Extended')},
 {down = iCommandViewKeepTerrain, name = _('Keep terrain camera altitude'), category = _('View Extended')},
@@ -210,17 +218,11 @@ keyCommands = {
 {down = iCommandViewObjectsAll, name = _('Objects all excluded - include'), category = _('View Extended')},
 
 --General
-{down = iCommandQuit, name = _('End mission'), category = _('General')},
-{down = iCommandBrakeGo, name = _('Pause'), category = _('General')},
-{down = iCommandAccelerate, name = _('Time accelerate'), category = _('General')},
-{down = iCommandDecelerate, name = _('Time decelerate'), category = _('General')},
-{down = iCommandNoAcceleration, name = _('Time normal'), category = _('General')},
 {down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
 {down = iCommandRecoverHuman, name = _('Get new plane - respawn'), category = _('General')},
 {down = iCommandTrkEsc, name = _('Playback track cancel'), category = _('General')},
 {down = iCommandInfoOnOff, name = _('Info bar view toggle'), category = _('General')},
 {down = iCommandOneFrame, name = _('One frame mode'), category = _('General')},
-{down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {down = iCommandViewCoordinatesInLinearUnits, name = _('Info bar coordinate units toggle'), category = _('General')},
 {down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {down = iCommandPlane_ShowControls, name = _('Show controls indicator') , category = _('General')},
@@ -638,7 +640,7 @@ keyCommands = {
 --UHF Radio
 {down = iCommandPlaneUHFPresetChannelSelectorDec		, name = _('UHF Preset chanel selector decrease'), category = _('UHF Radio')},
 {down = iCommandPlaneUHFPresetChannelSelectorInc		, name = _('UHF Preset chanel selector increase'), category = _('UHF Radio')},
-{down = iCommandPlaneUHF100MhzSelector1					, name = _('UHF 100Mhz selector switch 1'), category = _('UHF Radio')},
+--{down = iCommandPlaneUHF100MhzSelector1					, name = _('UHF 100Mhz selector switch 1'), category = _('UHF Radio')},
 {down = iCommandPlaneUHF100MhzSelector2					, name = _('UHF 100Mhz selector switch 2'), category = _('UHF Radio')},
 {down = iCommandPlaneUHF100MhzSelector3					, name = _('UHF 100Mhz selector switch 3'), category = _('UHF Radio')},
 {down = iCommandPlaneUHF100MhzSelectorA					, name = _('UHF 100Mhz selector switch A'), category = _('UHF Radio')},
@@ -913,8 +915,8 @@ keyCommands = {
 {down = iCommandPlane_AAP_SteerPt_FLTPLAN, 				name = _('AAP Steer Point FLT PLAN'), category = _('AAP')},
 {down = iCommandPlane_AAP_SteerPt_MARK, 				name = _('AAP Steer Point MARK'), category = _('AAP')},
 {down = iCommandPlane_AAP_SteerPt_MISSION, 				name = _('AAP Steer Point MISSION'), category = _('AAP')},
-{down = iCommandPlane_AAP_SteerSw_Up, up=iCommandPlane_AAP_SteerSw_Up, name = _('AAP STEER Switch Up'), category = _('AAP')},
-{down = iCommandPlane_AAP_SteerSw_Down, up=iCommandPlane_AAP_SteerSw_Down, name = _('AAP STEER Switch Down'), category = _('AAP')},
+{down = 3002, up = 3002, cockpit_device_id = 22, value_down = 1.0,	value_up = 0.0, name = _('AAP STEER Switch Up'), category = _('AAP')},
+{down = 3003, up = 3003, cockpit_device_id = 22, value_down = -1.0,	value_up = 0.0, name = _('AAP STEER Switch Down'), category = _('AAP')},
 
 -- TACAN Control Panel
 {down = iCommandPlane_TACAN_Mode_Off, 					name = _('TACAN Mode Select OFF'), category = _('TACAN Control Panel')},

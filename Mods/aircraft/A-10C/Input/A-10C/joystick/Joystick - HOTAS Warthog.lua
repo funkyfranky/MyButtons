@@ -206,17 +206,11 @@ keyCommands = {
 {down = iCommandViewObjectsAll, name = _('Objects all excluded - include'), category = _('View Extended')},
 
 --General
-{down = iCommandQuit, name = _('End mission'), category = _('General')},
-{down = iCommandBrakeGo, name = _('Pause'), category = _('General')},
-{down = iCommandAccelerate, name = _('Time accelerate'), category = _('General')},
-{down = iCommandDecelerate, name = _('Time decelerate'), category = _('General')},
-{down = iCommandNoAcceleration, name = _('Time normal'), category = _('General')},
 {down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
 {down = iCommandRecoverHuman, name = _('Get new plane - respawn'), category = _('General')},
 {down = iCommandTrkEsc, name = _('Playback track cancel'), category = _('General')},
 {down = iCommandInfoOnOff, name = _('Info bar view toggle'), category = _('General')},
 {down = iCommandOneFrame, name = _('One frame mode'), category = _('General')},
-{down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {down = iCommandViewCoordinatesInLinearUnits, name = _('Info bar coordinate units toggle'), category = _('General')},
 {down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {down = iCommandPlane_ShowControls, name = _('Show controls indicator') , category = _('General')},
@@ -633,7 +627,7 @@ keyCommands = {
 --UHF Radio
 {down = iCommandPlaneUHFPresetChannelSelectorDec		, name = _('UHF Preset chanel selector decrease'), category = _('UHF Radio')},
 {down = iCommandPlaneUHFPresetChannelSelectorInc		, name = _('UHF Preset chanel selector increase'), category = _('UHF Radio')},
-{down = iCommandPlaneUHF100MhzSelector1					, name = _('UHF 100Mhz selector switch 1'), category = _('UHF Radio')},
+--{down = iCommandPlaneUHF100MhzSelector1					, name = _('UHF 100Mhz selector switch 1'), category = _('UHF Radio')},
 {down = iCommandPlaneUHF100MhzSelector2					, name = _('UHF 100Mhz selector switch 2'), category = _('UHF Radio')},
 {down = iCommandPlaneUHF100MhzSelector3					, name = _('UHF 100Mhz selector switch 3'), category = _('UHF Radio')},
 {down = iCommandPlaneUHF100MhzSelectorA					, name = _('UHF 100Mhz selector switch A'), category = _('UHF Radio')},
@@ -815,6 +809,11 @@ keyCommands = {
 {pressed = iCommandPlaneFloodLightsIncrease,							name = _('Floodlight Increase'), category = _('Lighting Panel')},
 {pressed = iCommandPlaneConsoleLightsDecrease,							name = _('Console Light Decrease'), category = _('Lighting Panel')},
 {pressed = iCommandPlaneConsoleLightsIncrease,							name = _('Console Light Increase'), category = _('Lighting Panel')},
+-- Flashlight (Utility Light)
+{down = 3256, cockpit_device_id = 0, value_down = 1.0, 					name = _('Flashlight'), category = _('View Cockpit')},
+{down = 3255, cockpit_device_id = 0, value_down = 1.0,					name = _('Flashlight Color - Toggle Green/White'), category = {_('View Cockpit'), _('Right Console')}},
+{down = 3019, cockpit_device_id = 49, value_down =  0.1,				name = _('Flashlight BRT Control - Increase'), category = {_('View Cockpit'), _('Right Console')}},
+{down = 3019, cockpit_device_id = 49, value_down = -0.1,				name = _('Flashlight BRT Control - Decrease'), category = {_('View Cockpit'), _('Right Console')}},
 
 --AHCP
 {down = iCommandPlaneAHCPMasterArm, 									name = _('Master switch ARM'), category = _('Armament HUD Control Panel')},
@@ -903,8 +902,8 @@ keyCommands = {
 {down = iCommandPlane_AAP_SteerPt_FLTPLAN, 				name = _('AAP Steer Point FLT PLAN'), category = _('AAP')},
 {down = iCommandPlane_AAP_SteerPt_MARK, 				name = _('AAP Steer Point MARK'), category = _('AAP')},
 {down = iCommandPlane_AAP_SteerPt_MISSION, 				name = _('AAP Steer Point MISSION'), category = _('AAP')},
-{down = iCommandPlane_AAP_SteerSw_Up, up=iCommandPlane_AAP_SteerSw_Up, name = _('AAP STEER Switch Up'), category = _('AAP')},
-{down = iCommandPlane_AAP_SteerSw_Down, up=iCommandPlane_AAP_SteerSw_Down, name = _('AAP STEER Switch Down'), category = _('AAP')},
+{down = 3002, up = 3002, cockpit_device_id = 22, value_down = 1.0,	value_up = 0.0, name = _('AAP STEER Switch Up'), category = _('AAP')},
+{down = 3003, up = 3003, cockpit_device_id = 22, value_down = -1.0,	value_up = 0.0, name = _('AAP STEER Switch Down'), category = _('AAP')},
 
 -- TACAN Control Panel
 {down = iCommandPlane_TACAN_Mode_Off, 					name = _('TACAN Mode Select OFF'), category = _('TACAN Control Panel')},
@@ -1091,6 +1090,9 @@ axisCommands = {
 
 {action = iCommandPlaneSelecterHorizontalAbs, name = _('HOTAS Slew Horizontal')},
 {action = iCommandPlaneSelecterVerticalAbs	, name = _('HOTAS Slew Vertical')},
+
+-- Flashlight (Utility Light)
+{action = 3020, cockpit_device_id = 49, name = _('Flashlight BRT Control'), category = {_('Right Console')}},
 
 },
 }

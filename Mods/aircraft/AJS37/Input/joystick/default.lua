@@ -3,11 +3,11 @@ local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua
 local keycommands = {
 
 	-- FF Begin
-	--{down = 3500, value_down =  1.0, up = 3500, value_up =  0.0, cockpit_device_id = 28, name = _("Countermeasure Dispense - Press: Off Release: Kont"), category = _("Countermeasures")},
-	--{down = 3500, value_down =  0.0, up = 3500, value_up =  1.0, cockpit_device_id = 28, name = _("Countermeasure Dispense - Press: Kont Release: Off"), category = _("Countermeasures")},
 	{down = 3718,            cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,                 name = _('Oxygen Lever ON'), category = _('Flight Control')},
 	{down = 3718,            cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 0.0,                 name = _('Oxygen Lever OFF'), category = _('Flight Control')},
 	{down = 3003, up = 3003, cockpit_device_id = devices.ELECTRICSYSTEM, value_down = 1.0, value_up = 0.0, name = _('Backup Generator On/Off'), category = _('Electronics')},
+	{down = 3304,            cockpit_device_id = devices.ENGINEPANEL,    value_down = 1.0,                 name = _('Autopilot Autothrottle mode AFK ON'), category = _('Flight Control')},
+	{down = 3304,            cockpit_device_id = devices.ENGINEPANEL,    value_down = 0.0,                 name = _('Autopilot Autothrottle mode AFK OFF'), category = _('Flight Control')},
 	-- FF End
 
     -- Autopilot

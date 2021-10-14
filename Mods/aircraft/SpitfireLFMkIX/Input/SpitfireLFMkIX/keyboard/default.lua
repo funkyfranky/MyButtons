@@ -15,13 +15,8 @@ keyCommands = {
 
 -- Gameplay -------------------------------------------------------------------------------
 {combos = {{key = 'Pause', reformers = {'LShift', 'LWin'}}},down = iCommandActivePauseOnOff, name = _('Pause Active'), category = _('General')},
-{combos = {{key = 'Esc'}},                                  down = iCommandQuit, name = _('Exit mission'), category = _('General')},
 {combos = {{key = 'B', reformers = {'LAlt'}}},              down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
 {combos = {{key = 'J', reformers = {'RAlt'}}},              down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
-{combos = {{key = 'Pause'}},                                down = iCommandBrakeGo, name = _('Pause'), category = _('General')},
-{combos = {{key = 'Z', reformers = {'LCtrl'}}},             down = iCommandAccelerate, name = _('Time accelerate'), category = _('General')},
-{combos = {{key = 'Z', reformers = {'LAlt'}}},              down = iCommandDecelerate, name = _('Time decelerate'), category = _('General')},
-{combos = {{key = 'Z', reformers = {'LShift'}}},            down = iCommandNoAcceleration, name = _('Time normal'), category = _('General')},
 {combos = {{key = '\''}},                                   down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
 {combos = {{key = '\'', reformers = {'RShift'}}},           down = iCommandDebriefing, name = _('Show debriefing window'), category = _('General')},
 {combos = {{key = 'Y', reformers = {'LCtrl'}}},             down = iCommandInfoOnOff, name = _('Info bar view toggle'), category = _('General')},
@@ -29,7 +24,6 @@ keyCommands = {
 {combos = {{key = 'SysRQ'}},                                down = iCommandScreenShot, name = _('Screenshot'), category = _('General'), disabled = true},
 {                                                           down = iCommandTrkEsc, name = _('Playback track cancel'), category = _('General')},
 {combos = {{key = 'Pause', reformers = {'RShift'}}},        down = iCommandOneFrame, name = _('One frame mode'), category = _('General')},
-{combos = {{key = 'Pause', reformers = {'RCtrl'}}},         down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {combos = {{key = 'Y', reformers = {'LAlt'}}},              down = iCommandViewCoordinatesInLinearUnits, name = _('Coordinates units change'), category = _('General')},
 {combos = {{key = 'C', reformers = {'LAlt'}}},              down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {combos = {{key = 'Enter', reformers = {'RCtrl'}}},         down = iCommandPlane_ShowControls, name = _('Controls indicator') , category = _('General')},
@@ -91,9 +85,9 @@ keyCommands = {
 {combos = {{key = 'F2', reformers = {'LAlt'}}},             down = iCommandViewLocal, name = _('F2 Toggle local camera control'), category = _('View')},
 {combos = {{key = 'F3'}},                                   down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {combos = {{key = 'F3', reformers = {'LCtrl'}}},            down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
-{combos = {{key = 'F4'}},                                   down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
-{combos = {{key = 'F4', reformers = {'LShift'}}},           down = iCommandViewRear, name = _('F4 Look back view'), category = _('View')},
-{combos = {{key = 'F4', reformers = {'LCtrl'}}},            down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
+{combos = {{key = 'F4'}},								down = iCommandViewRear,														name = _('F4 Look back view'),									category = _('View')},
+{combos = {{key = 'F4', reformers = {'LCtrl'}}},		down = iCommandViewChase,														name = _('F4 Chase view'),										category = _('View')},
+{combos = {{key = 'F4', reformers = {'LShift'}}},		down = iCommandViewChaseArcade,													name = _('F4 Arcade Chase view'),								category = _('View')},
 {combos = {{key = 'F5'}},                                   down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
 {combos = {{key = 'F5', reformers = {'LCtrl'}}},            down = iCommandViewFightGround, name = _('F5 Ground hostile view'), category = _('View')},
 {combos = {{key = 'F6'}},                                   down = iCommandViewWeapons, name = _('F6 Released weapon view'), category = _('View')},
@@ -101,7 +95,7 @@ keyCommands = {
 {combos = {{key = 'F7'}},                                   down = iCommandViewGround, name = _('F7 Ground unit view'), category = _('View')},
 {combos = {{key = 'F7', reformers = {'LCtrl'}}},            down = iCommandViewJFO, name = _('F7 Ground JFO/JTAC view'), category = _('View')},
 --{combos = {{key = 'F8'}}, down = iCommandViewTargets, name = _('F8 Target view'), category = _('View')},
---{combos = {{key = 'F8', reformers = {'RAlt'}}}, down = iCommandViewTargetType, name = _('F8 Player targets/All targets filter'), category = _('View')},
+--{combos = {{key = 'F8', reformers = {'RCtrl'}}}, down = iCommandViewTargetType, name = _('F8 Player targets/All targets filter'), category = _('View')},
 {combos = {{key = 'F9'}},                                   down = iCommandViewNavy, name = _('F9 Ship view'), category = _('View')},
 {combos = {{key = 'F9', reformers = {'LAlt'}}},             down = iCommandViewLndgOfficer, name = _('F9 Landing signal officer view'), category = _('View')},
 {combos = {{key = 'F10'}},                                  down = iCommandViewAWACS, name = _('F10 Theater map view'), category = _('View')},
@@ -119,6 +113,17 @@ keyCommands = {
 {combos = {{key = '[', reformers = {'LShift'}}},            down =  iCommandViewFastMouse, name = _('Camera view mouse rate fast'), category = _('View')},
 {combos = {{key = '[', reformers = {'LCtrl'}}},             down = iCommandViewSlowMouse, name = _('Camera view mouse rate slow'), category = _('View')},
 {combos = {{key = '[', reformers = {'LAlt'}}},              down = iCommandViewNormalMouse, name = _('Camera view mouse rate normal'), category = _('View')},
+
+-- Experimental object free camera
+{combos = {{key = 'F2', reformers = {'RCtrl'}}}, 		down = iCommandViewObject, name = _('Object free camera'), category = _('View')},
+{combos = {{key = '=', reformers = {'RAlt', 'RShift'}}}, 			down = iCommandViewBookmarksEditor, name = _('Object free camera bookmarks editor'), category = _('View')},
+{combos = {{key = '-', reformers = {'RWin'}}}, 			down = iCommandViewBookmarksMenu, name = _('Object free camera bookmarks menu'), category = _('View')},
+{combos = {{key = 'O', reformers = {'RWin'}}}, 			down = iCommandViewPieMenu, name = _('Pie menu'), category = _('View')},
+-- Experimental wingman camera
+{combos = {{key = 'F4', reformers = {'LAlt'}}}, 		down = iCommandViewWingman, name = _('Wingman camera'), category = _('View')},
+-- Camera position to/from clipboard 
+{combos = {{key = ',', reformers = {'RAlt', 'RCtrl'}}}, 			down = iCommandViewCameraToClipboard, name = _('Unload camera position to clipboard'), category = _('View')},
+{combos = {{key = '.', reformers = {'RAlt', 'RCtrl'}}}, 			down = iCommandViewClipboardToCamera, name = _('Load camera position from clipboard'), category = _('View')},
 -- ----------------------------------------------------------------------------------------
 
 
@@ -359,8 +364,8 @@ keyCommands = {
 
 
 -- Magnetic Compass -----------------------------------------------------------------------
-{combos = {{key = 'C', reformers = {'RAlt'}}},              pressed = device_commands.Button_18, cockpit_device_id = devices.CONTROLS, value_pressed = -1.0, name = _('Input.SpitfireLFMkIX.compass_minus'), category = _('Front Dash')},
-{combos = {{key = 'C', reformers = {'RCtrl'}}},             pressed = device_commands.Button_18, cockpit_device_id = devices.CONTROLS, value_pressed = 1.0,  name = _('Input.SpitfireLFMkIX.compass_plus'), category = _('Front Dash')},
+{combos = {{key = 'C', reformers = {'RAlt'}}},              pressed = device_commands.Button_18, cockpit_device_id = devices.CONTROLS, value_pressed = -0.25, name = _('Input.SpitfireLFMkIX.compass_minus'), category = _('Front Dash')},
+{combos = {{key = 'C', reformers = {'RCtrl'}}},             pressed = device_commands.Button_18, cockpit_device_id = devices.CONTROLS, value_pressed = 0.25,  name = _('Input.SpitfireLFMkIX.compass_plus'), category = _('Front Dash')},
 -- TODO make available only in slider configuration:
 --{                                                           action = device_commands.Button_19, cockpit_device_id = devices.CONTROLS, name = _('Input.SpitfireLFMkIX.compass_slider', 'Compass Course (analog)'), category = _('Front Dash')},
 -- ----------------------------------------------------------------------------------------

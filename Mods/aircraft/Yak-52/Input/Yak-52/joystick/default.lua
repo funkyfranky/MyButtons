@@ -91,20 +91,14 @@ keyCommands = {
 
 -- Gameplay -------------------------------------------------------------------------------
 {down = iCommandActivePauseOnOff, name = _('Pause Active'), category = _('General')},
-{down = iCommandQuit, name = _('Exit mission'), category = _('General')},
 {down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
 {down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
-{down = iCommandBrakeGo, name = _('Pause'), category = _('General')},
-{down = iCommandAccelerate, name = _('Time accelerate'), category = _('General')},
-{down = iCommandDecelerate, name = _('Time decelerate'), category = _('General')},
-{down = iCommandNoAcceleration, name = _('Time normal'), category = _('General')},
 {down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
 {down = iCommandDebriefing, name = _('Show debriefing window'), category = _('General')},
 {down = iCommandInfoOnOff, name = _('Info bar view toggle'), category = _('General')},
 {down = iCommandRecoverHuman, name = _('Get new plane - respawn'), category = _('General')},
 {down = iCommandTrkEsc, name = _('Playback track cancel'), category = _('General')},
 {down = iCommandOneFrame, name = _('One frame mode'), category = _('General')},
-{down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {down = iCommandViewCoordinatesInLinearUnits, name = _('Coordinates units change'), category = _('General')},
 {down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {down = iCommandPlane_ShowControls, name = _('Controls indicator') , category = _('General')},
@@ -180,7 +174,7 @@ keyCommands = {
 {                                                                                                                       down = iCommandViewGround, name = _('F7 Ground unit view'), category = _('View')},
 {                                                                                                                       down = iCommandViewJFO, name = _('F7 Ground JFO/JTAC view'), category = _('View')},
 --{combos = {{key = 'F8'}}, down = iCommandViewTargets, name = _('F8 Target view'), category = _('View')},
---{combos = {{key = 'F8', reformers = {'RAlt'}}}, down = iCommandViewTargetType, name = _('F8 Player targets/All targets filter'), category = _('View')},
+--{combos = {{key = 'F8', reformers = {'RCtrl'}}}, down = iCommandViewTargetType, name = _('F8 Player targets/All targets filter'), category = _('View')},
 {                                                                                                                       down = iCommandViewNavy, name = _('F9 Ship view'), category = _('View')},
 {                                                                                                                       down = iCommandViewLndgOfficer, name = _('F9 Landing signal officer view'), category = _('View')},
 {                                                                                                                       down = iCommandViewAWACS, name = _('F10 Theater map view'), category = _('View')},
@@ -293,7 +287,11 @@ keyCommands = {
 {                                                                                                                       down = iCommandViewTerrainLock, name = _('Padlock terrain point'), category = _('View Padlock')},
 -- ----------------------------------------------------------------------------------------
 
-
+--	Head Tracker View ---------------------------------------------------------------------
+{								down = iHeadTrackerZoomToggle,			up = iHeadTrackerZoomToggle, 		 value_down = 1.0, value_up = 0.0, name = _('VR tracker Zoom'),			 category = _('Head Tracker')},
+{								down = iHeadTrackerSpyglassZoomToggle,	up = iHeadTrackerSpyglassZoomToggle, value_down = 1.0, value_up = 0.0, name = _('VR tracker Spyglass Zoom'), category = _('Head Tracker')},
+{								down = iHeadTrackerPosReset,																				   name = _('VR tracker Reset Base'),	 category = _('Head Tracker')},
+-- ----------------------------------------------------------------------------------------
 
 -- Labels ---------------------------------------------------------------------------------
 {                                                                                                                       down = iCommandMarkerState, name = _('Labels All'), category = _('Labels')},
