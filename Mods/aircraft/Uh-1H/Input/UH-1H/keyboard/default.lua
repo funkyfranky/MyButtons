@@ -70,11 +70,6 @@ keyCommands = {
 {combos = {{key = 'End' , reformers = {'LWin'}}} , down = iCommandEnginesStop, name = _('Auto Stop') , category = _('Cheat')},
 
 -- General
-{combos = {{key = 'Esc'}}, down = iCommandQuit, name = _('End mission'), category = _('General')},
-{combos = {{key = 'Pause'}}, down = iCommandBrakeGo, name = _('Pause'), category = _('General')},
-{combos = {{key = 'Z', reformers = {'LCtrl'}}}, down = iCommandAccelerate, name = _('Time accelerate'), category = _('General')},
-{combos = {{key = 'Z', reformers = {'LAlt'}}}, down = iCommandDecelerate, name = _('Time decelerate'), category = _('General')},
-{combos = {{key = 'Z', reformers = {'LShift'}}}, down = iCommandNoAcceleration, name = _('Time normal'), category = _('General')},
 {combos = {{key = '\''}}, down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
 --{combos = {{key = 'Tab', reformers = {'LShift'}}}, down = iCommandTrkEsc, name = _('Playback track cancel'), category = _('General')},
 {combos = {{key = 'Y', reformers = {'LCtrl'}}}, down = iCommandInfoOnOff, name = _('Info bar toggle'), category = _('General')},
@@ -82,7 +77,6 @@ keyCommands = {
 {combos = {{key = 'C', reformers = {'LAlt'}}}, down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {combos = {{key = 'J', reformers = {'RAlt'}}}, down = iCommandPlaneJump, name = _('Jump into other aircraft'), category = _('General')},
 {combos = {{key = 'SysRQ'}}, down = iCommandScreenShot, name = _('Screenshot'), category = _('General'), disabled = true},
-{combos = {{key = 'Pause', reformers = {'RCtrl'}}}, down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {combos = {{key = 'Y', reformers = {'LAlt'}}}, down = iCommandViewCoordinatesInLinearUnits, name = _('Info bar coordinate units toggle'), category = _('General')},
 {combos = {{key = 'P', reformers = {'RShift'}}}, down = iCommandCockpitShowPilotOnOff, name = _('Show Pilot Body'), category = _('General')},
 {combos = {{key = 'Enter', reformers = {'RCtrl'}}}, down = iCommandPlane_ShowControls, name = _('Show controls indicator') , category = _('General')},
@@ -138,8 +132,8 @@ keyCommands = {
 {combos = {{key = 'F6'}}, down = iCommandViewWeapons, name = _('F6 Released weapon view'), category = _('View')},
 {combos = {{key = 'F6', reformers = {'LCtrl'}}}, down = iCommandViewWeaponAndTarget, name = _('F6 Weapon to target view'), category = _('View')},
 {combos = {{key = 'F7'}}, down = iCommandViewGround, name = _('F7 Ground unit view'), category = _('View')},
-{combos = {{key = 'F8'}}, down = iCommandViewTargets, name = _('F8 Target view'), category = _('View')},
-{combos = {{key = 'F8', reformers = {'RAlt'}}}, down = iCommandViewTargetType, name = _('F8 Player targets/All targets filter'), category = _('View')},
+--{combos = {{key = 'F8'}}, down = iCommandViewTargets, name = _('F8 Target view'), category = _('View')},
+--{combos = {{key = 'F8', reformers = {'RCtrl'}}}, down = iCommandViewTargetType, name = _('F8 Player targets/All targets filter'), category = _('View')},
 {combos = {{key = 'F9'}}, down = iCommandViewNavy, name = _('F9 Ship view'), category = _('View')},
 {combos = {{key = 'F9', reformers = {'LAlt'}}}, down = iCommandViewLndgOfficer, name = _('F9 Landing signal officer view'), category = _('View')},
 {combos = {{key = 'F10'}}, down = iCommandViewAWACS, name = _('F10 Theater map view'), category = _('View')},
@@ -156,6 +150,17 @@ keyCommands = {
 {combos = {{key = '[', reformers = {'LShift'}}}, down =  iCommandViewFastMouse, name = _('Camera view mouse rate fast'), category = _('View')},
 {combos = {{key = '[', reformers = {'LCtrl'}}}, down = iCommandViewSlowMouse, name = _('Camera view mouse rate slow'), category = _('View')},
 {combos = {{key = '[', reformers = {'LAlt'}}}, down = iCommandViewNormalMouse, name = _('Camera view mouse rate normal'), category = _('View')},
+
+-- Experimental object free camera
+{combos = {{key = 'F2', reformers = {'RCtrl'}}}, 		down = iCommandViewObject, name = _('Object free camera'), category = _('View')},
+{combos = {{key = '=', reformers = {'RAlt', 'RShift'}}}, 			down = iCommandViewBookmarksEditor, name = _('Object free camera bookmarks editor'), category = _('View')},
+{combos = {{key = '-', reformers = {'RWin'}}}, 			down = iCommandViewBookmarksMenu, name = _('Object free camera bookmarks menu'), category = _('View')},
+{combos = {{key = 'O', reformers = {'RWin'}}}, 			down = iCommandViewPieMenu, name = _('Pie menu'), category = _('View')},
+-- Experimental wingman camera
+{combos = {{key = 'F4', reformers = {'LAlt'}}}, 		down = iCommandViewWingman, name = _('Wingman camera'), category = _('View')},
+-- Camera position to/from clipboard 
+{combos = {{key = ',', reformers = {'RWin'}}}, 			down = iCommandViewCameraToClipboard, name = _('Unload camera position to clipboard'), category = _('View')},
+{combos = {{key = '.', reformers = {'RWin'}}}, 			down = iCommandViewClipboardToCamera, name = _('Load camera position from clipboard'), category = _('View')},
 
 -- View Cockpit
 {combos = {{key = 'Num0'}}, down = iCommandViewTempCockpitOn, up = iCommandViewTempCockpitOff, name = _('Cockpit panel view in'), category = _('View Cockpit')},
@@ -625,7 +630,9 @@ keyCommands = {
 {combos = {{key = '2'}}, down = device_commands.Button_2, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('Set Operator Seat'), category = _('View Cockpit')},
 {combos = {{key = '4'}}, down = device_commands.Button_3, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('Set Right Gunner Seat'), category = _('View Cockpit')},
 {combos = {{key = '3'}}, down = device_commands.Button_4, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('Set Left Gunner Seat'), category = _('View Cockpit')},
-{combos = {{key = 'T', reformers = {'RShift'}}},	down = device_commands.Button_5, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('TrackIR Aiming On/Off'),		category = _('View Cockpit')},
+{combos = {{key = 'T', reformers = {'RShift'}}},	down = device_commands.Button_5, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0,	name = _('Uncoupled Aiming On/Off'),		category = _('View Cockpit')},
+{combos = {{key = 'Y', reformers = {'RShift'}}},	down = device_commands.Button_45, cockpit_device_id = devices.WEAPON_SYS, value_down = 0.0,	name = _('Absolute/Relative Axis Aiming'),		category = _('View Cockpit')},
+
 
 --Circuit breakers
 {down = device_commands.Button_18, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 0.0,  name = _('CB IFF APX 1'), category = _('Circuit breaker panel')},
@@ -716,6 +723,9 @@ keyCommands = {
 -- View
 {combos = {{key = 'Q', reformers = {'LShift','LAlt'}}},	down = device_commands.Button_1, cockpit_device_id = devices.EXTERNAL_CARGO_VIEW, value_down = 1, name = _('Cargo View'), category = _('View')},
 
+-- Flashlight
+{combos = {{key = 'L', reformers = {'LCtrl','LAlt'}}}, down = 3256, cockpit_device_id = 0, value_down = 1.0, name = _('Flashlight'), category = _('View Cockpit')},
+{down = 3255, cockpit_device_id = 0, value_down = 1.0, name = _('Flashlight Color - Toggle Green/White'), category = {_('View Cockpit')}},
 
 },
 }
