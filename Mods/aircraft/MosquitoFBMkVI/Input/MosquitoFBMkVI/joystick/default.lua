@@ -2,6 +2,8 @@ local cockpit = folder .. "../../../Cockpit/Scripts/"
 dofile(cockpit .. "devices.lua")
 dofile(cockpit .. "command_defs.lua")
 
+
+
 local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
 join(res.keyCommands, {
 
@@ -63,7 +65,7 @@ join(res.keyCommands, {
 
 
 -- Communications -----------------------------------------------------------------------
-{                                                           down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk'), category = {_("SCR-522 Radio Set"), _("Communications")}},
+{                                                           down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk (call radio menu)'), category = {_("SCR-522 Radio Set"), _("Communications")}},
 {                                                           cockpit_device_id = devices.RADIO_INTERFACE, down = device_commands.Button_1, value_down = 1.0, up = device_commands.Button_1, value_up = 0.0, name = _("Input.Generic.T1154.key"), category = {_("T.1154/R.1155 Radio Set"), _("Communications")}},
 -- --------------------------------------------------------------------------------------
 
@@ -518,6 +520,22 @@ join(res.keyCommands, {
 {                                                           cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_22, value_down = 0.0,                                                     name = _("Input.Mosquito.supercharger_gear_auto"),category = _("Engine Controls")},
 {                                                           cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_22, value_down = 1.0,                                                     name = _("Input.Mosquito.supercharger_gear_mod"), category = _("Engine Controls")},
 {                                                           cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_23, value_down = 1.0,                                                     name = _("Input.Mosquito.supercharger_gear"),     category = _("Engine Controls")},
+
+            -- Rockets Firing Switch
+{                                                           cockpit_device_id = devices.ROCKETS, down = device_commands.Button_6, value_down = 1.0, up = device_commands.Button_6, value_up = 0.0,           name = _("Input.Mosquito.trigger_rockets"),       category = {_("Weapons")}},
+        -- ------------------------------------------------------------------------------
+
+        -- Auto-Selector Switch and Accessories -----------------------------------------
+            -- Master Switch
+{                                                           cockpit_device_id = devices.ROCKETS, down = device_commands.Button_1, value_down = 0.0,                                                name = _("Input.Mosquito.rockets_master_0"), category = {_("Weapons")}},
+{                                                           cockpit_device_id = devices.ROCKETS, down = device_commands.Button_1, value_down = 1.0,                                                name = _("Input.Mosquito.rockets_master_1"), category = {_("Weapons")}},
+{                                                           cockpit_device_id = devices.ROCKETS, down = device_commands.Button_2, value_down = 1.0,                                                name = _("Input.Mosquito.rockets_master"),   category = {_("Weapons")}},
+            -- Salvo Selector Switch
+{                                                           cockpit_device_id = devices.ROCKETS, down = device_commands.Button_3, value_down = 0.0,                                                name = _("Input.Mosquito.rockets_salvo_0"), category = {_("Weapons")}},
+{                                                           cockpit_device_id = devices.ROCKETS, down = device_commands.Button_3, value_down = 1.0,                                                name = _("Input.Mosquito.rockets_salvo_1"), category = {_("Weapons")}},
+{                                                           cockpit_device_id = devices.ROCKETS, down = device_commands.Button_4, value_down = 1.0,                                                name = _("Input.Mosquito.rockets_salvo"),   category = {_("Weapons")}},
+            -- Manual Advancement Button
+{                                                           cockpit_device_id = devices.ROCKETS, down = device_commands.Button_5, value_down = 1.0, up = device_commands.Button_5, value_up = 0.0, name = _("Input.Mosquito.rockets_manual"),  category = {_("Weapons")}},
         -- ------------------------------------------------------------------------------
 
         -- Shoulder Switch Box ----------------------------------------------------------

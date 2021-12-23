@@ -639,7 +639,8 @@ join(res.keyCommands,{
 {	down = device_commands.Button_16,									cockpit_device_id = devices.UHF_RADIO,	value_down = 1.0,				name = _('UHF Radio Antenna Selector Switch - UPPER'),			category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},
 {	down = device_commands.Button_16,									cockpit_device_id = devices.UHF_RADIO,	value_down = 0.5,				name = _('UHF Radio Antenna Selector Switch - AUTO'),			category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},
 {	down = device_commands.Button_16,									cockpit_device_id = devices.UHF_RADIO,	value_down = 0.0,				name = _('UHF Radio Antenna Selector Switch - LOWER'),			category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},
-{	down = device_commands.Button_1,	up = device_commands.Button_1,	cockpit_device_id = devices.INTERCOM,	value_down = 1,	value_up = 0,	name = _('UHF Radio Microphone Button'),						category = {_('UHF Radio ARC-164 Control Panel'), _('Throttle Quadrant')}},
+
+{	down = device_commands.Button_1,	up = device_commands.Button_1,	cockpit_device_id = devices.INTERCOM,	value_down = 1,	value_up = 0,	name = _('UHF Radio Microphone Button (call radio menu)'),		category = {_('UHF Radio ARC-164 Control Panel'), _('Throttle Quadrant')}},
 {	down = device_commands.Button_23,									cockpit_device_id = devices.UHF_RADIO,	value_down = 1,					name = _('UHF Radio Hinged Access Door - OPEN/CLOSE'),			category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},
 {	down = device_commands.Button_22,									cockpit_device_id = devices.UHF_RADIO,	value_down = 1,					name = _('UHF Radio Hinged Access Door - OPEN'),				category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},
 {	down = device_commands.Button_22,									cockpit_device_id = devices.UHF_RADIO,	value_down = 0,					name = _('UHF Radio Hinged Access Door - CLOSE'),				category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},

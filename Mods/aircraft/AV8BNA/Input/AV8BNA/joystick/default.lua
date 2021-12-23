@@ -793,10 +793,20 @@ join(res.keyCommands,{
 	{down = acnip_commands.Switch_IFF_CRYPTO,					cockpit_device_id = devices.ACNIP,	value_down =  1.0,	name = _('IFF Crypto Switch: ZERO'),	category = _('IFF')},
 	
 	-- INTERNAL LIGHTS
-	{down = iCommandPlaneMasterCaution,																					name = _('Master Warning/Caution Reset'),				category = _('Internal Lights')},
+	{down = iCommandPlaneMasterCaution,                                          name = _('Master Warning/Caution Reset'),       category = _('Internal Lights')},
+	{down = wc_lights_commands.Switch_Master_Caution,		cockpit_device_id = devices.LTWCA, value_down = 1.0, name = _('Master Caution'),				category = _('Internal Lights')},
+	{down = wc_lights_commands.Switch_Master_Warning,   cockpit_device_id = devices.LTWCA, value_down = 1.0, name = _('Master Warning'),       category = _('Internal Lights')},
 	{down = int_light_commands.Switch_Compass_Light_Test,		cockpit_device_id = devices.LTINT,	value_down = 0.0,	name = _('Compass Light/Test COMP'),					category = _('Internal Lights')},
 	{down = int_light_commands.Switch_Compass_Light_Test,		cockpit_device_id = devices.LTINT,	value_down = 1.0,	name = _('Compass Light/Test TEST'),					category = _('Internal Lights')},
 	{down = int_light_commands.Switch_Compass_Light_Test,		cockpit_device_id = devices.LTINT,	value_down = 0.5,	name = _('Compass Light/Test OFF'),						category = _('Internal Lights')},
+	{down = int_light_commands.Knob_Instr_Lights,       cockpit_device_id = devices.LTINT, value_down = 0.1, name = _("Instrument Lights Increase"), category = _('Internal Lights')},
+  {down = int_light_commands.Knob_Instr_Lights,       cockpit_device_id = devices.LTINT, value_down = -0.1, name = _("Instrument Lights Decrease"), category = _('Internal Lights')},
+  {down = int_light_commands.Knob_Console_Lights,     cockpit_device_id = devices.LTINT, value_down = 0.1, name = _("Console Lights Increase"), category = _('Internal Lights')},
+  {down = int_light_commands.Knob_Console_Lights,     cockpit_device_id = devices.LTINT, value_down = -0.1, name = _("Console Lights Decrease"), category = _('Internal Lights')},  
+  {down = int_light_commands.Knob_Flood_Lights,       cockpit_device_id = devices.LTINT, value_down = 0.1, name = _("Flood Lights Increase"), category = _('Internal Lights')},
+  {down = int_light_commands.Knob_Flood_Lights,       cockpit_device_id = devices.LTINT, value_down = -0.1, name = _("Flood Lights Decrease"), category = _('Internal Lights')},
+  {down = int_light_commands.Knob_Annunciator_Lights, cockpit_device_id = devices.LTINT, value_down = 0.1, name = _("Annunciator Lights Increase"), category = _('Internal Lights')},
+  {down = int_light_commands.Knob_Annunciator_Lights, cockpit_device_id = devices.LTINT, value_down = -0.1, name = _("Annunciator Lights Decrease"), category = _('Internal Lights')},  
 	
 	--EXTERNAL LIGHTS
 	{down = iCommandPlaneLightsOnOff,																					name = _('Exterior Lights ALL Toggle ON/OFF'),			category = _('Exterior Lights')},
