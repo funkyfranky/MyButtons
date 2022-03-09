@@ -279,11 +279,11 @@ keyCommands = {
 {combos = {{key = 'JOY_BTN2'}},down = iCommandPlaneFire, up = iCommandPlaneFire, value_down = 1, value_up = 0,  name = _("Pilot weapon release/Machinegun fire"),  category = _("Ins Cyclic Stick")},
 {down = iCommandPlanePickleOn,    up = iCommandPlanePickleOn, value_down = 1, value_up = 0, name = _('Copilot weapon release'), category = _('Ins Cyclic Stick')},
 
-{combos = {{key = 'JOY_BTN1'}}, down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id  = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _("Pilot's radio trigger RADIO"), category = _('Ins Cyclic Stick')},
-{down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id  = devices.INTERCOM, value_down = 0.5, value_up = 0.0, name = _("Pilot's radio trigger ICS"), category = _('Ins Cyclic Stick')},
+{combos = {{key = 'JOY_BTN1'}},	down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id  = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _("Pilot's radio trigger RADIO (call radio menu)"), category = _('Ins Cyclic Stick')},
+{								down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id = devices.INTERCOM, value_down = 0.5, value_up = 0.0, name = _("Pilot's radio trigger ICS (call radio menu)"), category = _('Ins Cyclic Stick')},
 
-{down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id  = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _("Co-pilot's radio trigger RADIO"), category = _('Ins Cyclic Stick')},
-{down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id  = devices.INTERCOM, value_down = 0.5, value_up = 0.0, name = _("Co-pilot's radio trigger ICS"), category = _('Ins Cyclic Stick')},
+{	down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _("Co-pilot's radio trigger RADIO (call radio menu)"), category = _('Ins Cyclic Stick')},
+{	down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id = devices.INTERCOM, value_down = 0.5, value_up = 0.0, name = _("Co-pilot's radio trigger ICS (call radio menu)"), category = _('Ins Cyclic Stick')},
 
 {combos = {{key = 'JOY_BTN3'}}, down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Pilot Trimmer'), category = _('Ins Cyclic Stick')},
 {down = device_commands.Button_3, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = 1.0, name = _('Trimmer reset'), category = _('Ins Cyclic Stick')},

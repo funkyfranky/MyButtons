@@ -276,11 +276,11 @@ keyCommands = {
 {combos = {{key = 'Left'}},  pressed = iCommandPlaneLeftStart  , up = iCommandPlaneLeftStop,   name = _('Cyclic bank left'), category = _('Ins Cyclic Stick')},
 {combos = {{key = 'Right'}}, pressed = iCommandPlaneRightStart , up = iCommandPlaneRightStop,  name = _('Cyclic bank right'), category = _('Ins Cyclic Stick')},
 
-{combos = {{key = '\\', 	 reformers = {'RAlt'}}}, down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id  = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _("Pilot's radio trigger RADIO"), category = _('Ins Cyclic Stick')},
-{combos = {{key = 'Space',   reformers = {'RShift'}}}, down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id = devices.INTERCOM, value_down = 0.5, value_up = 0.0, name = _("Pilot's radio trigger ICS"), category = _('Ins Cyclic Stick')},
+{combos = {{key = '\\', 	 reformers = {'RAlt'}}}, down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id  = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _("Pilot's radio trigger RADIO (call radio menu)"), category = _('Ins Cyclic Stick')},
+{combos = {{key = 'Space',   reformers = {'RShift'}}}, down = device_commands.Button_9, up = device_commands.Button_9, cockpit_device_id = devices.INTERCOM, value_down = 0.5, value_up = 0.0, name = _("Pilot's radio trigger ICS (call radio menu)"), category = _('Ins Cyclic Stick')},
 
-{combos = {{key = 'Space',   reformers = {'LCtrl'}}}, down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _("Co-pilot's radio trigger RADIO"), category = _('Ins Cyclic Stick')},
-{combos = {{key = 'Space',   reformers = {'LShift'}}}, down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id = devices.INTERCOM, value_down = 0.5, value_up = 0.0, name = _("Co-pilot's radio trigger ICS"), category = _('Ins Cyclic Stick')},
+{combos = {{key = 'Space',   reformers = {'LCtrl'}}}, down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _("Co-pilot's radio trigger RADIO (call radio menu)"), category = _('Ins Cyclic Stick')},
+{combos = {{key = 'Space',   reformers = {'LShift'}}}, down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id = devices.INTERCOM, value_down = 0.5, value_up = 0.0, name = _("Co-pilot's radio trigger ICS (call radio menu)"), category = _('Ins Cyclic Stick')},
 
 {combos = {{key = 'T'}},  down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Pilot Trimmer'), category = _('Ins Cyclic Stick')},
 {combos = {{key = 'T', reformers = {'LCtrl'}}}, down = device_commands.Button_3, cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 1.0, name = _('Trimmer reset'), category = _('Ins Cyclic Stick')},

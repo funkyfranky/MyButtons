@@ -21,17 +21,23 @@ join(res.keyCommands, {
 {cockpit_device_id = devices.THREE_WAY_SELECTOR, down = device_commands.Button_9, up = device_commands.Button_8, value_down = 1.0,  value_up =  0.0, name = _("Bomb Doors DOWN/NEUTRAL"),   category = {_('_My Buttons')}},
 
 -- WEAPONS
-{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_3,  up = device_commands.Button_3, value_down = 1.0,  value_up =  0.0, name = _("Gun firing master switch ON/OFF"),   category = {_('_My Buttons')}},
-{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_63, up = device_commands.Button_63, value_down = 1.0,  value_up =  0.0, name = _("Bomb station #1 Power ON/OFF"),   category = {_('_My Buttons')}},
-{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_65, up = device_commands.Button_65, value_down = 1.0,  value_up =  0.0, name = _("Bomb station #2 Power ON/OFF"),   category = {_('_My Buttons')}},
-{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_67, up = device_commands.Button_67, value_down = 1.0,  value_up =  0.0, name = _("Bomb station #3 Power ON/OFF"),   category = {_('_My Buttons')}},
-{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_69, up = device_commands.Button_69, value_down = 1.0,  value_up =  0.0, name = _("Bomb station #4 Power ON/OFF"),   category = {_('_My Buttons')}},
-{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_71, up = device_commands.Button_71, value_down = 1.0,  value_up =  0.0, name = _("Nose Fuze Switch ON/OFF"),   category = {_('_My Buttons')}},
-{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_73, up = device_commands.Button_73, value_down = 1.0,  value_up =  0.0, name = _("Tail Fuze Switch ON/OFF"),   category = {_('_My Buttons')}},
+{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_3,  up = device_commands.Button_3,  value_down = 1.0,  value_up =  0.0, name = _("Gun firing master switch ON/OFF"),	category = {_('_My Buttons')}},
+{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_63, up = device_commands.Button_63, value_down = 1.0,  value_up =  0.0, name = _("Bomb station #1 Power ON/OFF"),		category = {_('_My Buttons')}},
+{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_65, up = device_commands.Button_65, value_down = 1.0,  value_up =  0.0, name = _("Bomb station #2 Power ON/OFF"),		category = {_('_My Buttons')}},
+{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_67, up = device_commands.Button_67, value_down = 1.0,  value_up =  0.0, name = _("Bomb station #3 Power ON/OFF"),		category = {_('_My Buttons')}},
+{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_69, up = device_commands.Button_69, value_down = 1.0,  value_up =  0.0, name = _("Bomb station #4 Power ON/OFF"),		category = {_('_My Buttons')}},
+{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_71, up = device_commands.Button_71, value_down = 1.0,  value_up =  0.0, name = _("Nose Fuze Switch ON/OFF"),   			category = {_('_My Buttons')}},
+{cockpit_device_id = devices.WEAPONS, down = device_commands.Button_73, up = device_commands.Button_73, value_down = 1.0,  value_up =  0.0, name = _("Tail Fuze Switch ON/OFF"),   			category = {_('_My Buttons')}},
 
 -- ENGINE_CONTROLS
 {cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_9, up = device_commands.Button_9, value_down = 1.0,  value_up =  0.0, name = _("Electric Power Master Switch ON/OFF"),   category = {_('_My Buttons')}},
 
+-- SWITCHBOARD
+{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_1,  up = device_commands.Button_1,  value_down = 1.0,  value_up =  0.0, name = _("Compass Switch 1 ON/OFF"),					category = {_('_My Buttons')}},
+{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_2,  up = device_commands.Button_2,  value_down = 1.0,  value_up =  0.0, name = _("Compass Switch 2 ON/OFF"),   					category = {_('_My Buttons')}},
+{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_62, up = device_commands.Button_62, value_down = 1.0,  value_up =  0.0, name = _("Radiator Flaps Switch Left ON/OFF"),			category = {_('_My Buttons')}},
+{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_64, up = device_commands.Button_64, value_down = 1.0,  value_up =  0.0, name = _("Radiator Flaps Switch Right ON/OFF"),			category = {_('_My Buttons')}},
+{cockpit_device_id = devices.SWITCHBOARD, down = device_commands.Button_66, up = device_commands.Button_66, value_down = 1.0,  value_up =  0.0, name = _("Tropical Air Filter Switch Right ON/OFF"),	category = {_('_My Buttons')}},
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- FF end additional commands
@@ -503,12 +509,12 @@ join(res.keyCommands, {
 {                                                           cockpit_device_id = devices.ENGINE_CONTROLS, pressed = device_commands.Button_34, value_pressed = -1.0,                                          name = _('Input.Generic.prop_friction_minus'),    category = _("Engine Controls")},
 
             -- Prop Levers --------------------------------------------------------------
-{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, pressed = device_commands.Button_37, value_pressed = 1.0,                                           name = _("Input.Generic.pitch_port_plus"),        category = _("Engine Controls")},
-{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, pressed = device_commands.Button_37, value_pressed = -1.0,                                          name = _("Input.Generic.pitch_port_minus"),       category = _("Engine Controls")},
-{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, pressed = device_commands.Button_40, value_pressed = 1.0,                                           name = _("Input.Generic.pitch_stbd_plus"),        category = _("Engine Controls")},
-{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, pressed = device_commands.Button_40, value_pressed = -1.0,                                          name = _("Input.Generic.pitch_stbd_minus"),       category = _("Engine Controls")},
-{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, pressed = device_commands.Button_43, value_pressed = 1.0,                                           name = _("Input.Generic.pitch_plus"),             category = _("Engine Controls")},
-{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, pressed = device_commands.Button_43, value_pressed = -1.0,                                          name = _("Input.Generic.pitch_minus"),            category = _("Engine Controls")},
+{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_37, value_down = 1.0,  up = device_commands.Button_37, value_up = 0.0, name = _("Input.Generic.pitch_port_plus"),       category = _("Engine Controls")},
+{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_37, value_down = -1.0, up = device_commands.Button_37, value_up = 0.0, name = _("Input.Generic.pitch_port_minus"),      category = _("Engine Controls")},
+{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_40, value_down = 1.0,  up = device_commands.Button_40, value_up = 0.0, name = _("Input.Generic.pitch_stbd_plus"),       category = _("Engine Controls")},
+{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_40, value_down = -1.0, up = device_commands.Button_40, value_up = 0.0, name = _("Input.Generic.pitch_stbd_minus"),      category = _("Engine Controls")},
+{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_43, value_down = 1.0,  up = device_commands.Button_43, value_up = 0.0, name = _("Input.Generic.pitch_plus"),            category = _("Engine Controls")},
+{                                                           cockpit_device_id = devices.ENGINE_CONTROLS, down = device_commands.Button_43, value_down = -1.0, up = device_commands.Button_43, value_up = 0.0, name = _("Input.Generic.pitch_minus"),           category = _("Engine Controls")},
             -- --------------------------------------------------------------------------
 
             -- Mixture Control
@@ -551,8 +557,8 @@ join(res.keyCommands, {
         -- ------------------------------------------------------------------------------
 
         -- Tail Trim Wheel --------------------------------------------------------------
-{                                                           cockpit_device_id = devices.CONTROLS, down = device_commands.Button_16, up = device_commands.Button_16, value_down = -1.0, value_up = 0.0, name = _("Trim Elevator Nose Up"),   category = _("Flight Control")},
-{                                                           cockpit_device_id = devices.CONTROLS, down = device_commands.Button_16, up = device_commands.Button_16, value_down = 1.0,  value_up = 0.0, name = _("Trim Elevator Nose Down"), category = _("Flight Control")},
+{                                                           cockpit_device_id = devices.CONTROLS, down = device_commands.Button_16, up = device_commands.Button_16, value_down = -0.3, value_up = 0.0, name = _("Trim Elevator Nose Up"),   category = _("Flight Control")},
+{                                                           cockpit_device_id = devices.CONTROLS, down = device_commands.Button_16, up = device_commands.Button_16, value_down = 0.3,  value_up = 0.0, name = _("Trim Elevator Nose Down"), category = _("Flight Control")},
     -- ----------------------------------------------------------------------------------
 
 

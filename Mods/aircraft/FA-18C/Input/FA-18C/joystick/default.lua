@@ -180,10 +180,6 @@ join(res.keyCommands,{
 {	down = hotas_commands.THROTTLE_EXTERIOR_LIGHTS,																					cockpit_device_id = devices.HOTAS,	value_down =  0.0,					name = _('Exterior Lights Switch - OFF'),					category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_COMMS_COMM1,						up = hotas_commands.THROTTLE_COMMS_COMM1,						cockpit_device_id = devices.HOTAS,	value_down =  0.2,	value_up = 0.0,	name = _('COMM Switch - COMM 1 (call radio menu)'),			category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_COMMS_COMM2,						up = hotas_commands.THROTTLE_COMMS_COMM2,						cockpit_device_id = devices.HOTAS,	value_down =  0.4,	value_up = 0.0,	name = _('COMM Switch - COMM 2 (call radio menu)'),			category = {_('Throttle Grip'), _('HOTAS')}},
---[[VOICECHAT_READY
-{	down = hotas_commands.THROTTLE_COMMS_COMM1_VOIP,				up = hotas_commands.THROTTLE_COMMS_COMM1_VOIP,					cockpit_device_id = devices.HOTAS,	value_down =  0.2,	value_up = 0.0,	name = _('COMM Switch - COMM 1 (VOIP)'),					category = {_('Throttle Grip'), _('HOTAS')}},
-{	down = hotas_commands.THROTTLE_COMMS_COMM2_VOIP,				up = hotas_commands.THROTTLE_COMMS_COMM2_VOIP,					cockpit_device_id = devices.HOTAS,	value_down =  0.4,	value_up = 0.0,	name = _('COMM Switch - COMM 2 (VOIP)'),					category = {_('Throttle Grip'), _('HOTAS')}},
---]]
 {	down = hotas_commands.THROTTLE_COMMS_MIDS_A,					up = hotas_commands.THROTTLE_COMMS_MIDS_A,						cockpit_device_id = devices.HOTAS,	value_down =  0.6,	value_up = 0.0,	name = _('COMM Switch - MIDS A'),							category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_COMMS_MIDS_B,					up = hotas_commands.THROTTLE_COMMS_MIDS_B,						cockpit_device_id = devices.HOTAS,	value_down =  0.8,	value_up = 0.0,	name = _('COMM Switch - MIDS B'),							category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_CAGE,							up = hotas_commands.THROTTLE_CAGE,								cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,	name = _('Cage/Uncage Button'),								category = {_('Throttle Grip'), _('HOTAS')}},
@@ -534,8 +530,12 @@ join(res.keyCommands,{
 {	down = SMS_commands.SelJettBtn,				up = SMS_commands.SelJettBtn,			cockpit_device_id = devices.SMS,				value_down =  1.0,	value_up = 0.0,	name = _('Selective Jettison Pushbutton'),									category = {_('Left Vertical Panel')}},
 --
 {	down = gear_commands.LaunchBarSw,			up = gear_commands.LaunchBarSw,			cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('Launch Bar Control Switch - EXTEND/RETRACT'),						category = {_('Left Vertical Panel')}},
+{	down = gear_commands.LaunchBarSw_EXT,		up = gear_commands.LaunchBarSw_EXT,		cockpit_device_id = devices.GEAR_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('Launch Bar Control Switch - EXTEND'),								category = {_('Left Vertical Panel')}},
+{	down = gear_commands.LaunchBarSw_EXT,												cockpit_device_id = devices.GEAR_INTERFACE,		value_down = -1.0,					name = _('Launch Bar Control Switch - RETRACT'),							category = {_('Left Vertical Panel')}},
 --
 {	down = cptlights_commands.HookBypass,		up = cptlights_commands.HookBypass,		cockpit_device_id = devices.CPT_LIGHTS,			value_down =  1.0,	value_up = 0.0,	name = _('HOOK BYPASS Switch - FIELD/CARRIER'),								category = {_('Left Vertical Panel')}},
+{	down = cptlights_commands.HookBypass_EXT,	up = cptlights_commands.HookBypass_EXT,	cockpit_device_id = devices.CPT_LIGHTS,			value_down =  1.0,	value_up = 0.0,	name = _('HOOK BYPASS Switch - FIELD'),										category = {_('Left Vertical Panel')}},
+{	down = cptlights_commands.HookBypass_EXT,											cockpit_device_id = devices.CPT_LIGHTS,			value_down = -1.0,					name = _('HOOK BYPASS Switch - CARRIER'),									category = {_('Left Vertical Panel')}},
 --
 {	down = extlights_commands.LdgTaxi_EXT,												cockpit_device_id = devices.EXT_LIGHTS,			value_down =  0.0,					name = _('LDG/TAXI LIGHT Switch - ON/OFF'),									category = {_('Left Vertical Panel')}},
 {	down = extlights_commands.LdgTaxi,													cockpit_device_id = devices.EXT_LIGHTS,			value_down =  1.0,					name = _('LDG/TAXI LIGHT Switch - ON'),										category = {_('Left Vertical Panel')}},
@@ -1029,6 +1029,8 @@ join(res.keyCommands,{
 {	down = elec_commands.GenTieControlSw,					up = elec_commands.GenTieControlSw,					cockpit_device_id = devices.ELEC_INTERFACE,			value_down =  1.0,	value_up = 0.0,	name = _('Generator TIE Control Switch (special) - NORM/RESET'),				category = {_('Special For Joystick'), _('Left Console')}},
 {	down = hydro_commands.HydIsolSw,						up = hydro_commands.HydIsolSw,						cockpit_device_id = devices.HYDRAULIC_INTERFACE,	value_down =  1.0,	value_up = 0.0,	name = _('Hydraulic Isolate Override Switch (special) - NORM/ORIDE'),			category = {_('Special For Joystick'), _('Left Console')}},
 {	down = gear_commands.AntiSkidSw,						up = gear_commands.AntiSkidSw,						cockpit_device_id = devices.GEAR_INTERFACE,			value_down =  1.0,	value_up = 0.0,	name = _('Anti Skid Switch (special) - ON/OFF'),								category = {_('Special For Joystick'), _('Left Vertical Panel')}},
+{	down = gear_commands.LaunchBarSw_EXT,					up = gear_commands.LaunchBarSw_EXT,					cockpit_device_id = devices.GEAR_INTERFACE,			value_down =  1.0,	value_up =-1.0,	name = _('Launch Bar Control Switch (special) - EXTEND/RETRACT'),				category = {_('Special For Joystick'), _('Left Vertical Panel')}},
+{	down = cptlights_commands.HookBypass_EXT,				up = cptlights_commands.HookBypass_EXT,				cockpit_device_id = devices.CPT_LIGHTS,				value_down =  1.0,	value_up =-1.0,	name = _('HOOK BYPASS Switch (special) - FIELD/CARRIER'),						category = {_('Special For Joystick'), _('Left Vertical Panel')}},
 {	down = gear_commands.HookHandle,						up = gear_commands.HookHandle,						cockpit_device_id = devices.GEAR_INTERFACE,			value_down =  1.0,	value_up = 0.0,	name = _('Arresting Hook Handle (special) - Up/Down'),							category = {_('Special For Joystick'), _('Right Vertical Panel')}},
 {	down = fuel_commands.IntrWingInhibitSw,					up = fuel_commands.IntrWingInhibitSw,				cockpit_device_id = devices.FUEL_INTERFACE,			value_down =  1.0,	value_up = 0.0,	name = _('Internal Wing Tank Fuel Control Switch (special) - INHIBIT/NORM'),	category = {_('Special For Joystick'), _('Left Console'), _('Exterior Lights Panel')}},
 {	down = cpt_commands.CanopyJettLever,					up = cpt_commands.CanopyJettLever,					cockpit_device_id = devices.CPT_MECHANICS,			value_down =  1.0,	value_up = 0.0,	name = _('Canopy Jettison Handle (special) - PULL/PUSH'),						category = {_('Special For Joystick'), _('Left Wall')}},
@@ -1045,7 +1047,6 @@ join(res.keyCommands,{
 {	down = intercom_commands.IFF_MasterSw,					up = intercom_commands.IFF_MasterSw,				cockpit_device_id = devices.INTERCOM,				value_down =  1.0,	value_up = 0.0,	name = _('IFF Master Switch (special) - EMER/NORM'),							category = {_('Special For Joystick'), _('Left Console'), _('Communication Control Panel')}},
 {	down = intercom_commands.ILS_UFC_MAN_Sw,				up = intercom_commands.ILS_UFC_MAN_Sw,				cockpit_device_id = devices.INTERCOM,				value_down =  1.0,	value_up = 0.0,	name = _('ILS UFC/MAN Switch (special) - UFC/MAN'),								category = {_('Special For Joystick'), _('Left Console'), _('Communication Control Panel')}},
 {	down = tgp_commands.Lst,								up = tgp_commands.Lst,								cockpit_device_id = devices.TGP_INTERFACE,			value_down =  1.0,	value_up = 0.0,	name = _('LST/NFLR Switch (special) - ON/OFF'),									category = {_('Special For Joystick'), _('Right Console'), _('Sensor Panel')}},
---{	down = ,												up = ,												cockpit_device_id = devices.,						value_down = 1.0,	value_up = 0.0,	name = _('NUC WPN Switch (special) - ENABLE/DISABLE (no function)'),			category = {_('Special For Joystick'), _('Left Wall')}},	-- not used
 
 })
 

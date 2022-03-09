@@ -588,8 +588,6 @@ join(res.keyCommands,{
 {	down = cptlights_commands.MalIndLtsDim,				up = cptlights_commands.MalIndLtsDim,	cockpit_device_id = devices.CPTLIGHTS_SYSTEM,	value_down = -1.0,		value_up = 0.0,	name = _('MAL & IND LTS Switch - DIM/Center'),						category = {_('Right Console'), _('Interior LIGHTING Control Panel')}},
 {	down = cptlights_commands.MalIndLtsBrt,				up = cptlights_commands.MalIndLtsBrt,	cockpit_device_id = devices.CPTLIGHTS_SYSTEM,	value_down =  1.0,		value_up = 0.0,	name = _('MAL & IND LTS Switch - BRT/Center'),						category = {_('Right Console'), _('Interior LIGHTING Control Panel')}},
 
--- NUCLEAR CONSENT Switch Cover (not used)
--- NUCLEAR CONSENT Switch (not used)
 -- PLAIN Cipher Switch
 {	down = intercom_commands.PlainCipherSw,			cockpit_device_id = devices.INTERCOM,	value_down = -1.0,	name = _('PLAIN Cipher Switch - CRAD 2'),			category = {_('Right Console')}},
 {	down = intercom_commands.PlainCipherSw,			cockpit_device_id = devices.INTERCOM,	value_down =  0.0,	name = _('PLAIN Cipher Switch - PLAIN'),			category = {_('Right Console')}},
@@ -802,7 +800,44 @@ join(res.keyCommands,{
 {	down = intercom_commands.HotMicCipherSw_ITER,		cockpit_device_id = devices.INTERCOM,	value_down =  1.0,		name = _('HOT MIC CIPHER Switch - Up'),					category = {_('Left Console'), _('AUDIO 2 Control Panel')}},
 
 -- ECM Pod Control Panel
--- TODO:
+{	down = ecm_commands.PwrSw,									cockpit_device_id = devices.ECM_INTERFACE,	value_down = -1.0,					name = _('ECM Power Switch - OFF'),			category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.PwrSw,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  0.0,					name = _('ECM Power Switch - STBY'),		category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.PwrSw,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM Power Switch - OPR'),			category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.PwrSw_ITER,								cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM Power Switch - Up'),			category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.PwrSw_ITER,								cockpit_device_id = devices.ECM_INTERFACE,	value_down = -1.0,					name = _('ECM Power Switch - Down'),		category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	pressed = ecm_commands.DimRotary_ITER,						cockpit_device_id = devices.ECM_INTERFACE,	value_pressed = -0.3,	name = _('ECM DIM Knob - CCW/Decrease'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	pressed = ecm_commands.DimRotary_ITER,						cockpit_device_id = devices.ECM_INTERFACE,	value_pressed =  0.3,	name = _('ECM DIM Knob - CW/Increase'),					category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.XmitSw,									cockpit_device_id = devices.ECM_INTERFACE,	value_down = -1.0,					name = _('ECM XMIT Switch - 3'),			category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.XmitSw,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  0.0,					name = _('ECM XMIT Switch - 2'),			category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.XmitSw,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM XMIT Switch - 1'),			category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.XmitSw_ITER,							cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM XMIT Switch - Up'),			category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.XmitSw_ITER,							cockpit_device_id = devices.ECM_INTERFACE,	value_down = -1.0,					name = _('ECM XMIT Switch - Down'),			category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.ResetBtn,	up = ecm_commands.ResetBtn,	cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,	value_up = 0.0,	name = _('ECM RESET Button'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.BitBtn,		up = ecm_commands.BitBtn,	cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,	value_up = 0.0,	name = _('ECM BIT Button'),					category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.OneBtn,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 1 Button - Depressed'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.OneBtn,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  0.0,					name = _('ECM 1 Button - Released'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.OneBtn_ITER,							cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 1 Button - Depressed/Released'),		category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.TwoBtn,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 2 Button - Depressed'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.TwoBtn,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  0.0,					name = _('ECM 2 Button - Released'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.TwoBtn_ITER,							cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 2 Button - Depressed/Released'),		category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.ThreeBtn,								cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 3 Button - Depressed'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.ThreeBtn,								cockpit_device_id = devices.ECM_INTERFACE,	value_down =  0.0,					name = _('ECM 3 Button - Released'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.ThreeBtn_ITER,							cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 3 Button - Depressed/Released'),		category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.FourBtn,								cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 4 Button - Depressed'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.FourBtn,								cockpit_device_id = devices.ECM_INTERFACE,	value_down =  0.0,					name = _('ECM 4 Button - Released'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.FourBtn_ITER,							cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 4 Button - Depressed/Released'),		category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.FiveBtn,								cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 5 Button - Depressed'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.FiveBtn,								cockpit_device_id = devices.ECM_INTERFACE,	value_down =  0.0,					name = _('ECM 5 Button - Released'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.FiveBtn_ITER,							cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 5 Button - Depressed/Released'),		category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.SixBtn,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 6 Button - Depressed'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.SixBtn,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  0.0,					name = _('ECM 6 Button - Released'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.SixBtn_ITER,							cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM 6 Button - Depressed/Released'),		category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.FrmBtn,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM FRM Button - Depressed'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.FrmBtn,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  0.0,					name = _('ECM FRM Button - Released'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.FrmBtn_ITER,							cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM FRM Button - Depressed/Released'),	category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.SplBtn,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM SPL Button - Depressed'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.SplBtn,									cockpit_device_id = devices.ECM_INTERFACE,	value_down =  0.0,					name = _('ECM SPL Button - Released'),				category = {_('Left Console'), _('ECM Pod Control Panel')}},
+{	down = ecm_commands.SplBtn_ITER,							cockpit_device_id = devices.ECM_INTERFACE,	value_down =  1.0,					name = _('ECM SPL Button - Depressed/Released'),	category = {_('Left Console'), _('ECM Pod Control Panel')}},
 
 -- AVTR Control Panel
 -- TODO:
@@ -1165,6 +1200,8 @@ join(res.axisCommands,{
 {	action = cptlights_commands.IndBrtAoA_AXIS,			cockpit_device_id = devices.CPTLIGHTS_SYSTEM,	name = _('AOA Indexer Dimming Lever'),				category = {_('Instrument Panel')}},
 {	action = cptlights_commands.IndBrtAR_AXIS,			cockpit_device_id = devices.CPTLIGHTS_SYSTEM,	name = _('AR Status Indicator Dimming Lever'),		category = {_('Instrument Panel')}},
 
+-- ECM Control Panel
+{	action = ecm_commands.DimRotary_AXIS,				cockpit_device_id = devices.ECM_INTERFACE,		name = _('ECM DIM Knob'),							category = {_('Left Console'), _('ECM Pod Control Panel')}},
 
 })
 

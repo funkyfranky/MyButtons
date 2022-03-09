@@ -9,6 +9,13 @@ join(res.keyCommands,{
 	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	-- ff: begin additional buttons
 	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    --{category = _('Engine & Fuel'), name = _('Fuel Emergency Cutoff Switch Cover CLOSE'), 	down = 3651, up = 3651, cockpit_device_id = 7, value_down = 0,   				},
+    --{category = _('Engine & Fuel'), name = _('Fuel Emergency Cutoff Switch Cover OPEN'),	down = 3651, up = 3651, cockpit_device_id = 7, value_down = 1,   				},
+    --{category = _('Engine & Fuel'), name = _('Fuel Emergency Cutoff Switch ON'),			down = 3652, up = 3652, cockpit_device_id = 7, value_down = 0,   				},
+    --{category = _('Engine & Fuel'), name = _('Fuel Emergency Cutoff Switch OFF'),			down = 3652, up = 3652, cockpit_device_id = 7, value_down = 1,   				},
+	{down=3652, up=3652, pressed=3651, cockpit_device_id = 7, value_down = 1, value_up = 0, value_pressed=1, name = _('Fuel Emergency Cuttoff ON/OFF + Cover'), category = _('_My Buttons')},
+
 	{down = iCommandPlaneCobra, up=iCommandPlaneCobra, value_down = 1, value_up = -1, name = _('FBW G-Limiter Mode On/Off (iCommand)'), category = _('_My Buttons')},
 	{down = 3422, up=3422, cockpit_device_id = 3, value_down = -1, value_up = 1, name = _('FBW G-Limiter Mode On/Off'), category = _('_My Buttons')},
 	{down = 3422, cockpit_device_id = 3, value_down = 1, name = _('FBW G-Limiter Mode On'), category = _('_My Buttons')},
@@ -40,10 +47,6 @@ join(res.keyCommands,{
 	{down = 3646, up = 3646, cockpit_device_id = 7, value_down= 1, value_up=0, name = _('Starter Fuel Pump On/Off'), category = _('_My Buttons')},
 	{down = 3468, up = 3468, cockpit_device_id = 7, value_down= 1, value_up=0, name = _('In-Flight Start Switch On/Off'), category = _('_My Buttons')},
 
-	--- PROBLEM in these two lines
-	--{down = device_commands.Button_221, up = device_commands.Button_221, value_down = 1.0, value_up = 0.0, cockpit_device_id = devices.VTH_VTB, name = _('VTB Radar Screen ON/OFF'), category = _('_My Buttons')},
-	--{down = iCommandSwitchMasterArm, up = iCommandSwitchMasterArm,    name = _('Master Arm ON/OFF'),   category = _('_My Buttons')},
-
 	{down = 3520, up = 3520, cockpit_device_id = 8, value_down = 1, value_up = 0, name = _('Main Battery On/Off'), category = _('_My Buttons')},	
 	
 	{down = 3449, up = 3449, cockpit_device_id = 16, value_down = 1, value_up=0, name = _('Police Lights On/Off'), category = _('_My Buttons')},
@@ -57,144 +60,25 @@ join(res.keyCommands,{
 	{down = 3194, up = 3194, cockpit_device_id = 13, value_down = 1.0, value_up = 0.5, name = _('CM Box Auto/On'), category = _('_My Buttons')},
 	{down = 3195, up = 3195, cockpit_device_id = 13, value_down = 1,   value_up = 0,   name = _('CM Box PTF/CC'),  category = _('_My Buttons')},
 
-
-	--- PROBLEM in this block
-	--[[
-	{down = 3710, up = 3710, cockpit_device_id = 11, value_down = 1, value_up = 0, name = _('TDC Mode Z/S'), category = _('_My Buttons')},
-	{down = 3499, up = 3499, cockpit_device_id = 11, value_down = 1, value_up = 0, name = _('Radar Mode B-Scope/PPI'), category = _('_My Buttons')},
---	elements["PTN_500"] = default_2_position_tumb(_("Target Memory Time Selector Switch"), devices.RADAR, device_commands.Button_500, 500, 0, 1)
-	{down = device_commands.Button_500, cockpit_device_id = devices.RADAR,  value_down = 1.0, name = _('Radar Target Mem Time R'), category = _('_My Buttons')},
-	{down = device_commands.Button_500, cockpit_device_id = devices.RADAR,  value_down = 0.0, name = _('Radar Target Mem Time N'), category = _('_My Buttons')},
-	{down = iCommandLeftEngineStart, up=iCommandLeftEngineStop, name = _('Engines START/STOP'), category = _('_My Buttons')},
-	{down = device_commands.Button_652,            cockpit_device_id = devices.ENGPANEL,  value_down = 1,               name = _('Fuel Cutoff Switch ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_652,            cockpit_device_id = devices.ENGPANEL,  value_down = 0,               name = _('Fuel Cutoff Switch OFF'), category = _('_My Buttons')},
-	]]
-
-	--- PROBLEM in this block
-	--[[
-	-- Flight Instruments
-	--elements["PTN_309"] = default_axis(_("Barometric Pressure Calibration"),devices.FLIGHTINST,device_commands.Button_309,309)
-	{down = device_commands.Button_309,            cockpit_device_id = devices.FLIGHTINST,  value_down = 1.00,               name = _('Barometric Pressure 1.0'), category = _('_My Buttons')},
-	{down = device_commands.Button_309,            cockpit_device_id = devices.FLIGHTINST,  value_down = 0.00,               name = _('Barometric Pressure 0.0'), category = _('_My Buttons')},
-	{down = device_commands.Button_309,            cockpit_device_id = devices.FLIGHTINST,  value_down =-1.00,               name = _('Barometric Pressure -1.0'), category = _('_My Buttons')},
-	]]
-	
-
-	--[[
-
-	-- HSI
-	--elements["PTN_340"] = default_axis_cycle("HSI VAD Selector",devices.NAVINST, device_commands.Button_340, 340)
-	--elements["PTN_341"] = multiposition_switch_limited(_("HSI Mode Selector Switch"), devices.NAVINST, device_commands.Button_341, 341, 7, 0.1, false, 0)
-	{down = device_commands.Button_340,            cockpit_device_id = devices.NAVINST,  value_down = 1.00,               name = _('HSI VAD Selector 1.0'), category = _('_My Buttons')},
-	{down = device_commands.Button_340,            cockpit_device_id = devices.NAVINST,  value_down = 0.00,               name = _('HSI VAD Selector 0.0'), category = _('_My Buttons')},
-	{down = device_commands.Button_340,            cockpit_device_id = devices.NAVINST,  value_down =-1.00,               name = _('HSI VAD Selector -1.0'), category = _('_My Buttons')},
-	
-	-- TACAN
-    -- elements["PTN_623"] = default_multiposition_knob(_("TACAN Channel 10 Selector"),devices.TACAN,device_commands.Button_623,623, 13, 0.076923, false, 0.0)
-    -- elements["PTN_625"] = default_multiposition_knob(_("TACAN Channel 1 Selector"),devices.TACAN,device_commands.Button_625,625, 10, 0.1, false, 0)
-	{down = device_commands.Button_624,            cockpit_device_id = devices.TACAN,  value_down = 0.00,               name = _('TACAN X'), category = _('_My Buttons')},
-	{down = device_commands.Button_624,            cockpit_device_id = devices.TACAN,  value_down = 1.00,               name = _('TACAN Y'), category = _('_My Buttons')},
-	{down = device_commands.Button_626,            cockpit_device_id = devices.TACAN,  value_down = 0.00,               name = _('TACAN Mode OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_626,            cockpit_device_id = devices.TACAN,  value_down = 0.33,               name = _('TACAN Mode REC'), category = _('_My Buttons')},
-	{down = device_commands.Button_626,            cockpit_device_id = devices.TACAN,  value_down = 0.66,               name = _('TACAN Mode T/R'), category = _('_My Buttons')},
-	{down = device_commands.Button_626,            cockpit_device_id = devices.TACAN,  value_down = 1.00,               name = _('TACAN Mode A/A'), category = _('_My Buttons')},
-	
 	-- VOR/ILS
-    --elements["PTN_616"] = default_multiposition_knob(_("VOR/ILS Frequency Change Whole"),devices.VORILS,device_commands.Button_616,616, 11, 0.1, false, 0)
-    --elements["PTN_618"] = default_multiposition_knob(_("VOR/ILS Frequency Change Decimal"),devices.VORILS,device_commands.Button_618,618, 20, 0.05,false,0.0)	
-	{down = device_commands.Button_617,            cockpit_device_id = devices.VORILS,  value_down = 1.0,               name = _('VOR/ILS Power ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_617,            cockpit_device_id = devices.VORILS,  value_down = 0.0,               name = _('VOR/ILS Power OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_619,            cockpit_device_id = devices.VORILS,  value_down = 1.0,               name = _('VOR/ILS Test BD'), category = _('_My Buttons')},
-	{down = device_commands.Button_619,            cockpit_device_id = devices.VORILS,  value_down = 0.0,               name = _('VOR/ILS Test HG'), category = _('_My Buttons')},
-	
-	-- EW PANEL
-	{down = device_commands.Button_606,            cockpit_device_id = devices.RWR,  value_down = 0.5,               name = _('BR Power ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_606,            cockpit_device_id = devices.RWR,  value_down = 0.0,               name = _('BR Power OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_607,            cockpit_device_id = devices.RWR,  value_down = 0.5,               name = _('RWR Power ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_607,            cockpit_device_id = devices.RWR,  value_down = 0.0,               name = _('RWR Power OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_608,            cockpit_device_id = devices.RWR,  value_down = 0.5,               name = _('DDM Power ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_608,            cockpit_device_id = devices.RWR,  value_down = 0.0,               name = _('DDM Power OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_609,            cockpit_device_id = devices.RWR,  value_down = 0.0,               name = _('Decoy Release Mode Arret'), category = _('_My Buttons')},
-	{down = device_commands.Button_609,            cockpit_device_id = devices.RWR,  value_down = 0.5,               name = _('Decoy Release Mode S.A.'), category = _('_My Buttons')},
-	{down = device_commands.Button_609,            cockpit_device_id = devices.RWR,  value_down = 1.0,               name = _('Decoy Release Mode AU.'), category = _('_My Buttons')},
-	{down = device_commands.Button_610,            cockpit_device_id = devices.RWR,  value_down = 0.0,               name = _('Decoy Release Program A'), category = _('_My Buttons')},
-	{down = device_commands.Button_610,            cockpit_device_id = devices.RWR,  value_down = 0.5,               name = _('Decoy Release Program 5'), category = _('_My Buttons')},
-	
-	-- UHF Radio
-	{down = device_commands.Button_429,            cockpit_device_id = devices.UHF,  value_down = 0.0,               name = _('UHF Power 5W'), category = _('_My Buttons')},
-	{down = device_commands.Button_429,            cockpit_device_id = devices.UHF,  value_down = 1.0,               name = _('UHF Power 25W'), category = _('_My Buttons')},
-	{down = device_commands.Button_430, up = device_commands.Button_430, cockpit_device_id = devices.UHF, value_down = 1.0, value_up = 0.0, name = _('UHF SIL OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_430,            cockpit_device_id = devices.UHF,  value_down = 1.0,               name = _('UHF SIL ON'),  category = _('_My Buttons')},
-	{down = device_commands.Button_431,            cockpit_device_id = devices.UHF,  value_down = 0.0,               name = _('UHF E+A2 OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_431,            cockpit_device_id = devices.UHF,  value_down = 1.0,               name = _('UHF E+A2 ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_431,            cockpit_device_id = devices.UHF,  value_down = 0.0,               name = _('UHF EA2 OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_431,            cockpit_device_id = devices.UHF,  value_down = 1.0,               name = _('UHF EA2 ON'),  category = _('_My Buttons')},
-	{down = device_commands.Button_432,            cockpit_device_id = devices.UHF,  value_down = 0.0,               name = _('UHF CDE OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_432,            cockpit_device_id = devices.UHF,  value_down = 1.0,               name = _('UHF CDE OFF'),  category = _('_My Buttons')},
-	{down = device_commands.Button_432,            cockpit_device_id = devices.UHF,  value_down = 1.0,               name = _('UHF CDE ON'),  category = _('_My Buttons')},
+	{down = cmds.Button_617, cockpit_device_id = devices.VORILS,  value_down = 1.0, name = _('VOR/ILS Power ON'),  category = _('_My Buttons')},
+	{down = cmds.Button_617, cockpit_device_id = devices.VORILS,  value_down = 0.0, name = _('VOR/ILS Power OFF'), category = _('_My Buttons')},
+	{down = cmds.Button_619, cockpit_device_id = devices.VORILS,  value_down = 1.0, name = _('VOR/ILS Test BD'),   category = _('_My Buttons')},
+	{down = cmds.Button_619, cockpit_device_id = devices.VORILS,  value_down = 0.0, name = _('VOR/ILS Test HG'),   category = _('_My Buttons')},
 
-	{down = device_commands.Button_433,            cockpit_device_id = devices.UHF,  value_down = 0.00,              name = _('UHF Mode OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_433,            cockpit_device_id = devices.UHF,  value_down = 0.25,              name = _('UHF Mode ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_433,            cockpit_device_id = devices.UHF,  value_down = 0.50,              name = _('UHF Mode F1'), category = _('_My Buttons')},
-	{down = device_commands.Button_433,            cockpit_device_id = devices.UHF,  value_down = 0.75,              name = _('UHF Mode H'), category = _('_My Buttons')},		
-	{down = device_commands.Button_434,            cockpit_device_id = devices.UHF,  value_down = 0.0,               name = _('UHF Test Switch OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_434,            cockpit_device_id = devices.UHF,  value_down = 1.0,               name = _('UHF Test Switch ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_435,            cockpit_device_id = devices.UHF,  value_down = 0.05,              name = _('UHF Knob 1'), category = _('_My Buttons')},
-	{down = device_commands.Button_435,            cockpit_device_id = devices.UHF,  value_down = 0.10,              name = _('UHF Knob 2'), category = _('_My Buttons')},		
 
-	-- UVHF Radio
-	{down = device_commands.Button_437,            cockpit_device_id = devices.UVHF,  value_down = 0.0,              name = _('U/VHF Test OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_437,            cockpit_device_id = devices.UVHF,  value_down = 1.0,              name = _('U/VHF Test ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_438,            cockpit_device_id = devices.UVHF,  value_down = 0.0,              name = _('U/VHF E+A2 OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_438,            cockpit_device_id = devices.UVHF,  value_down = 1.0,              name = _('U/VHF E+A2 ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_439,            cockpit_device_id = devices.UVHF,  value_down = 0.0,              name = _('U/VHF SIL OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_439,            cockpit_device_id = devices.UVHF,  value_down = 1.0,              name = _('U/VHF SIL ON'), category = _('_My Buttons')},
-	{down = device_commands.Button_440,            cockpit_device_id = devices.UVHF,  value_down = 0.0,              name = _('U/VHF 100 MHz Selector 0'), category = _('_My Buttons')},
-	{down = device_commands.Button_440,            cockpit_device_id = devices.UVHF,  value_down = 0.1,              name = _('U/VHF 100 MHz Selector 1'), category = _('_My Buttons')},
-	{down = device_commands.Button_441,            cockpit_device_id = devices.UVHF,  value_down = 0.0,              name = _('U/VHF 10 MHz Selector 0'), category = _('_My Buttons')},
-	{down = device_commands.Button_441,            cockpit_device_id = devices.UVHF,  value_down = 0.1,              name = _('U/VHF 10 MHz Selector 1'), category = _('_My Buttons')},
-	{down = device_commands.Button_442,            cockpit_device_id = devices.UVHF,  value_down = 0.0,              name = _('U/VHF 1 MHz Selector 0'), category = _('_My Buttons')},
-	{down = device_commands.Button_442,            cockpit_device_id = devices.UVHF,  value_down = 0.1,              name = _('U/VHF 1 MHz Selector 1'), category = _('_My Buttons')},
-	{down = device_commands.Button_443,            cockpit_device_id = devices.UVHF,  value_down = 0.0,              name = _('U/VHF 100 kHz Selector 0'), category = _('_My Buttons')},
-	{down = device_commands.Button_443,            cockpit_device_id = devices.UVHF,  value_down = 0.1,              name = _('U/VHF 100 kHz Selector 1'), category = _('_My Buttons')},
-	{down = device_commands.Button_444,            cockpit_device_id = devices.UVHF,  value_down = 0.25,             name = _('U/VHF 25 kHz Selector 0'), category = _('_My Buttons')},
-	{down = device_commands.Button_444,            cockpit_device_id = devices.UVHF,  value_down = 0.50,             name = _('U/VHF 25 kHz Selector 25'), category = _('_My Buttons')},
-	{down = device_commands.Button_445,            cockpit_device_id = devices.UVHF,  value_down = 0.05,             name = _('U/VHF Knob 1'), category = _('_My Buttons')},
-	{down = device_commands.Button_445,            cockpit_device_id = devices.UVHF,  value_down = 0.10,             name = _('U/VHF Knob 2'), category = _('_My Buttons')},
-	{down = device_commands.Button_446,            cockpit_device_id = devices.UVHF,  value_down = 0.00,             name = _('U/VHF Mode Switch OFF'), category = _('_My Buttons')},
-	{down = device_commands.Button_446,            cockpit_device_id = devices.UVHF,  value_down = 0.25,             name = _('U/VHF Mode Switch PAL'), category = _('_My Buttons')},
-	{down = device_commands.Button_446,            cockpit_device_id = devices.UVHF,  value_down = 0.50,             name = _('U/VHF Mode Switch PAL+G'), category = _('_My Buttons')},
-	{down = device_commands.Button_446,            cockpit_device_id = devices.UVHF,  value_down = 0.75,             name = _('U/VHF Mode Switch F1'), category = _('_My Buttons')},
-	{down = device_commands.Button_446,            cockpit_device_id = devices.UVHF,  value_down = 1.00,             name = _('U/VHF Mode Switch H'), category = _('_My Buttons')},	
-	{down = device_commands.Button_447,            cockpit_device_id = devices.UVHF,  value_down = 0.00,             name = _('U/VHF Power 5W'), category = _('_My Buttons')},
-	{down = device_commands.Button_447,            cockpit_device_id = devices.UVHF,  value_down = 1.00,             name = _('U/VHF Power 25W'), category = _('_My Buttons')},	
-	{down = device_commands.Button_448,            cockpit_device_id = devices.UVHF,  value_down = 0.00,             name = _('U/VHF Mode Selector M'), category = _('_My Buttons')},
-	{down = device_commands.Button_448,            cockpit_device_id = devices.UVHF,  value_down = 0.50,             name = _('U/VHF Mode Selector P'), category = _('_My Buttons')},
-	{down = device_commands.Button_448,            cockpit_device_id = devices.UVHF,  value_down = 1.00,             name = _('U/VHF Mode Selector G'), category = _('_My Buttons')},	
+	-- RADAR
+	{down = cmds.Button_500, cockpit_device_id = devices.RADAR,  value_down = 1.0, name = _('Radar Target Mem Time R'), category = _('_My Buttons')},
+	{down = cmds.Button_500, cockpit_device_id = devices.RADAR,  value_down = 0.0, name = _('Radar Target Mem Time N'), category = _('_My Buttons')},
+	
+	-- ENGINE
+	{down = iCommandLeftEngineStart, up=iCommandLeftEngineStop, name = _('Engines START/STOP'), category = _('_My Buttons')},
+	{down = cmds.Button_652, cockpit_device_id = devices.ENGPANEL,  value_down = 1, name = _('Fuel Cutoff Switch ON'), category = _('_My Buttons')},
+	{down = cmds.Button_652, cockpit_device_id = devices.ENGPANEL,  value_down = 0, name = _('Fuel Cutoff Switch OFF'), category = _('_My Buttons')},
 
-	-- IFF
-	--elements["PTN_377"] = default_multiposition_knob(_("Mode-1 Tens Selector"), devices.INSTPANEL, device_commands.Button_377, 377,  10, 0.1, false, 0)
-	--elements["PTN_378"] = default_multiposition_knob(_("Mode-1 Ones Selector"), devices.INSTPANEL, device_commands.Button_378, 378,  10, 0.1, false, 0)
-	--elements["PTN_379"] = default_multiposition_knob(_("Mode-3A Thousands Selector"), devices.INSTPANEL, device_commands.Button_379, 379,  10, 0.1, false, 0)
-	--elements["PTN_380"] = default_multiposition_knob(_("Mode-3A Hundreds Selector"), devices.INSTPANEL, device_commands.Button_380, 380,  10, 0.1, false, 0)
-	--elements["PTN_381"] = default_multiposition_knob(_("Mode-3A Tens Selector"), devices.INSTPANEL, device_commands.Button_381, 381,  10, 0.1, false, 0)
-	--elements["PTN_382"] = default_multiposition_knob(_("Mode-3A Ones Selector"), devices.INSTPANEL, device_commands.Button_382, 382,  10, 0.1, false, 0)
-	--elements["PTN_383"] = default_3_position_tumb(_("Ident Power Switch"), devices.INSTPANEL, device_commands.Button_383, 383, false, false)
-	--elements["PTN_384"] = default_2_position_tumb(_("Mode-1 Switch"), devices.INSTPANEL, device_commands.Button_384, 384)
-	--elements["PTN_385"] = default_2_position_tumb(_("Mode-2 Switch"), devices.INSTPANEL, device_commands.Button_385, 385)
-	--elements["PTN_386"] = default_2_position_tumb(_("Mode-3A Switch"), devices.INSTPANEL, device_commands.Button_386, 386)
-	--elements["PTN_387"] = default_2_position_tumb(_("Mode-C Switch"), devices.INSTPANEL, device_commands.Button_387, 387)
-	--{down = device_commands.Button_383,            cockpit_device_id = devices.INSTPANEL,  value_down = 0.00,             name = _('IFF Power OFF'), category = _('_My Buttons')},
-	--{down = device_commands.Button_383,            cockpit_device_id = devices.INSTPANEL,  value_down = 1.00,             name = _('IFF Power SECT'), category = _('_My Buttons')},
-	--{down = device_commands.Button_383,            cockpit_device_id = devices.INSTPANEL,  value_down =-1.00,             name = _('IFF Power CONT'), category = _('_My Buttons')},		
-	
-	]]
-	
 	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	-- ff: end additional buttons
 	----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 
 	--HOTAS Stick
@@ -246,6 +130,7 @@ join(res.keyCommands,{
 	--PCA
 	{category = _('PCA Weapons Management'), name = _('Gun Arm TOGGLE'),							down = iCommandPlaneAHCPGUNArm,																},
 	{category = _('PCA Weapons Management'), name = _('Master Arm TOGGLE'),							down = iCommandSwitchMasterArm,																},
+	{category = _('PCA Weapons Management'), name = _('Selective Jettison TOGGLE'),					down = cmds.SelJett_TOGGLE, 																},
 	{category = _('PCA Weapons Management'), name = _('Smoke'),										down = iCommandPlaneWingtipSmokeOnOff,														}, 
 	{category = _('PCA Weapons Management'), name = _('Emergency Jettison'),						cockpit_device_id = devices.PCA, down = 3409, up = 3409, value_down = 1, value_up = 0,		},
 	{category = _('PCA Weapons Management'), name = _('PCA Button 1 SELECT'),						cockpit_device_id = devices.PCA, down = 3235, up = 3235, value_down = 1, value_up = 0,		},
@@ -450,13 +335,13 @@ join(res.keyCommands,{
 	{category = _('RDI Radar'), name = _('Radar Azimuth 60'),					cockpit_device_id = 11,	down = 3506,	value_down = 0.0,	 								},
 	{category = _('RDI Radar'), name = _('Radar Azimuth 30'),					cockpit_device_id = 11,	down = 3506,	value_down = 0.5,	 								},
 	{category = _('RDI Radar'), name = _('Radar Azimuth 15'),					cockpit_device_id = 11,	down = 3506,	value_down = 1.0,	 								},
-	{category = _('RDI Radar'), name = _('Radar Azimuth 60, else 30'),			cockpit_device_id = 11,	down = 3506,	value_down = 0,		 up = 3506, value_up = 0.5,		},
-	{category = _('RDI Radar'), name = _('Radar Azimuth 15, else 30'),			cockpit_device_id = 11,	down = 3506,	value_down = 1,		 up = 3506, value_up = 0.5,		},
+	{category = _('RDI Radar'), name = _('Radar Azimuth 60, else 30'),			cockpit_device_id = 11,	down = 3506,	value_down = 0,		up = 3506,	value_up = 0.5,		},
+	{category = _('RDI Radar'), name = _('Radar Azimuth 15, else 30'),			cockpit_device_id = 11,	down = 3506,	value_down = 1,		up = 3506,	value_up = 0.5,		},
 	{category = _('RDI Radar'), name = _('Radar Scan Line 4'),					cockpit_device_id = 11,	down = 3502,	value_down = 0.0,	 								},
 	{category = _('RDI Radar'), name = _('Radar Scan Line 2'),					cockpit_device_id = 11,	down = 3502,	value_down = 0.5,	 								},
 	{category = _('RDI Radar'), name = _('Radar Scan Line 1'),					cockpit_device_id = 11,	down = 3502,	value_down = 1.0,	 								},
-	{category = _('RDI Radar'), name = _('Radar Scan Line 4, else 2'),			cockpit_device_id = 11,	down = 3502,	value_down = 0,		 up = 3502, value_up = 0.5,		},
-	{category = _('RDI Radar'), name = _('Radar Scan Line 1, else 2'),			cockpit_device_id = 11,	down = 3502,	value_down = 1,		 up = 3502, value_up = 0.5,		},
+	{category = _('RDI Radar'), name = _('Radar Scan Line 4, else 2'),			cockpit_device_id = 11,	down = 3502,	value_down = 0,		up = 3502,	value_up = 0.5,		},
+	{category = _('RDI Radar'), name = _('Radar Scan Line 1, else 2'),			cockpit_device_id = 11,	down = 3502,	value_down = 1,		up = 3502,	value_up = 0.5,		},
 	{category = _('RDI Radar'), name = _('Radar Power A Off'),					cockpit_device_id = 11,	down = 3486, 	value_down = 0.0,									},
 	{category = _('RDI Radar'), name = _('Radar Power PCH Warm-up'), 			cockpit_device_id = 11,	down = 3486, 	value_down = .33,									},
 	{category = _('RDI Radar'), name = _('Radar Power SIL Standby'), 			cockpit_device_id = 11,	down = 3486, 	value_down = .67,									},
@@ -470,16 +355,16 @@ join(res.keyCommands,{
 	{category = _('RDI Radar'), name = _('Doppler Reject OFF'),					cockpit_device_id = 11,	down = 3484,	value_down = -1,									},
 	{category = _('RDI Radar'), name = _('Doppler Reject AUTO'),				cockpit_device_id = 11,	down = 3484,	value_down = 0,										},
 	{category = _('RDI Radar'), name = _('Doppler Reject ON'),					cockpit_device_id = 11,	down = 3484,	value_down = 1,										},
-	{category = _('RDI Radar'), name = _('Doppler Reject OFF, else AUTO'),		cockpit_device_id = 11,	down = 3484,	value_down = -1,	 up = 3484, value_up = 0,		},
-	{category = _('RDI Radar'), name = _('Doppler Reject ON, else AUTO'),		cockpit_device_id = 11,	down = 3484,	value_down = 1,		 up = 3484, value_up = 0,		},
-	{category = _('RDI Radar'), name = _('Radar PPI Mode, else B-Scope Mode'),	cockpit_device_id = 11,	down = 3499,	value_down = 0,		 up = 3499, value_up = 1,		},
-    {category = _('RDI Radar'), name = _('Radar ON, else STANDBY'),				cockpit_device_id = 11,	down = 3486,	value_up = 0.67,	 up = 3486, value_down = 1,		},
-    {category = _('RDI Radar'), name = _('Radar WARM UP, else OFF'),			cockpit_device_id = 11,	down = 3486,	value_up = 0,		 up = 3486, value_down = 0.33,	},
-	{category = _('RDI Radar'), name = _('TDC Mode S, else Z'),					cockpit_device_id = 11,	down = 3710,	value_down = 0,		 up = 3710, value_up = 1,		},
-	{category = _('RDI Radar'), name = _('A Switch'),							cockpit_device_id = 11,	down = 3491,	value_down = 1,										},
-	{category = _('RDI Radar'), name = _('DEC Switch'),							cockpit_device_id = 11,	down = 3493,	value_down = 1,										},
-	{category = _('RDI Radar'), name = _('VISU Switch'),						cockpit_device_id = 11,	down = 3495,	value_down = 1,										},
-	{category = _('RDI Radar'), name = _('PSIC Switch'),						cockpit_device_id = 11,	down = 3504,	value_down = 1,										},
+	{category = _('RDI Radar'), name = _('Doppler Reject OFF, else AUTO'),		cockpit_device_id = 11,	down = 3484,	value_down = -1,	up = 3484,	value_up = 0,		},
+	{category = _('RDI Radar'), name = _('Doppler Reject ON, else AUTO'),		cockpit_device_id = 11,	down = 3484,	value_down = 1,		up = 3484,	value_up = 0,		},
+	{category = _('RDI Radar'), name = _('Radar PPI Mode, else B-Scope Mode'),	cockpit_device_id = 11,	down = 3499,	value_down = 0,		up = 3499,	value_up = 1,		},
+    {category = _('RDI Radar'), name = _('Radar ON, else STANDBY'),				cockpit_device_id = 11,	down = 3486,	value_up = 0.67,	up = 3486,	value_down = 1,		},
+    {category = _('RDI Radar'), name = _('Radar WARM UP, else OFF'),			cockpit_device_id = 11,	down = 3486,	value_up = 0,		up = 3486,	value_down = 0.33,	},
+	{category = _('RDI Radar'), name = _('TDC Mode S, else Z'),					cockpit_device_id = 11,	down = 3710,	value_down = 0,		up = 3710,	value_up = 1,		},
+	{category = _('RDI Radar'), name = _('A Switch'),							cockpit_device_id = 11,	down = 3491,	value_down = 1,		up = 3491,	value_up = 0,		},
+	{category = _('RDI Radar'), name = _('DEC Switch'),							cockpit_device_id = 11,	down = 3493,	value_down = 1,		up = 3493,	value_up = 0,		},
+	{category = _('RDI Radar'), name = _('VISU Switch'),						cockpit_device_id = 11,	down = 3495,	value_down = 1,		up = 3495,	value_up = 0,		},
+	{category = _('RDI Radar'), name = _('PSIC Switch'),						cockpit_device_id = 11,	down = 3504,	value_down = 1,		up = 3504,	value_up = 0,		},
 
 	--IFF
 	{category = _('IFF'), name = _('IFF Mode 1'),		down = 3598, up = 3598, cockpit_device_id = 11, value_down = 0.0, },
@@ -497,6 +382,8 @@ join(res.keyCommands,{
 	--Countermeasures
 	{category = _('Countermeasures'), name = _('Decoy Release Program Knob Up'),	down = iCommandPlaneCMDChangeRippleQuantity,    					},
 	{category = _('Countermeasures'), name = _('Decoy Release Program Knob Down'),	down = iCommandPlaneCMDChangeRippleQuantityOff, 					},
+	{category = _('Countermeasures'), name = _('RWR Brightness INC'),    			pressed = cmds.RWRBrightness_INC, value_pressed=0.1					}, 
+	{category = _('Countermeasures'), name = _('RWR Brightness DEC'),    			pressed = cmds.RWRBrightness_INC, value_pressed=-0.1				},
 	{category = _('Countermeasures'), name = _('RWR OFF'),  						down = 3607, up = 3607, cockpit_device_id = 13, value_down = 0,		},
     {category = _('Countermeasures'), name = _('RWR ON'),   						down = 3607, up = 3607, cockpit_device_id = 13, value_down = 0.5,	},
     {category = _('Countermeasures'), name = _('RWR TEST'), 						down = 3607, up = 3607, cockpit_device_id = 13, value_down = 1.0,	},
@@ -544,23 +431,18 @@ join(res.keyCommands,{
     {category = _('Electrical'), name = _('Pitot Heat Switch ON'),    		down = 3660, up = 3660, cockpit_device_id = 22, value_down= 0.0, 				},
 
     -- Interior Lights
-    {category = _('Interior Lights'), name = _('Console Flood Lights TOGGLE'), 		down = iCommandPlaneCockpitIlluminationPanels, 									},
-    {category = _('Interior Lights'), name = _('Dashboard Flood Lights OFF'),    	down = 3639, up = 3639, cockpit_device_id = 16, value_down = 0,   				},
-    {category = _('Interior Lights'), name = _('Dashboard Flood Lights LOW'),    	down = 3639, up = 3639, cockpit_device_id = 16, value_down = .33, 				},
-    {category = _('Interior Lights'), name = _('Dashboard Flood Lights MEDIUM'), 	down = 3639, up = 3639, cockpit_device_id = 16, value_down = .67, 				},
-    {category = _('Interior Lights'), name = _('Dashboard Flood Lights HIGH'),   	down = 3639, up = 3639, cockpit_device_id = 16, value_down = 1,   				},
-    {category = _('Interior Lights'), name = _('Dashboard Panel Lights OFF'),    	down = 3640, up = 3640, cockpit_device_id = 16, value_down = 0,   				},
-    {category = _('Interior Lights'), name = _('Dashboard Panel Lights LOW'),    	down = 3640, up = 3640, cockpit_device_id = 16, value_down = .33, 				},
-    {category = _('Interior Lights'), name = _('Dashboard Panel Lights MEDIUM'), 	down = 3640, up = 3640, cockpit_device_id = 16, value_down = .67, 				},
-    {category = _('Interior Lights'), name = _('Dashboard Panel Lights HIGH'),   	down = 3640, up = 3640, cockpit_device_id = 16, value_down = 1,   				},
-	{category = _('Interior Lights'), name = _('Console Flood Lights OFF'),      	down = 3641, up = 3641, cockpit_device_id = 16, value_down = 0,   				},
-    {category = _('Interior Lights'), name = _('Console Flood Lights LOW'),      	down = 3641, up = 3641, cockpit_device_id = 16, value_down = .33, 				},
-    {category = _('Interior Lights'), name = _('Console Flood Lights MEDIUM'),   	down = 3641, up = 3641, cockpit_device_id = 16, value_down = .67, 				},
-    {category = _('Interior Lights'), name = _('Console Flood Lights HIGH'),     	down = 3641, up = 3641, cockpit_device_id = 16, value_down = 1,   				},
-    {category = _('Interior Lights'), name = _('Console Panel Lights OFF'),      	down = 3642, up = 3642, cockpit_device_id = 16, value_down = 0,   				},
-    {category = _('Interior Lights'), name = _('Console Panel Lights LOW'),      	down = 3642, up = 3642, cockpit_device_id = 16, value_down = .33, 				},
-    {category = _('Interior Lights'), name = _('Console Panel Lights MEDIUM'),   	down = 3642, up = 3642, cockpit_device_id = 16, value_down = .67, 				},
-    {category = _('Interior Lights'), name = _('Console Panel Lights HIGH'),     	down = 3642, up = 3642, cockpit_device_id = 16, value_down = 1,   				},
+	{category = _('Interior Lights'), name = _('Dashboard Flood Lights INC'),    	pressed = cmds.DashFloodLight_INC, value_pressed=0.1							}, 
+	{category = _('Interior Lights'), name = _('Dashboard Flood Lights DEC'),    	pressed = cmds.DashFloodLight_INC, value_pressed=-0.1							}, 
+	{category = _('Interior Lights'), name = _('Dashboard Panel Lights INC'),    	pressed = cmds.DashPanelLight_INC, value_pressed=0.1							}, 
+	{category = _('Interior Lights'), name = _('Dashboard Panel Lights DEC'),    	pressed = cmds.DashPanelLight_INC, value_pressed=-0.1							}, 
+	{category = _('Interior Lights'), name = _('Console Flood Lights INC'),    		pressed = cmds.ConsoleFloodLight_INC, value_pressed=0.1							}, 
+	{category = _('Interior Lights'), name = _('Console Flood Lights DEC'),    		pressed = cmds.ConsoleFloodLight_INC, value_pressed=-0.1						}, 
+	{category = _('Interior Lights'), name = _('Console Panel Lights INC'),    		pressed = cmds.ConsolePanelLight_INC, value_pressed=0.1							}, 
+	{category = _('Interior Lights'), name = _('Console Panel Lights DEC'),    		pressed = cmds.ConsolePanelLight_INC, value_pressed=-0.1						}, 
+	{category = _('Interior Lights'), name = _('White Flood Lights INC'),    		pressed = cmds.WhiteFloodLight_INC, value_pressed=0.1							}, 
+	{category = _('Interior Lights'), name = _('White Flood Lights DEC'),    		pressed = cmds.WhiteFloodLight_INC, value_pressed=-0.1							}, 
+	{category = _('Interior Lights'), name = _('Caution Lights INC'),    			pressed = cmds.CautionLight_INC, value_pressed=0.1								}, 
+	{category = _('Interior Lights'), name = _('Caution Lights DEC'),    			pressed = cmds.CautionLight_INC, value_pressed=-0.1								},
     {category = _('Interior Lights'), name = _('Warning Lights TEST'), 				down = 3524, up = 3524, cockpit_device_id = 8, value_up= 0, value_down= 1, 		},
 	{category = _('Interior Lights'), name = _('NVG Lights Filter ON else OFF'),	down = 3672, up = 3672, cockpit_device_id = 16, value_down = 1, value_up = 0,	},
 
