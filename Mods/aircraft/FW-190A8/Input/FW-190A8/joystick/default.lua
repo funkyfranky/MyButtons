@@ -59,20 +59,14 @@ keyCommands = {
 
 -- Gameplay
 {down = iCommandActivePauseOnOff, name = _('Pause Active'), category = _('General')},
-{down = iCommandQuit, name = _('Exit mission'), category = _('General')},
 {down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
 {down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
-{down = iCommandBrakeGo, name = _('Pause'), category = _('General')},
-{down = iCommandAccelerate, name = _('Time accelerate'), category = _('General')},
-{down = iCommandDecelerate, name = _('Time decelerate'), category = _('General')},
-{down = iCommandNoAcceleration, name = _('Time normal'), category = _('General')},
 {down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
 {down = iCommandDebriefing, name = _('Show debriefing window'), category = _('General')},
 {down = iCommandRecoverHuman, name = _('Get new plane - respawn'), category = _('General')},
 {down = iCommandTrkEsc, name = _('Playback track cancel'), category = _('General')},
 {down = iCommandInfoOnOff, name = _('Info bar view toggle'), category = _('General')},
 {down = iCommandOneFrame, name = _('One frame mode'), category = _('General')},
-{down = iCommandGraphicsFrameRate, name = _('Frame rate counter - Service info'), category = _('General')},
 {down = iCommandViewCoordinatesInLinearUnits, name = _('Coordinates units change'), category = _('General')},
 {down = iCommandCockpitClickModeOnOff, name = _('Clickable mouse cockpit mode On/Off'), category = _('General')},
 {down = iCommandPlane_ShowControls, name = _('Controls indicator') , category = _('General')},
@@ -94,7 +88,10 @@ keyCommands = {
 {down = iCommandToggleCommandMenu, name = _('COMM Communication menu'), category = _('Communications')},
 {down = ICommandSwitchDialog, name = _('COMM Switch dialog'), category = _('Communications')},
 {down = ICommandSwitchToCommonDialog, name = _('COMM Switch to main menu'), category = _('Communications')},
-{down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk'), category = _('Communications')},
+{down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk (call radio menu)'), category = _('Communications')},
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0, value_up = 0.0, name = _('COMM Push to talk (VOIP)'), category = _('Communications')},
 
 -- View                                                    
 {combos = {{key = 'JOY_BTN_POV1_L'}}, pressed = iCommandViewLeftSlow, up = iCommandViewStopSlow, name = _('View Left slow'), category = _('View')},
@@ -127,7 +124,7 @@ keyCommands = {
 {down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
 {down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
-{down = iCommandViewRear, name = _('F4 Look back view'), category = _('View')},
+{down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
 {down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
 {down = iCommandViewFightGround, name = _('F5 Ground hostile view'), category = _('View')},

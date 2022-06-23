@@ -255,10 +255,13 @@ join(res.keyCommands,{
     {down = ext_light_commands.Switch_LANDING_LT,  up = ext_light_commands.Switch_LANDING_LT,  cockpit_device_id = devices.LTEXT, value_down = 1,0, value_up=0.5, name = _('Landing Light APP else HVR'),                       category = _('Joystick Switch Abstractions')},
     {down = ext_light_commands.Switch_LANDING_LT,  up = ext_light_commands.Switch_LANDING_LT,  cockpit_device_id = devices.LTEXT, value_down = 0,0, value_up=0.5, name = _('Landing Light OFF else HVR'), 	                category = _('Joystick Switch Abstractions')}, 
    
+	-- DCS Communications
+	{down = iCommandPlaneRefuelingReadyPreContact,	name = _('A/A refueling - "Ready for precontact" radio call'), 		category = _('Communications')},
+	
 	-- Master Modes
-	{down = iCommandHelicopter_PPR_button_K, name = _('Master Mode NAV'),	category = _('Master Modes')},
-	{down = iCommandHelicopter_PPR_button_H, name = _('Master Mode VSTOL'),	category = _('Master Modes')},
-	{down = iCommandHelicopter_PPR_button_T, name = _('Master Mode AG'),	category = _('Master Modes')},
+	{down = iCommandHelicopter_PPR_button_K, 		name = _('Master Mode NAV'),										category = _('Master Modes')},
+	{down = iCommandHelicopter_PPR_button_H,		name = _('Master Mode VSTOL'),										category = _('Master Modes')},
+	{down = iCommandHelicopter_PPR_button_T, 		name = _('Master Mode AG'),											category = _('Master Modes')},
 	
 	-- HUD Controls
 	{down = iCommandPlane_ABRIS_BT_1,									name = _('HUD Reject Mode Down (NORM - REJ1 - REJ2)'),	category = _('HUD Control')},
@@ -573,8 +576,8 @@ join(res.keyCommands,{
 	
 	{pressed = iCommandPlaneLeftMFD_BRT_Increase,	up = iCommandPlaneLeftMFD_BRT_Stop,		name = _('Left MPCD BRT Increase'),		category = _('Left MPCD')},
 	{pressed = iCommandPlaneLeftMFD_BRT_Decrease,	up = iCommandPlaneLeftMFD_BRT_Stop,		name = _('Left MPCD BRT Decrease'),		category = _('Left MPCD')},
-	{down = mpcd_l_commands.Switch_NGT_MODE,	up = mpcd_l_commands.Switch_NGT_MODE,	cockpit_device_id = devices.MPCD_LEFT,	value_down = -1,	value_up = 0,	name = _('Left MPCD Night Mode'),		category = _('Left MPCD')},
-	{down = mpcd_l_commands.Switch_DAY_MODE,	up = mpcd_l_commands.Switch_DAY_MODE,	cockpit_device_id = devices.MPCD_LEFT,	value_down =  1,	value_up = 0,	name = _('Left MPCD Day Mode'),			category = _('Left MPCD')},
+	{down = mpcd_l_commands.Switch_NGT_MODE,	up = mpcd_l_commands.Switch_NGT_MODE,	cockpit_device_id = devices.MPCD_LEFT,	value_down =  1,	value_up = 0,	name = _('Left MPCD Night Mode'),		category = _('Left MPCD')},
+	{down = mpcd_l_commands.Switch_DAY_MODE,	up = mpcd_l_commands.Switch_DAY_MODE,	cockpit_device_id = devices.MPCD_LEFT,	value_down = -1,	value_up = 0,	name = _('Left MPCD Day Mode'),			category = _('Left MPCD')},
 	{down = mpcd_l_commands.Switch_SYM_UP,		up = mpcd_l_commands.Switch_SYM_UP,		cockpit_device_id = devices.MPCD_LEFT,	value_down =  1,	value_up = 0,	name = _('Left MPCD SYM Increase'),		category = _('Left MPCD')},
 	{down = mpcd_l_commands.Switch_SYM_DN,		up = mpcd_l_commands.Switch_SYM_DN,		cockpit_device_id = devices.MPCD_LEFT,	value_down = -1,	value_up = 0,	name = _('Left MPCD SYM Decrease'),		category = _('Left MPCD')},
 	{down = mpcd_l_commands.Switch_CONT_UP,		up = mpcd_l_commands.Switch_CONT_UP,	cockpit_device_id = devices.MPCD_LEFT,	value_down =  1,	value_up = 0,	name = _('Left MPCD CON Increase'),		category = _('Left MPCD')},
@@ -608,8 +611,8 @@ join(res.keyCommands,{
 	
 	{pressed = iCommandPlaneRightMFD_BRT_Increase,	up = iCommandPlaneRightMFD_BRT_Stop,	name = _('Right MPCD BRT Increase'),	category = _('Right MPCD')},
 	{pressed = iCommandPlaneRightMFD_BRT_Decrease,	up = iCommandPlaneRightMFD_BRT_Stop,	name = _('Right MPCD BRT Decrease'),	category = _('Right MPCD')},
-	{down = mpcd_r_commands.Switch_NGT_MODE,	up = mpcd_r_commands.Switch_NGT_MODE,	cockpit_device_id = devices.MPCD_RIGHT,	value_down = -1,	value_up = 0,	name = _('Right MPCD Night Mode'),		category = _('Right MPCD')},
-	{down = mpcd_r_commands.Switch_DAY_MODE,	up = mpcd_r_commands.Switch_DAY_MODE,	cockpit_device_id = devices.MPCD_RIGHT,	value_down =  1,	value_up = 0,	name = _('Right MPCD Day Mode'),		category = _('Right MPCD')},
+	{down = mpcd_r_commands.Switch_NGT_MODE,	up = mpcd_r_commands.Switch_NGT_MODE,	cockpit_device_id = devices.MPCD_RIGHT,	value_down =  1,	value_up = 0,	name = _('Right MPCD Night Mode'),		category = _('Right MPCD')},
+	{down = mpcd_r_commands.Switch_DAY_MODE,	up = mpcd_r_commands.Switch_DAY_MODE,	cockpit_device_id = devices.MPCD_RIGHT,	value_down = -1,	value_up = 0,	name = _('Right MPCD Day Mode'),		category = _('Right MPCD')},
 	{down = mpcd_r_commands.Switch_SYM_UP,		up = mpcd_r_commands.Switch_SYM_UP,		cockpit_device_id = devices.MPCD_RIGHT, value_down =  1,	value_up = 0,	name = _('Right MPCD SYM Increase'),	category = _('Right MPCD')},
 	{down = mpcd_r_commands.Switch_SYM_DN,		up = mpcd_r_commands.Switch_SYM_DN,		cockpit_device_id = devices.MPCD_RIGHT, value_down = -1,	value_up = 0,	name = _('Right MPCD SYM Decrease'),	category = _('Right MPCD')},
 	{down = mpcd_r_commands.Switch_CONT_UP,		up = mpcd_r_commands.Switch_CONT_UP,	cockpit_device_id = devices.MPCD_RIGHT, value_down =  1,	value_up = 0,	name = _('Right MPCD CON Increase'),	category = _('Right MPCD')},

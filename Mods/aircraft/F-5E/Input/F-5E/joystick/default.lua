@@ -280,12 +280,12 @@ join(res.keyCommands,{
 {	down = ic_commands.Search,		up = ic_commands.Search,		cockpit_device_id = devices.RWR_IC,	value_down = 1.0, value_up = 0.0,	name = _('RWR Indicator Control SEARCH Button'),				category = {_('Instrument Panel'), _('RWR')}},
 {	down = ic_commands.Handoff,		up = ic_commands.Handoff,		cockpit_device_id = devices.RWR_IC,	value_down = 1.0, value_up = 0.0,	name = _('RWR Indicator Control HANDOFF Button'),				category = {_('Instrument Panel'), _('RWR')}},
 {	down = ic_commands.Launch,		up = ic_commands.Launch,		cockpit_device_id = devices.RWR_IC,	value_down = 1.0, value_up = 0.0,	name = _('RWR Indicator Control LAUNCH Button'),				category = {_('Instrument Panel'), _('RWR')}},
-{	down = ic_commands.Altitude,	up = ic_commands.Altitude,		cockpit_device_id = devices.RWR_IC,	value_down = 1.0, value_up = 0.0,	name = _('RWR Indicator Control ALTITUDE Button'),				category = {_('Instrument Panel'), _('RWR')}},
+{	down = ic_commands.Altitude_EXT,								cockpit_device_id = devices.RWR_IC,	value_down = 1.0,					name = _('RWR Indicator Control ALTITUDE Button'),				category = {_('Instrument Panel'), _('RWR')}},
 {	down = ic_commands.Btn_T,		up = ic_commands.Btn_T,			cockpit_device_id = devices.RWR_IC,	value_down = 1.0, value_up = 0.0,	name = _('RWR Indicator Control T Button'),						category = {_('Instrument Panel'), _('RWR')}},
 {	down = ic_commands.SysTest,		up = ic_commands.SysTest,		cockpit_device_id = devices.RWR_IC,	value_down = 1.0, value_up = 0.0,	name = _('RWR Indicator Control SYS TEST Button'),				category = {_('Instrument Panel'), _('RWR')}},
 {	down = ic_commands.UnknownShip,	up = ic_commands.UnknownShip,	cockpit_device_id = devices.RWR_IC,	value_down = 1.0, value_up = 0.0,	name = _('RWR Indicator Control UNKNOWN SHIP Button'),			category = {_('Instrument Panel'), _('RWR')}},
 {	down = ic_commands.ActPwr,		up = ic_commands.ActPwr,		cockpit_device_id = devices.RWR_IC,	value_down = 1.0, value_up = 0.0,	name = _('RWR Indicator Control ACT/PWR Button'),				category = {_('Instrument Panel'), _('RWR')}},
-{	down = ic_commands.Power,		up = ic_commands.Power,			cockpit_device_id = devices.RWR_IC,	value_down = 1.0, value_up = 0.0,	name = _('RWR Indicator Control POWER Button'),					category = {_('Instrument Panel'), _('RWR')}},
+{	down = ic_commands.Power_EXT,									cockpit_device_id = devices.RWR_IC,	value_down = 1.0,					name = _('RWR Indicator Control POWER Button'),					category = {_('Instrument Panel'), _('RWR')}},
 {	pressed = ic_commands.Volume_EXT,								cockpit_device_id = devices.RWR_IC,	value_pressed = -1.0,				name = _('RWR Indicator Control AUDIO Knob - CCW/Decrease'),	category = {_('Instrument Panel'), _('RWR')}},
 {	pressed = ic_commands.Volume_EXT,								cockpit_device_id = devices.RWR_IC,	value_pressed = 1.0,				name = _('RWR Indicator Control AUDIO Knob - CW/Increase'),		category = {_('Instrument Panel'), _('RWR')}},
 {	pressed = ic_commands.Brightness_EXT,							cockpit_device_id = devices.RWR_IC,	value_pressed = -1.0,				name = _('RWR Indicator Control DIM Knob - CCW/Decrease'),		category = {_('Instrument Panel'), _('RWR')}},
@@ -641,6 +641,10 @@ join(res.keyCommands,{
 {	down = device_commands.Button_16,									cockpit_device_id = devices.UHF_RADIO,	value_down = 0.0,				name = _('UHF Radio Antenna Selector Switch - LOWER'),			category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},
 
 {	down = device_commands.Button_1,	up = device_commands.Button_1,	cockpit_device_id = devices.INTERCOM,	value_down = 1,	value_up = 0,	name = _('UHF Radio Microphone Button (call radio menu)'),		category = {_('UHF Radio ARC-164 Control Panel'), _('Throttle Quadrant')}},
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{	down = iCommandVoIPRadioPushToTalkEnableDisableVoice,	up = iCommandVoIPRadioPushToTalkEnableDisableVoice,	value_down = 1.0,	value_up = 0.0,	name = _('UHF Radio Microphone Button (VOIP)'),					category = {_('UHF Radio ARC-164 Control Panel'), _('Throttle Quadrant')}},
+--
 {	down = device_commands.Button_23,									cockpit_device_id = devices.UHF_RADIO,	value_down = 1,					name = _('UHF Radio Hinged Access Door - OPEN/CLOSE'),			category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},
 {	down = device_commands.Button_22,									cockpit_device_id = devices.UHF_RADIO,	value_down = 1,					name = _('UHF Radio Hinged Access Door - OPEN'),				category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},
 {	down = device_commands.Button_22,									cockpit_device_id = devices.UHF_RADIO,	value_down = 0,					name = _('UHF Radio Hinged Access Door - CLOSE'),				category = {_('UHF Radio ARC-164 Control Panel'), _('Pedestal Panels')}},

@@ -95,32 +95,32 @@ keyCommands = {
 {down = device_commands.Button_3, up = device_commands.Button_3,cockpit_device_id = devices.WEAPONS, value_down = 1, name = _('SA342 Pilot Sight Deploy/Retract'), category = _('SA342 Pilot Sight')},
 
 -- [TV]
-{down = device_commands.Button_5, up = device_commands.Button_5,cockpit_device_id = devices.TV, value_down = 1, name = _('SA342 TV On/Off'), category = _('SA342 TV')},
-{down = device_commands.Button_6, up = device_commands.Button_7,cockpit_device_id = devices.TV, value_down = 1, value_up = 0, name = _('SA342 TV Contrast+'), category = _('SA342 TV')},
-{down = device_commands.Button_8, up = device_commands.Button_9,cockpit_device_id = devices.TV, value_down = 1, value_up = 0, name = _('SA342 TV Contrast-'), category = _('SA342 TV')},
-{down = device_commands.Button_10, up = device_commands.Button_11,cockpit_device_id = devices.TV, value_down = 1, value_up = 0, name = _('SA342 TV Brightness+'), category = _('SA342 TV')},
-{down = device_commands.Button_12, up = device_commands.Button_13,cockpit_device_id = devices.TV, value_down = 1, value_up = 0, name = _('SA342 TV Brightness-'), category = _('SA342 TV')},
-{down = device_commands.Button_14, up = device_commands.Button_15,cockpit_device_id = devices.TV, value_down = 1, value_up = 0, name = _('SA342 TV Cover+'), category = _('SA342 TV')},
-{down = device_commands.Button_16, up = device_commands.Button_17,cockpit_device_id = devices.TV, value_down = 1, value_up = 0, name = _('SA342 TV Cover-'), category = _('SA342 TV')},
+{down = device_commands.Button_85, up = device_commands.Button_85,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 TV On/Off'), category = _('SA342 TV')},
+{down = device_commands.Button_86, up = device_commands.Button_87,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 TV Contrast+'), category = _('SA342 TV')},
+{down = device_commands.Button_88, up = device_commands.Button_89,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 TV Contrast-'), category = _('SA342 TV')},
+{down = device_commands.Button_90, up = device_commands.Button_91,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 TV Brightness+'), category = _('SA342 TV')},
+{down = device_commands.Button_92, up = device_commands.Button_93,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 TV Brightness-'), category = _('SA342 TV')},
+{down = device_commands.Button_94, up = device_commands.Button_95,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 TV Cover+'), category = _('SA342 TV')},
+{down = device_commands.Button_96, up = device_commands.Button_97,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 TV Cover-'), category = _('SA342 TV')},
 
 -- MAIN PANEL
-{down = device_commands.Button_21,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Battery On/Off'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_22,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Alternator On/Off'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_23,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Generator On/Off'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_21,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Battery On/Off'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_22,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Alternator On/Off'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_23,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Generator On/Off'), category = _('SA342 Main Panel')},
 {down = device_commands.Button_22,cockpit_device_id = devices.AUTOPILOT, value_down = 1, name = _('SA342 Trim On/Off'), category = _('SA342 Main Panel')},
 {down = iCommandSwitchMasterArm, name = _('SA342 Master arm On/Off'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_24,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Pitot On/Off'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_27,  up = device_commands.Button_28, cockpit_device_id = devices.ELECTRIC, value_down = 1, value_up = 0,name = _('SA342 Pilot Wiper L/A'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_29,  up = device_commands.Button_28, cockpit_device_id = devices.ELECTRIC, value_down = -1, value_up = 0,name = _('SA342 Pilot Wiper R/A'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_25, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Pilot Wiper Up'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_26, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Pilot Wiper Down'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_30, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Copilot Wiper Up'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_31, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Copilot Wiper Down'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_32,  up = device_commands.Button_33, cockpit_device_id = devices.ELECTRIC, value_down = 1, value_up = 0,name = _('SA342 Copilot Wiper L/A'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_34,  up = device_commands.Button_33, cockpit_device_id = devices.ELECTRIC, value_down = -1, value_up = 0,name = _('SA342 Copilot Wiper R/A'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_35,  up = device_commands.Button_36, cockpit_device_id = devices.ELECTRIC, value_down = 1, value_up = 0,name = _('SA342 TEST'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_37,  up = device_commands.Button_38, cockpit_device_id = devices.ELECTRIC, value_down = 1, value_up = 0,name = _('SA342 Test HYD'), category = _('SA342 Main Panel')},
-{down = device_commands.Button_39,  up = device_commands.Button_40, cockpit_device_id = devices.ELECTRIC, value_down = 1, value_up = 0,name = _('SA342 Test warning panel'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_24,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Pitot On/Off'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_27,  up = device_commands.Button_28, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 Pilot Wiper L/A'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_29,  up = device_commands.Button_28, cockpit_device_id = devices.SYNC_CONTROLS, value_down = -1, value_up = 0,name = _('SA342 Pilot Wiper R/A'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_25, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Pilot Wiper Up'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_26, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Pilot Wiper Down'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_30, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Copilot Wiper Up'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_31, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Copilot Wiper Down'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_32,  up = device_commands.Button_33, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 Copilot Wiper L/A'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_34,  up = device_commands.Button_33, cockpit_device_id = devices.SYNC_CONTROLS, value_down = -1, value_up = 0,name = _('SA342 Copilot Wiper R/A'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_35,  up = device_commands.Button_36, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 TEST'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_37,  up = device_commands.Button_38, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 Test HYD'), category = _('SA342 Main Panel')},
+{down = device_commands.Button_39,  up = device_commands.Button_40, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 Test warning panel'), category = _('SA342 Main Panel')},
 {down = device_commands.Button_26, cockpit_device_id = devices.NAVLIGHTS, value_down = 1, name = _('SA342 Nav Lights Up'), category = _('SA342 Main Panel')},
 {down = device_commands.Button_27, cockpit_device_id = devices.NAVLIGHTS, value_down = 1, name = _('SA342 Nav Lights Down'), category = _('SA342 Main Panel')},
 {down = device_commands.Button_28,  up = device_commands.Button_29, cockpit_device_id = devices.NAVLIGHTS, value_down = 1, value_up = 0,name = _('SA342 Nav Lights Flashing'), category = _('SA342 Main Panel')},
@@ -140,18 +140,18 @@ keyCommands = {
 {down = device_commands.Button_33, cockpit_device_id = devices.NAVLIGHTS, value_down = 1, name = _('SA342 Strobe Lights Down'), category = _('SA342 Main Panel')},
 
 -- START PANEL
-{down = device_commands.Button_41,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 RSUPP On/Off'), category = _('SA342 Start Panel')},
-{down = device_commands.Button_42,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 FILTAS On/Off'), category = _('SA342 Start Panel')},
+{down = device_commands.Button_41,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 RSUPP On/Off'), category = _('SA342 Start Panel')},
+{down = device_commands.Button_42,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 FILTAS On/Off'), category = _('SA342 Start Panel')},
 {down = device_commands.Button_23,cockpit_device_id = devices.AUTOPILOT, value_down = 1, name = _('SA342 Magnetic Brake On/Off'), category = _('SA342 Start Panel')},
-{down = device_commands.Button_43,  up = device_commands.Button_44, cockpit_device_id = devices.ELECTRIC, value_down = 1, value_up = 0,name = _('SA342 Rearm Alter'), category = _('SA342 Start Panel')},
-{down = device_commands.Button_45,  up = device_commands.Button_46, cockpit_device_id = devices.ELECTRIC, value_down = 1, value_up = 0,name = _('SA342 Rearm Gene'), category = _('SA342 Start Panel')},
-{down = device_commands.Button_49,  up = device_commands.Button_50, cockpit_device_id = devices.ELECTRIC, value_down = 1, value_up = 0,name = _('SA342 Starter M/A'), category = _('SA342 Start Panel')},
-{down = device_commands.Button_51,  up = device_commands.Button_50, cockpit_device_id = devices.ELECTRIC, value_down = -1, value_up = 0,name = _('SA342 Starter V/A'), category = _('SA342 Start Panel')},
-{down = device_commands.Button_52,cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Fuel Pump On/Off'), category = _('SA342 Start Panel')},
+{down = device_commands.Button_43,  up = device_commands.Button_44, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 Rearm Alter'), category = _('SA342 Start Panel')},
+{down = device_commands.Button_45,  up = device_commands.Button_46, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 Rearm Gene'), category = _('SA342 Start Panel')},
+{down = device_commands.Button_49,  up = device_commands.Button_50, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 Starter M/A'), category = _('SA342 Start Panel')},
+{down = device_commands.Button_51,  up = device_commands.Button_50, cockpit_device_id = devices.SYNC_CONTROLS, value_down = -1, value_up = 0,name = _('SA342 Starter V/A'), category = _('SA342 Start Panel')},
+{down = device_commands.Button_52,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Fuel Pump On/Off'), category = _('SA342 Start Panel')},
 {down = device_commands.Button_5, up = device_commands.Button_6, cockpit_device_id = devices.CLOCK, value_down = 1, value_up = 0,name = _('SA342 Clock Start/Stop'), category = _('SA342 Start Panel')},
 {down = device_commands.Button_7, up = device_commands.Button_8, cockpit_device_id = devices.CLOCK, value_down = 1, value_up = 0,name = _('SA342 Clock reset'), category = _('SA342 Start Panel')},
-{down = device_commands.Button_48, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Starter Down'), category = _('SA342 Start Panel')},
-{down = device_commands.Button_47, cockpit_device_id = devices.ELECTRIC, value_down = 1, name = _('SA342 Starter Up'), category = _('SA342 Start Panel')},
+{down = device_commands.Button_48, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Starter Down'), category = _('SA342 Start Panel')},
+{down = device_commands.Button_47, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 Starter Up'), category = _('SA342 Start Panel')},
 {down = device_commands.Button_13, up = device_commands.Button_14, cockpit_device_id = devices.LIGHTS, value_down = 1, value_up = 0,name = _('SA342 UV Lighting Increase'), category = _('SA342 Start Panel')},
 {down = device_commands.Button_15, up = device_commands.Button_16, cockpit_device_id = devices.LIGHTS, value_down = 1, value_up = 0,name = _('SA342 UV Lighting Decrease'), category = _('SA342 Start Panel')},
 
@@ -182,54 +182,54 @@ keyCommands = {
 {down = device_commands.Button_48,up = device_commands.Button_48,cockpit_device_id = devices.NADIR, value_down = 1, value_up = 0,name = _('SA342 NADIR Param-'), category = _('SA342 NADIR')},
 
 -- VHF RADIO
-{down = device_commands.Button_5,up = device_commands.Button_5,cockpit_device_id = devices.AM_RADIO, value_down = 1, value_up = 0,name = _('SA342 VHF increment'), category = _('SA342 VHF RADIO')},
-{down = device_commands.Button_6,up = device_commands.Button_6,cockpit_device_id = devices.AM_RADIO, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Mode+'), category = _('SA342 VHF RADIO')},
-{down = device_commands.Button_7,up = device_commands.Button_7,cockpit_device_id = devices.AM_RADIO, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Mode-'), category = _('SA342 VHF RADIO')},
-{down = device_commands.Button_8,up = device_commands.Button_8,cockpit_device_id = devices.AM_RADIO, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Unit+'), category = _('SA342 VHF RADIO')},
-{down = device_commands.Button_9,up = device_commands.Button_9,cockpit_device_id = devices.AM_RADIO, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Unit-'), category = _('SA342 VHF RADIO')},
-{down = device_commands.Button_10,up = device_commands.Button_10,cockpit_device_id = devices.AM_RADIO, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Dec+'), category = _('SA342 VHF RADIO')},
-{down = device_commands.Button_11,up = device_commands.Button_11,cockpit_device_id = devices.AM_RADIO, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Dec-'), category = _('SA342 VHF RADIO')},
+{down = device_commands.Button_145,up = device_commands.Button_145,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 VHF increment'), category = _('SA342 VHF RADIO')},
+{down = device_commands.Button_146,up = device_commands.Button_146,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Mode+'), category = _('SA342 VHF RADIO')},
+{down = device_commands.Button_147,up = device_commands.Button_147,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Mode-'), category = _('SA342 VHF RADIO')},
+{down = device_commands.Button_148,up = device_commands.Button_148,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Unit+'), category = _('SA342 VHF RADIO')},
+{down = device_commands.Button_149,up = device_commands.Button_149,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Unit-'), category = _('SA342 VHF RADIO')},
+{down = device_commands.Button_150,up = device_commands.Button_150,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Dec+'), category = _('SA342 VHF RADIO')},
+{down = device_commands.Button_151,up = device_commands.Button_151,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 VHF RADIO Dec-'), category = _('SA342 VHF RADIO')},
 
 -- PR4G
-{down = device_commands.Button_18,up = device_commands.Button_18,cockpit_device_id = devices.FM_RADIO, value_down = 1, value_up = 0,name = _('SA342 FM RADIO Mode+'), category = _('SA342 FM RADIO')},
-{down = device_commands.Button_19,up = device_commands.Button_19,cockpit_device_id = devices.FM_RADIO, value_down = 1, value_up = 0,name = _('SA342 FM RADIO Mode-'), category = _('SA342 FM RADIO')},
-{down = device_commands.Button_20,up = device_commands.Button_20,cockpit_device_id = devices.FM_RADIO, value_down = 1, value_up = 0,name = _('SA342 FM RADIO Canal+'), category = _('SA342 FM RADIO')},
-{down = device_commands.Button_21,up = device_commands.Button_21,cockpit_device_id = devices.FM_RADIO, value_down = 1, value_up = 0,name = _('SA342 FM RADIO Canal-'), category = _('SA342 FM RADIO')},
+{down = device_commands.Button_208,up = device_commands.Button_208,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 FM RADIO Mode+'), category = _('SA342 FM RADIO')},
+{down = device_commands.Button_209,up = device_commands.Button_209,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 FM RADIO Mode-'), category = _('SA342 FM RADIO')},
+{down = device_commands.Button_210,up = device_commands.Button_210,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 FM RADIO Canal+'), category = _('SA342 FM RADIO')},
+{down = device_commands.Button_211,up = device_commands.Button_211,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 FM RADIO Canal-'), category = _('SA342 FM RADIO')},
 
 -- UHF RADIO
-{down = device_commands.Button_16, up = device_commands.Button_16, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF VLD'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_17, up = device_commands.Button_17, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF 1'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_18, up = device_commands.Button_18, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF 2'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_19, up = device_commands.Button_19, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF 3'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_20, up = device_commands.Button_20, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF 4'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_21, up = device_commands.Button_21, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF 5'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_22, up = device_commands.Button_22, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF 6'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_23, up = device_commands.Button_23, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF 7'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_24, up = device_commands.Button_24, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF 8'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_25, up = device_commands.Button_25, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF 9'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_26, up = device_commands.Button_26, cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF 0'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_27,up = device_commands.Button_27,cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF Mode+'), category = _('SA342 UHF RADIO')},
-{down = device_commands.Button_28,up = device_commands.Button_28,cockpit_device_id = devices.UHF_RADIO, value_down = 1, value_up = 0,name = _('SA342 UHF Mode-'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_176, up = device_commands.Button_176, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF VLD'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_177, up = device_commands.Button_177, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF 1'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_178, up = device_commands.Button_178, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF 2'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_179, up = device_commands.Button_179, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF 3'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_180, up = device_commands.Button_180, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF 4'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_181, up = device_commands.Button_181, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF 5'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_182, up = device_commands.Button_182, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF 6'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_183, up = device_commands.Button_183, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF 7'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_184, up = device_commands.Button_184, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF 8'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_185, up = device_commands.Button_185, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF 9'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_186, up = device_commands.Button_186, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF 0'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_187,up = device_commands.Button_187,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF Mode+'), category = _('SA342 UHF RADIO')},
+{down = device_commands.Button_188,up = device_commands.Button_188,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF Mode-'), category = _('SA342 UHF RADIO')},
 
 -- ADF RADIO
-{down = device_commands.Button_12, up = device_commands.Button_12, cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 Select Switch'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_13, up = device_commands.Button_13, cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 Tone Switch'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_16,up = device_commands.Button_16,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 ADF Mode+'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_17,up = device_commands.Button_17,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 ADF Mode-'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_18,up = device_commands.Button_19,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 ADF Gain+'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_20,up = device_commands.Button_21,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 ADF Gain-'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_22,up = device_commands.Button_22,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV1 Cent+'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_23,up = device_commands.Button_23,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV1 Cent-'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_24,up = device_commands.Button_24,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV1 Dix+'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_25,up = device_commands.Button_25,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV1 Dix-'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_26,up = device_commands.Button_26,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV1 Unit+'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_27,up = device_commands.Button_27,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV1 Unit-'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_28,up = device_commands.Button_28,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV2 Cent+'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_29,up = device_commands.Button_29,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV2 Cent-'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_30,up = device_commands.Button_30,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV2 Dix+'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_31,up = device_commands.Button_31,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV2 Dix-'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_32,up = device_commands.Button_32,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV2 Unit+'), category = _('SA342 ADF RADIO')},
-{down = device_commands.Button_33,up = device_commands.Button_33,cockpit_device_id = devices.ADF, value_down = 1, value_up = 0,name = _('SA342 NAV2 Unit-'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_112, up = device_commands.Button_112, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 Select Switch'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_113, up = device_commands.Button_113, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 Tone Switch'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_116,up = device_commands.Button_116,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 ADF Mode+'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_117,up = device_commands.Button_117,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 ADF Mode-'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_118,up = device_commands.Button_119,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 ADF Gain+'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_120,up = device_commands.Button_121,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 ADF Gain-'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_122,up = device_commands.Button_122,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV1 Cent+'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_123,up = device_commands.Button_123,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV1 Cent-'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_124,up = device_commands.Button_124,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV1 Dix+'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_125,up = device_commands.Button_125,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV1 Dix-'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_126,up = device_commands.Button_126,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV1 Unit+'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_127,up = device_commands.Button_127,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV1 Unit-'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_128,up = device_commands.Button_128,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV2 Cent+'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_129,up = device_commands.Button_129,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV2 Cent-'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_130,up = device_commands.Button_130,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV2 Dix+'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_131,up = device_commands.Button_131,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV2 Dix-'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_132,up = device_commands.Button_132,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV2 Unit+'), category = _('SA342 ADF RADIO')},
+{down = device_commands.Button_133,up = device_commands.Button_133,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 NAV2 Unit-'), category = _('SA342 ADF RADIO')},
 
 -- PILOT COLLECTIVE
 {down = device_commands.Button_6, up = device_commands.Button_7, cockpit_device_id = devices.NAVLIGHTS, value_down = 1, value_up = 0,name = _('SA342 Landing Light Retract'), category = _('SA342 Pilot Collective')},
@@ -250,25 +250,27 @@ keyCommands = {
 {combos = {{key = 'JOY_BTN_POV1_D'}}, down = device_commands.Button_5, up = device_commands.Button_6,cockpit_device_id = devices.CONTROLS, value_down = 1, value_up = 0, name = _('Trim: Nose Up'), category = _('SA342 Pilot Stick')},
 {combos = {{key = 'JOY_BTN_POV1_L'}}, down = device_commands.Button_9, up = device_commands.Button_10,cockpit_device_id = devices.CONTROLS, value_down = 1, value_up = 0, name = _('Trim: Left Wing Down'), category = _('SA342 Pilot Stick')},
 {combos = {{key = 'JOY_BTN_POV1_R'}}, down = device_commands.Button_11, up = device_commands.Button_12,cockpit_device_id = devices.CONTROLS, value_down = 1, value_up = 0, name = _('Trim: Right Wing Down'), category = _('SA342 Pilot Stick')},
-{down = device_commands.Button_19, up = device_commands.Button_20,cockpit_device_id = devices.ELECTRIC, value_down = 1, value_up = 0, name = _('SA342 Wiper once'), category = _('SA342 Pilot Stick')},
+{down = device_commands.Button_19, up = device_commands.Button_20,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Wiper once'), category = _('SA342 Pilot Stick')},
 {down = device_commands.Button_29, up = device_commands.Button_30,cockpit_device_id = devices.AUTOPILOT, value_down = 1, value_up = 0, name = _('SA342 Autopilot Master'), category = _('SA342 Pilot Stick')},
 {down = device_commands.Button_12, up = device_commands.Button_12, cockpit_device_id = devices.AUTOPILOT, value_down = 1, value_up = 0, name = _('SA342 Auto-Slaved Toggle'), category = _('SA342 Pilot Stick')},
 {down = device_commands.Button_8, up = device_commands.Button_8, cockpit_device_id = devices.AUTOPILOT, value_down = 1, value_up = 0, name = _('SA342 Auto-Hover Toggle'), category = _('SA342 Pilot Stick')},
 {combos = {{key = 'JOY_BTN1'}}, down = iCommandPlaneFire, up = iCommandPlaneFireOff, name = _('SA342 Fire Gun or Rocket'), category = _('SA342 Pilot Stick')},
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down= 1.0, value_up= 0.0,name = _('SA342 Main PTT (VOIP)'), category = _('SA342 Pilot Stick')},
+{down = iCommandVoIPIntercomPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down= 1.0, value_up= 0.0,name = _('SA342 Intercom1 PTT (VOIP Intercom)'), category = _('SA342 Pilot Stick')},
 
 -- WSO LEFT STICK
-{down = device_commands.Button_35, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Lasing Button Cover'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_42, up = device_commands.Button_42, cockpit_device_id = devices.PE, value_down = 1, value_up = 0,name = _('SA342 Lasing Button'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_36, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Missile Launch Cover'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_41, up = device_commands.Button_41, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Missile Launch Button'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_25, up = device_commands.Button_25, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Inversed Symbology Toggle'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_26, up = device_commands.Button_26, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Inversed Image Toggle'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_29, up = device_commands.Button_29, cockpit_device_id = devices.PE, value_down = -1, value_up = 0, name = _('SA342 Gain decrease'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_30, up = device_commands.Button_30, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Gain increase'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_31, up = device_commands.Button_31, cockpit_device_id = devices.PE, value_down = -1, value_up = 0, name = _('SA342 Image Brightness decrease'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_32, up = device_commands.Button_32, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Image Brightness increase'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_33, up = device_commands.Button_33, cockpit_device_id = devices.PE, value_down = -1, value_up = 0, name = _('SA342 Symbology Brightness decrease'), category = _('SA342 WSO Left Stick')},
-{down = device_commands.Button_34, up = device_commands.Button_34, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Symbology Brightness increase'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_315, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Lasing Button Cover'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_322, up = device_commands.Button_322, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 Lasing Button'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_316, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Missile Launch Cover'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_321, up = device_commands.Button_321, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Missile Launch Button'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_305, up = device_commands.Button_305, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Inversed Symbology Toggle'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_306, up = device_commands.Button_306, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Inversed Image Toggle'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_309, up = device_commands.Button_309, cockpit_device_id = devices.SYNC_CONTROLS, value_down = -1, value_up = 0, name = _('SA342 Gain decrease'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_310, up = device_commands.Button_310, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Gain increase'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_311, up = device_commands.Button_311, cockpit_device_id = devices.SYNC_CONTROLS, value_down = -1, value_up = 0, name = _('SA342 Image Brightness decrease'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_312, up = device_commands.Button_312, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Image Brightness increase'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_313, up = device_commands.Button_313, cockpit_device_id = devices.SYNC_CONTROLS, value_down = -1, value_up = 0, name = _('SA342 Symbology Brightness decrease'), category = _('SA342 WSO Left Stick')},
+{down = device_commands.Button_314, up = device_commands.Button_314, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Symbology Brightness increase'), category = _('SA342 WSO Left Stick')},
 
 -- WEAPONS PANEL
 {down = device_commands.Button_4, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Station 1 Select'), category = _('SA342 Weapons Panel')},
@@ -284,14 +286,14 @@ keyCommands = {
 {down = device_commands.Button_13, cockpit_device_id = devices.PH, value_down = 1.0, name = _('SA342 Lum moins'), category = _('SA342 Weapons Panel')},
 
 -- RWR
-{down = device_commands.Button_8,  up = device_commands.Button_9, cockpit_device_id = devices.RWR, value_down = -1, value_up = 0,name = _('SA342 RWR OFF/ON'), category = _('SA342 RWR')},
-{down = device_commands.Button_10,  up = device_commands.Button_9, cockpit_device_id = devices.RWR, value_down = 1, value_up = 0,name = _('SA342 RWR CROC/ON'), category = _('SA342 RWR')},
-{down = device_commands.Button_6, cockpit_device_id = devices.RWR, value_down = 1, name = _('SA342 RWR Off/On/Croc Up'), category = _('SA342 RWR')},
-{down = device_commands.Button_7, cockpit_device_id = devices.RWR, value_down = 1, name = _('SA342 RWR Off/On/Croc Down'), category = _('SA342 RWR')},
-{down = device_commands.Button_11, up = device_commands.Button_12, cockpit_device_id = devices.RWR, value_down = 1, value_up = 0,name = _('SA342 RWR Audio Increase'), category = _('SA342 RWR')},
-{down = device_commands.Button_13, up = device_commands.Button_14, cockpit_device_id = devices.RWR, value_down = 1, value_up = 0,name = _('SA342 RWR Audio Decrease'), category = _('SA342 RWR')},
-{down = device_commands.Button_16, up = device_commands.Button_17, cockpit_device_id = devices.RWR, value_down = 1, value_up = 0,name = _('SA342 RWR Brightness Increase'), category = _('SA342 RWR')},
-{down = device_commands.Button_18, up = device_commands.Button_19, cockpit_device_id = devices.RWR, value_down = 1, value_up = 0,name = _('SA342 RWR Brightness Decrease'), category = _('SA342 RWR')},
+{down = device_commands.Button_68,  up = device_commands.Button_69, cockpit_device_id = devices.SYNC_CONTROLS, value_down = -1, value_up = 0,name = _('SA342 RWR OFF/ON'), category = _('SA342 RWR')},
+{down = device_commands.Button_70,  up = device_commands.Button_69, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 RWR CROC/ON'), category = _('SA342 RWR')},
+{down = device_commands.Button_66, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 RWR Off/On/Croc Up'), category = _('SA342 RWR')},
+{down = device_commands.Button_67, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 RWR Off/On/Croc Down'), category = _('SA342 RWR')},
+{down = device_commands.Button_71, up = device_commands.Button_72, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 RWR Audio Increase'), category = _('SA342 RWR')},
+{down = device_commands.Button_73, up = device_commands.Button_74, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 RWR Audio Decrease'), category = _('SA342 RWR')},
+{down = device_commands.Button_76, up = device_commands.Button_77, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 RWR Brightness Increase'), category = _('SA342 RWR')},
+{down = device_commands.Button_78, up = device_commands.Button_79, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 RWR Brightness Decrease'), category = _('SA342 RWR')},
 
 -- AUTOPILOT
 {down = device_commands.Button_9,  up = device_commands.Button_20, cockpit_device_id = devices.AUTOPILOT, value_down = 1, value_up = 0,name = _('SA342 Altitude Mode'), category = _('SA342 Autopilot')},
@@ -325,17 +327,17 @@ keyCommands = {
 {down = device_commands.Button_20, cockpit_device_id = devices.NAVLIGHTS, value_down = 1, name = _('SA342 Formation Lights On/Off'), category = _('SA342 Roof Console')},
 
 -- VIDEO COMMAND BOX
-{down = device_commands.Button_44, up = device_commands.Button_44, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Camera Centering'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_45, cockpit_device_id = devices.PE, value_down = 1.0, name = _('SA342 Normal/IR View Toggle'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_46, up = device_commands.Button_46, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Zoom +'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_47, up = device_commands.Button_47, cockpit_device_id = devices.PE, value_down = -1, value_up = 0, name = _('SA342 Zoom -'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_37, cockpit_device_id = devices.PE, value_down = 1, name = _('SA342 CTH +'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_38, cockpit_device_id = devices.PE, value_down = 1, name = _('SA342 CTH -'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_39, up = device_commands.Button_39, cockpit_device_id = devices.PE, value_down = 1, value_up = 0, name = _('SA342 Power button'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_17, cockpit_device_id = devices.PE, value_down = 1, name = _('SA342 MODE +'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_18, cockpit_device_id = devices.PE, value_down = 1, name = _('SA342 MODE -'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_19, cockpit_device_id = devices.PE, value_down = 1.0, name = _('SA342 CTH Cycle'), category = _('SA342 Video Command Box')},
-{down = device_commands.Button_20, up = device_commands.Button_20, cockpit_device_id = devices.PE, value_down = 1.0, value_up = 0.0, name = _('SA342 Power 2 pos'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_324, up = device_commands.Button_324, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Camera Centering'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_325, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1.0, name = _('SA342 Normal/IR View Toggle'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_326, up = device_commands.Button_326, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Zoom +'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_327, up = device_commands.Button_327, cockpit_device_id = devices.SYNC_CONTROLS, value_down = -1, value_up = 0, name = _('SA342 Zoom -'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_317, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 CTH +'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_318, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 CTH -'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_319, up = device_commands.Button_319, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Power button'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_297, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 MODE +'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_298, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, name = _('SA342 MODE -'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_299, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1.0, name = _('SA342 CTH Cycle'), category = _('SA342 Video Command Box')},
+{down = device_commands.Button_300, up = device_commands.Button_300, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('SA342 Power 2 pos'), category = _('SA342 Video Command Box')},
  
 -- BCV China Hat second joystick
 {down = device_commands.Button_8, up = device_commands.Button_9, cockpit_device_id = devices.PE, value_down = 1, value_up = 0,name = _('SA342 Slew up'), category = _('SA342 Video Command Box')},
@@ -344,14 +346,19 @@ keyCommands = {
 {down = device_commands.Button_14, up = device_commands.Button_15, cockpit_device_id = devices.PE, value_down = 1, value_up = 0,name = _('SA342 Slew right'), category = _('SA342 Video Command Box')},
 
 -- Intercom1
-{down = device_commands.Button_24,up = device_commands.Button_24,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 VHF AM Radio Select'), category = _('SA342 Intercom1')},
-{down = device_commands.Button_25,up = device_commands.Button_25,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 FM Radio Select'), category = _('SA342 Intercom1')},
-{down = device_commands.Button_26,up = device_commands.Button_26,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 UHF AM Radio Select'), category = _('SA342 Intercom1')},
+{down = device_commands.Button_244,up = device_commands.Button_244,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 VHF AM Radio Select'), category = _('SA342 Intercom1')},
+{down = device_commands.Button_245,up = device_commands.Button_245,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 FM Radio Select'), category = _('SA342 Intercom1')},
+{down = device_commands.Button_246,up = device_commands.Button_246,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF AM Radio Select'), category = _('SA342 Intercom1')},
+
+-- VOIP
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_1, up = iCommandVoIPRadioPushToTalkEnableDisableVoice_1, value_down=1.0, value_up=0.0,name = _('SA342 VHF AM Radio Select (VOIP)'), category = _('SA342 Intercom1')},
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_2, up = iCommandVoIPRadioPushToTalkEnableDisableVoice_2, value_down=1.0, value_up=0.0,name = _('SA342 FM AM Radio Select 	(VOIP)'), category = _('SA342 Intercom1')},
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_3, up = iCommandVoIPRadioPushToTalkEnableDisableVoice_3, value_down=1.0, value_up=0.0,name = _('SA342 UHF AM Radio Select  (VOIP)'), category = _('SA342 Intercom1')},
 
 -- Intercom2
-{down = device_commands.Button_54,up = device_commands.Button_54,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 VHF AM Radio Select2'), category = _('SA342 Intercom2')},
-{down = device_commands.Button_55,up = device_commands.Button_55,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 FM Radio Select2'), category = _('SA342 Intercom2')},
-{down = device_commands.Button_56,up = device_commands.Button_56,cockpit_device_id = devices.INTERCOM, value_down = 1, value_up = 0,name = _('SA342 UHF AM Radio Select2'), category = _('SA342 Intercom2')},
+{down = device_commands.Button_274,up = device_commands.Button_274,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 VHF AM Radio Select2'), category = _('SA342 Intercom2')},
+{down = device_commands.Button_275,up = device_commands.Button_275,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 FM Radio Select2'), category = _('SA342 Intercom2')},
+{down = device_commands.Button_276,up = device_commands.Button_276,cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0,name = _('SA342 UHF AM Radio Select2'), category = _('SA342 Intercom2')},
  
 -- Controls
 {down = iCommandPlane_ShowControls, name = _('Show controls indicator') , category = _('Controls')},
@@ -371,8 +378,11 @@ keyCommands = {
 -- HEAD_WRAPPER
 {down = device_commands.Button_1, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('SA342 Set Pilot Seat'), category = _('View Cockpit')},
 {down = device_commands.Button_2, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('SA342 Set CoPilot Seat'), category = _('View Cockpit')},
-{down = device_commands.Button_3, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('SA342 Pilot Sun glass On/Off'), category = _('View Cockpit')},
-{down = device_commands.Button_4, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('SA342 Microphone Light On/Off'), category = _('View Cockpit')},
+{down = device_commands.Button_7, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 0.0, name = _('SA342 Set Gunner Seat'), category = _('View Cockpit')},
+{down = device_commands.Button_331, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 0.0, name = _('SA342 Pilot Sun glass On/Off'), category = _('View Cockpit')},
+{down = device_commands.Button_336, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 0.0, name = _('SA342 CoPilot Sun glass On/Off'), category = _('View Cockpit')},
+{down = device_commands.Button_332, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 0.0, name = _('SA342 Microphone Pilot Light On/Off'), category = _('View Cockpit')},
+{down = device_commands.Button_337, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 0.0, name = _('SA342 Microphone CoPilot Light On/Off'), category = _('View Cockpit')},
 
 -- View                                                    
 {pressed = iCommandViewLeftSlow, up = iCommandViewStopSlow, name = _('View Left slow'), category = _('View')},
@@ -589,9 +599,26 @@ keyCommands = {
 {down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
 
 --Night Vision Goggles
-{down = device_commands.Button_5, up = device_commands.Button_5, cockpit_device_id = devices.HEAD_WRAPPER, value_down = 1, value_up = 0, name = _('SA342 Night Vision Goggles On/Off'), category = _('Night Vision Goggles')},
+{down = device_commands.Button_333, up = device_commands.Button_333, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Night Vision Goggles On/Off'), category = _('Night Vision Goggles')},
+{down = device_commands.Button_338, up = device_commands.Button_338, cockpit_device_id = devices.SYNC_CONTROLS, value_down = 1, value_up = 0, name = _('SA342 Night Vision Goggles Copilot On/Off'), category = _('Night Vision Goggles')},
+
 {down = iCommandPlane_Helmet_Brightess_Up  , name = _('Night Vision Goggles Gain Up')  , category = _('Night Vision Goggles')},
 {down = iCommandPlane_Helmet_Brightess_Down, name = _('Night Vision Goggles Gain Down'), category = _('Night Vision Goggles')},
+
+-- Minigun
+
+{combos = {{key = 'JOY_BTN2'}}, down = device_commands.Button_34, up = device_commands.Button_33,cockpit_device_id = devices.WEAPONS, value_down = 1,value_up = 0, name = _('Minigun fire'), category = _('Weapon')},
+
+
+-- FLARE DISPENSER
+{down = device_commands.Button_2, cockpit_device_id = devices.FD, value_down = 1, name = _('Flare Dispenser SEQ'), 	category = _('Flare Dispenser')},
+{down = device_commands.Button_2, cockpit_device_id = devices.FD, value_down = 0, name = _('Flare Dispenser C/C'), 	category = _('Flare Dispenser')},
+{down = device_commands.Button_1, cockpit_device_id = devices.FD, value_down = -1, name = _('Flare Dispenser D'), 	category = _('Flare Dispenser')},
+{down = device_commands.Button_1, cockpit_device_id = devices.FD, value_down = 0, name = _('Flare Dispenser G+D'), 	category = _('Flare Dispenser')},
+{down = device_commands.Button_1, cockpit_device_id = devices.FD, value_down = 1, name = _('Flare Dispenser G'), 	category = _('Flare Dispenser')},
+{down = device_commands.Button_3, cockpit_device_id = devices.FD, value_down = -1, name = _('Flare Dispenser AR'), 	category = _('Flare Dispenser')},
+{down = device_commands.Button_3, cockpit_device_id = devices.FD, value_down = 1, name = _('Flare Dispenser LE'), 	category = _('Flare Dispenser')},
+{down = device_commands.Button_3, cockpit_device_id = devices.FD, value_down = 0, name = _('Flare Dispenser VE'), 	category = _('Flare Dispenser')},
 
 },
 
@@ -619,8 +646,8 @@ axisCommands = {
 --{action = device_commands.Button_10, cockpit_device_id = devices.FLIGHT_CONTROLS, name = _('Main Horizontal Attitude Set')},
 
 -- [TV]
-{action = device_commands.Button_18, cockpit_device_id = devices.TV, name = _('SA342 TV Contrast'), category = _('SA342 TV')},
-{action = device_commands.Button_19, cockpit_device_id = devices.TV, name = _('SA342 TV Brightness'), category = _('SA342 TV')},
+{action = device_commands.Button_98, cockpit_device_id = devices.SYNC_CONTROLS, name = _('SA342 TV Contrast'), category = _('SA342 TV')},
+{action = device_commands.Button_99, cockpit_device_id = devices.SYNC_CONTROLS, name = _('SA342 TV Brightness'), category = _('SA342 TV')},
 
 -- UV LIGHT
 {action = device_commands.Button_18, cockpit_device_id = devices.LIGHTS, name = _('SA342 UV Light'), category = _('SA342 Start Panel')},
@@ -629,8 +656,8 @@ axisCommands = {
 {action = device_commands.Button_15, cockpit_device_id = devices.WEAPONS, name = _('SA342 Weapons Panel Brightness'), category = _('SA342 Weapons Panel')},
 
 -- RWR
-{action = device_commands.Button_15, cockpit_device_id = devices.RWR, name = _('SA342 RWR Audio'), category = _('SA342 RWR')},
-{action = device_commands.Button_20, cockpit_device_id = devices.RWR, name = _('SA342 RWR Brightness'), category = _('SA342 RWR')},
+{action = device_commands.Button_75, cockpit_device_id = devices.SYNC_CONTROLS, name = _('SA342 RWR Audio'), category = _('SA342 RWR')},
+{action = device_commands.Button_80, cockpit_device_id = devices.SYNC_CONTROLS, name = _('SA342 RWR Brightness'), category = _('SA342 RWR')},
 
 -- MAIN PANEL
 {action = device_commands.Button_42, cockpit_device_id = devices.NAVLIGHTS, name = _('SA342 Strobe Intensity'), category = _('SA342 Main Panel')},
@@ -638,20 +665,20 @@ axisCommands = {
 {action = device_commands.Button_28, cockpit_device_id = devices.LIGHTS, name = _('SA342 PBO Intensity'), category = _('SA342 Main Panel')},
 
 -- INTERCOM 1
-{action = device_commands.Button_4, cockpit_device_id  = devices.INTERCOM, name = _('SA342 VHF AM Radio Volume'), category = _('SA342 Intercom1')},
-{action = device_commands.Button_5, cockpit_device_id  = devices.INTERCOM, name = _('SA342 FM1 Radio Volume'), category = _('SA342 Intercom1')},
-{action = device_commands.Button_6, cockpit_device_id  = devices.INTERCOM, name = _('SA342 UHF Radio Volume'), category = _('SA342 Intercom1')},
+{action = device_commands.Button_224, cockpit_device_id  = devices.SYNC_CONTROLS, name = _('SA342 VHF AM Radio Volume'), category = _('SA342 Intercom1')},
+{action = device_commands.Button_225, cockpit_device_id  = devices.SYNC_CONTROLS, name = _('SA342 FM1 Radio Volume'), category = _('SA342 Intercom1')},
+{action = device_commands.Button_226, cockpit_device_id  = devices.SYNC_CONTROLS, name = _('SA342 UHF Radio Volume'), category = _('SA342 Intercom1')},
 
 -- INTERCOM 2
-{action = device_commands.Button_34, cockpit_device_id  = devices.INTERCOM, name = _('SA342 VHF AM Radio Volume 2'), category = _('SA342 Intercom2')},
-{action = device_commands.Button_35, cockpit_device_id  = devices.INTERCOM, name = _('SA342 FM1 Radio Volume 2'), category = _('SA342 Intercom2')},
-{action = device_commands.Button_36, cockpit_device_id  = devices.INTERCOM, name = _('SA342 UHF Radio Volume 2'), category = _('SA342 Intercom2')},
+{action = device_commands.Button_254, cockpit_device_id  = devices.SYNC_CONTROLS, name = _('SA342 VHF AM Radio Volume 2'), category = _('SA342 Intercom2')},
+{action = device_commands.Button_255, cockpit_device_id  = devices.SYNC_CONTROLS, name = _('SA342 FM1 Radio Volume 2'), category = _('SA342 Intercom2')},
+{action = device_commands.Button_256, cockpit_device_id  = devices.SYNC_CONTROLS, name = _('SA342 UHF Radio Volume 2'), category = _('SA342 Intercom2')},
 
 -- NADIR
 {action = device_commands.Button_24, cockpit_device_id  = devices.NADIR, name = _('SA342 NADIR Brightness'), category = _('SA342 NADIR')},
 
 -- ADF RADIO
-{action = device_commands.Button_11, cockpit_device_id  = devices.ADF, name = _('SA342 Gain'), category = _('SA342 ADF RADIO')},
+{action = device_commands.Button_11, cockpit_device_id  = devices.SYNC_CONTROLS, name = _('SA342 Gain'), category = _('SA342 ADF RADIO')},
 
 -- ROOF CONSOLE
 {action = device_commands.Button_17, cockpit_device_id = devices.LIGHTS, name = _('SA342 Roof Lamp'), category = _('SA342 Roof Console')},

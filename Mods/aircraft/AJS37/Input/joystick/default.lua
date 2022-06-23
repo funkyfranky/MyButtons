@@ -85,12 +85,11 @@ local keycommands = {
     {down = 3028, up = 3028, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0, name = "Data panel Digit 8", category = "Data panel"},
     {down = 3029, up = 3029, cockpit_device_id = devices.NAVIGATION, value_down = 1.0, value_up = 0, name = "Data panel Digit 9", category = "Data panel"},
     {down = 3001, up = 3001, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, value_up = 0.0, name = "Data panel RENSA (Clear)", category = "Data panel"},
-    {combos = {{key = "C", reformers = {"LAlt", "LShift"}}}, down = 3101, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, name = _("Data panel RENSA cover"), category = _("Data panel")},
+    {down = 3101, up = 3101, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, value_up = 0.0, name = _("Data panel RENSA cover"), category = _("Data panel")},
     {down = 3101, up = 3101, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, name = "Data panel RENSA cover OPEN", category = "Data panel"},
     {down = 3101, up = 3101, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.0, name = "Data panel RENSA cover CLOSE", category = "Data panel"},
     {combos = {{key = "T", reformers = {"RAlt"}}}, down = 3510, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, name = _("TILS rotary clockwise"), category = _("Navigation")},
     {combos = {{key = "T", reformers = {"LAlt"}}}, down = 3510, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = -1.0, name = _("TILS rotary counterclockwise"), category = _("Navigation")},
-    {combos = {{key = "T", reformers = {"RAlt","RCtrl"}}}, down = 3511, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = -1.0, name = _("TILS rotary layer switch"), category = _("Navigation")},
     
     {down = 3009, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.6, name = "Datapanel Rotary Mode 7 - AKT POS", category = "Navigation"},
     {down = 3009, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.5, name = "Datapanel Rotary Mode 6 - REF LOLA", category = "Navigation"},
@@ -260,8 +259,10 @@ local keycommands = {
     {down = 3007, value_down = -1.0, cockpit_device_id = devices.FR22, name = _('FR22 Group selector turn left'), category = _('Radios')},
     {down = 3010, value_down = -1.0, cockpit_device_id = devices.FR22, name = _('Radio function selector turn right'), category = _('Radios')},
     {down = 3010, value_down = 1.0, cockpit_device_id = devices.FR22, name = _('Radio function selector turn left'), category = _('Radios')},
-    {down = 3011, value_down = 1.0, cockpit_device_id = devices.FR22, name = _('FR22 Push-to-talk'), category = _('Radios')},
-    {down = 3011, value_down = 1.0, cockpit_device_id = devices.FR24, name = _('FR24 Push-to-talk'), category = _('Radios')},
+    {down = 3011, value_down = 1.0, cockpit_device_id = devices.TESTINTERCOM, name = _('FR22 Push-to-talk'), category = _('Radios')},
+    {down = 3012, value_down = 1.0, cockpit_device_id = devices.TESTINTERCOM, name = _('FR24 Push-to-talk'), category = _('Radios')},
+    {down = 3013, value_down = 1.0, up = 3013, value_up = 0.0, cockpit_device_id = devices.TESTINTERCOM, name = _('FR22 Push-to-talk (Short- Menu, Long- VOIP)'), category = _('Radios')},
+    {down = 3014, value_down = 1.0, up = 3014, value_up = 0.0, cockpit_device_id = devices.TESTINTERCOM, name = _('FR24 Push-to-talk (Short- Menu, Long- VOIP)'), category = _('Radios')},
     {down = iCommandVoIPRadioPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, name = _('FR22 VoIP Push-to-talk'), value_down = 1.0, value_up = 0.0,  category = _('Radios')},
     {down = iCommandVoIPRadioPushToTalkEnableDisableVoice_1, up = iCommandVoIPRadioPushToTalkEnableDisableVoice_1, name = _('FR24 VoIP Push-to-talk'), value_down = 1.0, value_up = 0.0,  category = _('Radios')},
     {pressed = 3012, value_pressed = 1.0, cockpit_device_id = devices.FR22, name = _('Radio volume control increase'), category = _('Radios')},
@@ -348,7 +349,7 @@ local keycommands = {
     {down = 3716, value_down = 1.000000, up = 3716, value_up = 0.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Emergency Trim Roll Rght'), category = _('Flight Control')},
     {down = 3719, value_down = 1.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Landing Gear Down'), category = _('Flight Control')},
     {down = 3719, value_down = 0.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Landing Gear Up'), category = _('Flight Control')},
-    {down = 3408, value_down = 1.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Parking brake'), category = _('Flight Control')},
+	{down = 3413, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down =1.0, name = _('Parking brake (toggle)'), category = _('Flight Control')},
     {down = 3713, value_down = -1.000000, up = 3713, value_up = 0.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Trim: Rudder Left'), category = _('Flight Control')},
     {down = 3713, value_down = -1.000000, up = 3713, value_up = 0.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Trim: Rudder Left'), category = _('Flight Control')},
     {down = 3713, value_down = 1.000000, up = 3713, value_up = 0.000000, cockpit_device_id = devices.FLIGHTDATAUNIT, name = _('Trim: Rudder Right'), category = _('Flight Control')},
@@ -410,7 +411,7 @@ local keycommands = {
 	{down = 3406, up = 3406, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down =-1.0, value_up = 0.0, name = _('Canopy Open/Center'), category = _('Flight Control')}, -- working
 	{down = 3406, up = 3406, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up =-1.0, name = _('Canopy Close/Open'), category = _('Flight Control')}, --working
 	{down = 3407, up = 3407, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Canopy Jettison'), category = _('Flight Control')}, --added v0.5
-	{down = 3408, up = 3408, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Parking Brake On/Off'), category = _('Flight Control')}, --working
+	{down = 3408, up = 3408, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('Parking Brake (hold- on)'), category = _('Flight Control')},
 	{down = 3513,            cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0,                 name = _('TILS Channel Layer Selection 1-10/11-20 (toggle)'), category = _('Navigation')}, --working, toggle only
     {down = 3511, up = 3511, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 0.0, name = _('TILS Channel Layer Selection 1-10/11-20 (hold - 11-20)'), category = _('Navigation')}, --working, toggle only
 	{down = 3601, up = 3602, cockpit_device_id = devices.FLIGHTDATAUNIT, value_down = 1.0, value_up = 1.0, name = _('Airbrake Out/In'), category = _('Flight Control')}, --working
@@ -584,7 +585,6 @@ local keycommands = {
 	{down = 3009,            cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.4,                 name = _("Datapanel BANA/GRANS"), category = _("Navigation")}, -- added v0.6
 	{down = 3009,            cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.5,                 name = _("Datapanel REF/LOLA"), category = _("Navigation")}, -- added v0.6
 	{down = 3009,            cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 0.6,                 name = _("Datapanel AKTPOS"), category = _("Navigation")}, -- added v0.6
-	{down = 3101, up = 3101, cockpit_device_id = devices.NAVIGATIONPANEL, value_down = 1.0, value_up = 0.0, name = _("Data panel RENSA cover OPEN/CLOSE"), category = _("Navigation")}, -- added v1.3
 	-- RWR
 	{down = 3001, up = 3002, cockpit_device_id = devices.RWR, value_down = 1.0, value_up = 1.0,  name = _('KB Off/Lights'), category = _('Lights')}, --added v0.4
 	{down = 3003, up = 3002, cockpit_device_id = devices.RWR, value_down = 1.0, value_up = 1.0,  name = _('KB Lights+Sound/Lights'), category = _('Lights')}, --added v0.4

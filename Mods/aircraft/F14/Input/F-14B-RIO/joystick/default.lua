@@ -213,6 +213,7 @@ join_override(res.keyCommands,{
 { cockpit_device_id=devices.RADAR, down = device_commands.RADAR_VSL_switch, value_down = 1, up = device_commands.RADAR_VSL_switch, value_up = 0, name = _('VSL High'), category = _('Radar Control Panel')},
 { cockpit_device_id=devices.RADAR, down = device_commands.RADAR_VSL_switch, value_down = -1, up = device_commands.RADAR_VSL_switch, value_up = 0, name = _('VSL Low'), category = _('Radar Control Panel')},
 
+
 })
 
 -- joystick axes
@@ -284,8 +285,10 @@ join_override(res.axisCommands,{
 {action = device_commands.RADIO_ICS_ButtonAxisThresh_MIC_RIO_Export_Only, cockpit_device_id=devices.ICS, name = _('ICS Button MIC (UHF) PTT (axis threshold) - SRS or VoIP Only / No Menu')},
 {action = device_commands.RADAR_elevation_center_knob, cockpit_device_id=devices.RADAR, name = _('Radar elevation control')},
 {action = device_commands.RADAR_azimuth_center_knob, cockpit_device_id=devices.RADAR, name = _('Radar azimuth control')},
-{action = device_commands.RADAR_DDD_erase_axis, cockpit_device_id=devices.RADAR, name = _('DDD erase')},
-{action = device_commands.RADAR_DDD_pulse_gain_axis, cockpit_device_id=devices.RADAR, name = _('DDD pulse gain')},
+{action = device_commands.RADAR_DDD_erase_axis, cockpit_device_id=devices.RADAR, name = _('DDD Erase')},
+{action = device_commands.RADAR_DDD_pulse_gain_axis, cockpit_device_id=devices.RADAR, name = _('DDD Pulse gain')},
+{action = device_commands.RADAR_DDD_pulse_vid_axis, cockpit_device_id=devices.RADAR, name = _('DDD Pulse Video')},
+{action = device_commands.RADAR_DDD_bright_axis, cockpit_device_id=devices.RADAR, name = _('DDD Brightness')},
 
 {action = device_commands.RADAR_azimuth_analog_adjust, cockpit_device_id=devices.RADAR, name = _('Radar azimuth relative adjustment')},
 {action = device_commands.RADAR_elevation_analog_adjust, cockpit_device_id=devices.RADAR, name = _('Radar elevation relative adjustment')},
@@ -293,6 +296,16 @@ join_override(res.axisCommands,{
 
 {action = device_commands.TCS_Trim_az_axis, cockpit_device_id=devices.TCS, name = _('TCS azimuth trim axis')},
 {action = device_commands.TCS_Trim_el_axis, cockpit_device_id=devices.TCS, name = _('TCS elevation trim axis')},
+
+{action = device_commands.RADIO_ICS_Vol_RIO_axis, cockpit_device_id=devices.ICS, name = _('ICS Volume RIO')},
+{action = device_commands.RWR_ALR67_Volume_axis, cockpit_device_id=devices.ICS, name = _('AN/ALR-67 Volume')},
+{action = device_commands.RADIO_VHF_VOL_RIO_axis, cockpit_device_id=devices.ARC182, name = _('VHF/UHF ARC-182 Volume RIO')},
+{action = device_commands.TACAN_Knob_Vol_RIO_axis, cockpit_device_id=devices.TACAN, name = _('TACAN Volume')},
+{action = device_commands.TID_contrast_axis, cockpit_device_id=devices.TID, name = _('TID Contrast')},
+{action = device_commands.TID_bright_axis, cockpit_device_id=devices.TID, name = _('TID Brightness')},
+{action = device_commands.ECMD_Knob_Brightness_axis, cockpit_device_id=devices.ECMD, name = _('ECMD Brightness')},
+{action = device_commands.DECM_Vol_Knob_axis, cockpit_device_id=devices.DECM, name = _('DECM ALQ-100 Volume')},
+
 
 {action = iCommandViewHorizontalAbs			, name = _('Absolute Camera Horizontal View')},
 {action = iCommandViewVerticalAbs			, name = _('Absolute Camera Vertical View')},

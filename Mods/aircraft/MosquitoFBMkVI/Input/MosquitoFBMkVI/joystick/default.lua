@@ -72,6 +72,11 @@ join(res.keyCommands, {
 
 -- Communications -----------------------------------------------------------------------
 {                                                           down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk (call radio menu)'), category = {_("SCR-522 Radio Set"), _("Communications")}},
+
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0, value_up = 0.0, name = _('COMM Push to talk (VOIP)'), category = {_("SCR-522 Radio Set"), _("Communications")}},
+--
 {                                                           cockpit_device_id = devices.RADIO_INTERFACE, down = device_commands.Button_1, value_down = 1.0, up = device_commands.Button_1, value_up = 0.0, name = _("Input.Generic.T1154.key"), category = {_("T.1154/R.1155 Radio Set"), _("Communications")}},
 -- --------------------------------------------------------------------------------------
 

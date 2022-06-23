@@ -71,7 +71,10 @@ join(res.keyCommands, {
 
 
 -- Communications -------------------------------------------------------------------------
-{                                                           down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk'), category = _('Communications')},
+{                                                           down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk (call radio menu)'), category = _('Communications')},
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0, value_up = 0.0, name = _('COMM Push to talk (VOIP)'), category = _('Communications')},
 -- ----------------------------------------------------------------------------------------
 
 

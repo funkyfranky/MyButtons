@@ -1,4 +1,3 @@
--- FF: Added device commands
 local cockpit = folder.."../../../Cockpit/Scripts/"
 dofile(cockpit.."devices.lua")
 dofile(cockpit.."command_defs.lua")
@@ -106,7 +105,7 @@ keyCommands = {
 {down = iCommandViewLocal, name = _('F2 Toggle local camera control'), category = _('View')},
 {down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
-{down = iCommandViewRear, name = _('F4 Look back view'), category = _('View')},
+{down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
 {down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
 {down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
@@ -243,6 +242,7 @@ keyCommands = {
 {down = iCommandToggleCommandMenu, name = _('Communication menu'), category = _('Communications')},
 {down = ICommandSwitchToCommonDialog, name = _('Switch to main menu'), category = _('Communications')},
 {down = ICommandSwitchDialog, name = _('Switch dialog'), category = _('Communications')},
+{down = iCommandPlaneRefuelingReadyPreContact, name = _('A/A refueling - "Ready for precontact" radio call'), category = _('Communications')},
 
 
 -- Padlock
@@ -295,6 +295,8 @@ keyCommands = {
 {down = iCommandPlane_HOTAS_BoatSwitchAft, name = _('HOTAS Boat Switch Aft'), category = _('HOTAS')},
 {down = iCommandPlane_HOTAS_BoatSwitchCenter, name = _('HOTAS Boat Switch Center'), category = _('HOTAS')},
 {down = iCommandPlane_HOTAS_BoatSwitchForward, name = _('HOTAS Boat Switch Forward'), category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_BoatSwitchAft,up = iCommandPlane_HOTAS_BoatSwitchCenter, name = _('HOTAS Boat Switch : Aft<>Center'), category = { _("Special For Joystick"), _('HOTAS')}},
+{down = iCommandPlane_HOTAS_BoatSwitchForward,up = iCommandPlane_HOTAS_BoatSwitchCenter, name = _('HOTAS Boat Switch : Forward<>Center'), category = { _("Special For Joystick"), _('HOTAS')}},
 
 {down = iCommandPlane_HOTAS_ChinaHatAft, up = iCommandPlane_HOTAS_ChinaHatOff, name = _('HOTAS China Hat Aft'), category = _('HOTAS')},
 {down = iCommandPlane_HOTAS_ChinaHatForward, up = iCommandPlane_HOTAS_ChinaHatOff, name = _('HOTAS China Hat Forward'), category = _('HOTAS')},
@@ -309,11 +311,21 @@ keyCommands = {
 {down = iCommandPlane_HOTAS_PinkySwitchAft,  	name = _('HOTAS Pinky Switch Aft'),     category = _('HOTAS')},
 {down = iCommandPlane_HOTAS_PinkySwitchForward, name = _('HOTAS Pinky Switch Forward'), category = _('HOTAS')},
 {down = iCommandPlane_HOTAS_PinkySwitchCenter , name = _('HOTAS Pinky Switch Center'),  category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_PinkySwitchAft,     up = iCommandPlane_HOTAS_PinkySwitchCenter, name = _('HOTAS Pinky Switch : Aft<>Center'),     category = { _("Special For Joystick"), _('HOTAS')}},
+{down = iCommandPlane_HOTAS_PinkySwitchForward, up = iCommandPlane_HOTAS_PinkySwitchCenter, name = _('HOTAS Pinky Switch : Forward<>Center'), category = { _("Special For Joystick"), _('HOTAS')}},
 
 --{down = iCommandPlane_HOTAS_MIC_SwitchUp,    up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Up (no function)'),    category = _('HOTAS')},
 {down = iCommandPlane_HOTAS_MIC_SwitchDown,  up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Down (call radio menu)'),  category = _('HOTAS')},
 {down = iCommandPlane_HOTAS_MIC_SwitchLeft,  up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Aft (call radio menu)'),  category = _('HOTAS')},
 {down = iCommandPlane_HOTAS_MIC_SwitchRight, up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Forward (call radio menu)'), category = _('HOTAS')},
+
+-- start VoIP radio global commands
+-- in case you need to open commands in the cockpit
+--{down = device_commands.Button_1,  up = device_commands.Button_1, cockpit_device_id = devices.HOTAS, value_down = 1.0,    value_up = 0.0, name = ('HOTAS MIC Switch Up (VOIP, no function)'), category = _('HOTAS')},
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice,  up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0,    value_up = 0.0, name = ('HOTAS MIC Switch Down (VOIP)'),  category = _('HOTAS')},
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_2,  up = iCommandVoIPRadioPushToTalkEnableDisableVoice_2, value_down = 1.0,    value_up = 0.0, name = ('HOTAS MIC Switch Aft (VOIP)'),  category = _('HOTAS')},
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,  up = iCommandVoIPRadioPushToTalkEnableDisableVoice_1, value_down = 1.0,    value_up = 0.0, name = ('HOTAS MIC Switch Forward (VOIP)'), category = _('HOTAS')},
+-- end VoIP radio commands
 
 {pressed = iCommandPlaneTrimUp, up = iCommandPlaneTrimStop,    name = _('Trim: Nose Down'),	     category = _('HOTAS')},
 {pressed = iCommandPlaneTrimDown, up = iCommandPlaneTrimStop,  name = _('Trim: Nose Up'),			 category = _('HOTAS')},
@@ -376,6 +388,10 @@ keyCommands = {
 {down = iCommand_FireExting_Discharge_Center					, name = _('Fire Extinguishig Agent Discharge Off')							, category = _('Fire Extinguishers System')},
 {down = iCommand_FireExting_Discharge_Right						, name = _('Fire Extinguishig Agent Discharge Right')							, category = _('Fire Extinguishers System')},
 
+{down = iCommandLeftEngineStop , up = iCommandLeftEngineStart,  name = _('Left Engine Throttle Set OFF') , category = {_("Special For Joystick"), _('Systems')}},
+{down = iCommandRightEngineStop, up = iCommandRightEngineStart, name = _('Right Engine Throttle Set OFF'), category = {_("Special For Joystick"), _('Systems')}},
+{down = iCommandPlane_FLAPS_UP, up = iCommandPlane_FLAPS_MNR_from_UP,name = _('Flaps : Up<>Center'), category = {_("Special For Joystick"), _('Systems')}},
+{down = iCommandPlane_FLAPS_DN, up = iCommandPlane_FLAPS_MNR_from_DN,name = _('Flaps : Down<>Center'), category = {_("Special For Joystick"), _('Systems')}},
 
 
 -- Autopilot
@@ -387,30 +403,54 @@ keyCommands = {
 {down = iCommandPlane_EAC_OFF, up = iCommandPlane_EAC_OFF, name = _('EAC Off'), category = _('LASTE Control Panel')},
 {down = iCommandPlane_RDR_ALTM_NRM, name = _('RDR ALTM Normal'), category = _('LASTE Control Panel')},
 {down = iCommandPlane_RDR_ALTM_DIS, name = _('RDR ALTM Disable'), category = _('LASTE Control Panel')},
+{down = iCommandPlane_EAC_ARM     , up = iCommandPlane_EAC_OFF       , name = _('EAC 2-pos Switch : ARM<>OFF') 			  , category = { _("Special For Joystick"), _('LASTE Control Panel')}},
+{down = iCommandPlane_RDR_ALTM_NRM, up = iCommandPlane_RDR_ALTM_DIS  , name = _('RDR ALTM 2-pos Switch : NORMAL<>DISABLE')  , category = { _("Special For Joystick"), _('LASTE Control Panel')}},
+{down = iCommandPlaneStabPathHold , up = iCommand_LASTE_from_PATH_to_ALTHDG, name = _('LAAP Mode 3-pos Switch : PATH <> ALT/HDG'), category = { _("Special For Joystick"), _('LASTE Control Panel')}},
+{down = iCommandPlaneStabHbarBank , up = iCommand_LASTE_from_ALT_to_ALTHDG , name = _('LAAP Mode 3-pos Switch : ALT <> ALT/HDG') , category = { _("Special For Joystick"), _('LASTE Control Panel')}},
+
+
 
 
 -- Engine Control Panel
 
 {down = iCommandPlane_LG_WRN_Silence		, up = iCommandPlane_LG_WRN_Silence		, name = _('Landing Gear Warning Silence')			, category = _('Engine Control Panel')},
-{down = iCommandPlane_APU_Start														, name = _('APU Start')							, category = _('Engine Control Panel')},
+{down = iCommandPlane_APU_Start														, name = _('APU Start')								, category = _('Engine Control Panel')},
 {down = iCommandPlane_APU_Off														, name = _('APU Off')								, category = _('Engine Control Panel')},
+{down = iCommandPlane_APU_Start				, up = iCommandPlane_APU_Off			, name = _('APU Start 2-pos Switch : ON<>OFF')	, category = { _("Special For Joystick"),_('Engine Control Panel')}},
 
 -- Left engine Motor/Norm/Ign switch
 {down = iCommandPlane_L_ENG_OPER_Ign 		, up = iCommandPlane_L_ENG_OPER_Norm	, name = _('Left Engine Oper Ign')					, category = _('Engine Control Panel')},
 {down = iCommandPlane_L_ENG_OPER_Motor												, name = _('Left Engine Oper Motor')				, category = _('Engine Control Panel')},
 {down = iCommandPlane_L_ENG_OPER_Norm												, name = _('Left Engine Oper Norm')					, category = _('Engine Control Panel')},
+{down = iCommandPlane_L_ENG_OPER_Ign 		, up = iCommandPlane_L_ENG_OPER_Norm_from_Ign	, name = _('Left Engine Oper 3-pos Switch : IGN<>NORM')			, category = { _("Special For Joystick"),_('Engine Control Panel')}},
+{down = iCommandPlane_L_ENG_OPER_Motor		, up = iCommandPlane_L_ENG_OPER_Norm_from_Motor	, name = _('Left Engine Oper 3-pos Switch : MOTOR<>NORM')			, category = { _("Special For Joystick"),_('Engine Control Panel')}},
+
 
 -- Right engine Motor/Norm/Ign switch
 {down = iCommandPlane_R_ENG_OPER_Ign 		, up = iCommandPlane_R_ENG_OPER_Norm	, name = _('Right Engine Oper Ign')					, category = _('Engine Control Panel')},
 {down = iCommandPlane_R_ENG_OPER_Motor												, name = _('Right Engine Oper Motor')				, category = _('Engine Control Panel')},
 {down = iCommandPlane_R_ENG_OPER_Norm												, name = _('Right Engine Oper Norm')				, category = _('Engine Control Panel')},
+{down = iCommandPlane_R_ENG_OPER_Ign  		, up = iCommandPlane_R_ENG_OPER_Norm_from_Ign	, name = _('Right Engine Oper 3-pos Switch : IGN<>NORM')			, category = { _("Special For Joystick"),_('Engine Control Panel')}},
+{down = iCommandPlane_R_ENG_OPER_Motor		, up = iCommandPlane_R_ENG_OPER_Norm_from_Motor	, name = _('Right Engine Oper 3-pos Switch : MOTOR<>NORM')		, category = { _("Special For Joystick"),_('Engine Control Panel')}},
+
 
 {down = iCommandPlane_L_ENG_FUEL_FLOW_Norm											, name = _('Left Engine Fuel Flow Norm')			, category = _('Engine Control Panel')},
 {down = iCommandPlane_L_ENG_FUEL_FLOW_Override										, name = _('Left Engine Fuel Flow Override')		, category = _('Engine Control Panel')},
 {down = iCommandPlane_R_ENG_FUEL_FLOW_Norm											, name = _('Right Engine Fuel Flow Norm')			, category = _('Engine Control Panel')},
 {down = iCommandPlane_R_ENG_FUEL_FLOW_Override										, name = _('Right Engine Fuel Flow Override')		, category = _('Engine Control Panel')},
+{down = iCommandPlane_L_ENG_FUEL_FLOW_Norm	, up = iCommandPlane_L_ENG_FUEL_FLOW_Override	, name = _('Left Engine Fuel Flow 2-pos Switch : NORM<>OVERRIDE')	, category = { _("Special For Joystick"),_('Engine Control Panel')}},
+{down = iCommandPlane_R_ENG_FUEL_FLOW_Norm	, up = iCommandPlane_R_ENG_FUEL_FLOW_Override	, name = _('Right Engine Fuel Flow 2-pos Switch : NORM<>OVERRIDE'), category = { _("Special For Joystick"),_('Engine Control Panel')}},
+
 {pressed = iCommandPlaneThrottleFrictionDec											, name = _('Throttle Friction Decrease')			, category = _('Engine Control Panel')},
 {pressed = iCommandPlaneThrottleFrictionInc											, name = _('Throttle Friction Increase')			, category = _('Engine Control Panel')},
+
+
+
+-- Left engine Motor/Norm/Ign switch
+
+-- Right engine Motor/Norm/Ign switch
+
+
 
 --NightVision
 {down    = iCommandViewNightVisionGogglesOn   , name = _('Toggle goggles')   , category = _('Sensors')},
@@ -1065,14 +1105,20 @@ keyCommands = {
 {down = 3004, up = 3004, cockpit_device_id = 39, value_down = -1.0,	value_up = 0.0, name = _('Seat Adjustment Up'), category = _('Systems')},
 {down = 3005, up = 3005, cockpit_device_id = 39, value_down = 1.0,	value_up = 0.0, name = _('Seat Adjustment Down'), category = _('Systems')},
 
+-- Helment Mounted Cueuing System
+{down = device_commands.Button_2, cockpit_device_id = devices.SCORPION_HMCS, value_down = 1.0, name = _('HMCS Power ON/OFF'), category = _('HMCS')},
+{down = device_commands.Button_1, cockpit_device_id = devices.SCORPION_HMCS, value_down = 1.0, name = _('HMCS Power ON'), category = _('HMCS')},
+{down = device_commands.Button_1, cockpit_device_id = devices.SCORPION_HMCS, value_down = 0.0, name = _('HMCS Power OFF'), category = _('HMCS')},
+{down = device_commands.Button_1, cockpit_device_id = devices.SCORPION_HMCS, value_down = -1.0, name = _('HMCS Power BAT'), category = _('HMCS')},
+{down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.SCORPION_HMCS, value_down = 1.0, value_up = 0, name = _('HMCS Power 3-pos Switch : ON<>OFF'), category = {_('Special For Joystick'), _('HMCS')}},
+{down = device_commands.Button_1, up = device_commands.Button_1, cockpit_device_id = devices.SCORPION_HMCS, value_down = -1.0, value_up = 0, name = _('HMCS Power 3-pos Switch : BAT<>OFF'), category = {_('Special For Joystick'), _('HMCS')}},
+
 --- Kneeboard
 {down = 3001, cockpit_device_id  = 100, value_down = 1.0, name = _('Kneeboard Next Page')  , category = _('Kneeboard')},
 {down = 3002, cockpit_device_id  = 100, value_down = 1.0, name = _('Kneeboard Previous Page'), category = _('Kneeboard')},
 {down = iCommandPlaneShowKneeboard,	name = _('Kneeboard ON/OFF'), category = _('Kneeboard')},
 {down = iCommandPlaneShowKneeboard, up = iCommandPlaneShowKneeboard ,value_down = 1.0,value_up = -1.0, name = _('Kneeboard glance view')  , category = _('Kneeboard')},
 {down = 3003	, cockpit_device_id  = 100,value_down = 1.0, name = _('Kneeboard current position mark point')  , category = _('Kneeboard')},
-
-
 },
 
 

@@ -118,8 +118,11 @@ join(res.keyCommands,{
 --{down = iCommandPlaneAUTDecreaseRegime,						name = _('Thrust Step Down'),		category = _('Flight Control')},
 
 -- Communications
-{down = radio_commands.F86_CockpitDeviceCommand_ARC27_MicrophoneBtn, up = radio_commands.F86_CockpitDeviceCommand_ARC27_MicrophoneBtn, cockpit_device_id = devices.AN_ARC_27_COMMAND_SET, value_down = 1, value_up = 0, name = _('Microphone Button'), category = {_('Communications'), _('Throttle Grip'), _('AN/ARC-27 UHF Radio')}},
-
+{down = radio_commands.F86_CockpitDeviceCommand_ARC27_MicrophoneBtn, up = radio_commands.F86_CockpitDeviceCommand_ARC27_MicrophoneBtn, cockpit_device_id = devices.AN_ARC_27_COMMAND_SET, value_down = 1, value_up = 0, name = _('Microphone Button (call radio menu)'), category = {_('Communications'), _('Throttle Grip'), _('AN/ARC-27 UHF Radio')}},
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice,  up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0, value_up = 0.0, name = ('Microphone Button (VOIP)'), category = {_('Communications'), _('Throttle Grip'), _('AN/ARC-27 UHF Radio')}},
+--
 -- Systems
 -- air brake
 {	down = iCommandPlaneAirBrake,																					value_down = 1,		name = _('Speed Brake Switch - Up'),	category = {_('Flight Control'), _('Throttle Grip')}},

@@ -180,6 +180,17 @@ join(res.keyCommands,{
 {	down = hotas_commands.THROTTLE_EXTERIOR_LIGHTS,																					cockpit_device_id = devices.HOTAS,	value_down =  0.0,					name = _('Exterior Lights Switch - OFF'),					category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_COMMS_COMM1,						up = hotas_commands.THROTTLE_COMMS_COMM1,						cockpit_device_id = devices.HOTAS,	value_down =  0.2,	value_up = 0.0,	name = _('COMM Switch - COMM 1 (call radio menu)'),			category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_COMMS_COMM2,						up = hotas_commands.THROTTLE_COMMS_COMM2,						cockpit_device_id = devices.HOTAS,	value_down =  0.4,	value_up = 0.0,	name = _('COMM Switch - COMM 2 (call radio menu)'),			category = {_('Throttle Grip'), _('HOTAS')}},
+
+-- old VoIP cockpit commands
+--{	down = hotas_commands.THROTTLE_COMMS_COMM1_VOIP,				up = hotas_commands.THROTTLE_COMMS_COMM1_VOIP,					cockpit_device_id = devices.HOTAS,	value_down =  0.2,	value_up = 0.0,	name = _('COMM Switch - COMM 1 (VOIP)'),					category = {_('Throttle Grip'), _('HOTAS')}},
+--{	down = hotas_commands.THROTTLE_COMMS_COMM2_VOIP,				up = hotas_commands.THROTTLE_COMMS_COMM2_VOIP,					cockpit_device_id = devices.HOTAS,	value_down =  0.4,	value_up = 0.0,	name = _('COMM Switch - COMM 2 (VOIP)'),					category = {_('Throttle Grip'), _('HOTAS')}},
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+-- through global commands
+{	down = iCommandVoIPRadioPushToTalkEnableDisableVoice,				up = iCommandVoIPRadioPushToTalkEnableDisableVoice,			value_down =  1.0,	value_up = 0.0,	name = _('COMM Switch - COMM 1 (VOIP)'),					category = {_('Throttle Grip'), _('HOTAS')}},
+{	down = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,				up = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,		value_down =  1.0,	value_up = 0.0,	name = _('COMM Switch - COMM 2 (VOIP)'),					category = {_('Throttle Grip'), _('HOTAS')}},
+--
+
 {	down = hotas_commands.THROTTLE_COMMS_MIDS_A,					up = hotas_commands.THROTTLE_COMMS_MIDS_A,						cockpit_device_id = devices.HOTAS,	value_down =  0.6,	value_up = 0.0,	name = _('COMM Switch - MIDS A'),							category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_COMMS_MIDS_B,					up = hotas_commands.THROTTLE_COMMS_MIDS_B,						cockpit_device_id = devices.HOTAS,	value_down =  0.8,	value_up = 0.0,	name = _('COMM Switch - MIDS B'),							category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_CAGE,							up = hotas_commands.THROTTLE_CAGE,								cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,	name = _('Cage/Uncage Button'),								category = {_('Throttle Grip'), _('HOTAS')}},
@@ -953,6 +964,8 @@ join(res.keyCommands,{
 {	down = iCommandPilotGestureSalute,																		name = _('Pilot Salute'),	category = _('Communications')},
 {	down = intercom_commands.MsgHornetBall_EXT,	cockpit_device_id = devices.INTERCOM,	value_down =  1.0,	name = _('Hornet Ball'),	category = _('Communications')},
 
+-- A/A refueling
+{down = iCommandPlaneRefuelingReadyPreContact, name = _('A/A refueling - "Ready for precontact" radio call'), category = _('Communications')},
 
 --------------------------------------------------------------------------------------
 -- Special input for 3-pos 2-signals switches on joystick ----------------------------

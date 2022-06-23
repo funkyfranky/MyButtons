@@ -150,8 +150,18 @@ join(res.keyCommands,{
 {								down = device_commands.Button_86,	cockpit_device_id = devices.WEAPON_SYS,		value_down = 0.0,												name = _('RS Button Cover - CLOSE'),		category = {_('Ins Cyclic Stick'), _('Armament System')}},
 {								down = device_commands.Button_87, up = device_commands.Button_87,	cockpit_device_id = devices.WEAPON_SYS,	value_down = 1.0, value_up = 0.0,	name = _('RS Button'),						category = {_('Ins Cyclic Stick'), _('Armament System')}},
 
-{combos = {{key = 'JOY_BTN1'}},	down = device_commands.Button_25,	up = device_commands.Button_25, cockpit_device_id = devices.SPU_7, value_down = 1.0, value_up = 0.0,	name = _('Radio trigger - RADIO'),		category = {_('Ins Cyclic Stick'), _('Communications')}},
-{								down = device_commands.Button_25,	up = device_commands.Button_25, cockpit_device_id = devices.SPU_7, value_down = 0.5, value_up = 0.0,	name = _('Radio trigger - ICS'),		category = {_('Ins Cyclic Stick'), _('Communications')}},
+{combos = {{key = 'JOY_BTN1'}},	down = device_commands.Button_25,	up = device_commands.Button_25, cockpit_device_id = devices.SPU_7, value_down = 1.0, value_up = 0.0,		name = _('Radio trigger - RADIO (call radio menu)'),	category = {_('Ins Cyclic Stick'), _('Communications')}},
+{								down = device_commands.Button_25,	up = device_commands.Button_25, cockpit_device_id = devices.SPU_7, value_down = 0.5, value_up = 0.0,		name = _('Radio trigger - ICS (call radio menu)'),		category = {_('Ins Cyclic Stick'), _('Communications')}},
+
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+-- global commands
+{															down = iCommandVoIPRadioPushToTalkEnableDisableVoice,	up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0, value_up = 0.0,	name = _('Radio trigger - RADIO (VOIP)'),				category = {_('Ins Cyclic Stick'), _('Communications')}},
+{															down = iCommandVoIPIntercomPushToTalkEnableDisableVoice, up = iCommandVoIPIntercomPushToTalkEnableDisableVoice, value_down = 0.5, value_up = 0.0,	name = _('Radio trigger - ICS (VOIP)'),					category = {_('Ins Cyclic Stick'), _('Communications')}},
+-- old local commands
+--{															down = device_commands.Button_28,	up = device_commands.Button_28, cockpit_device_id = devices.SPU_7, value_down = 1.0, value_up = 0.0,		name = _('Radio trigger - RADIO (VOIP)'),				category = {_('Ins Cyclic Stick'), _('Communications')}},
+--{															down = device_commands.Button_28,	up = device_commands.Button_28, cockpit_device_id = devices.SPU_7, value_down = 0.5, value_up = 0.0,		name = _('Radio trigger - ICS (VOIP)'),					category = {_('Ins Cyclic Stick'), _('Communications')}},
+
 
 {	down = iCommandPlaneTrimOn, up = iCommandPlaneTrimOff,																					name = _('Trimmer Button'),				category = {_('Ins Cyclic Stick'), _('Trimmer')}},
 {	down = iCommandPlaneTrimCancel,																											name = _('Trimmer - Reset'),			category = {_('Ins Cyclic Stick'), _('Trimmer')}},

@@ -80,7 +80,10 @@ keyCommands = {
 {down = iCommandToggleCommandMenu, name = _('COMM Communication menu'), category = _('Communications')},
 {down = ICommandSwitchDialog, name = _('COMM Switch dialog'), category = _('Communications')},
 {down = ICommandSwitchToCommonDialog, name = _('COMM Switch to main menu'), category = _('Communications')},
-{down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk'), category = _('Communications')},
+{down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk (call radio menu)'), category = _('Communications')},
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0, value_up = 0.0, name = _('COMM Push to talk (VOIP)'), category = _('Communications')},
 
 -- View                                                    
 {combos = {{key = 'JOY_BTN_POV1_L'}}, pressed = iCommandViewLeftSlow, up = iCommandViewStopSlow, name = _('View Left slow'), category = _('View')},
@@ -113,7 +116,7 @@ keyCommands = {
 {down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
 {down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
-{down = iCommandViewRear, name = _('F4 Look back view'), category = _('View')},
+{down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
 {down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
 {down = iCommandViewFightGround, name = _('F5 Ground hostile view'), category = _('View')},
@@ -322,9 +325,9 @@ keyCommands = {
 {down = device_commands.Button_8, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Main Rocket Switch ON'), category = _('Weapon System')},
 {down = device_commands.Button_8, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.0, name = _('Main Rocket Switch OFF'), category = _('Weapon System')},
 
-{down = device_commands.Button_9, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Rocket Emergency Release Cover OPEN'), category = _('Weapon System')},
-{down = device_commands.Button_10, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Rocket Emergency Release ON'), category = _('Weapon System')},
-{down = device_commands.Button_10, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.0, name = _('Rocket Emergency Release OFF'), category = _('Weapon System')},
+{down = device_commands.Button_10, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Rocket Emergency Release ON'),                category = _('Weapon System')},
+{down = device_commands.Button_10, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 0.0, name = _('Rocket Emergency Release OFF'),               category = _('Weapon System')},
+{down = device_commands.Button_20, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Rocket Emergency Release - toggle ON / OFF'), category = _('Weapon System')},
 
 --landing gear
 {down = device_commands.Button_10, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = 1.0, name = _('Landing Gear Up/Down'), category = _('Systems')},
@@ -498,6 +501,8 @@ axisCommands = {
 {action = device_commands.Button_8, cockpit_device_id  = devices.EZ42_GUNSIGHT, name = _('EZ42 Gunsight Target Wingspan Knob')},
 {action = device_commands.Button_7, cockpit_device_id  = devices.EZ42_GUNSIGHT, name = _('EZ42 Gunsight Target Distance Control')},
 {action = device_commands.Button_17, cockpit_device_id  = devices.EZ42_GUNSIGHT, name = _('EZ42 Gunsight Altitude Correction')},
+
+{action = device_commands.Button_15, cockpit_device_id = devices.CONTROL_SYSTEM, name = _('Radiator Flaps'), category = _('Engine Controls')},
 
 -- ff: additonal axes
 {action = device_commands.Button_13, cockpit_device_id  = devices.CONTROL_SYSTEM,     name = _('Radiator Flaps Control'),category = _('My Axes')},

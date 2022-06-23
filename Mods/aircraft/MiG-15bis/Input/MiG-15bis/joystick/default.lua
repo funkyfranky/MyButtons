@@ -218,7 +218,12 @@ join(res.keyCommands,{
 -- Throttle Grip
 {down = electric_commands.Mig15_Command_EngineStartBtn,	up = electric_commands.Mig15_Command_EngineStartBtn, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1, value_up = 0, name = _('Engine Start Button'),	category = _('Throttle Grip')},
 {down = electric_commands.Mig15_Command_EngineStartBtnCover_EXT, cockpit_device_id = devices.ELEC_INTERFACE, value_down = 1,	name = _('Engine Start Button Cover'),			category = _('Throttle Grip')},
-{down = RSI_6K_commands.Mig15_Command_RSI6K_MicBtn, up = RSI_6K_commands.Mig15_Command_RSI6K_MicBtn, cockpit_device_id = devices.RSI_6K, value_down = 1, value_up = 0, name = _('Microphone Button'), category = _('Throttle Grip')},
+{down = RSI_6K_commands.Mig15_Command_RSI6K_MicBtn, up = RSI_6K_commands.Mig15_Command_RSI6K_MicBtn, cockpit_device_id = devices.RSI_6K, value_down = 1, value_up = 0, name = _('Microphone Button (call radio menu)'), category = _('Throttle Grip')},
+
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0, value_up = 0.0, name = _('Microphone Button (VOIP)'), category = _('Throttle Grip')},
+--
 
 -- Stick
 {									down = device_commands.Button_10, cockpit_device_id  = devices.WEAPON_SYSTEM, value_down = 1.0, name = _('Guns Safety Cover'), category = _('Stick')},

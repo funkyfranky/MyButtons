@@ -366,7 +366,11 @@ join(res.keyCommands,{
 {	down = iCommandPlaneIntercomINT,	up = iCommandPlaneIntercomINT,	value_down = 1.0,	value_up = 0.0,				name = _('INT Button'),				category = {_('Communications'), _('Throttle Grip')}},
 {	down = iCommandPlaneIntercomVHF,	up = iCommandPlaneIntercomVHF,	value_down = 1.0,	value_up = 0.0,				name = _('Radio Button'),			category = {_('Communications'), _('Throttle Grip')}},
 {	down = iCommandPlaneIntercomINTPress,	up = iCommandPlaneIntercomINTPress,	value_down = 1.0,	value_up = 0.0,		name = _('INT Button On Stick'),	category = {_('Communications'), _('Stick Grip'), _('Only Rear Cockpit')}},
-
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice,	up = iCommandVoIPRadioPushToTalkEnableDisableVoice,		value_down = 1.0,	value_up = 0.0,		name = _('Radio Button (VOIP)'),	category = {_('Communications'), _('Throttle Grip')}},
+{down = iCommandVoIPIntercomPushToTalkEnableDisableVoice,	up = iCommandVoIPIntercomPushToTalkEnableDisableVoice,	value_down = 1.0,	value_up = 0.0,		name = _('INT Button (VOIP)'),	category = {_('Communications'), _('Throttle Grip')}},
+{down = iCommandVoIPIntercomPushToTalkEnableDisableVoice_1,		up = iCommandVoIPIntercomPushToTalkEnableDisableVoice_1,	value_down = 1.0,	value_up = 0.0,		name = _('INT Button On Stick (VOIP)'),	category = {_('Communications'), _('Stick Grip'), _('Only Rear Cockpit')}},
 
 ------------------------------------------------
 -- Aft CB Switch Panel ----------------------------

@@ -106,7 +106,7 @@ keyCommands = {
 {down = iCommandViewLocal, name = _('F2 Toggle local camera control'), category = _('View')},
 {down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
-{down = iCommandViewRear, name = _('F4 Look back view'), category = _('View')},
+{down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
 {down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
 {down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
@@ -246,7 +246,7 @@ keyCommands = {
 {down = iCommandToggleCommandMenu, name = _('Communication menu'), category = _('Communications')},
 {down = ICommandSwitchToCommonDialog, name = _('Switch to main menu'), category = _('Communications')},
 {down = ICommandSwitchDialog, name = _('Switch dialog'), category = _('Communications')},
-
+{down = iCommandPlaneRefuelingReadyPreContact, name = _('A/A refueling - "Ready for precontact" radio call'), category = _('Communications')},
 
 -- Padlock
 
@@ -313,10 +313,18 @@ keyCommands = {
 {down = iCommandPlane_HOTAS_PinkySwitchForward, name = _('HOTAS Pinky Switch Forward'), category = _('HOTAS')},
 {down = iCommandPlane_HOTAS_PinkySwitchCenter , name = _('HOTAS Pinky Switch Center'),  category = _('HOTAS')},
 
-{down = iCommandPlane_HOTAS_MIC_SwitchUp,    up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Up'),    category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_MIC_SwitchDown,  up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Down'),  category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_MIC_SwitchLeft,  up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Aft'),  category = _('HOTAS')},
-{down = iCommandPlane_HOTAS_MIC_SwitchRight, up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Forward'), category = _('HOTAS')},
+-- {down = iCommandPlane_HOTAS_MIC_SwitchUp,    up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Up (no function)'),    category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_MIC_SwitchDown,  up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Down (call radio menu)'),  category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_MIC_SwitchLeft,  up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Aft (call radio menu)'),  category = _('HOTAS')},
+{down = iCommandPlane_HOTAS_MIC_SwitchRight, up = iCommandPlane_HOTAS_MIC_SwitchOff, name = _('HOTAS MIC Switch Forward (call radio menu)'), category = _('HOTAS')},
+
+-- start VoIP radio global commands
+-- in case you need to open commands in the cockpit
+--{down = device_commands.Button_1,  up = device_commands.Button_1, cockpit_device_id = devices.HOTAS, value_down = 1.0,    value_up = 0.0, name = ('HOTAS MIC Switch Up (VOIP, no function)'), category = _('HOTAS')},
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice,  up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0,    value_up = 0.0, name = ('HOTAS MIC Switch Down (VOIP)'),  category = _('HOTAS')},
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_2,  up = iCommandVoIPRadioPushToTalkEnableDisableVoice_2, value_down = 1.0,    value_up = 0.0, name = ('HOTAS MIC Switch Aft (VOIP)'),  category = _('HOTAS')},
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,  up = iCommandVoIPRadioPushToTalkEnableDisableVoice_1, value_down = 1.0,    value_up = 0.0, name = ('HOTAS MIC Switch Forward (VOIP)'), category = _('HOTAS')},
+-- end VoIP radio commands
 
 {pressed = iCommandPlaneTrimUp, up = iCommandPlaneTrimStop,    name = _('Trim: Nose Down'),	     category = _('HOTAS')},
 {pressed = iCommandPlaneTrimDown, up = iCommandPlaneTrimStop,  name = _('Trim: Nose Up'),			 category = _('HOTAS')},
@@ -397,12 +405,17 @@ keyCommands = {
 {down = iCommandPlane_LG_WRN_Silence		, up = iCommandPlane_LG_WRN_Silence		, name = _('Landing Gear Warning Silence')			, category = _('Engine Control Panel')},
 {down = iCommandPlane_APU_Start														, name = _('APU Start')							, category = _('Engine Control Panel')},
 {down = iCommandPlane_APU_Off														, name = _('APU Off')								, category = _('Engine Control Panel')},
-{down = iCommandPlane_L_ENG_OPER_Ign 		, up = iCommandPlane_L_ENG_OPER_Norm	, name = _('Left Engine Oper Ign / Norm')			, category = _('Engine Control Panel')},
+
+-- Left engine Motor/Norm/Ign switch
+{down = iCommandPlane_L_ENG_OPER_Ign 		, up = iCommandPlane_L_ENG_OPER_Norm	, name = _('Left Engine Oper Ign')					, category = _('Engine Control Panel')},
 {down = iCommandPlane_L_ENG_OPER_Motor												, name = _('Left Engine Oper Motor')				, category = _('Engine Control Panel')},
-{down = iCommandPlane_L_ENG_OPER_Norm												, name = _('Left Engine Oper Norm')				, category = _('Engine Control Panel')},
-{down = iCommandPlane_R_ENG_OPER_Ign 		, up = iCommandPlane_R_ENG_OPER_Norm	, name = _('Right Engine Oper Ign / Norm')			, category = _('Engine Control Panel')},
+{down = iCommandPlane_L_ENG_OPER_Norm												, name = _('Left Engine Oper Norm')					, category = _('Engine Control Panel')},
+
+-- Right engine Motor/Norm/Ign switch
+{down = iCommandPlane_R_ENG_OPER_Ign 		, up = iCommandPlane_R_ENG_OPER_Norm	, name = _('Right Engine Oper Ign')					, category = _('Engine Control Panel')},
 {down = iCommandPlane_R_ENG_OPER_Motor												, name = _('Right Engine Oper Motor')				, category = _('Engine Control Panel')},
 {down = iCommandPlane_R_ENG_OPER_Norm												, name = _('Right Engine Oper Norm')				, category = _('Engine Control Panel')},
+
 {down = iCommandPlane_L_ENG_FUEL_FLOW_Norm											, name = _('Left Engine Fuel Flow Norm')			, category = _('Engine Control Panel')},
 {down = iCommandPlane_L_ENG_FUEL_FLOW_Override										, name = _('Left Engine Fuel Flow Override')		, category = _('Engine Control Panel')},
 {down = iCommandPlane_R_ENG_FUEL_FLOW_Norm											, name = _('Right Engine Fuel Flow Norm')			, category = _('Engine Control Panel')},
@@ -583,8 +596,8 @@ keyCommands = {
 {down = iCommandPlaneCircuitBreaker_38							, name = _('CB AUX ESS BUS TIE'), category = _('Circuit breaker panel')},
 
 --Stability Augmentation system panel
-{pressed = iCommandPlaneTrimLeftRudder 						,name = _('Yaw Trim Left'), category = _('Stability Augmentation System')},
-{pressed = iCommandPlaneTrimRightRudder						,name = _('Yaw Trim Right'), category = _('Stability Augmentation System')},
+{pressed = iCommandPlaneTrimLeftRudder 						,name = _('Yaw Trim Left'), category = {_('Stability Augmentation System'), _('Flight Control')}},
+{pressed = iCommandPlaneTrimRightRudder						,name = _('Yaw Trim Right'), category = {_('Stability Augmentation System'), _('Flight Control')}},
 {down = iCommandPlaneYawSASEngageL							, name = _('Yaw SAS engage Left'), category = _('Stability Augmentation System')},
 {down = iCommandPlaneYawSASEngageR							, name = _('Yaw SAS engage Right'), category = _('Stability Augmentation System')},
 {down = iCommandPlanePitchSASEngageL						, name = _('Pitch SAS engage Left'), category = _('Stability Augmentation System')},
@@ -1069,8 +1082,6 @@ keyCommands = {
 {down = iCommandPlaneShowKneeboard,	name = _('Kneeboard ON/OFF'), category = _('Kneeboard')},
 {down = iCommandPlaneShowKneeboard, up = iCommandPlaneShowKneeboard ,value_down = 1.0,value_up = -1.0, name = _('Kneeboard glance view')  , category = _('Kneeboard')},
 {down = 3003	, cockpit_device_id  = 100,value_down = 1.0, name = _('Kneeboard current position mark point')  , category = _('Kneeboard')},
-
-
 },
 
 

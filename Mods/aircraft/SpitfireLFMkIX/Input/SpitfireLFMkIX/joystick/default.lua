@@ -116,7 +116,10 @@ keyCommands = {
 {down = ICommandSwitchDialog, name = _('COMM Switch dialog'), category = _('Communications')},
 {down = ICommandSwitchToCommonDialog, name = _('COMM Switch to main menu'), category = _('Communications')},
 -- TODO move down and implement - Made Dragon
-{down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk'), category = _('Communications')},
+{down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk (call radio menu)'), category = _('Communications')},
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0, value_up = 0.0, name = _('COMM Push to talk (VOIP)'), category = _('Communications')},
 -- ----------------------------------------------------------------------------------------
 
 
@@ -151,7 +154,7 @@ keyCommands = {
 {                                                                                                                       down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {                                                                                                                       down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
 {                                                                                                                       down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
-{                                                                                                                       down = iCommandViewRear, name = _('F4 Look back view'), category = _('View')},
+{                                                                                                                       down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
 {                                                                                                                       down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {                                                                                                                       down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
 {                                                                                                                       down = iCommandViewFightGround, name = _('F5 Ground hostile view'), category = _('View')},
@@ -415,8 +418,8 @@ keyCommands = {
 
 
 -- Magnetic Compass -----------------------------------------------------------------------
-{                                                           pressed = device_commands.Button_18, cockpit_device_id = devices.CONTROLS, value_pressed = -1.0, name = _('Input.SpitfireLFMkIX.compass_minus'), category = _('Front Dash')},
-{                                                           pressed = device_commands.Button_18, cockpit_device_id = devices.CONTROLS, value_pressed = 1.0,  name = _('Input.SpitfireLFMkIX.compass_plus'), category = _('Front Dash')},
+{                                                           pressed = device_commands.Button_18, cockpit_device_id = devices.CONTROLS, value_pressed = -0.25, name = _('Input.SpitfireLFMkIX.compass_minus'), category = _('Front Dash')},
+{                                                           pressed = device_commands.Button_18, cockpit_device_id = devices.CONTROLS, value_pressed = 0.25,  name = _('Input.SpitfireLFMkIX.compass_plus'), category = _('Front Dash')},
 -- ----------------------------------------------------------------------------------------
 
 

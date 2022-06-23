@@ -134,7 +134,7 @@ keyCommands = {
 {down = iCommandViewLocal, name = _('F2 Toggle local camera control'), category = _('View')},
 {down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
-{down = iCommandViewRear, name = _('F4 Look back view'), category = _('View')},
+{down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
 {down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {down = iCommandViewChaseArcade, name = _('F4 Arcade Chase view'), category = _('View')},
 {down = iCommandViewFight, name = _('F5 Nearest AC view'), category = _('View')},
@@ -284,6 +284,15 @@ keyCommands = {
 
 {	down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _("Co-pilot's radio trigger RADIO (call radio menu)"), category = _('Ins Cyclic Stick')},
 {	down = device_commands.Button_10, up = device_commands.Button_10, cockpit_device_id = devices.INTERCOM, value_down = 0.5, value_up = 0.0, name = _("Co-pilot's radio trigger ICS (call radio menu)"), category = _('Ins Cyclic Stick')},
+
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+-- global commands
+{	down = iCommandVoIPRadioPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down = 1.0, value_up = 0.0, name = _("radio trigger RADIO (VOIP)"),	category = _('Ins Cyclic Stick')},
+{	down = iCommandVoIPIntercomPushToTalkEnableDisableVoice, up = iCommandVoIPIntercomPushToTalkEnableDisableVoice, value_down = 0.5, value_up = 0.0, name = _("radio trigger ICS (VOIP)"),		category = _('Ins Cyclic Stick')},
+-- old local commands
+-- {	down = device_commands.Button_18, up = device_commands.Button_18, cockpit_device_id = devices.INTERCOM, value_down = 1.0, value_up = 0.0, name = _("radio trigger RADIO (VOIP)"),	category = _('Ins Cyclic Stick')},
+-- {	down = device_commands.Button_18, up = device_commands.Button_18, cockpit_device_id = devices.INTERCOM, value_down = 0.5, value_up = 0.0, name = _("radio trigger ICS (VOIP)"),		category = _('Ins Cyclic Stick')},
 
 {combos = {{key = 'JOY_BTN3'}}, down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Pilot Trimmer'), category = _('Ins Cyclic Stick')},
 {down = device_commands.Button_3, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = 1.0, name = _('Trimmer reset'), category = _('Ins Cyclic Stick')},

@@ -130,11 +130,7 @@ keyCommands = {
 {down = ICommandSwitchDialog, name = _('COMM Switch dialog'), category = _('Communications')},
 {down = ICommandSwitchToCommonDialog, name = _('COMM Switch to main menu'), category = _('Communications')},
 -- TODO move down and implement - Made Dragon
-{down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk'), category = _('Communications')},
--- ----------------------------------------------------------------------------------------
-
-
-
+{down = iCommandPlane_P_51_PTT_on, up = iCommandPlane_P_51_PTT_off, name = _('COMM Push to talk (call radio menu)'), category = _('Communications')},
 -- Views ----------------------------------------------------------------------------------
 {combos = {{key = 'JOY_BTN_POV1_L'}},                                           pressed = iCommandViewLeftSlow, up = iCommandViewStopSlow, name = _('View Left slow'), category = _('View')},
 {combos = {{key = 'JOY_BTN_POV1_R'}},                                           pressed = iCommandViewRightSlow, up = iCommandViewStopSlow, name = _('View Right slow'), category = _('View')},
@@ -165,7 +161,7 @@ keyCommands = {
 {                                                                                                                       down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {                                                                                                                       down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
 {                                                                                                                       down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
-{                                                                                                                       down = iCommandViewRear, name = _('F4 Look back view'), category = _('View')},
+{                                                                                                                       down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
 {                                                                                                                       down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {                                                                                                                       down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
 {                                                                                                                       down = iCommandViewFightGround, name = _('F5 Ground hostile view'), category = _('View')},
@@ -680,8 +676,9 @@ keyCommands = {
 
 
 
-{                                                           down = device_commands.Button_53, up = device_commands.Button_53, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('Radio Button'), category = {_('VHF Radio'), _('Communications'), _('Throttle Grip')}},
-{                                                           down = device_commands.Button_54, up = device_commands.Button_54, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('INT Button'), category = {_('VHF Radio'), _('Communications'), _('Throttle Grip')}},
+{                                                           down = device_commands.Button_53, up = device_commands.Button_53, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('Radio Button (call radio menu)'), category = {_('VHF Radio'), _('Communications'), _('Throttle Grip')}},
+{                                                           down = device_commands.Button_54, up = device_commands.Button_54, cockpit_device_id = devices.VHF_RADIO, value_down = 1.0, value_up = 0.0, name = _('INT Button (call radio menu)'), category = {_('VHF Radio'), _('Communications'), _('Throttle Grip')}},
+
 },
 
 

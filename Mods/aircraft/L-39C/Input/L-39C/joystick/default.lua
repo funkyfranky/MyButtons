@@ -314,10 +314,15 @@ join(res.keyCommands,{
 {	down = iCommandPlane_R_800_Emergency_Radio,		value_down = -1.0,	name = _('Reserve Intercom Switch - ON/OFF'),	category = {_('Communications'), _('Intercom Control Panel')}},
 {	down = iCommandPlane_R_800_Emergency_Radio,		value_down = 1.0,	name = _('Reserve Intercom Switch - ON'),		category = {_('Communications'), _('Intercom Control Panel')}},
 {	down = iCommandPlane_R_800_Emergency_Radio,		value_down = 0.0,	name = _('Reserve Intercom Switch - OFF'),		category = {_('Communications'), _('Intercom Control Panel')}},
-{	down = iCommandPlaneIntercomINT,		up = iCommandPlaneIntercomINT,		value_down = 1.0,	value_up = 0.0,		name = _('INT Button'),				category = {_('Communications'), _('Throttle Grip')}},
-{	down = iCommandPlaneIntercomVHF,		up = iCommandPlaneIntercomVHF,		value_down = 1.0,	value_up = 0.0,		name = _('Radio Button'),			category = {_('Communications'), _('Throttle Grip')}},
-{	down = iCommandPlaneIntercomINTPress,	up = iCommandPlaneIntercomINTPress,	value_down = 1.0,	value_up = 0.0,		name = _('INT Button On Stick'),	category = {_('Communications'), _('Stick Grip'), _('Only Rear Cockpit')}},
 
+{	down = iCommandPlaneIntercomINT,		up = iCommandPlaneIntercomINT,		value_down = 1.0,	value_up = 0.0,		name = _('INT Button (call radio menu)'), category = {_('Communications'), _('Throttle Grip')}},
+{	down = iCommandPlaneIntercomVHF,		up = iCommandPlaneIntercomVHF,		value_down = 1.0,	value_up = 0.0,		name = _('Radio Button (call radio menu)'),			category = {_('Communications'), _('Throttle Grip')}},
+{	down = iCommandPlaneIntercomINTPress,	up = iCommandPlaneIntercomINTPress,	value_down = 1.0,	value_up = 0.0,		name = _('INT Button On Stick (call radio menu)'),	category = {_('Communications'), _('Stick Grip'), _('Only Rear Cockpit')}},
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice,	up = iCommandVoIPRadioPushToTalkEnableDisableVoice,		value_down = 1.0,	value_up = 0.0,		name = _('Radio Button (VOIP)'),	category = {_('Communications'), _('Throttle Grip')}},
+{down = iCommandVoIPIntercomPushToTalkEnableDisableVoice,	up = iCommandVoIPIntercomPushToTalkEnableDisableVoice,	value_down = 1.0,	value_up = 0.0,		name = _('INT Button (VOIP)'),	category = {_('Communications'), _('Throttle Grip')}},
+{down = iCommandVoIPIntercomPushToTalkEnableDisableVoice_1,		up = iCommandVoIPIntercomPushToTalkEnableDisableVoice_1,	value_down = 1.0,	value_up = 0.0,		name = _('INT Button On Stick (VOIP)'),	category = {_('Communications'), _('Stick Grip'), _('Only Rear Cockpit')}},
 
 ------------------------------------------------
 -- Aft CB Switch Panel ----------------------------
@@ -682,7 +687,6 @@ join(res.keyCommands,{
 {down = device_commands.Button_39,		cockpit_device_id = devices.WEAPON_SYSTEM,	value_down = 0.2,		name = _('Rockets Firing Mode Selector Switch - 2RS'),						category = _('Armament Control Panel')},
 {down = device_commands.Button_39,		cockpit_device_id = devices.WEAPON_SYSTEM,	value_down = 0.3,		name = _('Rockets Firing Mode Selector Switch - 4RS'),						category = _('Armament Control Panel')},
 
-
 })
 
 -- joystick axes 
@@ -767,9 +771,6 @@ join(res.axisCommands,{
 -- Auxiliary Switch Panel ----------------------
 ------------------------------------------------
 {action = device_commands.Button_30,	cockpit_device_id = devices.AIR_INTERFACE,	name = _('Cabin Air Temperature Controller Rheostat'),	category = {_('Auxiliary Switch Panel'), _('Only Front Cockpit')}},
-
-
-
 
 })
 

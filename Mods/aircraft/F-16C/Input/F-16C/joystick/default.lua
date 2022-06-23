@@ -169,6 +169,11 @@ join(res.keyCommands,{
 ---------------------------------------------
 {	down = hotas_commands.THROTTLE_TRANSMIT_FWD,		up = hotas_commands.THROTTLE_TRANSMIT_FWD,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - VHF (call radio menu)'),					category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_TRANSMIT_AFT,		up = hotas_commands.THROTTLE_TRANSMIT_AFT,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - UHF (call radio menu)'),					category = {_('Throttle Grip'), _('HOTAS')}},
+-- VoIP radio global command
+-- in case you need to open commands in the cockpit
+{	down = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,	up = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - VHF (VOIP)'),								category = {_('Throttle Grip'), _('HOTAS')}},
+{	down = iCommandVoIPRadioPushToTalkEnableDisableVoice,	up = iCommandVoIPRadioPushToTalkEnableDisableVoice,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - UHF (VOIP)'),								category = {_('Throttle Grip'), _('HOTAS')}},
+--
 {	down = hotas_commands.THROTTLE_TRANSMIT_LEFT,		up = hotas_commands.THROTTLE_TRANSMIT_LEFT,		cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - IFF OUT'),									category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_TRANSMIT_RIGHT,		up = hotas_commands.THROTTLE_TRANSMIT_RIGHT,	cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('Transmit Switch - IFF IN'),									category = {_('Throttle Grip'), _('HOTAS')}},
 {	down = hotas_commands.THROTTLE_UNCAGE,				up = hotas_commands.THROTTLE_UNCAGE,			cockpit_device_id = devices.HOTAS,	value_down =  1.0,	value_up = 0.0,		name = _('UNCAGE Switch'),												category = {_('Throttle Grip'), _('HOTAS')}},
@@ -1048,6 +1053,9 @@ join(res.keyCommands,{
 {	pressed = iCommandPlane_Helmet_Brightess_Up  , name = _('Gain goggles up')  , category = _('Sensors')},
 {	pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Gain goggles down'), category = _('Sensors')},
 
+-- A/A refueling
+{   down = iCommandPlaneRefuelingReadyPreContact, name = _('A/A refueling - "Ready for precontact" radio call'), category = _('Communications')},
+
 ----------------------------------------------
 --				TEST FEATURE!!!				--
 -- Weapon Adjustment
@@ -1190,8 +1198,8 @@ join(res.axisCommands,{
 {	action = hmcs_commands.IntKnob_AXIS,				cockpit_device_id = devices.HMCS,				name = _('HMCS SYMBOLOGY INT Knob'),				category = {_('Left Auxiliary Console')}},
 
 -- RWR
-{	action = rwr_commands.BrtKnob_AXIS,					cockpit_device_id = devices.RWR,			name = _('RWR Indicator Control DIM Knob'),			category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
-{	action = rwr_commands.IntKnob_AXIS,					cockpit_device_id = devices.RWR,			name = _('RWR Intensity Knob'),						category = {_('Instrument Panel'), _("RWR")}},
+{	action = rwr_commands.BrtKnob_AXIS,					cockpit_device_id = devices.RWR,			name = _('RWR Indicator Control DIM Knob'),				category = {_('Left Auxiliary Console'), _('THREAT WARNING AUX Panel'), _("RWR")}},
+{	action = rwr_commands.IntKnob_AXIS,					cockpit_device_id = devices.RWR,			name = _('RWR Intensity Knob'),							category = {_('Instrument Panel'), _("RWR")}},
 
 -- Secure Voice
 {	action = ky58_commands.KY58_Volume_AXIS,			cockpit_device_id = devices.KY58,				name = _('KY-58 VOLUME Knob'),						category = {_('Right Console'), _('Secure Voice Control Panel')}},
