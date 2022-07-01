@@ -1,3 +1,6 @@
+dofile(folder.."../../Cockpit/Scripts/devices.lua")
+dofile(folder.."../../Cockpit/Scripts/command_defs.lua")
+
 local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
 
 local keycommands = {
