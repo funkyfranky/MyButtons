@@ -98,8 +98,8 @@ join(res.keyCommands,{
 -- General ----------------------------------
 ---------------------------------------------
 {	down = iCommandCockpitShowPilotOnOff,											name = _('Show pilot body'),						category = {_('General')}},
--- TODO: Smoke Device Button
---{												down = cpt_commands.SmokeDevice,	cockpit_device_id = devices.CPT_MECHANICS, value_down = 1.0, name = _('Smoke Device - ON/OFF'),	category = _('General')},
+-- Smoke Device Button
+{												down = cpt_commands.SmokeDevice,	cockpit_device_id = devices.CPT_MECH, value_down = 1.0, name = _('Smoke Device - ON/OFF'),	category = _('General')},
 
 ---------------------------------------------
 -- View Cockpit -----------------------------

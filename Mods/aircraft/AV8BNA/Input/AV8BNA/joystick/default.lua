@@ -860,6 +860,9 @@ join(res.keyCommands,{
 	{down = iCommandPlaneCircuitBreaker_31,		value_down = 1,	name = _('Change APKWS Laser Code X100'),								category = {_('Ground Adjustments')}},
 	{down = iCommandPlaneCircuitBreaker_32,		value_down = 1,	name = _('Change APKWS Laser Code X010'),								category = {_('Ground Adjustments')}},
 	{down = iCommandPlaneCircuitBreaker_33,		value_down = 1,	name = _('Change APKWS Laser Code X001'),								category = {_('Ground Adjustments')}},
+	{down = iCommandPlaneCircuitBreaker_34,		value_down = 1,	name = _('Change GBU-12/16 Laser Code X100'),							category = {_('Ground Adjustments')}},
+	{down = iCommandPlaneCircuitBreaker_35,		value_down = 1,	name = _('Change GBU-12/16 Laser Code X010'),							category = {_('Ground Adjustments')}},
+	{down = iCommandPlaneCircuitBreaker_36,		value_down = 1,	name = _('Change GBU-12/16 Laser Code X001'),							category = {_('Ground Adjustments')}},
 	
 	-- Cheat
 	{down = iCommandEnginesStart,				name = _('Start Procedure'),		category = _('Keyboard Macros')},
