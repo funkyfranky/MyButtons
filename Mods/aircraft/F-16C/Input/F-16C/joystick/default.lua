@@ -91,8 +91,6 @@ join(res.keyCommands,{
 ---------------------------------------------
 {	down = iCommandEnginesStart,													name = _('Auto Start'),								category = {_('Cheat')}},
 {	down = iCommandEnginesStop,														name = _('Auto Stop'),								category = {_('Cheat')}},
-{	down = device_commands.Button_10,	cockpit_device_id = 0,	value_down =  1.0,	name = _('Recorder On'),							category = {_('Cheat')}},
-{	down = device_commands.Button_11,	cockpit_device_id = 0,	value_down =  1.0,	name = _('Recorder Off'),							category = {_('Cheat')}},
 
 ---------------------------------------------
 -- General ----------------------------------

@@ -821,7 +821,7 @@ keyCommands = {
 {down = iCommandPlanePositionLightsSteady, 								name = _('Position Lights Steady'), category = _('Lighting Panel')},
 {pressed = iCommandPlaneFormationLightsDecrease,						name = _('Formation Lights Decrease'), category = _('Lighting Panel')},
 {pressed = iCommandPlaneFormationLightsIncrease,						name = _('Formation Lights Increase'), category = _('Lighting Panel')},
-{down = 3010, up = 3011, cockpit_device_id = 49, value_down = 1.0,	value_up = -1.0, name = _('Anti-Collision Lights switch'), category = _('Lighting Panel')},
+{down = device_commands.Button_10, up = device_commands.Button_11, cockpit_device_id = devices.LIGHT_SYSTEM, value_down = 1.0,value_up = -1.0, name = _('Anti-Collision Lights switch'), category = _('Lighting Panel')},
 {pressed = iCommandPlaneEngInstLightsDecrease,							name = _('Engine Instruments Lights Decrease'), category = _('Lighting Panel')},
 {pressed = iCommandPlaneEngInstLightsIncrease,							name = _('Engine Instruments Lights Increase'), category = _('Lighting Panel')},
 {down = iCommandPlaneNoseIllum, 										name = _('Nose Flooding and Nose Illimination switch'), category = _('Lighting Panel')},
@@ -838,8 +838,8 @@ keyCommands = {
 -- Flashlight (Utility Light)
 {down = 3256, cockpit_device_id = 0, value_down = 1.0, 					name = _('Flashlight'), category = _('View Cockpit')},
 {down = 3255, cockpit_device_id = 0, value_down = 1.0,					name = _('Flashlight Color - Toggle Green/White'), category = {_('View Cockpit'), _('Right Console')}},
-{down = 3019, cockpit_device_id = 49, value_down =  0.1,				name = _('Flashlight BRT Control - Increase'), category = {_('View Cockpit'), _('Right Console')}},
-{down = 3019, cockpit_device_id = 49, value_down = -0.1,				name = _('Flashlight BRT Control - Decrease'), category = {_('View Cockpit'), _('Right Console')}},
+{down = device_commands.Button_19, cockpit_device_id = devices.LIGHT_SYSTEM, value_down =  0.1, name = _('Flashlight BRT Control - Increase'), category = {_('View Cockpit'), _('Right Console')}},
+{down = device_commands.Button_19, cockpit_device_id = devices.LIGHT_SYSTEM, value_down = -0.1, name = _('Flashlight BRT Control - Decrease'), category = {_('View Cockpit'), _('Right Console')}},
 
 --AHCP
 {down = iCommandPlaneAHCPMasterArm, 									name = _('Master switch ARM'), category = _('Armament HUD Control Panel')},
@@ -928,8 +928,8 @@ keyCommands = {
 {down = iCommandPlane_AAP_SteerPt_FLTPLAN, 				name = _('AAP Steer Point FLT PLAN'), category = _('AAP')},
 {down = iCommandPlane_AAP_SteerPt_MARK, 				name = _('AAP Steer Point MARK'), category = _('AAP')},
 {down = iCommandPlane_AAP_SteerPt_MISSION, 				name = _('AAP Steer Point MISSION'), category = _('AAP')},
-{down = 3002, up = 3002, cockpit_device_id = 22, value_down = 1.0,	value_up = 0.0, name = _('AAP STEER Switch Up'), category = _('AAP')},
-{down = 3003, up = 3003, cockpit_device_id = 22, value_down = -1.0,	value_up = 0.0, name = _('AAP STEER Switch Down'), category = _('AAP')},
+{down = device_commands.Button_2, up = device_commands.Button_2, cockpit_device_id = devices.AAP, value_down = 1.0,	value_up = 0.0, name = _('AAP STEER Switch Up'), category = _('AAP')},
+{down = device_commands.Button_3, up = device_commands.Button_3, cockpit_device_id = devices.AAP, value_down = -1.0, value_up = 0.0, name = _('AAP STEER Switch Down'), category = _('AAP')},
 
 -- TACAN Control Panel
 {down = iCommandPlane_TACAN_Mode_Off, 					name = _('TACAN Mode Select OFF'), category = _('TACAN Control Panel')},
@@ -986,8 +986,8 @@ keyCommands = {
 {down = iCommandPlane_VHF_FM_Squelch, 				    name = _('VHF FM Squelch'), category = _('VHF FM Radio Control Panel')},
 {down = iCommandPlane_VHF_FM_Tone,up = iCommandPlane_VHF_FM_Tone, name = _('VHF FM Tone'), category = _('VHF FM Radio Control Panel')},
 {down = iCommandPlane_VHF_FM_Load,up=iCommandPlane_VHF_FM_Load, name = _('VHF FM Load'), category = _('VHF FM Radio Control Panel')},
-{down = 3017, cockpit_device_id = 56, value_down = -1.0,name = _('VHF FM Preset Channel Decrease'), category = _('VHF FM Radio Control Panel')},
-{down = 3017, cockpit_device_id = 56, value_down = 1.0,name = _('VHF FM Preset Channel Increase'), category = _('VHF FM Radio Control Panel')},
+{down = device_commands.Button_17, cockpit_device_id = devices.VHF_FM_RADIO, value_down = -1.0,name = _('VHF FM Preset Channel Decrease'), category = _('VHF FM Radio Control Panel')},
+{down = device_commands.Button_17, cockpit_device_id = devices.VHF_FM_RADIO, value_down = 1.0,name = _('VHF FM Preset Channel Increase'), category = _('VHF FM Radio Control Panel')},
 {pressed = iCommandPlane_VHF_FM_10MHz_Dec, 				name = _('VHF FM 10Mhz Selector Decrease'), category = _('VHF FM Radio Control Panel')},
 {pressed = iCommandPlane_VHF_FM_10MHz_Inc, 				name = _('VHF FM 10Mhz Selector Increase'), category = _('VHF FM Radio Control Panel')},
 
@@ -1011,8 +1011,8 @@ keyCommands = {
 {down = iCommandPlane_VHF_AM_Squelch, 				    name = _('VHF AM Squelch'), category = _('VHF AM Radio Control Panel')},
 {down = iCommandPlane_VHF_AM_Tone,up = iCommandPlane_VHF_AM_Tone, name = _('VHF AM Tone'), category = _('VHF AM Radio Control Panel')},
 {down = iCommandPlane_VHF_AM_Load,up=iCommandPlane_VHF_AM_Load, name = _('VHF AM Load'), category = _('VHF AM Radio Control Panel')},
-{down = 3017, cockpit_device_id = 55, value_down = -1.0,name = _('VHF AM Preset Channel Decrease'), category = _('VHF AM Radio Control Panel')},
-{down = 3017, cockpit_device_id = 55, value_down = 1.0,name = _('VHF AM Preset Channel Increase'), category = _('VHF AM Radio Control Panel')},
+{down = device_commands.Button_17, cockpit_device_id = devices.VHF_AM_RADIO, value_down = -1.0,name = _('VHF AM Preset Channel Decrease'), category = _('VHF AM Radio Control Panel')},
+{down = device_commands.Button_17, cockpit_device_id = devices.VHF_AM_RADIO, value_down = 1.0,name = _('VHF AM Preset Channel Increase'), category = _('VHF AM Radio Control Panel')},
 {pressed = iCommandPlane_VHF_AM_10MHz_Dec, 				name = _('VHF AM 10Mhz Selector Decrease'), category = _('VHF AM Radio Control Panel')},
 {pressed = iCommandPlane_VHF_AM_10MHz_Inc, 				name = _('VHF AM 10Mhz Selector Increase'), category = _('VHF AM Radio Control Panel')},
 
@@ -1073,8 +1073,8 @@ keyCommands = {
 {pressed = iCommandRWRIntensityIncrease,				name = _('Radar Warning Receiver Intensity Increase'), category = _('Systems')},
 
 --Seat Adjustment
-{down = 3004, up = 3004, cockpit_device_id = 39, value_down = -1.0,	value_up = 0.0, name = _('Seat Adjustment Up'), category = _('Systems')},
-{down = 3005, up = 3005, cockpit_device_id = 39, value_down = 1.0,	value_up = 0.0, name = _('Seat Adjustment Down'), category = _('Systems')},
+{down = device_commands.Button_4, up = device_commands.Button_4, cockpit_device_id = devices.CPT_MECH, value_down = -1.0,	value_up = 0.0, name = _('Seat Adjustment Up'), category = _('Systems')},
+{down = device_commands.Button_5, up = device_commands.Button_5, cockpit_device_id = devices.CPT_MECH, value_down = 1.0,	value_up = 0.0, name = _('Seat Adjustment Down'), category = _('Systems')},
 
 --- Kneeboard
 {down = 3001, cockpit_device_id  = 100, value_down = 1.0, name = _('Kneeboard Next Page')  , category = _('Kneeboard')},
@@ -1137,7 +1137,7 @@ axisCommands = {
 {action = iCommandPlaneSelecterVerticalAbs	, name = _('HOTAS Slew Vertical')},
 
 -- Flashlight (Utility Light)
-{action = 3020, cockpit_device_id = 49, name = _('Flashlight BRT Control'), category = {_('Right Console')}},
+{action = device_commands.Button_20, cockpit_device_id = devices.LIGHT_SYSTEM, name = _('Flashlight BRT Control'), category = {_('Right Console')}},
 
 },
 }

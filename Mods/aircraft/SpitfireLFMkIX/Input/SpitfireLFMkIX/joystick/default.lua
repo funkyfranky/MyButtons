@@ -80,7 +80,6 @@ keyCommands = {
 
 
 -- Gameplay -------------------------------------------------------------------------------
-{down = iCommandActivePauseOnOff, name = _('Pause Active'), category = _('General')},
 {down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
 {down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
 {down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
@@ -162,8 +161,6 @@ keyCommands = {
 {                                                                                                                       down = iCommandViewWeaponAndTarget, name = _('F6 Weapon to target view'), category = _('View')},
 {                                                                                                                       down = iCommandViewGround, name = _('F7 Ground unit view'), category = _('View')},
 {                                                                                                                       down = iCommandViewJFO, name = _('F7 Ground JFO/JTAC view'), category = _('View')},
---{combos = {{key = 'F8'}}, down = iCommandViewTargets, name = _('F8 Target view'), category = _('View')},
---{combos = {{key = 'F8', reformers = {'RCtrl'}}}, down = iCommandViewTargetType, name = _('F8 Player targets/All targets filter'), category = _('View')},
 {                                                                                                                       down = iCommandViewNavy, name = _('F9 Ship view'), category = _('View')},
 {                                                                                                                       down = iCommandViewLndgOfficer, name = _('F9 Landing signal officer view'), category = _('View')},
 {                                                                                                                       down = iCommandViewAWACS, name = _('F10 Theater map view'), category = _('View')},

@@ -425,8 +425,6 @@ keyCommands = {
 {down = iCommandViewWeapons, name = _('F6 Released weapon view'), category = _('View')},
 {down = iCommandViewWeaponAndTarget, name = _('F6 Weapon to target view'), category = _('View')},
 {down = iCommandViewGround, name = _('F7 Ground unit view'), category = _('View')},
-{down = iCommandViewTargets, name = _('F8 Target view'), category = _('View')},
-{down = iCommandViewTargetType, name = _('F8 Player targets/All targets filter'), category = _('View')},
 {down = iCommandViewNavy, name = _('F9 Ship view'), category = _('View')},
 {down = iCommandViewLndgOfficer, name = _('F9 Landing signal officer view'), category = _('View')},
 {down = iCommandViewAWACS, name = _('F10 Theater map view'), category = _('View')},

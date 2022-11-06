@@ -1,7 +1,8 @@
-local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
 local cockpit = folder.."../../../Cockpit/"
 dofile(cockpit.."devices.lua")
 dofile(cockpit.."command_defs.lua")
+
+local res = external_profile("Config/Input/Aircrafts/common_joystick_binding.lua")
 
 join(res.keyCommands,{
 
@@ -286,7 +287,11 @@ join(res.keyCommands,{
 	{category = _('Flight Control'), name = _('FBW Gain Cover OPEN'),   			down = 3420, up = 3420, cockpit_device_id = 3, value_down = 1,   							},
 	{category = _('Flight Control'), name = _('FBW Gain NORM'),         			down = 3421, up = 3421, cockpit_device_id = 3, value_down = 0,   							},
 	{category = _('Flight Control'), name = _('FBW Gain EMER'),         			down = 3421, up = 3421, cockpit_device_id = 3, value_down = 1,   							},
-	{category = _('Flight Control'), name = _('FBW RESET'),        					down = 3423, cockpit_device_id = devices.CDVE, value_down = 1,   							},
+	{category = _('Flight Control'), name = _('FBW Channel 5 Cover CLOSED'), 		down = 3479, up = 3479, cockpit_device_id = 17, value_down = 0,   							},
+	{category = _('Flight Control'), name = _('FBW Channel 5 Cover OPEN'),   		down = 3479, up = 3479, cockpit_device_id = 17, value_down = 1,   							},
+	{category = _('Flight Control'), name = _('FBW Channel 5 DISABLE'),        		down = 3480, up = 3480, cockpit_device_id = 17, value_down = 0,   							},
+	{category = _('Flight Control'), name = _('FBW Channel 5 ENABLE'),       		down = 3480, up = 3480, cockpit_device_id = 17, value_down = 1,   							},
+	{category = _('Flight Control'), name = _('FBW RESET'),        					down = 3423, 			cockpit_device_id = 17, value_down = 1,   							},
 	{category = _('Flight Control'), name = _('Slats RETRACT, else AUTO'),			down = 3462, up = 3462, cockpit_device_id = 14,	value_down = -1, value_up = 0,				},
 	{category = _('Flight Control'), name = _('Slats EXTEND, else AUTO'),			down = 3462, up = 3462, cockpit_device_id = 14,	value_down = 1, value_up = 0,				},
 	{category = _('Flight Control'), name = _('FBW G-Limiter AA else CHARGES'),		down = 3422, up = 3422, cockpit_device_id = devices.ENGINE,	value_down = 0,	value_up = 1,	},
@@ -476,18 +481,16 @@ join(res.keyCommands,{
 	{category = _('HUD'), name = _('Auxiliary Gunsight ON'),			down = 3206, up = 3206, cockpit_device_id = devices.VTH, value_down = 1.0,	},
 	
 	-- RADAR ALTIMETER
- 	{category = _('HUD'), name = _('Radar Altimeter ON, else OFF'),		down = 3205, up = 3205, cockpit_device_id = 5,	value_down = 0.5,	value_up = 0,		},
-	{category = _('HUD'), name = _('Radar Altimeter ZB'), 				down = 3204, up = 3204, cockpit_device_id = devices.RS,  value_down = 0.0, 				},
-	{category = _('HUD'), name = _('Radar Altimeter H'), 				down = 3204, up = 3204, cockpit_device_id = devices.RS,  value_down = 0.5, 				},
-	{category = _('HUD'), name = _('Radar Altimeter SELH'), 			down = 3204, up = 3204, cockpit_device_id = devices.RS,  value_down = 1.0, 				},
-    {category = _('HUD'), name = _('Radar Altimeter OFF'), 				down = 3205, up = 3205, cockpit_device_id = devices.RS,  value_down = 0.0, 				},
-    {category = _('HUD'), name = _('Radar Altimeter ON'), 				down = 3205, up = 3205, cockpit_device_id = devices.RS,  value_down = 0.5, 				},
-    {category = _('HUD'), name = _('Radar Altimeter TEST'), 			down = 3205, up = 3205, cockpit_device_id = devices.RS,  value_down = 1.0, 				},
+ 	{category = _('HUD'), name = _('Radar Altimeter ON, else OFF'),		down = 3205, up = 3205, cockpit_device_id = devices.RS,	value_down = 0.5, value_up = 0,		},
+	{category = _('HUD'), name = _('Radar Altimeter ZB'), 				down = 3204, up = 3204, cockpit_device_id = devices.RS, value_down = 0.0, 					},
+	{category = _('HUD'), name = _('Radar Altimeter H'), 				down = 3204, up = 3204, cockpit_device_id = devices.RS, value_down = 0.5, 					},
+	{category = _('HUD'), name = _('Radar Altimeter SELH'), 			down = 3204, up = 3204, cockpit_device_id = devices.RS, value_down = 1.0, 					},
+    {category = _('HUD'), name = _('Radar Altimeter OFF'), 				down = 3205, up = 3205, cockpit_device_id = devices.RS, value_down = 0.0, 					},
+    {category = _('HUD'), name = _('Radar Altimeter ON'), 				down = 3205, up = 3205, cockpit_device_id = devices.RS, value_down = 0.5, 					},
+    {category = _('HUD'), name = _('Radar Altimeter TEST'), 			down = 3205, up = 3205, cockpit_device_id = devices.RS, value_down = 1.0, 					},
 
 	-- VTB
     {category = _('HDD'), name = _('VTB Viewport ON/OFF'), 											down = iCommandPlaneCDU_CLR, 																},
-    {category = _('HDD'), name = _('HDD Zoom IN'),         											down = iCommandPlaneZoomIn,  																},
-    {category = _('HDD'), name = _('HDD Zoom OUT'),        											down = iCommandPlaneZoomOut, 																},
     {category = _('HDD'), name = _('Radar Screen OFF'),												cockpit_device_id = devices.VTB, down = 3221, up = 3221, value_down =  0,    				},
     {category = _('HDD'), name = _('Radar Screen ON'), 												cockpit_device_id = devices.VTB, down = 3221, up = 3221, value_down =  1,    				},
 	{category = _('HDD'), name = _('Radar Target Data Manual Entry Begin'),							cockpit_device_id = devices.VTB, down = 3213, up = 3213, value_down =  1,	value_up = 0,	},

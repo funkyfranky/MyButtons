@@ -243,6 +243,9 @@ keyCommands={
 {combos={{key='H',reformers={'RShift'}}},down=device_commands.NR27on,cockpit_device_id=devices.MAIN_HYDRO,value_down=1.0,name=_('Emergency Hydraulic Pump On/Off'),category=_('Flight Controls')},
 {combos={{key='H',reformers={'RAlt'}}},down=device_commands.AileronBoosters,cockpit_device_id=devices.MAIN_HYDRO,value_down=1.0,name=_('Aileron Boosters On/Off'),category=_('Flight Controls')},
 
+{down=device_commands.Aileron_boosters_On,cockpit_device_id=devices.MAIN_HYDRO,value_down=1.0,name=_('Aileron Boosters On'),category=_('Flight Controls')},
+{down=device_commands.Aileron_boosters_Off,cockpit_device_id=devices.MAIN_HYDRO,value_down=0.0,name=_('Aileron Boosters Off'),category=_('Flight Controls')},
+
 -- SPS - Boundary Layer System
 {combos={{key='U',reformers={'RShift'}}},down=device_commands.SPSon,cockpit_device_id=devices.SPS,value_down=1,name=_('SPS (BLC) System On/Off'),category=_('Flight Controls')},
 
@@ -254,6 +257,11 @@ keyCommands={
 -- Airbrake
 {combos={{key='C'}},down=device_commands.Airbrakes,cockpit_device_id=devices.AIRBRAKE,value_down=1.0,name=_('Airbrakes On/Off'),category=_('Flight Controls')},
 
+{down=device_commands.Airbrakes_On,cockpit_device_id=devices.AIRBRAKE,value_down=1.0,name=_('Airbrakes On'),category=_('Flight Controls')},
+{down=device_commands.Airbrakes_Off,cockpit_device_id=devices.AIRBRAKE,value_down=0.0,name=_('Airbrakes Off'),category=_('Flight Controls')},
+
+{down=device_commands.Airbrakes_On_Off,up=device_commands.Airbrakes_On_Off,cockpit_device_id=devices.AIRBRAKE,value_down=1.0,value_up=0.0,name=_('Airbrakes On / Off'),category=_('Flight Controls')},
+
 -- Flaps
 {down = iCommandPlaneFlapsOn, name=_('Flaps Down'),category=_('Flight Controls')},
 {down = iCommandPlaneFlapsOff, name=_('Flaps Up'),category=_('Flight Controls')},
@@ -262,6 +270,9 @@ keyCommands={
 {down=device_commands.Flaps25,cockpit_device_id=devices.FLAPS,value_down=1.0,name=_('Flaps 25'),category=_('Flight Controls')},
 {down=device_commands.Flaps45,cockpit_device_id=devices.FLAPS,value_down=1.0,name=_('Flaps 45'),category=_('Flight Controls')},
 {down=device_commands.FlapsReset,up=device_commands.FlapsReset,cockpit_device_id=devices.FLAPS,value_down=1.0,value_up=0.0,name=_('Flaps, releave springs '),category=_('Flight Controls')},
+
+{down=device_commands.Flaps_TO,up=device_commands.Flaps_TO,cockpit_device_id=devices.FLAPS,value_down=0.0,value_up=1.0,name=_('Flaps 25 / Up'),category=_('Flight Controls')},
+{down=device_commands.Flaps_LNDG,up=device_commands.Flaps_LNDG,cockpit_device_id=devices.FLAPS,value_down=1.0,value_up=0.0,name=_('Flaps 45 / 25'),category=_('Flight Controls')},
 
 --************************************** SAU *************************************************************************************
 
@@ -502,8 +513,8 @@ keyCommands={
 {combos={{key='F6'}},down=iCommandViewWeapons,name=_('F6 Released weapon view'),category=_('View')},
 {combos={{key='F6',reformers={'LCtrl'}}},down=iCommandViewWeaponAndTarget,name=_('F6 Weapon to target view'),category=_('View')},
 {combos={{key='F7'}},down=iCommandViewGround,name=_('F7 Ground unit view'),category=_('View')},
-{combos={{key='F8'}},down=iCommandViewTargets,name=_('F8 Target view'),category=_('View')},
-{combos={{key='F8',reformers={'RCtrl'}}},down=iCommandViewTargetType,name=_('F8 Player targets/All targets filter'),category=_('View')},
+--{combos={{key='F8'}},down=iCommandViewTargets,name=_('F8 Target view'),category=_('View')},
+--{combos={{key='F8',reformers={'RCtrl'}}},down=iCommandViewTargetType,name=_('F8 Player targets/All targets filter'),category=_('View')},
 {combos={{key='F9'}},down=iCommandViewNavy,name=_('F9 Ship view'),category=_('View')},
 {combos={{key='F9',reformers={'LAlt'}}},down=iCommandViewLndgOfficer,name=_('F9 Landing signal officer view'),category=_('View')},
 {combos={{key='F10'}},down=iCommandViewAWACS,name=_('F10 Theater map view'),category=_('View')},
@@ -674,10 +685,27 @@ keyCommands={
 
 
 {combos={{key='B',reformers={'RShift'}}},down=device_commands.Obogrev,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Missiles Heat On/Off'),category=_('Weapons')},
+{down=device_commands.Missiles_Heat_On,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Missiles Heat On'),category=_('Weapons')},
+{down=device_commands.Missiles_Heat_Off,cockpit_device_id=devices.WEAPON_CONTROL,value_down=0.0,name=_('Missiles Heat Off'),category=_('Weapons')},
+
 {combos={{key='N',reformers={'RShift'}}},down=device_commands.Pusk,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Missiles - Rockets Launch On/Off'),category=_('Weapons')},
+{down=device_commands.Missiles_Rockets_Launch_On,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Missiles - Rockets Launch On'),category=_('Weapons')},
+{down=device_commands.Missiles_Rockets_Launch_Off,cockpit_device_id=devices.WEAPON_CONTROL,value_down=0.0,name=_('Missiles - Rockets Launch Off'),category=_('Weapons')},
+
 {combos={{key='M',reformers={'RShift'}}},down=device_commands.Pitanie12,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Pylon 1-2 Power On/Off'),category=_('Weapons')},
 {combos={{key=',',reformers={'RShift'}}},down=device_commands.Pitanie34,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Pylon 3-4 Power On/Off'),category=_('Weapons')},
+
+{down=device_commands.Pylon_1_2_On,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Pylon 1-2 Power On'),category=_('Weapons')},
+{down=device_commands.Pylon_1_2_Off,cockpit_device_id=devices.WEAPON_CONTROL,value_down=0.0,name=_('Pylon 1-2 Power Off'),category=_('Weapons')},
+{down=device_commands.Pylon_3_4_On,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Pylon 3-4 Power On'),category=_('Weapons')},
+{down=device_commands.Pylon_3_4_Off,cockpit_device_id=devices.WEAPON_CONTROL,value_down=0.0,name=_('Pylon 3-4 Power Off'),category=_('Weapons')},
+
 {combos={{key='.',reformers={'RShift'}}},down=device_commands.GS23,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('GS-23 Gun On/Off'),category=_('Weapons')},
+
+{down=device_commands.GSh23_On,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('GS-23 Gun On'),category=_('Weapons')},
+{down=device_commands.GSh23_Off,cockpit_device_id=devices.WEAPON_CONTROL,value_down=0.0,name=_('GS-23 Gun Off'),category=_('Weapons')},
+
+
 {combos={{key='/',reformers={'RShift'}}},down=device_commands.FKP,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Guncam On/Off'),category=_('Weapons')},
 {combos={{key='N',reformers={'RAlt'}}},down=device_commands.AvarPuskSafetyCover,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,name=_('Emergency Missile/Rocket Launcher Cover Open/Close'),category=_('Weapons')},
 {combos={{key='N',reformers={'RCtrl'}}},down=device_commands.AvarPusk,up=device_commands.AvarPusk,cockpit_device_id=devices.WEAPON_CONTROL,value_down=1.0,value_up=0.0,name=_('Emergency Missile/Rocket Launch'),category=_('Weapons')},

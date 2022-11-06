@@ -58,7 +58,6 @@ keyCommands = {
 
 
 -- Gameplay
-{down = iCommandActivePauseOnOff, name = _('Pause Active'), category = _('General')},
 {down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
 {down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
 {down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
@@ -407,8 +406,8 @@ keyCommands = {
 {down = device_commands.Button_5, cockpit_device_id  = devices.FUEL_SYSTEM, value_down = -1.0, name = _('Fuel Selector Valve Down'), category = _('Fuel Control')},
 {down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.0, name = _('Fuel Selector Valve OFF'), category = _('Fuel Control')},
 {down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.1, name = _('Fuel Selector Valve AFT Tank Closed'), category = _('Fuel Control')},
-{down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.3, name = _('Fuel Selector Valve FWD Tank Closed'), category = _('Fuel Control')},
-{down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.2, name = _('Fuel Selector Valve Open'), category = _('Fuel Control')},
+{down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.2, name = _('Fuel Selector Valve FWD Tank Closed'), category = _('Fuel Control')},
+{down = device_commands.Button_1, cockpit_device_id = devices.FUEL_SYSTEM, value_down = 0.3, name = _('Fuel Selector Valve Open'), category = _('Fuel Control')},
 
 {down = device_commands.Button_6, cockpit_device_id  = devices.FUEL_SYSTEM, value_down = 1.0, name = _('Fuel Gauge Selector to the Right'), category = _('Fuel Control')},
 {down = device_commands.Button_6, cockpit_device_id  = devices.FUEL_SYSTEM, value_down = -1.0, name = _('Fuel Gauge Selector to the Left'), category = _('Fuel Control')},

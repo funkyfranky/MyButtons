@@ -57,7 +57,6 @@ return {
 
 
         -- Gameplay -------------------------------------------------------------------------------
-        {															down = iCommandActivePauseOnOff, name = _('Pause Active'), category = _('General')},
         {															down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
         {															down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
         {															down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
@@ -137,8 +136,6 @@ return {
         {															down = iCommandViewWeaponAndTarget, name = _('F6 Weapon to target view'), category = _('View')},
         {															down = iCommandViewGround, name = _('F7 Ground unit view'), category = _('View')},
         {															down = iCommandViewJFO, name = _('F7 Ground JFO/JTAC view'), category = _('View')},
-        --{combos = {{key = 'F8'}}, down = iCommandViewTargets, name = _('F8 Target view'), category = _('View')},
-        --{combos = {{key = 'F8', reformers = {'RCtrl'}}}, down = iCommandViewTargetType, name = _('F8 Player targets/All targets filter'), category = _('View')},
         {															down = iCommandViewNavy, name = _('F9 Ship view'), category = _('View')},
         {															down = iCommandViewLndgOfficer, name = _('F9 Landing signal officer view'), category = _('View')},
         {															down = iCommandViewAWACS, name = _('F10 Theater map view'), category = _('View')},
@@ -508,6 +505,8 @@ return {
 {                                                           down = device_commands.Button_6, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, name = _('Input.Bf109K4.schnellstop_1'), category = _('Fuel System Controls')},
 {                                                           down = device_commands.Button_6, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 0.0, name = _('Input.Bf109K4.schnellstop_0'), category = _('Fuel System Controls')},
 {                                                           down = device_commands.Button_7, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, name = _('Input.Bf109K4.schnellstop'), category = _('Fuel System Controls')},
+-- Schnellstop Extended
+{                                                           down = device_commands.Button_6, up = device_commands.Button_6, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0, value_up = 0.0, name = _('Input.Bf109K4.schnellstop_1_hold'), category = {_('Special For Joystick'), _('Fuel System Controls')}},
 
 -- Fuel Pumps Control Lever
 {                                                           down = device_commands.Button_25, cockpit_device_id = devices.CONTROLS, value_down = 0.0, name = _('Input.Bf109K4.fuel_pumps_quad_0'), category = _('Fuel System Controls')},

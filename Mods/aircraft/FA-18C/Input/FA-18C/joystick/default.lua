@@ -84,8 +84,6 @@ join(res.keyCommands,{
 ---------------------------------------------
 {	down = iCommandEnginesStart,													name = _('Auto Start'),		category = _('Cheat')},
 {	down = iCommandEnginesStop,														name = _('Auto Stop'),		category = _('Cheat')},
-{	down = device_commands.Button_10,	cockpit_device_id = 0,	value_down = 1.0,	name = _('Recorder On'),	category = _('Cheat')},
-{	down = device_commands.Button_11,	cockpit_device_id = 0,	value_down = 1.0,	name = _('Recorder Off'),	category = _('Cheat')},
 
 ---------------------------------------------
 -- General ----------------------------------
@@ -1028,7 +1026,6 @@ join(res.keyCommands,{
 {	down = rwr_commands.Power,							up = rwr_commands.Power,						cockpit_device_id = devices.RWR,				value_down =  1.0,	value_up = 0.0,	name = _('ALR-67 POWER Pushbutton (special) - ON/OFF'),					category = {_('Special For Joystick'), _('Instrument Panel'), _('ALR-67')}},
 {	down = tgp_commands.Flir,							up = tgp_commands.Flir,							cockpit_device_id = devices.TGP_INTERFACE,		value_down =  1.0,	value_up = 0.0,	name = _('FLIR Switch - ON/STBY'),										category = {_('Special For Joystick'), _('Right Console'), _('Sensor Panel')}},
 {	down = tgp_commands.Flir,							up = tgp_commands.Flir,							cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,	value_up = 0.0,	name = _('FLIR Switch - OFF/STBY'),										category = {_('Special For Joystick'), _('Right Console'), _('Sensor Panel')}},
-{	down = tgp_commands.Ltdr,							up = tgp_commands.Ltdr,							cockpit_device_id = devices.TGP_INTERFACE,		value_down = -1.0,	value_up = 0.0,	name = _('LTD/R Switch - AFT/SAFE'),									category = {_('Special For Joystick'), _('Right Console'), _('Sensor Panel')}},
 --------------------------------------------------------------------------------------
 -- Special input for 2-pos 1-signal switches on joystick -----------------------------
 --------------------------------------------------------------------------------------

@@ -264,8 +264,8 @@ join(res.keyCommands, {
 {                                                           down = device_commands.Button_5,    cockpit_device_id = devices.ROCKETS, value_down = 1.0,     name = _('Input.P47.rockets_delay'),          category = {_('Weapons'), _('Rocket Control Panel'), _("D-40 Specific")}},
 {                                                           down = device_commands.Button_4,    cockpit_device_id = devices.ROCKETS, value_down = 0.0,     name = _('Input.P47.rockets_delay_inst'),     category = {_('Weapons'), _('Rocket Control Panel'), _("D-40 Specific")}},
 {                                                           down = device_commands.Button_4,    cockpit_device_id = devices.ROCKETS, value_down = 1.0,     name = _('Input.P47.rockets_delay_delay'),    category = {_('Weapons'), _('Rocket Control Panel'), _("D-40 Specific")}},
-{                                                           pressed = device_commands.Button_6, cockpit_device_id = devices.ROCKETS, value_pressed = 1.0,  name = _('Input.P47.rockets_counter_plus'),   category = {_('Weapons'), _('Rocket Control Panel'), _("D-40 Specific")}},
-{                                                           pressed = device_commands.Button_6, cockpit_device_id = devices.ROCKETS, value_pressed = -1.0, name = _('Input.P47.rockets_counter_minus'),  category = {_('Weapons'), _('Rocket Control Panel'), _("D-40 Specific")}},
+{                                                           cockpit_device_id = devices.ROCKETS, down = device_commands.Button_6, value_down = 1.0,  up = device_commands.Button_6, value_up = 0.0, name = _('Input.P47.rockets_counter_plus'),  category = {_('Weapons'), _('Rocket Control Panel'), _("D-40 Specific")}},
+{                                                           cockpit_device_id = devices.ROCKETS, down = device_commands.Button_6, value_down = -1.0, up = device_commands.Button_6, value_up = 0.0, name = _('Input.P47.rockets_counter_minus'), category = {_('Weapons'), _('Rocket Control Panel'), _("D-40 Specific")}},
 {                                                           down = device_commands.Button_8,    cockpit_device_id = devices.ROCKETS, value_down = 1.0,     name = _('Input.P47.rockets_salvo'),          category = {_('Weapons'), _('Rocket Control Panel'), _("D-40 Specific")}},
 {                                                           down = device_commands.Button_7,    cockpit_device_id = devices.ROCKETS, value_down = 0.0,     name = _('Input.P47.rockets_salvo_dual'),     category = {_('Weapons'), _('Rocket Control Panel'), _("D-40 Specific")}},
 {                                                           down = device_commands.Button_7,    cockpit_device_id = devices.ROCKETS, value_down = 1.0,     name = _('Input.P47.rockets_salvo_single'),   category = {_('Weapons'), _('Rocket Control Panel'), _("D-40 Specific")}},
@@ -444,7 +444,7 @@ join(res.keyCommands, {
 {                                                           down = device_commands.Button_4, cockpit_device_id = devices.WEAPONS, value_down = 1.0,  name = _('Input.P47.guns_cover'),     category = _('Weapons')},
 {                                                           down = device_commands.Button_3, cockpit_device_id = devices.WEAPONS, value_down = 0.0,  name = _('Input.P47.guns_cover_0'),   category = _('Weapons')},
 {                                                           down = device_commands.Button_3, cockpit_device_id = devices.WEAPONS, value_down = 1.0,  name = _('Input.P47.guns_cover_1'),   category = _('Weapons')},
-{                                                           down = device_commands.Button_6, cockpit_device_id = devices.WEAPONS, value_down = 1.0,  name = _('Input.P47.guns_es'),        category = _('Weapons')},
+{                                                           down = device_commands.Button_6, cockpit_device_id = devices.WEAPONS, value_down = 0.0,  name = _('Input.P47.guns_es'),        category = _('Weapons')},
 {                                                           down = device_commands.Button_7, cockpit_device_id = devices.WEAPONS, value_down = 0.0,  name = _('Input.P47.guns_es_0'),      category = _('Weapons')},
 {                                                           down = device_commands.Button_7, cockpit_device_id = devices.WEAPONS, value_down = -1.0,  name = _('Input.P47.guns_es_both'),   category = _('Weapons')},
 {                                                           down = device_commands.Button_7, cockpit_device_id = devices.WEAPONS, value_down = 1.0, name = _('Input.P47.guns_es_camera'), category = _('Weapons')},
@@ -634,20 +634,6 @@ join(res.keyCommands, {
 {                                                           down = device_commands.Button_9,     cockpit_device_id = devices.K14_GUNSIGHT, value_down = 1.0,     name = _('Gunsight fixed ring blanc lever'),            category = _('K-14 gunsight')},
 {                                                           down = device_commands.Button_19,    cockpit_device_id = devices.K14_GUNSIGHT, value_down = 0.0,     name = _('Gunsight fixed ring blanc lever FIXED RING'), category = _('K-14 gunsight')},
 {                                                           down = device_commands.Button_19,    cockpit_device_id = devices.K14_GUNSIGHT, value_down = 1.0,     name = _('Gunsight fixed ring blanc lever NO RING'),    category = _('K-14 gunsight')},
--- ----------------------------------------------------------------------------------------
-
-
-
--- Night Vision Goggles -------------------------------------------------------------------
-{                                                           down = iCommandViewNightVisionGogglesOn,       name = _('Night Vision Goggles'),           category = _('Sensors')},
-{                                                           pressed = iCommandPlane_Helmet_Brightess_Up,   name = _('Night Vision Goggles Gain Up'),   category = _('Sensors')},
-{                                                           pressed = iCommandPlane_Helmet_Brightess_Down, name = _('Night Vision Goggles Gain Down'), category = _('Sensors')},
--- ----------------------------------------------------------------------------------------
-
--- FAC ------------------------------------------------------------------------------------
---{                                                           down = iCommandViewBinocular, name = _('Binocular view toggle'), category = _('FAC')},
---{                                                           down = iCommandViewLaserOnOff, name = _('Binocular laser illumination toggle'), category = _('FAC')},
---{                                                           down = iCommandViewIR, name = _('Binocular view IR mode'), category = _('FAC')},
 -- ----------------------------------------------------------------------------------------
 })
 

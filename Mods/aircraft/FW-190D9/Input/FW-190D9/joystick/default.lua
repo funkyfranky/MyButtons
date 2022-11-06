@@ -50,7 +50,6 @@ keyCommands = {
 
 
 -- Gameplay
-{down = iCommandActivePauseOnOff, name = _('Pause Active'), category = _('General')},
 {down = iCommandViewBriefing, name = _('Briefing window'), category = _('General')},
 {down = iCommandPlaneJump, name = _('Jump into selected aircraft'), category = _('General')},
 {down = iCommandScoresWindowToggle, name = _('Score window'), category = _('General')},
