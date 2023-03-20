@@ -271,9 +271,9 @@ join(res.keyCommands,{
 	{down = iCommandPlane_ABRIS_BT_4,									name = _('HUD Altitude Selector'),						category = _('HUD Control')},
 	{pressed = iCommandHUDBrightnessUp,		up = iCommandHUDTest_up,	name = _('HUD On - Brightness Increase'),				category = _('HUD Control')},
 	{pressed = iCommandHUDBrightnessDown,	up = iCommandHUDTest_up,	name = _('HUD Brightness Decrease - Off'),				category = _('HUD Control')},
-	{down = hud_commands.RejectSwitch,						cockpit_device_id = devices.HUDCONTROL,	value_down = 0.0,	name = _('HUD Reject Switch NORM'),			category = _('HUD Control')},
+	{down = hud_commands.RejectSwitch,						cockpit_device_id = devices.HUDCONTROL,	value_down = 0.0,	name = _('HUD Reject Switch REJ2'),			category = _('HUD Control')},
 	{down = hud_commands.RejectSwitch,						cockpit_device_id = devices.HUDCONTROL,	value_down = 0.5,	name = _('HUD Reject Switch REJ1'),			category = _('HUD Control')},
-	{down = hud_commands.RejectSwitch,						cockpit_device_id = devices.HUDCONTROL,	value_down = 1.0,	name = _('HUD Reject Switch REJ2'),			category = _('HUD Control')},
+	{down = hud_commands.RejectSwitch,						cockpit_device_id = devices.HUDCONTROL,	value_down = 1.0,	name = _('HUD Reject Switch NORM'),			category = _('HUD Control')},
 	{down = hud_commands.RejectSwitch_REJ1_TOGGLE,			cockpit_device_id = devices.HUDCONTROL,	value_down = 0.0,	name = _('HUD Reject Switch REJ1/NORM'),	category = _('HUD Control')},
 	{down = hud_commands.RejectSwitch_REJ2_TOGGLE,			cockpit_device_id = devices.HUDCONTROL,	value_down = 0.0,	name = _('HUD Reject Switch REJ2/NORM'),	category = _('HUD Control')},
 	{down = hud_commands.DisplayModeSwitch,					cockpit_device_id = devices.HUDCONTROL,	value_down = 0.0,	name = _('HUD Display Mode DAY'),			category = _('HUD Control')},
@@ -388,8 +388,8 @@ join(res.keyCommands,{
 	{down = engine_commands.Switch_H20_DUMP,				cockpit_device_id = devices.DECS, value_down = 0,	name = _('H2O Dump Switch OFF'),					category = _('Engine & Fuel')},
 	{down = engine_commands.Switch_H20_DUMP,				cockpit_device_id = devices.DECS, value_down = 1,	name = _('H2O Dump Switch DUMP'),					category = _('Engine & Fuel')},
 	{down = engine_commands.Switch_H20_DUMP_TOGGLE,			cockpit_device_id = devices.DECS, value_down = 0,	name = _('H2O Dump Switch TOGGLE'),					category = _('Engine & Fuel')},
-	{down = engine_commands.Switch_JPTL,					cockpit_device_id = devices.DECS, value_down = 1,	name = _('JPTL Switch ON'),							category = _('Engine & Fuel')},
-	{down = engine_commands.Switch_JPTL,					cockpit_device_id = devices.DECS, value_down = 0,	name = _('JPTL Switch OFF'),						category = _('Engine & Fuel')},
+	{down = engine_commands.Switch_JPTL,					cockpit_device_id = devices.DECS, value_down = 1,	name = _('JPTL Switch OFF'),							category = _('Engine & Fuel')},
+	{down = engine_commands.Switch_JPTL,					cockpit_device_id = devices.DECS, value_down = 0,	name = _('JPTL Switch ON'),						category = _('Engine & Fuel')},
 	{down = engine_commands.Switch_JPTLTOGGLE,				cockpit_device_id = devices.DECS, value_down = 0,	name = _('JPTL Switch TOGGLE'),						category = _('Engine & Fuel')},
 	{down = engine_commands.Switch_MAN_FUEL,				cockpit_device_id = devices.DECS, value_down = 0,	name = _('Manual Fuel Switch OFF'),					category = _('Engine & Fuel')},
 	{down = engine_commands.Switch_MAN_FUEL,				cockpit_device_id = devices.DECS, value_down = 1,	name = _('Manual Fuel Switch ON'),					category = _('Engine & Fuel')},
@@ -871,8 +871,9 @@ join(res.keyCommands,{
     {pressed = iCommandPlane_AAP_SteerSw_Down,	name = _('TPOD Video Zoom Out'),	category = _('Keyboard Macros')},
 	
 	-- DEBUG
-	{down = iCommandEasyRadarScaleUp,  up = iCommandRALT_Test_up,  name = _('AOA Indicator Up'), category = _('DEBUG')},
-	{down = iCommandEasyRadarScaleOut, up = iCommandRALT_Test_up, name = _('AOA Indicator Down'), category = _('DEBUG')},
+	{down = iCommandEasyRadarScaleUp,	up = iCommandRALT_Test_up,	name = _('AOA Indicator Up'),	category = _('DEBUG')},
+	{down = iCommandEasyRadarScaleOut,	up = iCommandRALT_Test_up,	name = _('AOA Indicator Down'),	category = _('DEBUG')},
+	{down = iCommandPlaneNav_DLK_OnOff,								name = _('Data Parameters'),	category = _('DEBUG')},
 	
 	}
 )
@@ -963,6 +964,11 @@ join(res.axisCommands,{
 {action = rwr_commands.Knob_RWR, cockpit_device_id = devices.RWRCONTROL, name = _('RWR VOL CONTROL')},
 {action = acnip_commands.Knob_AUX_VOL, cockpit_device_id = devices.INTERCOM, name = _('ICS Aux Volume Knob')},
 {action = ecs_commands.Knob_TEMP, cockpit_device_id = devices.ECS, name = _('ECS TEMP CONTROL')},
+{action = ufc_commands.Knob_BRT, cockpit_device_id = devices.UFCCONTROL, name = _('UFC Display Brightness Control')},
+{action = ufc_commands.Knob_Comm1_Vol, cockpit_device_id = devices.UFCCONTROL, name = _('Comm 1 Volume Control')},
+{action = ufc_commands.Knob_Comm2_Vol, cockpit_device_id = devices.UFCCONTROL, name = _('Comm 2 Volume Control')},
+{action = mpcd_l_commands.Knob_OFF_BRT, cockpit_device_id = devices.MPCD_LEFT, name = _('MPCD Left Off/Brightness Control')},
+{action = mpcd_r_commands.Knob_OFF_BRT, cockpit_device_id = devices.MPCD_RIGHT, name = _('MPCD Right Off/Brightness Control')},
 
 --HOTAS TDC
 {action = iCommandPlaneSelecterHorizontalAbs, name = _('TDC Slew Horizontal')},
