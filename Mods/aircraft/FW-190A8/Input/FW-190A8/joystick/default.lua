@@ -18,11 +18,11 @@ keyCommands = {
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- WEAPON_SYSTEM
-{down = device_commands.Button_1,  up = device_commands.Button_1,  cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Master Arm ON/OFF'), category = _('_My Buttons')},
-{down = device_commands.Button_20, up = device_commands.Button_20, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Outer Wing Guns Arm ON/OFF'), category = _('_My Buttons')},
-{down = device_commands.Button_18, up = device_commands.Button_18, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Jettison Fuselage Stores ON/OFF'), category = _('_My Buttons')},
-{down = device_commands.Button_22, up = device_commands.Button_22, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Main Rocket Switch ON/OFF'), category = _('_My Buttons')},
-{down = device_commands.Button_24, up = device_commands.Button_24, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Rocket Emergency Release ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_1,  up = device_commands.Button_1,  cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Master Arm Switch ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_20, up = device_commands.Button_20, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Outer Wing Guns Arm Switch ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_18, up = device_commands.Button_18, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Jettison Fuselage Stores Switch ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_22, up = device_commands.Button_22, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Main Rocket Switch Switch ON/OFF'), category = _('_My Buttons')},
+{down = device_commands.Button_24, up = device_commands.Button_24, cockpit_device_id = devices.WEAPON_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Rocket Emergency Release Switch ON/OFF'), category = _('_My Buttons')},
 
 -- CONTROL_SYSTEM
 {down = device_commands.Button_5,  up = device_commands.Button_7,  cockpit_device_id = devices.CONTROL_SYSTEM, value_down = 1.0, value_up = 1.0, name = _('Landing Gear RETRACT/EXTEND'), category = _('_My Buttons')},
