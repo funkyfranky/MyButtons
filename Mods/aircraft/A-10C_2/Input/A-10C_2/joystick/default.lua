@@ -168,7 +168,7 @@ keyCommands = {
 {down = iCommandViewLocal, name = _('F2 Toggle local camera control'), category = _('View')},
 {down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
-{down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
+{down = iCommandViewRear, name = _('F4 Camera mounted on object'), category = _('View')},
 {down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
 {down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
@@ -259,13 +259,6 @@ keyCommands = {
 
 {down = iCommandViewTransposeModeOn, up = iCommandViewTransposeModeOff, name = _('Camera transpose mode (press and hold)'), category = _('View Cockpit')},
 {down = iCommand_ExplorationStart, name = _('Enable visual recon mode'), category = _('View Cockpit')},
-
-
---	Head Tracker View
-{down = iHeadTrackerZoomToggle,			up = iHeadTrackerZoomToggle, 		 value_down = 1.0, value_up = 0.0, name = _('VR tracker Zoom'),			 category = _('Head Tracker')},
-{down = iHeadTrackerSpyglassZoomToggle,	up = iHeadTrackerSpyglassZoomToggle, value_down = 1.0, value_up = 0.0, name = _('VR tracker Spyglass Zoom'), category = _('Head Tracker')},
-{down = iHeadTrackerPosReset,																				   name = _('VR tracker Reset Base'),	 category = _('Head Tracker')},
-
 
 -- Extended view
 {down = iCommandViewCameraJiggle, name = _('Camera jiggle toggle'), category = _('View Extended')},
@@ -1230,5 +1223,13 @@ axisCommands = {
 
 -- Flashlight (Utility Light)
 {action = device_commands.Button_20, cockpit_device_id = devices.LIGHT_SYSTEM, name = _('Flashlight BRT Control'), category = {_('Right Console')}},
+
+-- Lighting dials
+{action = device_commands.Button_21, cockpit_device_id = devices.LIGHT_SYSTEM, name = _('Engine Instruments Lights'), 	category = {_('Lighting Panel')}},
+{action = device_commands.Button_22, cockpit_device_id = devices.LIGHT_SYSTEM, name = _('Flight Instruments Lights'), 	category = {_('Lighting Panel')}},
+{action = device_commands.Button_23, cockpit_device_id = devices.LIGHT_SYSTEM, name = _('Floodlight '), 					category = {_('Lighting Panel')}},
+{action = device_commands.Button_24, cockpit_device_id = devices.LIGHT_SYSTEM, name = _('Console Light'), 				category = {_('Lighting Panel')}},
+{action = device_commands.Button_25, cockpit_device_id = devices.LIGHT_SYSTEM, name = _('Formation Lights'), 			category = {_('Lighting Panel')}},
+{action = device_commands.Button_26, cockpit_device_id = devices.LIGHT_SYSTEM, name = _('Refuel status indexer LTS '),	category = {_('Auxiliary lighting control panel')}},
 },
 }

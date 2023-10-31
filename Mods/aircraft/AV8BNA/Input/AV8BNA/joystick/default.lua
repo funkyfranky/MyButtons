@@ -759,14 +759,10 @@ join(res.keyCommands,{
 	{down = iCommandPlaneUHFFreqModeDialMNL, 	up = iCommandPlaneUHFFunctionDialOFF,					name = _('UHF RCU-8150 LOAD/OFST Switch'),				category = _('Radios Control')},
 	
 	-- MISCELLANEOUS PANEL
-	{down = iCommandAltimeterPressureIncrease,	up = iCommandAltimeterPressureStop,	name = _('Barometric Altimeter Pressure Calibration Increase'),	category = _('Miscellaneous Controls')},
-	{down = iCommandAltimeterPressureDecrease,	up = iCommandAltimeterPressureStop,	name = _('Barometric Altimeter Pressure Calibration Decrease'),	category = _('Miscellaneous Controls')},
 	{down = iCommandPlaneNightTVOnOff,												name = _('DMT On/Off Toggle'),									category = _('Miscellaneous Controls')},
 	{down = iCommandPlaneRadarOnOff,												name = _('FLIR Power Switch ON/OFF'),							category = _('Miscellaneous Controls')},
 	{down = iCommandPlaneRadarUp,													name = _('Mission Computer Mode Up (OFF - AUTO - OVRD)'),		category = _('Miscellaneous Controls')},
 	{down = iCommandPlaneRadarDown,													name = _('Mission Computer Mode Down (OVRD - AUTO  - OFF)'),	category = _('Miscellaneous Controls')},
-	{down = iCommandPlaneCMSC_PRI,													name = _('Stopwatch Start/Stop toggle'),						category = _('Miscellaneous Controls')},
-	{down = iCommandPlaneCMSC_SEP,													name = _('Stopwatch Lap/Reset toggle'),							category = _('Miscellaneous Controls')},
 	{down = misc_commands.Switch_FLIR_Power, 		cockpit_device_id = devices.NAVFLIR,			value_down = 1.0,	name = _('FLIR Power Switch ON'),			category = _('Miscellaneous Controls')},
 	{down = misc_commands.Switch_FLIR_Power, 		cockpit_device_id = devices.NAVFLIR,			value_down = 0.0,	name = _('FLIR Power Switch OFF'),			category = _('Miscellaneous Controls')},
 	{down = misc_commands.Switch_DMT_Power, 		cockpit_device_id = devices.DMT,				value_down = 1.0,	name = _('DMT Switch ON'),					category = _('Miscellaneous Controls')},

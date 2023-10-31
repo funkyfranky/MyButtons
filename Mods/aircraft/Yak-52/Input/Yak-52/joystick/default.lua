@@ -169,7 +169,7 @@ keyCommands = {
 {                                                                                                                       down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {                                                                                                                       down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
 {                                                                                                                       down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
-{                                                                                                                       down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
+{                                                                                                                       down = iCommandViewRear, name = _('F4 Camera mounted on object'), category = _('View')},
 {                                                                                                                       down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {                                                                                                                       down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
 {                                                                                                                       down = iCommandViewFightGround, name = _('F5 Ground hostile view'), category = _('View')},
@@ -289,12 +289,6 @@ keyCommands = {
 {                                                                                                                       down = iCommandViewTerrainLock, name = _('Padlock terrain point'), category = _('View Padlock')},
 -- ----------------------------------------------------------------------------------------
 
---	Head Tracker View ---------------------------------------------------------------------
-{								down = iHeadTrackerZoomToggle,			up = iHeadTrackerZoomToggle, 		 value_down = 1.0, value_up = 0.0, name = _('VR tracker Zoom'),			 category = _('Head Tracker')},
-{								down = iHeadTrackerSpyglassZoomToggle,	up = iHeadTrackerSpyglassZoomToggle, value_down = 1.0, value_up = 0.0, name = _('VR tracker Spyglass Zoom'), category = _('Head Tracker')},
-{								down = iHeadTrackerPosReset,																				   name = _('VR tracker Reset Base'),	 category = _('Head Tracker')},
--- ----------------------------------------------------------------------------------------
-
 -- Labels ---------------------------------------------------------------------------------
 {                                                                                                                       down = iCommandMarkerState, name = _('Labels All'), category = _('Labels')},
 {                                                                                                                       down = iCommandMarkerStatePlane, name = _('Labels Aircraft'), category = _('Labels')},
@@ -330,7 +324,7 @@ keyCommands = {
 
 -- Joystick(s) ----------------------------------------------------------------------------
 -- Wheel Brakes Lever
-{combos = {{key = 'W'}},                                    pressed = iCommandPlaneWheelBrakeOn, up = iCommandPlaneWheelBrakeOff, name = _('Input.Yak52.wheel_brakes'), category = _('Stick')},
+{                                                           pressed = iCommandPlaneWheelBrakeOn, up = iCommandPlaneWheelBrakeOff, name = _('Input.Yak52.wheel_brakes'), category = _('Stick')},
 {                                                           pressed = device_commands.Button_26, cockpit_device_id = devices.CONTROLS, value_pressed = 1.0,  name = _('Input.Yak52.wheel_brakes_plus'),  category = _('Stick')},
 {                                                           pressed = device_commands.Button_26, cockpit_device_id = devices.CONTROLS, value_pressed = -1.0, name = _('Input.Yak52.wheel_brakes_minus'), category = _('Stick')},
 -- Wheel Brakes Lock

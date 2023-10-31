@@ -117,8 +117,8 @@ join(
          		
 		{down = hotas_cmds.FC_THROTTLE_MIC_FWD,		up = hotas_cmds.FC_THROTTLE_MIC_FWD,	value_down = 1, value_up = 0,	cockpit_device_id = devices.HOTASCTRL,  name = _('MIC Switch FWD (Call Radio 1 Menu)'),		category = {_('Throttle Quadrant'), _('HOTAS')}},
 		{down = hotas_cmds.FC_THROTTLE_MIC_AFT,		up = hotas_cmds.FC_THROTTLE_MIC_AFT,	value_down =-1, value_up = 0,	cockpit_device_id = devices.HOTASCTRL,  name = _('MIC Switch AFT (Call Radio 2 Menu)'),		category = {_('Throttle Quadrant'), _('HOTAS')}},
-		{down = iCommandVoIPRadioPushToTalkEnableDisableVoice,		up = iCommandVoIPRadioPushToTalkEnableDisableVoice,												name = _('MIC Switch FWD (Radio 1 VOIP)'),			category = {_('Throttle Quadrant'), _('HOTAS')}},
-		{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,	up = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,											name = _('MIC Switch AFT (Radio 2 VOIP)'),			category = {_('Throttle Quadrant'), _('HOTAS')}},
+		{down = iCommandVoIPRadioPushToTalkEnableDisableVoice,		up = iCommandVoIPRadioPushToTalkEnableDisableVoice,		value_down = 1, value_up = 0,			name = _('MIC Switch FWD (Radio 1 VOIP)'),			category = {_('Throttle Quadrant'), _('HOTAS')}},
+		{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,	up = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,	value_down = 1, value_up = 0,			name = _('MIC Switch AFT (Radio 2 VOIP)'),			category = {_('Throttle Quadrant'), _('HOTAS')}},
 
 		{down = iCommandHelicopter_Left_Engine_Lock,				up = iCommandHelicopter_Left_Engine_Lock,	value_down = 1.0,	value_up = 0.0,					name = _('Finger Lift LEFT'),						category = {_('Throttle Quadrant'), _('HOTAS')}},
 		{down = iCommandHelicopter_Right_Engine_Lock,				up = iCommandHelicopter_Right_Engine_Lock,	value_down = 1.0,	value_up = 0.0,					name = _('Finger Lift RIGHT'),						category = {_('Throttle Quadrant'), _('HOTAS')}},	
@@ -557,8 +557,8 @@ join(
 		{down = cas_commands.pitch_sw,		cockpit_device_id = devices.FLCTRL,	value_down =  0.0,	name = _('Pitch CAS Switch OFF'), category = {_('Left Console'), _('CAS Panel')}},
 		{down = cas_commands.bit_button,	up = cas_commands.bit_button, cockpit_device_id = devices.FLCTRL,	value_down = 1.0,	value_up = 0.0, name = _('CAS BIT Button'), category = {_('Left Console'), _('CAS Panel')}},
 		{down = cas_commands.to_button,		up = cas_commands.to_button, cockpit_device_id = devices.FLCTRL,	value_down = 1.0,	value_up = 0.0, name = _('T/O Trim Button'), category = {_('Left Console'), _('CAS Panel')}},
-		{down = cas_commands.tf_couple_sw,	cockpit_device_id = devices.FLCTRL,	value_down =  1.0,	name = _('TF Couple Switch ON'), category = {_('Left Console'), _('CAS Panel')}},
-		{down = cas_commands.tf_couple_sw,	cockpit_device_id = devices.FLCTRL,	value_down =  0.0,	name = _('TF Couple Switch OFF'), category = {_('Left Console'), _('CAS Panel')}},
+		{down = cas_commands.tf_couple_sw,	cockpit_device_id = devices.TFR,	value_down =  1.0,	name = _('TF Couple Switch ON'), category = {_('Left Console'), _('CAS Panel')}},
+		{down = cas_commands.tf_couple_sw,	cockpit_device_id = devices.TFR,	value_down =  0.0,	name = _('TF Couple Switch OFF'), category = {_('Left Console'), _('CAS Panel')}},
 		
 		--------------------------------------------------------------------------------------------
 		-- Right Side ------------------------------------------------------------------------------

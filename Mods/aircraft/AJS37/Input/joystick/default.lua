@@ -224,7 +224,7 @@ local keycommands = {
     {down = 3003, value_down = 1.0, cockpit_device_id = devices.RWR, name = _('RWR KB Lights/Sound'), category = _('Countermeasures')},
     {combos = {{key = "R", reformers = {"LAlt","LCtrl"}}},pressed = 3005, value_pressed = 1.0, cockpit_device_id = devices.RWR, name = _('Master Volume / Sidewinder Tone Up'), category = _('Countermeasures')},
     {combos = {{key = "R", reformers = {"LAlt","RAlt"}}}, pressed = 3005, value_pressed = -1.0, cockpit_device_id = devices.RWR, name = _('Master Volume / Sidewinder Tone Down'), category = _('Countermeasures')},
-    {down = 3001, value_down = 1.0, up = 3001, value_up = 0.0, cockpit_device_id = devices.ERRORPANEL, name = _('KONTROLL light test'), category = _('Lights')},
+    {down = 3002, value_down = 1.0, up = 3002, value_up = 0.0, cockpit_device_id = devices.ERRORPANEL, name = _('KONTR LAMPTABLA light test'), category = _('Lights')},
     {down = 3001, value_down = 1.0, cockpit_device_id = devices.IFF, name = _('IK (IFF) On/Off'), category = _('Countermeasures')},
     {down = 3002, value_down = 1.0, cockpit_device_id = devices.IFF, name = _('IK (IFF) Code Up'), category = _('Countermeasures')},
     {down = 3002, value_down = -1.0, cockpit_device_id = devices.IFF, name = _('IK (IFF) Code Down'), category = _('Countermeasures')},

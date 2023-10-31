@@ -133,7 +133,7 @@ keyCommands = {
 {down = iCommandViewLocal, name = _('F2 Toggle local camera control'), category = _('View')},
 {down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
-{down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
+{down = iCommandViewRear, name = _('F4 Camera mounted on object'), category = _('View')},
 {down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {down = iCommandViewChaseArcade, name = _('F4 Arcade Chase view'), category = _('View')},
 {down = iCommandViewFight, name = _('F5 Nearest AC view'), category = _('View')},
@@ -240,11 +240,6 @@ keyCommands = {
 {down = iCommandAllMissilePadlock, name = _('All missiles padlock'), category = _('View Padlock')},
 {down = iCommandThreatMissilePadlock, name = _('Threat missile padlock'), category = _('View Padlock')},
 {down = iCommandViewTerrainLock, name = _('Lock terrain view'), category = _('View Padlock')},
-
---	Head Tracker View
-{down = iHeadTrackerZoomToggle,			up = iHeadTrackerZoomToggle, 		 value_down = 1.0, value_up = 0.0, name = _('VR tracker Zoom'),			 category = _('Head Tracker')},
-{down = iHeadTrackerSpyglassZoomToggle,	up = iHeadTrackerSpyglassZoomToggle, value_down = 1.0, value_up = 0.0, name = _('VR tracker Spyglass Zoom'), category = _('Head Tracker')},
-{down = iHeadTrackerPosReset,																				   name = _('VR tracker Reset Base'),	 category = _('Head Tracker')},
 
 -- Labels
 {down = iCommandMarkerState, name = _('All Labels'), category = _('Labels')},
