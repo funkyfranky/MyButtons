@@ -540,10 +540,10 @@ join(res.keyCommands,{
 	{down = iCommandPlane_HOTAS_CMS_Up,		up = iCommandPlane_HOTAS_CMS_Left,	name = _('Engine Air Start'),				category = {_('HOTAS'), _('HOTAS - Throttle')}},
 	{down = iCommandPlane_HOTAS_CMS_Down,	up = iCommandPlane_HOTAS_CMS_Off,	name = _('Emergency Flap Retraction'),		category = {_('HOTAS'), _('HOTAS - Throttle')}},
 	
-	{down = iCommandPlane_HOTAS_MIC_SwitchUp,					up = iCommandPlane_HOTAS_MIC_SwitchOff,					name = _('COMM FWD: Select COMM 1'),		category = {_('HOTAS'), _('HOTAS - Throttle')}},
-	{down = iCommandPlane_HOTAS_MIC_SwitchDown,					up = iCommandPlane_HOTAS_MIC_SwitchOff,					name = _('COMM AFT: Select COMM 2'),		category = {_('HOTAS'), _('HOTAS - Throttle')}},
-	{down = iCommandVoIPRadioPushToTalkEnableDisableVoice,		up = iCommandVoIPRadioPushToTalkEnableDisableVoice,		name = _('COMM FWD: Select COMM 1 (VOIP)'),	category = {_('HOTAS'), _('HOTAS - Throttle'), _('Communications')}},
-	{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,	up = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,	name = _('COMM AFT: Select COMM 2 (VOIP)'),	category = {_('HOTAS'), _('HOTAS - Throttle'), _('Communications')}},
+	{down = iCommandPlane_HOTAS_MIC_SwitchUp,					up = iCommandPlane_HOTAS_MIC_SwitchOff,													name = _('COMM FWD: Select COMM 1'),		category = {_('HOTAS'), _('HOTAS - Throttle')}},
+	{down = iCommandPlane_HOTAS_MIC_SwitchDown,					up = iCommandPlane_HOTAS_MIC_SwitchOff,													name = _('COMM AFT: Select COMM 2'),		category = {_('HOTAS'), _('HOTAS - Throttle')}},
+	{down = iCommandVoIPRadioPushToTalkEnableDisableVoice,		up = iCommandVoIPRadioPushToTalkEnableDisableVoice,		value_down = 1,	value_up = 0,	name = _('COMM FWD: Select COMM 1 (VOIP)'),	category = {_('HOTAS'), _('HOTAS - Throttle'), _('Communications')}},
+	{down = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,	up = iCommandVoIPRadioPushToTalkEnableDisableVoice_1,	value_down = 1,	value_up = 0,	name = _('COMM AFT: Select COMM 2 (VOIP)'),	category = {_('HOTAS'), _('HOTAS - Throttle'), _('Communications')}},
 	
 	{down = iCommandPlaneAirBrake,																			name = _('Airbrake TOGGLE'),				category = {_('HOTAS'), _('HOTAS - Throttle')}},
 	{pressed = iCommandPlaneAirBrakeOn,							up = iCommandHelicopter_PPR_button_K_up,	name = _('Airbrake OUT'),					category = {_('HOTAS'), _('HOTAS - Throttle')}},

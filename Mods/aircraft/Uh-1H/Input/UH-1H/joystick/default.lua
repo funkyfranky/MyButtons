@@ -96,7 +96,7 @@ keyCommands = {
 {down = iCommandSoundOnOff,			name = _('Sound On/Off'),	 category = _('General')},
 {down = device_commands.Button_1, cockpit_device_id = devices.CREWE, value_down = 1.0, name = _('Show crew indicator'), category = _('General')},
 
-
+{down = iCommandNetCrewRequestControl,	name = _('Request Aircraft Control'),	category = _('Flight Control')},
 
 -- View                                                    
 {combos = {{key = 'JOY_BTN_POV1_L'}}, pressed = iCommandViewLeftSlow, up = iCommandViewStopSlow, name = _('View Left slow'), category = _('View')},

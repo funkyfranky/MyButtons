@@ -123,7 +123,7 @@ keyCommands = {
 {down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
 {down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
 {down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
-{down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
+{down = iCommandViewRear, name = _('F4 Camera mounted on object'), category = _('View')},
 {down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
 {down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
 {down = iCommandViewFightGround, name = _('F5 Ground hostile view'), category = _('View')},
@@ -224,12 +224,6 @@ keyCommands = {
 {down = iCommandViewSwitchReverse, name = _('Objects switching direction reverse '), category = _('View Extended')},
 {down = iCommandViewObjectIgnore, name = _('Object exclude '), category = _('View Extended')},
 {down = iCommandViewObjectsAll, name = _('Objects all excluded - include'), category = _('View Extended')},
-
---	Head Tracker View
-{down = iHeadTrackerZoomToggle,			up = iHeadTrackerZoomToggle, 		 value_down = 1.0, value_up = 0.0, name = _('VR tracker Zoom'),			 category = _('Head Tracker')},
-{down = iHeadTrackerSpyglassZoomToggle,	up = iHeadTrackerSpyglassZoomToggle, value_down = 1.0, value_up = 0.0, name = _('VR tracker Spyglass Zoom'), category = _('Head Tracker')},
-{down = iHeadTrackerPosReset,																				   name = _('VR tracker Reset Base'),	 category = _('Head Tracker')},
-
 
 -- Padlock
 {down = iCommandAllMissilePadlock, name = _('Padlock missiles all'), category = _('View Padlock')},
@@ -358,8 +352,8 @@ keyCommands = {
 {down = device_commands.Button_3, cockpit_device_id  = devices.CONTROL_SYSTEM, value_down = 1.0, name = _('Flaps Landing'), category = _('Flight Control')},
 
 --engine control
-{down = device_commands.Button_8, up = device_commands.Button_10, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 0.0, value_up = 0.5, name = _('Starter Power'), category = _('Engine Controls')},
-{down = device_commands.Button_9, up = device_commands.Button_10, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.5, name = _('Starter Clutch'), category = _('Engine Controls')},
+{down = device_commands.Button_8, up = device_commands.Button_10, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.5, name = _('Starter Power'), category = _('Engine Controls')},
+{down = device_commands.Button_9, up = device_commands.Button_10, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 0.0, value_up = 0.5, name = _('Starter Clutch'), category = _('Engine Controls')},
 {down = device_commands.Button_7, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, name = _('Starter Switch Cover'), category = _('Engine Controls')},
 {down = device_commands.Button_17, up = device_commands.Button_17, cockpit_device_id  = devices.ENGINE_SYSTEM, value_down = 1.0, value_up = 0.0, name = _('Starter Brushes Retract'), category = _('Engine Controls')},
 

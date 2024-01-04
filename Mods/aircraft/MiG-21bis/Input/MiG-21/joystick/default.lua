@@ -744,6 +744,9 @@ keyCommands={
 {down=device_commands.RadioCompassSound,cockpit_device_id=devices.RADIO,value_down=1.0,name=_('Radio / Compass off'),category=_('Radio Communications')},
 {down=device_commands.RadioCompassSound,cockpit_device_id=devices.RADIO,value_down=0.0,name=_('Radio / Compass on'),category=_('Radio Communications')},
 
+-- VOIP *****************
+{down = iCommandVoIPRadioPushToTalkEnableDisableVoice, up = iCommandVoIPRadioPushToTalkEnableDisableVoice, value_down=1.0, value_up=0.0, name=_('VOIP Talk'), category=_('VOIP')},
+
 },
 
 

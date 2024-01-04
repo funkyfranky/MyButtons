@@ -50,8 +50,6 @@ return {
         -- Temporary ------------------------------------------------------------------------------        
         {															down = iCommandEnginesStart, name = _('Start Procedure'), category = _('Cheat')},
         {															down = iCommandEnginesStop, name = _('Stop Procedure'), category = _('Cheat')},
-
-        {															down = device_commands.Button_1,up = device_commands.Button_1, cockpit_device_id = devices.ENGINE_CONTROLS, value_down = 1.0,value_up = 0.0, name = _('Signal Starter Crew'), category = _('Engine Controls')},
         -- ----------------------------------------------------------------------------------------
 
 
@@ -128,7 +126,7 @@ return {
         {															down = iCommandViewTower, name = _('F3 Fly-By view'), category = _('View')},
         {															down = iCommandViewTowerJump, name = _('F3 Fly-By jump view'), category = _('View')},
         {															down = iCommandViewChaseArcade, name = _('F4 Arcade View'), category = _('View')},
-        {															down = iCommandViewRear, name = _('F4 Camera mounted on airframe'), category = _('View')},
+        {															down = iCommandViewRear, name = _('F4 Camera mounted on object'), category = _('View')},
         {															down = iCommandViewChase, name = _('F4 Chase view'), category = _('View')},
         {															down = iCommandViewFight, name = _('F5 nearest AC view'), category = _('View')},
         {															down = iCommandViewFightGround, name = _('F5 Ground hostile view'), category = _('View')},
@@ -237,14 +235,6 @@ return {
         {															down = iCommandViewObjectIgnore, name = _('Object exclude '), category = _('View Extended')},
         {															down = iCommandViewObjectsAll, name = _('Objects all excluded - include'), category = _('View Extended')},
         -- ----------------------------------------------------------------------------------------
-
-
-		--	Head Tracker View --------------------------------------------------------------------------
-		{															down = iHeadTrackerZoomToggle,			up = iHeadTrackerZoomToggle, 		 value_down = 1.0, value_up = 0.0, name = _('VR tracker Zoom'),			 category = _('Head Tracker')},
-		{															down = iHeadTrackerSpyglassZoomToggle,	up = iHeadTrackerSpyglassZoomToggle, value_down = 1.0, value_up = 0.0, name = _('VR tracker Spyglass Zoom'), category = _('Head Tracker')},
-		{															down = iHeadTrackerPosReset,																				   name = _('VR tracker Reset Base'),	 category = _('Head Tracker')},
-		-- ----------------------------------------------------------------------------------------
-
 
         -- Padlock --------------------------------------------------------------------------------
         {															down = iCommandAllMissilePadlock, name = _('Padlock missiles all'), category = _('View Padlock')},
